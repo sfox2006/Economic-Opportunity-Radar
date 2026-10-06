@@ -1,0 +1,1350 @@
+{
+  "checkedAt": "2026-10-06",
+  "scope": "Organisation identity and About/homepage links only; does not verify opportunity availability.",
+  "organisations": {
+    "Department of the Treasury": {
+      "url": "https://treasury.gov.au/the-department/about-treasury",
+      "type": "about",
+      "evidenceUrl": "https://treasury.gov.au/the-department/about-treasury",
+      "checkMethod": "official_page"
+    },
+    "Reserve Bank of Australia (RBA)": {
+      "url": "https://www.rba.gov.au/about-rba/",
+      "type": "about",
+      "evidenceUrl": "https://www.rba.gov.au/about-rba/",
+      "checkMethod": "official_page"
+    },
+    "Productivity Commission": {
+      "url": "https://www.pc.gov.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.pc.gov.au/about/",
+      "checkMethod": "official_page"
+    },
+    "Australian Bureau of Statistics (ABS)": {
+      "url": "https://www.abs.gov.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.abs.gov.au/about",
+      "checkMethod": "official_page"
+    },
+    "Department of Finance": {
+      "url": "https://www.finance.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.finance.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Australian Prudential Regulation Authority (APRA)": {
+      "url": "https://www.apra.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.apra.gov.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Australian Securities and Investments Commission (ASIC)": {
+      "url": "https://www.asic.gov.au/about-asic/what-we-do/our-role",
+      "type": "about",
+      "evidenceUrl": "https://www.asic.gov.au/about-asic/what-we-do/our-role",
+      "checkMethod": "official_page"
+    },
+    "Australian Competition and Consumer Commission (ACCC) & Australian Energy Regulator (AER)": {
+      "url": "https://www.accc.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.accc.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Australian Taxation Office (ATO)": {
+      "url": "https://www.ato.gov.au/about-ato/who-we-are/?lang=en",
+      "type": "about",
+      "evidenceUrl": "https://www.ato.gov.au/about-ato/who-we-are/?lang=en",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Department of Foreign Affairs and Trade (DFAT)": {
+      "url": "https://www.dfat.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.dfat.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Department of Industry, Science and Resources": {
+      "url": "https://www.industry.gov.au/",
+      "type": "home",
+      "evidenceUrl": "https://www.industry.gov.au/",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Department of Climate Change, Energy, the Environment and Water (DCCEEW)": {
+      "url": "https://www.dcceew.gov.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.dcceew.gov.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Department of Employment and Workplace Relations": {
+      "url": "https://www.dewr.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.dewr.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Department of Social Services (DSS)": {
+      "url": "https://www.dss.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.dss.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Department of Health and Aged Care": {
+      "url": "https://www.health.gov.au/topics/about-the-department/who-we-are",
+      "type": "about",
+      "evidenceUrl": "https://www.health.gov.au/topics/about-the-department/who-we-are?language=gil",
+      "checkMethod": "official_search_result"
+    },
+    "Department of Infrastructure, Transport, Regional Development, Communications and the Arts": {
+      "url": "https://www.infrastructure.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.infrastructure.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Department of Defence": {
+      "url": "https://www.defence.gov.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.defence.gov.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Department of Veterans' Affairs": {
+      "url": "https://www.dva.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.dva.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Department of Agriculture, Fisheries and Forestry (DAFF)": {
+      "url": "https://www.agriculture.gov.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.agriculture.gov.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Department of the Prime Minister and Cabinet (PM&C)": {
+      "url": "https://www.pmc.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.pmc.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "National Disability Insurance Agency (NDIA / NDIS)": {
+      "url": "https://www.ndis.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.ndis.gov.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Austrade (Australian Trade and Investment Commission)": {
+      "url": "https://www.austrade.gov.au/en/about-austrade",
+      "type": "about",
+      "evidenceUrl": "https://www.austrade.gov.au/en/about-austrade",
+      "checkMethod": "official_page"
+    },
+    "Tourism Australia": {
+      "url": "https://www.tourism.australia.com/en/about.html",
+      "type": "about",
+      "evidenceUrl": "https://www.tourism.australia.com/en/about.html",
+      "checkMethod": "official_page"
+    },
+    "Export Finance Australia": {
+      "url": "https://www.exportfinance.gov.au/our-organisation/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.exportfinance.gov.au/our-organisation/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Australian Office of Financial Management (AOFM)": {
+      "url": "https://www.aofm.gov.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.aofm.gov.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Future Fund Management Agency": {
+      "url": "https://www.futurefund.gov.au/en/About-us",
+      "type": "about",
+      "evidenceUrl": "https://www.futurefund.gov.au/en/About-us",
+      "checkMethod": "official_page"
+    },
+    "Parliamentary Budget Office (PBO)": {
+      "url": "https://www.pbo.gov.au/about-the-pbo",
+      "type": "about",
+      "evidenceUrl": "https://www.pbo.gov.au/about-the-pbo",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Bureau of Infrastructure and Transport Research Economics (BITRE)": {
+      "url": "https://www.bitre.gov.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.bitre.gov.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Commonwealth Grants Commission": {
+      "url": "https://www.cgc.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.cgc.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Inspector-General of Taxation": {
+      "url": "https://taxombudsman.gov.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://taxombudsman.gov.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Civil Aviation Safety Authority (CASA)": {
+      "url": "https://www.casa.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.casa.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Australian Energy Market Operator (AEMO)": {
+      "url": "https://www.aemo.com.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.aemo.com.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "NSW Treasury": {
+      "url": "https://www.nsw.gov.au/departments-and-agencies/nsw-treasury",
+      "type": "home",
+      "evidenceUrl": "https://www.nsw.gov.au/departments-and-agencies/nsw-treasury",
+      "checkMethod": "official_page"
+    },
+    "Victorian Department of Treasury and Finance (DTF)": {
+      "url": "https://www.dtf.vic.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.dtf.vic.gov.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Queensland Treasury": {
+      "url": "https://www.treasury.qld.gov.au/about-treasury/",
+      "type": "about",
+      "evidenceUrl": "https://www.treasury.qld.gov.au/about-treasury/",
+      "checkMethod": "official_page"
+    },
+    "WA Department of Treasury": {
+      "url": "https://www.wa.gov.au/organisation/department-of-treasury-and-finance",
+      "type": "home",
+      "evidenceUrl": "https://www.wa.gov.au/organisation/department-of-treasury-and-finance",
+      "checkMethod": "official_page"
+    },
+    "SA Department of Treasury and Finance": {
+      "url": "https://www.treasury.sa.gov.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.treasury.sa.gov.au/about",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Tasmanian Department of Treasury and Finance": {
+      "url": "https://www.treasury.tas.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.treasury.tas.gov.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "ACT Chief Minister, Treasury and Economic Development Directorate": {
+      "url": "https://www.cmtedd.act.gov.au/",
+      "type": "home",
+      "evidenceUrl": "https://www.cmtedd.act.gov.au/",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Northern Territory Department of Treasury and Finance": {
+      "url": "https://treasury.nt.gov.au/dtf",
+      "type": "about",
+      "evidenceUrl": "https://treasury.nt.gov.au/dtf",
+      "checkMethod": "official_indexed_page"
+    },
+    "Infrastructure Australia": {
+      "url": "https://www.infrastructureaustralia.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.infrastructureaustralia.gov.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Infrastructure NSW": {
+      "url": "https://www.infrastructure.nsw.gov.au/about-us/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.infrastructure.nsw.gov.au/about-us/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Infrastructure Victoria": {
+      "url": "https://www.infrastructurevictoria.com.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.infrastructurevictoria.com.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Building Queensland": {
+      "url": "https://www.statedevelopment.qld.gov.au/about-us",
+      "type": "about",
+      "label": "About State Development",
+      "evidenceUrl": "https://www.statedevelopment.qld.gov.au/about-us",
+      "checkMethod": "official_navigation_or_search",
+      "notes": "Original directory name retained; link label identifies the parent or successor organisation."
+    },
+    "Independent Pricing and Regulatory Tribunal (IPART, NSW)": {
+      "url": "https://www.ipart.nsw.gov.au/Home/About-IPART",
+      "type": "about",
+      "evidenceUrl": "https://www.ipart.nsw.gov.au/Home/About-IPART",
+      "checkMethod": "official_indexed_page"
+    },
+    "Essential Services Commission (Victoria)": {
+      "url": "https://www.esc.vic.gov.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.esc.vic.gov.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Study NSW": {
+      "url": "https://www.study.nsw.gov.au/",
+      "type": "home",
+      "evidenceUrl": "https://www.study.nsw.gov.au/",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Transgrid": {
+      "url": "https://www.transgrid.com.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.transgrid.com.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Commonwealth Bank of Australia (CBA)": {
+      "url": "https://www.commbank.com.au/about-us.html",
+      "type": "about",
+      "evidenceUrl": "https://www.commbank.com.au/about-us.html?ei=CB-footer_aboutus",
+      "checkMethod": "official_page"
+    },
+    "ANZ": {
+      "url": "https://www.anz.com.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.anz.com.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "National Australia Bank (NAB)": {
+      "url": "https://www.nab.com.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.nab.com.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Westpac": {
+      "url": "https://www.westpac.com.au/about-westpac/",
+      "type": "about",
+      "evidenceUrl": "https://www.westpac.com.au/about-westpac/",
+      "checkMethod": "official_page"
+    },
+    "Macquarie Group": {
+      "url": "https://www.macquarie.com/au/en/about.html",
+      "type": "about",
+      "evidenceUrl": "https://www.macquarie.com/au/en/about.html",
+      "checkMethod": "official_page"
+    },
+    "Goldman Sachs (Australia)": {
+      "url": "https://www.goldmansachs.com/our-firm/history/",
+      "type": "about",
+      "evidenceUrl": "https://www.goldmansachs.com/our-firm/history/",
+      "checkMethod": "official_page"
+    },
+    "JPMorgan Chase (Australia)": {
+      "url": "https://www.jpmorganchase.com/about",
+      "type": "about",
+      "evidenceUrl": "https://www.jpmorganchase.com/about",
+      "checkMethod": "official_page"
+    },
+    "Morgan Stanley (Australia)": {
+      "url": "https://www.morganstanley.com/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.morganstanley.com/about-us",
+      "checkMethod": "official_page"
+    },
+    "UBS Australia": {
+      "url": "https://www.ubs.com/au/en.html",
+      "type": "home",
+      "evidenceUrl": "https://www.ubs.com/au/en.html",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Citi (Citigroup Australia)": {
+      "url": "https://www.citigroup.com/global/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.citigroup.com/global/about-us",
+      "checkMethod": "official_page"
+    },
+    "Deutsche Bank Australia": {
+      "url": "https://www.db.com/who-we-are/",
+      "type": "about",
+      "evidenceUrl": "https://www.db.com/who-we-are/",
+      "checkMethod": "official_page"
+    },
+    "Bank of America (Australia)": {
+      "url": "https://about.bankofamerica.com/en",
+      "type": "about",
+      "evidenceUrl": "https://about.bankofamerica.com/en",
+      "checkMethod": "official_page"
+    },
+    "Citadel Securities": {
+      "url": "https://www.citadelsecurities.com/who-we-are/",
+      "type": "about",
+      "evidenceUrl": "https://www.citadelsecurities.com/who-we-are/",
+      "checkMethod": "official_indexed_page"
+    },
+    "Grant Samuel": {
+      "url": "https://www.grantsamuel.com.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.grantsamuel.com.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Greenhill & Co.": {
+      "url": "https://www.mizuhogroup.com/americas/banking",
+      "type": "home",
+      "label": "Mizuho banking homepage",
+      "evidenceUrl": "https://www.mizuhogroup.com/americas/banking",
+      "checkMethod": "official_page"
+    },
+    "Macquarie Bank (separate from Macquarie Group's investment bank)": {
+      "url": "https://www.macquarie.com.au/",
+      "type": "home",
+      "evidenceUrl": "https://www.macquarie.com.au/",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Bank of Queensland (BOQ)": {
+      "url": "https://www.boq.com.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.boq.com.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Suncorp Group": {
+      "url": "https://www.suncorpgroup.com.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.suncorpgroup.com.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "HSBC Australia": {
+      "url": "https://www.about.hsbc.com.au/",
+      "type": "about",
+      "evidenceUrl": "https://www.about.hsbc.com.au/",
+      "checkMethod": "official_page"
+    },
+    "ING Australia": {
+      "url": "https://www.ing.com.au/about-us.html",
+      "type": "about",
+      "evidenceUrl": "https://www.ing.com.au/about-us.html",
+      "checkMethod": "official_page"
+    },
+    "Bendigo and Adelaide Bank": {
+      "url": "https://www.bendigoadelaide.com.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.bendigoadelaide.com.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "AustralianSuper": {
+      "url": "https://www.australiansuper.com/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.australiansuper.com/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Aware Super": {
+      "url": "https://aware.com.au/member/about-us",
+      "type": "about",
+      "evidenceUrl": "https://aware.com.au/member/about-us",
+      "checkMethod": "official_page"
+    },
+    "UniSuper": {
+      "url": "https://www.unisuper.com.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.unisuper.com.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "HESTA": {
+      "url": "https://www.hesta.com.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.hesta.com.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Cbus": {
+      "url": "https://www.cbussuper.com.au/",
+      "type": "home",
+      "evidenceUrl": "https://www.cbussuper.com.au/",
+      "checkMethod": "official_page"
+    },
+    "BlackRock Australia": {
+      "url": "https://www.blackrock.com/au/about-us/about-blackrock-australia",
+      "type": "about",
+      "evidenceUrl": "https://www.blackrock.com/au/about-us/about-blackrock-australia",
+      "checkMethod": "official_page"
+    },
+    "PIMCO Australia": {
+      "url": "https://www.pimco.com/au/en/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.pimco.com/au/en/about-us",
+      "checkMethod": "official_page"
+    },
+    "Vanguard Australia": {
+      "url": "https://www.vanguard.com.au/personal/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.vanguard.com.au/personal/about-us",
+      "checkMethod": "official_page"
+    },
+    "State Street Australia": {
+      "url": "https://www.statestreet.com/au/en/about",
+      "type": "about",
+      "evidenceUrl": "https://www.statestreet.com/au/en/about",
+      "checkMethod": "official_page"
+    },
+    "Magellan Financial Group": {
+      "url": "https://magellanfinancialgroup.com/about/",
+      "type": "about",
+      "evidenceUrl": "https://magellanfinancialgroup.com/about/",
+      "checkMethod": "official_page"
+    },
+    "Platinum Asset Management": {
+      "url": "https://www.platinum.com.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.platinum.com.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Perpetual Limited": {
+      "url": "https://www.perpetual.com.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.perpetual.com.au/about/",
+      "checkMethod": "official_page"
+    },
+    "Pendal Group": {
+      "url": "https://pendalgroup.com/about",
+      "type": "about",
+      "evidenceUrl": "https://pendalgroup.com/about",
+      "checkMethod": "official_page"
+    },
+    "Wilson Asset Management": {
+      "url": "https://wilsonassetmanagement.com.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://wilsonassetmanagement.com.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Plato Investment Management": {
+      "url": "https://plato.com.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://plato.com.au/about/",
+      "checkMethod": "official_page"
+    },
+    "Pinnacle Investment Management": {
+      "url": "https://pinnacleinvestment.com/about/",
+      "type": "about",
+      "evidenceUrl": "https://pinnacleinvestment.com/about/",
+      "checkMethod": "official_page"
+    },
+    "Hostplus": {
+      "url": "https://hostplus.com.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://hostplus.com.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Pacific Equity Partners (PEP)": {
+      "url": "https://www.pep.com.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.pep.com.au/about/",
+      "checkMethod": "official_page"
+    },
+    "Frontier Economics": {
+      "url": "https://www.frontier-economics.com.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.frontier-economics.com.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Deloitte Access Economics": {
+      "url": "https://www.deloitte.com/au/en/services/economics.html",
+      "type": "home",
+      "evidenceUrl": "https://www.deloitte.com/au/en/services/economics.html",
+      "checkMethod": "official_page"
+    },
+    "NERA Economic Consulting": {
+      "url": "https://www.nera.com/about.html",
+      "type": "about",
+      "evidenceUrl": "https://www.nera.com/about.html",
+      "checkMethod": "official_page"
+    },
+    "RBB Economics": {
+      "url": "https://www.rbbecon.com/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.rbbecon.com/about/",
+      "checkMethod": "official_page"
+    },
+    "Compass Lexecon": {
+      "url": "https://www.compasslexecon.com/about",
+      "type": "about",
+      "evidenceUrl": "https://www.compasslexecon.com/about",
+      "checkMethod": "official_page"
+    },
+    "ACIL Allen": {
+      "url": "https://acilallen.com.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://acilallen.com.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "CIE (Centre for International Economics)": {
+      "url": "https://www.thecie.com.au/what-we-do",
+      "type": "about",
+      "evidenceUrl": "https://www.thecie.com.au/what-we-do",
+      "checkMethod": "official_page"
+    },
+    "Mandala Partners": {
+      "url": "https://mandalapartners.com/",
+      "type": "home",
+      "evidenceUrl": "https://mandalapartners.com/",
+      "checkMethod": "official_page"
+    },
+    "BIS Oxford Economics / Oxford Economics Australia": {
+      "url": "https://www.oxfordeconomics.com/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.oxfordeconomics.com/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Marsden Jacob Associates": {
+      "url": "https://www.marsdenjacob.com.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.marsdenjacob.com.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Synergies Economic Consulting": {
+      "url": "https://www.synergies.com.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.synergies.com.au/about/",
+      "checkMethod": "official_page"
+    },
+    "Castalia": {
+      "url": "https://castalia-advisors.com/about/",
+      "type": "about",
+      "evidenceUrl": "https://castalia-advisors.com/about/",
+      "checkMethod": "official_page"
+    },
+    "Insight Economics": {
+      "url": "https://www.insighteconomics.com.au/",
+      "type": "home",
+      "evidenceUrl": "https://www.insighteconomics.com.au/",
+      "checkMethod": "official_page"
+    },
+    "Cadence Economics": {
+      "url": "https://www.ey.com/en_au/about-us",
+      "type": "about",
+      "label": "About EY",
+      "evidenceUrl": "https://www.ey.com/en_au/about-us",
+      "checkMethod": "official_page",
+      "notes": "Original directory name retained; link label identifies the parent or successor organisation."
+    },
+    "HoustonKemp": {
+      "url": "https://houstonkemp.com/",
+      "type": "home",
+      "evidenceUrl": "https://houstonkemp.com/",
+      "checkMethod": "official_page"
+    },
+    "AlphaBeta (Accenture)": {
+      "url": "https://www.accenture.com/en/about/company-index",
+      "type": "about",
+      "evidenceUrl": "https://www.accenture.com/en/about/company-index",
+      "checkMethod": "official_page"
+    },
+    "Charles River Associates (CRA Australia)": {
+      "url": "https://www.crai.com/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.crai.com/about-us/",
+      "checkMethod": "official_page"
+    },
+    "FTI Consulting": {
+      "url": "https://www.fticonsulting.com/about",
+      "type": "about",
+      "evidenceUrl": "https://www.fticonsulting.com/about",
+      "checkMethod": "official_page"
+    },
+    "Urbis": {
+      "url": "https://urbis.com.au/about-urbis",
+      "type": "about",
+      "evidenceUrl": "https://urbis.com.au/about-urbis",
+      "checkMethod": "official_page"
+    },
+    "McKinsey & Company (Australia)": {
+      "url": "https://www.mckinsey.com/au/overview",
+      "type": "home",
+      "evidenceUrl": "https://www.mckinsey.com/au/overview",
+      "checkMethod": "official_indexed_page"
+    },
+    "Bain & Company (Australia)": {
+      "url": "https://www.bain.com/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.bain.com/about/",
+      "checkMethod": "official_page"
+    },
+    "Boston Consulting Group (BCG, Australia)": {
+      "url": "https://www.bcg.com/australia",
+      "type": "home",
+      "evidenceUrl": "https://www.bcg.com/australia",
+      "checkMethod": "official_indexed_page"
+    },
+    "Accenture Strategy (Australia)": {
+      "url": "https://www.accenture.com/en/about/company-index",
+      "type": "about",
+      "evidenceUrl": "https://www.accenture.com/en/about/company-index",
+      "checkMethod": "official_page"
+    },
+    "Strategy& (part of PwC)": {
+      "url": "https://www.strategyand.pwc.com/gx/en/about.html",
+      "type": "about",
+      "evidenceUrl": "https://www.strategyand.pwc.com/gx/en/about.html",
+      "checkMethod": "official_page"
+    },
+    "L.E.K. Consulting (Sydney, Melbourne)": {
+      "url": "https://www.lek.com/about-lek",
+      "type": "about",
+      "evidenceUrl": "https://www.lek.com/about-lek",
+      "checkMethod": "official_page"
+    },
+    "Kearney (Sydney)": {
+      "url": "https://www.kearney.com/about",
+      "type": "about",
+      "evidenceUrl": "https://www.kearney.com/about",
+      "checkMethod": "official_page"
+    },
+    "Port Jackson Partners": {
+      "url": "https://www.ey.com/en_au/about-us",
+      "type": "about",
+      "label": "About EY",
+      "evidenceUrl": "https://www.ey.com/en_au/about-us",
+      "checkMethod": "official_page",
+      "notes": "Original directory name retained; link label identifies the parent or successor organisation."
+    },
+    "Deloitte Australia": {
+      "url": "https://www.deloitte.com/au/en/about.html",
+      "type": "about",
+      "evidenceUrl": "https://www.deloitte.com/au/en/about.html",
+      "checkMethod": "official_page"
+    },
+    "PwC Australia": {
+      "url": "https://www.pwc.com.au/about-us.html",
+      "type": "about",
+      "evidenceUrl": "https://www.pwc.com.au/about-us.html",
+      "checkMethod": "official_indexed_page"
+    },
+    "EY Australia (Ernst & Young)": {
+      "url": "https://www.ey.com/en_au/about-us#our-purpose",
+      "type": "about",
+      "evidenceUrl": "https://www.ey.com/en_au/about-us#our-purpose",
+      "checkMethod": "official_page"
+    },
+    "KPMG Australia": {
+      "url": "https://kpmg.com/au/en/about.html",
+      "type": "about",
+      "evidenceUrl": "https://kpmg.com/au/en/about.html",
+      "checkMethod": "official_page"
+    },
+    "BDO Australia": {
+      "url": "https://www.bdo.com.au/en-au/about/about-bdo-in-australia",
+      "type": "about",
+      "evidenceUrl": "https://www.bdo.com.au/en-au/about/about-bdo-in-australia",
+      "checkMethod": "official_page"
+    },
+    "Grant Thornton Australia": {
+      "url": "https://www.grantthornton.com.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.grantthornton.com.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Capgemini Australia": {
+      "url": "https://www.capgemini.com/au-en/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.capgemini.com/au-en/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Nous Group": {
+      "url": "https://nousgroup.com/",
+      "type": "home",
+      "evidenceUrl": "https://nousgroup.com/",
+      "checkMethod": "official_page"
+    },
+    "Arup Australia": {
+      "url": "https://www.arup.com/en-us/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.arup.com/en-us/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Visagio": {
+      "url": "https://www.visagio.com/grupo-visagio",
+      "type": "about",
+      "evidenceUrl": "https://www.visagio.com/grupo-visagio",
+      "checkMethod": "official_page"
+    },
+    "Grattan Institute": {
+      "url": "https://grattan.edu.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://grattan.edu.au/about/",
+      "checkMethod": "official_page"
+    },
+    "Committee for Economic Development of Australia (CEDA)": {
+      "url": "https://www.ceda.com.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.ceda.com.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Lowy Institute": {
+      "url": "https://www.lowyinstitute.org/about",
+      "type": "about",
+      "evidenceUrl": "https://www.lowyinstitute.org/about",
+      "checkMethod": "official_page"
+    },
+    "Centre for Independent Studies (CIS)": {
+      "url": "https://www.cis.org.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.cis.org.au/about/",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Institute of Public Affairs (IPA)": {
+      "url": "https://ipa.org.au/home-page-boxes/about-us",
+      "type": "about",
+      "evidenceUrl": "https://ipa.org.au/home-page-boxes/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Mitchell Institute (Victoria University)": {
+      "url": "https://mitchell-institute.vu.edu.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://mitchell-institute.vu.edu.au/about/",
+      "checkMethod": "official_page"
+    },
+    "Per Capita": {
+      "url": "https://percapita.org.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://percapita.org.au/about/",
+      "checkMethod": "official_page"
+    },
+    "The Australia Institute": {
+      "url": "https://australiainstitute.org.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://australiainstitute.org.au/about/",
+      "checkMethod": "official_indexed_page"
+    },
+    "e61 Institute": {
+      "url": "https://e61.in/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://e61.in/about-us/",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Australian Institute of Family Studies": {
+      "url": "https://aifs.gov.au/about",
+      "type": "about",
+      "evidenceUrl": "https://aifs.gov.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Centre for Policy Development (CPD)": {
+      "url": "https://cpd.org.au/discover-cpd-centre-for-policy-development/",
+      "type": "about",
+      "evidenceUrl": "https://cpd.org.au/discover-cpd-centre-for-policy-development/",
+      "checkMethod": "official_page"
+    },
+    "Australian Strategic Policy Institute (ASPI)": {
+      "url": "https://www.aspi.org.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.aspi.org.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Australian Institute of International Affairs (AIIA)": {
+      "url": "https://www.internationalaffairs.org.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.internationalaffairs.org.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Australian National University (ANU)": {
+      "url": "https://www.anu.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.anu.edu.au/about",
+      "checkMethod": "official_page"
+    },
+    "ANU Crawford School of Public Policy": {
+      "url": "https://crawford.anu.edu.au/about-crawford",
+      "type": "about",
+      "evidenceUrl": "https://crawford.anu.edu.au/about-crawford",
+      "checkMethod": "official_page"
+    },
+    "University of Sydney": {
+      "url": "https://www.sydney.edu.au/about-us.html",
+      "type": "about",
+      "evidenceUrl": "https://www.sydney.edu.au/about-us.html",
+      "checkMethod": "official_page"
+    },
+    "University of Melbourne": {
+      "url": "https://about.unimelb.edu.au/",
+      "type": "about",
+      "evidenceUrl": "https://about.unimelb.edu.au/",
+      "checkMethod": "official_indexed_page"
+    },
+    "Melbourne Institute of Applied Economic and Social Research": {
+      "url": "https://melbourneinstitute.unimelb.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://melbourneinstitute.unimelb.edu.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Monash University": {
+      "url": "https://www.monash.edu/about",
+      "type": "about",
+      "evidenceUrl": "https://www.monash.edu/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "University of New South Wales (UNSW)": {
+      "url": "https://www.unsw.edu.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.unsw.edu.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "UNSW Social Policy Research Centre": {
+      "url": "https://www.unsw.edu.au/research/sprc",
+      "type": "home",
+      "evidenceUrl": "https://www.unsw.edu.au/research/sprc",
+      "checkMethod": "official_page"
+    },
+    "University of Queensland (UQ)": {
+      "url": "https://about.uq.edu.au/",
+      "type": "about",
+      "evidenceUrl": "https://about.uq.edu.au/",
+      "checkMethod": "official_page"
+    },
+    "Queensland University of Technology (QUT)": {
+      "url": "https://www.qut.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.qut.edu.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Griffith University": {
+      "url": "https://www.griffith.edu.au/about-griffith",
+      "type": "about",
+      "evidenceUrl": "https://www.griffith.edu.au/about-griffith",
+      "checkMethod": "official_indexed_page"
+    },
+    "University of Adelaide": {
+      "url": "https://adelaide.edu.au/about/",
+      "type": "about",
+      "label": "About Adelaide University",
+      "evidenceUrl": "https://adelaide.edu.au/about/",
+      "checkMethod": "official_page",
+      "notes": "Original directory name retained; link label identifies the parent or successor organisation."
+    },
+    "University of South Australia": {
+      "url": "https://adelaide.edu.au/about/",
+      "type": "about",
+      "label": "About Adelaide University",
+      "evidenceUrl": "https://adelaide.edu.au/about/",
+      "checkMethod": "official_page",
+      "notes": "Original directory name retained; link label identifies the parent or successor organisation."
+    },
+    "University of Western Australia (UWA)": {
+      "url": "https://www.uwa.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.uwa.edu.au/about",
+      "checkMethod": "official_page"
+    },
+    "Curtin University": {
+      "url": "https://www.curtin.edu.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.curtin.edu.au/about/",
+      "checkMethod": "official_page"
+    },
+    "University of Tasmania": {
+      "url": "https://www.utas.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.utas.edu.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "University of Canberra": {
+      "url": "https://www.canberra.edu.au/about-uc",
+      "type": "about",
+      "evidenceUrl": "https://www.canberra.edu.au/about-uc",
+      "checkMethod": "official_page"
+    },
+    "Charles Darwin University": {
+      "url": "https://www.cdu.edu.au/about-cdu",
+      "type": "about",
+      "evidenceUrl": "https://www.cdu.edu.au/about-cdu",
+      "checkMethod": "official_page"
+    },
+    "RMIT University": {
+      "url": "https://www.rmit.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.rmit.edu.au/about",
+      "checkMethod": "official_page"
+    },
+    "Deakin University": {
+      "url": "https://www.deakin.edu.au/about-deakin",
+      "type": "about",
+      "evidenceUrl": "https://www.deakin.edu.au/about-deakin",
+      "checkMethod": "official_indexed_page"
+    },
+    "La Trobe University": {
+      "url": "https://www.latrobe.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.latrobe.edu.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Swinburne University of Technology": {
+      "url": "https://www.swinburne.edu.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.swinburne.edu.au/about/",
+      "checkMethod": "official_page"
+    },
+    "Macquarie University": {
+      "url": "https://www.mq.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.mq.edu.au/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "University of Technology Sydney (UTS)": {
+      "url": "https://www.uts.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.uts.edu.au/about",
+      "checkMethod": "official_page"
+    },
+    "Western Sydney University": {
+      "url": "https://www.westernsydney.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.westernsydney.edu.au/about",
+      "checkMethod": "official_page"
+    },
+    "University of Wollongong": {
+      "url": "https://www.uow.edu.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.uow.edu.au/about/",
+      "checkMethod": "official_page"
+    },
+    "University of Newcastle": {
+      "url": "https://www.newcastle.edu.au/our-uni",
+      "type": "about",
+      "evidenceUrl": "https://www.newcastle.edu.au/our-uni",
+      "checkMethod": "official_indexed_page"
+    },
+    "Australian Catholic University (ACU)": {
+      "url": "https://www.acu.edu.au/about-acu",
+      "type": "about",
+      "evidenceUrl": "https://www.acu.edu.au/about-acu",
+      "checkMethod": "official_indexed_page"
+    },
+    "Bond University": {
+      "url": "https://bond.edu.au/study/why-study-at-bond",
+      "type": "about",
+      "evidenceUrl": "https://bond.edu.au/study/why-study-at-bond",
+      "checkMethod": "official_page"
+    },
+    "Flinders University": {
+      "url": "https://www.flinders.edu.au/about",
+      "type": "about",
+      "evidenceUrl": "https://www.flinders.edu.au/about",
+      "checkMethod": "official_page"
+    },
+    "Charles Sturt University": {
+      "url": "https://about.csu.edu.au/our-university",
+      "type": "about",
+      "evidenceUrl": "https://about.csu.edu.au/our-university",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Southern Cross University": {
+      "url": "https://www.scu.edu.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.scu.edu.au/about/",
+      "checkMethod": "official_page"
+    },
+    "James Cook University": {
+      "url": "https://www.jcu.edu.au/about-jcu",
+      "type": "about",
+      "evidenceUrl": "https://www.jcu.edu.au/about-jcu",
+      "checkMethod": "official_indexed_page"
+    },
+    "University of New England (UNE)": {
+      "url": "https://www.une.edu.au/about-une",
+      "type": "about",
+      "evidenceUrl": "https://www.une.edu.au/about-une",
+      "checkMethod": "official_indexed_page"
+    },
+    "Federation University Australia": {
+      "url": "https://www.federation.edu.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.federation.edu.au/about/",
+      "checkMethod": "official_page"
+    },
+    "Victoria University": {
+      "url": "https://www.vu.edu.au/about-vu",
+      "type": "about",
+      "evidenceUrl": "https://www.vu.edu.au/about-vu",
+      "checkMethod": "official_page"
+    },
+    "Tax and Transfer Policy Institute (ANU)": {
+      "url": "https://crawford.anu.edu.au/ttpi",
+      "type": "home",
+      "evidenceUrl": "https://crawford.anu.edu.au/ttpi",
+      "checkMethod": "official_page"
+    },
+    "Centre for Applied Macroeconomic Analysis (ANU)": {
+      "url": "https://crawford.anu.edu.au/cama",
+      "type": "home",
+      "evidenceUrl": "https://crawford.anu.edu.au/cama",
+      "checkMethod": "official_page"
+    },
+    "Institute for Social Science Research (UQ)": {
+      "url": "https://issr.uq.edu.au/about_ISSR",
+      "type": "about",
+      "evidenceUrl": "https://issr.uq.edu.au/about_ISSR",
+      "checkMethod": "official_page"
+    },
+    "Centre for Social Research and Methods (ANU)": {
+      "url": "https://polis.cass.anu.edu.au/",
+      "type": "home",
+      "evidenceUrl": "https://polis.cass.anu.edu.au/",
+      "checkMethod": "official_page"
+    },
+    "Centre for Health Economics (Monash)": {
+      "url": "https://www.monash.edu/business/che/who-we-are",
+      "type": "about",
+      "evidenceUrl": "https://www.monash.edu/business/che/who-we-are",
+      "checkMethod": "official_navigation_or_search"
+    },
+    "Centre for Social Impact": {
+      "url": "https://www.csi.edu.au/about/",
+      "type": "about",
+      "evidenceUrl": "https://www.csi.edu.au/about/",
+      "checkMethod": "official_page"
+    },
+    "BehaviourWorks Australia (Monash)": {
+      "url": "https://www.behaviourworksaustralia.org/about",
+      "type": "about",
+      "evidenceUrl": "https://www.behaviourworksaustralia.org/about",
+      "checkMethod": "official_page"
+    },
+    "World Vision Australia": {
+      "url": "https://www.worldvision.com.au/our-work/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.worldvision.com.au/our-work/about-us",
+      "checkMethod": "official_page"
+    },
+    "Oxfam Australia": {
+      "url": "https://www.oxfam.org.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.oxfam.org.au/about-us/",
+      "checkMethod": "official_indexed_page"
+    },
+    "CARE Australia": {
+      "url": "https://www.care.org.au/who-we-are/",
+      "type": "about",
+      "evidenceUrl": "https://www.care.org.au/who-we-are/",
+      "checkMethod": "official_page"
+    },
+    "Save the Children Australia": {
+      "url": "https://www.savethechildren.org.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.savethechildren.org.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "ChildFund Australia": {
+      "url": "https://www.childfund.org.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.childfund.org.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "Australian Council of Social Service (ACOSS)": {
+      "url": "https://www.acoss.org.au/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.acoss.org.au/about-us/",
+      "checkMethod": "official_page"
+    },
+    "The Smith Family": {
+      "url": "https://www.thesmithfamily.com.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.thesmithfamily.com.au/about-us",
+      "checkMethod": "official_page"
+    },
+    "Mission Australia": {
+      "url": "https://www.missionaustralia.com.au/who-we-are",
+      "type": "about",
+      "evidenceUrl": "https://www.missionaustralia.com.au/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "OECD Sydney Office": {
+      "url": "https://www.oecd.org/en/about.html",
+      "type": "about",
+      "evidenceUrl": "https://www.oecd.org/en/about.html",
+      "checkMethod": "official_indexed_page"
+    },
+    "World Bank Sydney Hub": {
+      "url": "https://www.worldbank.org/ext/en/who-we-are",
+      "type": "about",
+      "evidenceUrl": "https://www.worldbank.org/ext/en/who-we-are",
+      "checkMethod": "official_page"
+    },
+    "International Monetary Fund (IMF)": {
+      "url": "https://www.imf.org/en/About",
+      "type": "about",
+      "evidenceUrl": "https://www.imf.org/en/About",
+      "checkMethod": "official_indexed_page"
+    },
+    "Asian Development Bank (ADB)": {
+      "url": "https://www.adb.org/who-we-are/about",
+      "type": "about",
+      "evidenceUrl": "https://www.adb.org/who-we-are/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Asian Infrastructure Investment Bank (AIIB)": {
+      "url": "https://www.aiib.org/en/who-we-are/about-aiib/index-m.html",
+      "type": "about",
+      "evidenceUrl": "https://www.aiib.org/en/who-we-are/about-aiib/index-m.html",
+      "checkMethod": "official_page"
+    },
+    "United Nations Development Programme (UNDP) — Pacific Office": {
+      "url": "https://www.undp.org/pacific/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.undp.org/pacific/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "Pacific Islands Forum Secretariat": {
+      "url": "https://forumsec.org/pacific-islands-forum",
+      "type": "about",
+      "evidenceUrl": "https://forumsec.org/pacific-islands-forum",
+      "checkMethod": "official_page"
+    },
+    "World Trade Organization (WTO)": {
+      "url": "https://www.wto.org/english/thewto_e/whatis_e/whatis_e.htm",
+      "type": "about",
+      "evidenceUrl": "https://www.wto.org/english/thewto_e/whatis_e/whatis_e.htm",
+      "checkMethod": "official_page"
+    },
+    "Bruegel": {
+      "url": "https://www.bruegel.org/bruegel-european-think-tank-specialises-economics",
+      "type": "about",
+      "evidenceUrl": "https://www.bruegel.org/",
+      "checkMethod": "official_page"
+    },
+    "Peterson Institute for International Economics": {
+      "url": "https://www.piie.com/about-piie",
+      "type": "about",
+      "evidenceUrl": "https://www.piie.com/",
+      "checkMethod": "official_page"
+    },
+    "Brookings Institution": {
+      "url": "https://www.brookings.edu/about-us/",
+      "type": "about",
+      "evidenceUrl": "https://www.brookings.edu/",
+      "checkMethod": "official_page"
+    },
+    "Centre for Economic Policy Research": {
+      "url": "https://cepr.org/about",
+      "type": "about",
+      "evidenceUrl": "https://cepr.org/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "National Institute of Economic and Social Research": {
+      "url": "https://niesr.ac.uk/about-us",
+      "type": "about",
+      "evidenceUrl": "https://niesr.ac.uk/",
+      "checkMethod": "official_page"
+    },
+    "ODI Global": {
+      "url": "https://odi.org/en/about/",
+      "type": "about",
+      "evidenceUrl": "https://odi.org/en/",
+      "checkMethod": "official_page"
+    },
+    "Kiel Institute for the World Economy": {
+      "url": "https://www.kielinstitut.de/institute/about-the-kiel-institute/",
+      "type": "about",
+      "evidenceUrl": "https://www.kielinstitut.de/",
+      "checkMethod": "official_page"
+    },
+    "ifo Institute": {
+      "url": "https://www.ifo.de/en/about-ifo",
+      "type": "about",
+      "evidenceUrl": "https://www.ifo.de/en/ifo-homepage",
+      "checkMethod": "official_page"
+    },
+    "RWI – Leibniz Institute for Economic Research": {
+      "url": "https://www.rwi-essen.de/rwi/das-institut/ueber-uns",
+      "type": "about",
+      "evidenceUrl": "https://www.rwi-essen.de/",
+      "checkMethod": "official_page"
+    },
+    "ZEW – Leibniz Centre for European Economic Research": {
+      "url": "https://www.zew.de/en/zew/about-zew",
+      "type": "about",
+      "evidenceUrl": "https://www.zew.de/en/zew/about-zew",
+      "checkMethod": "official_indexed_page"
+    },
+    "Global Voices": {
+      "url": "https://www.globalvoices.org.au/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.globalvoices.org.au/",
+      "checkMethod": "official_page"
+    },
+    "World Bank Group (global expansion)": {
+      "url": "https://www.worldbank.org/ext/en/who-we-are",
+      "type": "about",
+      "evidenceUrl": "https://www.worldbank.org/ext/en/who-we-are",
+      "checkMethod": "official_indexed_page"
+    },
+    "IFC": {
+      "url": "https://www.ifc.org/en/about",
+      "type": "about",
+      "evidenceUrl": "https://www.ifc.org/en/home",
+      "checkMethod": "official_page"
+    },
+    "MIGA": {
+      "url": "https://www.miga.org/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.miga.org/",
+      "checkMethod": "official_page"
+    },
+    "BIS": {
+      "url": "https://www.bis.org/about",
+      "type": "about",
+      "evidenceUrl": "https://www.bis.org/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "UN economics / ESCAP / DESA": {
+      "url": "https://www.un.org/",
+      "type": "home",
+      "evidenceUrl": "https://www.un.org/",
+      "checkMethod": "official_page"
+    },
+    "EBRD": {
+      "url": "https://www.ebrd.com/home/who-we-are/ebrd-history.html",
+      "type": "about",
+      "evidenceUrl": "https://www.ebrd.com/",
+      "checkMethod": "official_page"
+    },
+    "AfDB": {
+      "url": "https://www.afdb.org/en/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.afdb.org/en",
+      "checkMethod": "official_page"
+    },
+    "Institute for Fiscal Studies": {
+      "url": "https://ifs.org.uk/about",
+      "type": "about",
+      "evidenceUrl": "https://ifs.org.uk/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "Center for Global Development": {
+      "url": "https://www.cgdev.org/about-cgd",
+      "type": "about",
+      "evidenceUrl": "https://www.cgdev.org/about-cgd",
+      "checkMethod": "official_indexed_page"
+    },
+    "DIW Berlin": {
+      "url": "https://www.diw.de/en/diw_01.c.678791.en/about_us.html",
+      "type": "about",
+      "evidenceUrl": "https://www.diw.de/en/diw_01.c.678791.en/about_us.html",
+      "checkMethod": "official_indexed_page"
+    },
+    "UNCTAD": {
+      "url": "https://unctad.org/about",
+      "type": "about",
+      "evidenceUrl": "https://unctad.org/about",
+      "checkMethod": "official_indexed_page"
+    },
+    "UNDP global": {
+      "url": "https://www.undp.org/about-us-1",
+      "type": "about",
+      "evidenceUrl": "https://www.undp.org/about-us-1",
+      "checkMethod": "official_indexed_page"
+    },
+    "IDB": {
+      "url": "https://www.iadb.org/en/who-we-are/about-us",
+      "type": "about",
+      "evidenceUrl": "https://www.iadb.org/en/who-we-are/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "IDB Invest": {
+      "url": "https://idbinvest.org/en/about-us",
+      "type": "about",
+      "evidenceUrl": "https://idbinvest.org/en/about-us",
+      "checkMethod": "official_indexed_page"
+    },
+    "IDB Lab": {
+      "url": "https://bidlab.org/en/about/about-us",
+      "type": "about",
+      "evidenceUrl": "https://bidlab.org/en/about/about-us",
+      "checkMethod": "official_indexed_page"
+    }
+  },
+  "unavailable": []
+}

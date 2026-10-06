@@ -32,12 +32,16 @@ function renderDirectory() {
         const count = opportunities.filter(item => item.organisationId === org.id).length;
         const futureCount = confirmedFuture.filter(item => item.organisationId === org.id).length;
         const unconfirmedCount = futureCompilation.filter(item => item.organisationId === org.id && item.publicationState !== 'confirmed-future').length;
-        const url = org.careersUrl && org.careersUrl.startsWith('https://') ? org.careersUrl : (org.researchCoverage?.evidenceUrls || [])[0] || '';
+        let url = '';
+        try {
+          const parsed = new URL(org.website?.url);
+          if (parsed.protocol === 'https:' && !parsed.username && !parsed.password) url = parsed.href;
+        } catch {}
+        const label = org.website?.type === 'about' ? 'About us' : 'Homepage';
         return `<article class="organisation-card"><h4>${escapeHtml(org.name)}</h4>
           <p>${count} ${demoMode ? 'simulated' : 'verified open'} ${count === 1 ? 'opportunity' : 'opportunities'}</p>
           ${futureCount || unconfirmedCount ? `<p>${futureCount} confirmed future; ${unconfirmedCount} unconfirmed planning records</p>` : ''}
-          ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${org.careersUrl ? 'Reference careers page' : 'Official research reference'}</a>` : '<span class="missing-source">Careers URL not supplied</span>'}
-          <small>${org.researchCoverage ? `Programme/careers research reviewed ${escapeHtml(org.researchCoverage.checkedOn)}. Coverage does not establish vacancy availability. ` : ''}${org.referenceVerification?.checkedAt ? `Reference URL checked ${escapeHtml(org.referenceVerification.checkedAt)}. Programme availability is recorded separately.` : 'Organisation from the source list - reference URL not checked. Programme availability is recorded separately.'}</small></article>`;
+          ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(org.website.label || label)} ↗</a>` : '<span class="missing-source">Official website unavailable</span>'}</article>`;
       }).join('')}</div></details>`;
   }).join('');
   document.getElementById('directory-count').textContent = `${shown} of ${radarRegistry.organisations.length} organisations`;
