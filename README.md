@@ -1,22 +1,24 @@
 # Economic Opportunity Radar
 
-An economics careers website for Australian students and early-career applicants,
-based on the Young Economist Network
-Opportunity Roundup. Covers internships, graduate jobs, cadetships, vacation
-programs, industry placements, scholarships and research assistantships across
-the newsletter's ten sectors.
+An economics careers website for Australian economists and economics-related
+professionals under 30, including students, graduates and people with several
+years of experience, based on the Young Economist Network Opportunity Roundup.
+Covers economics-relevant professional jobs, suitable management and specialist
+roles, student pathways, research and scholarships across ten sectors. Audience
+age is not an employer age restriction; each listing retains actual requirements.
 
 **Current mode: live.** Simulated cards and watchlist examples have been removed
 from the public catalogue. The 196 real organisations from the supplied reference
-remain as research coverage. No live opportunities have been verified yet; the
-site displays an empty catalogue while research proceeds. Synthetic fixtures are
+remain as research coverage alongside 26 international and think-tank additions.
+Reviewed current and future opportunities are held in the live data source;
+availability is rechecked by the shared publication policy. Synthetic fixtures are
 kept privately in `data/demo-opportunities.json` for behavior checks.
 
 ## What works
 
 - Australian map with clustered locations and links to program cards.
 - Search and filters for sector, placement location, type, funding, citizenship,
-  international eligibility and study year.
+  international eligibility and qualifications / study.
 - Expandable cards with dates, pay and eligibility, plus optional profile matching.
 - Searchable directory covering the 196 original organisations and 26 additions,
   grouped in newsletter sector order, with official About pages or homepages.
@@ -24,6 +26,10 @@ kept privately in `data/demo-opportunities.json` for behavior checks.
   are retained, including records held for recheck; open and future CSV downloads
   remain separate.
 - Structured JSON inputs and shared publication rules for verified research updates.
+- Optional professional experience requirements in cards, search, application
+  prompts and exports, using source wording without inferred age limits.
+- Local application prompts and stable opportunity share links, plus YEN enquiry
+  links and the existing monthly newsletter signup form.
 - GitHub Actions tests and Pages deployment, with daily expiry-only rebuilds.
 
 ## Run and check
@@ -44,11 +50,16 @@ Authored assets live in `dist/`; only that folder is published. Generated
 
 Edit `data/organisations.json`, `data/demo-opportunities.json` or
 `data/live-opportunities.json`, then rebuild. `data/settings.json` explicitly
-selects demo/live mode. Live input starts empty, and live mode rejects simulated
+selects demo/live mode. Empty live input stays empty; live mode rejects simulated
 data. Unverified, closed, expired and stale live listings are held back. Exact
 opening dates require a recheck before promotion; expected windows stay labelled.
 Future candidates remain in the compilation across all dates and review states.
 Use `node scripts/export-compilation.cjs <output-directory>` for review CSV/JSON.
+The professional expansion preserves the 130 original records and adds 160
+reviewed candidates: 58 approved for publication and 102 held. Coverage and
+source identities are recorded in `data/research-coverage.json` and
+`data/research-provenance.json`. Finite searches across all 222 organisations do
+not establish that inaccessible or unindexed portals contain no further roles.
 
 Edit `data/organisation-websites.json` to maintain organisation About/homepage
 links, then rebuild. This separate overlay records link evidence and labels
@@ -60,10 +71,19 @@ Read [the agent update contract](docs/agent-updates.md), [known traps](docs/know
 and [AGENTS.md](AGENTS.md) before adding live data. Those checks enforce the input
 contract; they do not replace source verification or independent review.
 
-Newsletter signup is disabled until separately configured in `dist/config.js`.
-No Gmail drafts, subscriber integrations or research agents have been activated.
+The existing public YEN ACT newsletter form is configured in `dist/config.js`.
+This website does not collect CVs or operate a subscriber backend. No Gmail drafts
+or research agents are activated by a site update.
 
 ## Publish
+
+The broadened professional-audience pass starts as a **draft PR**, with
+added/updated/withheld counts, coverage across all registry organisations and
+sectors, access blockers and independent review. Sam authorised publication at
+21:52 UTC on 6 October 2026 once the completed independently reviewed data and
+coverage bundle pass final tests. The foundation checkpoint alone must not be
+published as completed catalogue research. Verify current main and the exact
+CI/Pages/live result after the authorised merge.
 
 In repository **Settings → Pages**, select **GitHub Actions**. After the PR is
 merged, main updates or a manual **Test and deploy website** run publish the site.

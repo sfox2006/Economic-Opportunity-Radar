@@ -6,6 +6,35 @@ assets. Sam authorised real opportunity research and international expansion on
 data and associated status/retention changes. Later updates follow their own
 requested scope; this authorisation does not send emails or update other sites.
 
+## Audience and professional vacancies
+
+The guide serves Australian economists and economics-related professionals under
+30: students, graduates and people with several years of experience. Under 30
+describes the guide's audience; do not turn it into an employer eligibility
+restriction without explicit official evidence. Search general vacancies and
+experienced-hire pages as well as student and graduate pathways for every
+registry organisation in all ten sectors.
+
+Consider economist, analyst, research, policy, consulting, evaluation, regulatory
+and financial work, plus suitable management, specialist and leadership roles.
+An EL1, assistant director, senior or manager title is not an exclusion by itself.
+Assess the actual qualification and experience requirements, economics relevance
+and reasonable audience fit against official evidence. Preserve work rights,
+citizenship, clearance, Indigenous-specific and internal-employee restrictions.
+Overseas opportunities still need specific Australian audience eligibility
+evidence. Keep descriptions politically neutral.
+
+Sam requested a draft PR for this broadened pass, with added/updated/withheld
+counts, all-organisation coverage, unresolved access and separate independent
+verification before publication. At 21:52 UTC Sam authorised publication once
+tests pass, superseding the draft-only hold for this pass. Complete the reviewed
+records and all-organisation coverage import, preserve held records outside
+public assets and verify the final data before merge/deployment. Do not publish
+the foundation alone as completed research. Check current main and verify the
+exact CI/Pages deployment and live site. APS shortlists
+are leads, not verification. Preserve APS-only restrictions and report blocked
+human-verification pages without bypassing them.
+
 ## Public data and organisation coverage
 
 `data/settings.json` selects `mode: "live"`. `data/live-opportunities.json` is the
@@ -37,6 +66,27 @@ Use null when no route has been established; a current record without a verified
 application URL is held. Closed and unknown audit records need no invented URL. Use `mapped: false` when coordinates are not
 verified or the placement location is variable; otherwise supply actual lat/lon.
 Use honest `Not stated` values for unknown pay, citizenship and eligibility.
+
+General professional vacancies use `type: "professional_job"` and display
+**Professional Job**; optional
+`typeDetails` describes the role category without changing that filter key.
+Keep the exact employer role title and level in `program`. The stable legacy
+`studyYear` field now supplies the **Qualifications / study** column and filter:
+record actual degree, registration or study requirements, including `Not stated`
+when unpublished; do not invent a student-year requirement for a professional
+role. Optional `experienceDetails` is a nonempty string containing the source's
+experience requirements or `Not stated`, with mandatory/preferred distinctions
+preserved. It appears in cards, search, prompts and both CSVs. Put all other
+restrictions in `eligibilityDetails`, with official evidence in `verification`.
+Publication approval remains an explicit review disposition. Record the basis
+for economics relevance and audience fit in verification notes, rather than
+guessing suitability from title, employer name or a years-of-experience ceiling.
+
+Research handoff must include stable-ID records and a separate coverage outcome
+for each registry organisation: official careers/general-vacancy pages checked,
+check time, findings, source URLs, independent review and unresolved access or
+eligibility questions. A blocked page is not a finding of no vacancies. Keep
+private uncertainty drafts and recipients outside public repository assets.
 
 All displayed live records require a `verification` object with:
 
@@ -155,9 +205,28 @@ mailbox review or create clarification drafts by itself.
 
 `data/research-provenance.json` records final Library audit and evidence identities,
 both version 1. The full 242-record original/reviewed-source/independent-review
-audit remains in Library. The repository contains 130 derived current/future/
+audit remains in Library. The original cohort contains 130 derived current/future/
 recurring candidates, preserving all original 196 organisation IDs and adding 26.
 At review time, 48 vacancies and 8 registers were accepting, 28 future records
 were approved, and 46 future/recurring candidates were held. All 74 future records
 remain in the offline compilation, including 22 openings after 6 January 2027
 (three nationality-restricted scholarship windows stay outside the public site).
+
+The separate professional-audience review is Library file
+`libfile_30366364b1048191a8c942825f9c4460`, version 0. Its 160 additions retain
+source requirements and independent decisions; all original 130 records and
+their check timestamps are unchanged. The original source bundle approves 57;
+a bounded browser check of NAB 809289's matching first application step resolves
+its sole route hold, giving 58 approved additions and 102 held additions. The
+original hold remains in `independentReview.previousDecision`.
+
+At the final import check there are 84 current vacancies, 21 interest registers,
+34 confirmed future programmes and 3 recurring programmes with unconfirmed next
+intakes. All 86 future candidates remain offline, including 49 held candidates.
+`data/research-provenance.json` separates the historic audit summary from this
+review and aggregate counts. `data/research-coverage.json` records finite general
+vacancy and student/graduate searches for all 222 organisations in ten sectors,
+with access limitations. Its search outcomes do not prove absence of vacancies.
+The additional incomplete AustralianSuper lead and nine clarification drafts
+are retained privately in the source review; neither is a public listing.
+Correspondence is handled separately from this website update.

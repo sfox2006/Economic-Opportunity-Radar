@@ -9,6 +9,10 @@ Employer-specific gotchas. **Read this file before finalising any draft.**
 - **The trap**: Employers use inconsistent labels. "Vacationer", "Vacation Program", "Summer Internship", and "Internship" can refer to the same broad penultimate-year pathway.
 - **Verification rule**: Use the employer's exact program title in `Program name`, then choose the closest spreadsheet `Type`.
 - **Do not miss these keywords**: internship, intern, graduate program, graduate job, graduate economist, cadetship, cadet, vacation program, vacationer, summer vacation, industry placement, scholarship.
+- **Professional vacancies**: Also review economist, analyst, research, policy,
+  consulting, evaluation, regulatory, financial, specialist, manager, leadership,
+  assistant director and EL1 roles. Assess actual requirements; no title alone
+  establishes or rules out suitability for an Australian professional under 30.
 
 ---
 
@@ -55,7 +59,9 @@ Employer-specific gotchas. **Read this file before finalising any draft.**
 ## McKinsey / Bain / BCG
 
 - **The trap**: Application windows are very strict, with multiple staged programs (Bridge programs, Insight days, Summer Internships, Full-time). Easy to list one program when the actual currently-open one is different.
-- **Verification rule**: Check the firm's "students" or "campus" page directly. Don't trust LinkedIn job snippets — these firms rotate roles quickly.
+- **Verification rule**: Check the firm's "students" or "campus" page directly. Don't trust LinkedIn job snippets - these firms rotate roles quickly.
+- **Experienced-hire rule**: Also check official general vacancies and experienced
+  professional roles; campus pages do not cover the broadened audience alone.
 
 ## Big 4 (Deloitte, PwC, EY, KPMG) graduate intakes
 
@@ -94,8 +100,13 @@ Employer-specific gotchas. **Read this file before finalising any draft.**
 
 1. **Direct fetch** the specific program page or careers portal listing.
 2. Confirm any listed deadline is after today.
-3. Confirm the program is open to the typical audience (penultimate-year for vacation, final-year for grad). If it's only open to e.g. final-year MBA students, flag in Notes.
-4. When uncertain, **omit the program** rather than risk listing a closed one.
+3. Record the actual qualification, experience and eligibility requirements for
+   each opportunity. Study-year conditions apply to particular student pathways;
+   they are not a default requirement for professional vacancies. Preserve
+   citizenship, work-rights, clearance, Indigenous-specific and internal-only
+   restrictions. The guide's under-30 audience does not imply an employer age cap.
+4. When uncertain, keep the opportunity out of the open list and record the
+   uncertainty or access blocker; do not describe a blocked page as no vacancies.
 5. The spreadsheet attachment follows the same rule — closed programs are excluded.
 
 ## Website retention rule (6 October 2026)
@@ -105,3 +116,10 @@ newsletter watchlist limit. Keep closed and uncertain programmes out of the open
 list; retain explicit future and recurring candidates separately with sources and
 clear unconfirmed or needs-recheck labels. Official overseas programmes can be
 relevant when Australian audience eligibility is specifically evidenced.
+
+The broadened professional-audience review is a draft-PR pass requiring separate
+independent verification before publication. Sam later authorised publication
+once the completed reviewed data and coverage bundle pass final tests; this does
+not relax verification or permit publication of the foundation alone. An APS shortlist, generic careers
+page or role-title snippet is a lead; preserve APS-only eligibility and do not
+bypass a human-verification challenge (including Finance vacancies).

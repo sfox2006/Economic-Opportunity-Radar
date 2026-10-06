@@ -4,7 +4,7 @@
   if (typeof module === 'object' && module.exports) module.exports = model;
   else root.RadarModel = model;
 })(typeof globalThis === 'object' ? globalThis : this, function () {
-  const types = ['Cadetship', 'Internship', 'Vacationer Program', 'Summer Vacation', 'Industry Placement', 'Scholarship', 'Research assistantship', 'Fellowship', 'Training', 'Tutoring / Casual Academic', 'Other', 'Graduate Program', 'Graduate Job'];
+  const types = ['Cadetship', 'Internship', 'Vacationer Program', 'Summer Vacation', 'Industry Placement', 'Scholarship', 'Research assistantship', 'Fellowship', 'Training', 'Tutoring / Casual Academic', 'Other', 'Graduate Program', 'Graduate Job', 'professional_job'];
   const currentStatuses = ['open', 'rolling', 'on-demand', 'interest-register'];
   const futureStatuses = ['upcoming', 'confirmed-future', 'recurring-unconfirmed'];
   function dateKey(now = new Date(), timeZone = 'Australia/Sydney') {
@@ -47,6 +47,7 @@
       for (const field of ['program', 'description', 'location', 'duration', 'paid', 'deadline', 'eligibilityDetails', 'application', 'country', 'region', 'studyYear']) {
         if (typeof item[field] !== 'string' || !item[field].trim()) throw new Error(`${item.id}: missing ${field}`);
       }
+      if (item.experienceDetails !== undefined && (typeof item.experienceDetails !== 'string' || !item.experienceDetails.trim())) throw new Error(`${item.id}: experienceDetails must be a nonempty string`);
       if (!['Required', 'Not required', 'Restrictions', 'Not stated'].includes(item.citizenship)) throw new Error(`${item.id}: invalid citizenship requirement`);
       if (!['Yes', 'No', 'Some restrictions', 'Not stated'].includes(item.eligibility)) throw new Error(`${item.id}: invalid international eligibility`);
       if (item.region !== 'Online' && item.mapped !== false) {

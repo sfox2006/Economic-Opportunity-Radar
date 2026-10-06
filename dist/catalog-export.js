@@ -15,27 +15,31 @@
   function sectorLabel(item, registry) {
     return registry.sectors.find(sector => sector.id === item.sector)?.label || item.sector;
   }
+  function typeLabel(item) {
+    const acronyms={phd:'PhD',mphil:'MPhil',hdr:'HDR',eoi:'EOI',ai:'AI'};
+    return String(item.typeDetails || item.type || 'Other').replace(/_/g,' ').replace(/\b[a-z][a-z]*\b/gi,word=>acronyms[word.toLowerCase()]||word[0].toUpperCase()+word.slice(1).toLowerCase());
+  }
   function currentCsv(items, registry) {
-    const header = ['Data status', 'Sector', 'Organisation', 'Program name', 'Type', 'Deadline', 'Location', 'Duration', 'Paid?', 'Australian citizenship required?', 'Year of study eligibility', 'Notes', 'Apply URL', 'Last checked', 'Official evidence URL', 'Verification notes'];
+    const header = ['Data status', 'Sector', 'Organisation', 'Program name', 'Type', 'Deadline', 'Location', 'Duration', 'Paid?', 'Australian citizenship required?', 'Qualifications / study', 'Notes', 'Apply URL', 'Last checked', 'Official evidence URL', 'Verification notes', 'Experience requirements'];
     const rows = items.filter(item => ['open', 'rolling', 'on-demand', 'interest-register'].includes(item.status) && (item.publicationState === 'open' || item.simulated === true)).map(item => [
       item.simulated ? 'SIMULATED - NOT A REAL VACANCY' : item.status === 'interest-register' ? 'Accepting interest register / enquiry - no placement or admission guarantee' : 'Verified open', sectorLabel(item, registry),
-      item.displayOrganisation || item.organisation, item.program, item.typeDetails || item.type, item.deadline, item.location, item.duration,
+      item.displayOrganisation || item.organisation, item.program, typeLabel(item), item.deadline, item.location, item.duration,
       item.paid, item.citizenshipDetails || item.citizenship, item.studyYear, item.eligibilityDetails, item.simulated ? '' : item.url,
       item.simulated ? 'Not verified' : item.verification?.checkedAt || item.reviewedAt,
-      item.simulated ? '' : item.verification?.sourceUrl, item.simulated ? '' : item.verification?.notes
+      item.simulated ? '' : item.verification?.sourceUrl, item.simulated ? '' : item.verification?.notes, item.experienceDetails || ''
     ]);
     return csv(header, rows);
   }
   function futureCsv(items, registry) {
-    const header = ['Availability status', 'Held reason', 'Sector', 'Organisation', 'Program name', 'Type', 'Country', 'Location', 'Reported opens on - check availability status', 'Reported opens from - check availability status', 'Reported opens by - check availability status', 'Official opening window - exact dates may be unpublished', 'Indicative window only', 'Expected from - unconfirmed', 'Expected by - unconfirmed', 'Deadline / status', 'Citizenship / work rights', 'Paid?', 'Year of study', 'Eligibility', 'Official programme URL', 'Last checked', 'Official evidence URL', 'Verification notes', 'Australian audience evidence', 'Other evidence sources'];
+    const header = ['Availability status', 'Held reason', 'Sector', 'Organisation', 'Program name', 'Type', 'Country', 'Location', 'Reported opens on - check availability status', 'Reported opens from - check availability status', 'Reported opens by - check availability status', 'Official opening window - exact dates may be unpublished', 'Indicative window only', 'Expected from - unconfirmed', 'Expected by - unconfirmed', 'Deadline / status', 'Citizenship / work rights', 'Paid?', 'Qualifications / study', 'Eligibility', 'Official programme URL', 'Last checked', 'Official evidence URL', 'Verification notes', 'Australian audience evidence', 'Other evidence sources', 'Experience requirements'];
     const rows = items.filter(item => ['upcoming', 'confirmed-future', 'recurring-unconfirmed'].includes(item.status)).map(item => [
       item.simulated ? 'SIMULATED - NOT A REAL VACANCY' : item.publicationState === 'held' ? 'Held - needs recheck; availability unconfirmed' : item.publicationState === 'recurring-unconfirmed' || item.status === 'recurring-unconfirmed' ? 'Recurring - next intake unconfirmed' : item.publicationState === 'confirmed-future' ? 'Confirmed future - applications not verified open' : 'Unconfirmed future record',
-      item.holdReason || '', sectorLabel(item, registry), item.displayOrganisation || item.organisation, item.program, item.typeDetails || item.type, item.country, item.location,
+      item.holdReason || '', sectorLabel(item, registry), item.displayOrganisation || item.organisation, item.program, typeLabel(item), item.country, item.location,
       item.opensOn || '', item.opensFrom || '', item.opensBy || '', item.openingWindow || '', item.expectedWindow || '', item.expectedOpensFrom || '', item.expectedOpensBy || '',
       item.deadline, item.citizenshipDetails || item.citizenship, item.paid, item.studyYear, item.eligibilityDetails, item.simulated ? '' : item.url,
       item.simulated ? 'Not verified' : item.verification?.checkedAt || '', item.simulated ? '' : item.verification?.sourceUrl || '',
       item.simulated ? '' : item.verification?.notes || '', item.simulated ? '' : item.verification?.audienceEvidence || '',
-      item.simulated ? '' : (item.verification?.sources || []).map(source => `${source.claim}: ${source.url}`).join('; ')
+      item.simulated ? '' : (item.verification?.sources || []).map(source => `${source.claim}: ${source.url}`).join('; '), item.experienceDetails || ''
     ]);
     return csv(header, rows);
   }
