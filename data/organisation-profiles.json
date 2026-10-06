@@ -1,0 +1,1343 @@
+{
+  "reviewedAt": "2026-10-06",
+  "scope": "Concise editorial paraphrases of organisation identity pages. These profiles do not establish whether opportunities are open. Source URLs are retained for future agents. Partner sources are explicitly identified; unavailable profiles remain null.",
+  "organisations": {
+    "Department of the Treasury": {
+      "description": "Treasury advises the Australian Government on economic policy, drawing on analysis across the economy and engagement with other agencies and stakeholders.",
+      "sourceUrl": "https://treasury.gov.au/the-department/about-treasury",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Reserve Bank of Australia (RBA)": {
+      "description": "Australia's central bank sets monetary policy, issues banknotes and supports the stability of the financial system and payments infrastructure.",
+      "sourceUrl": "https://www.rba.gov.au/about-rba/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Productivity Commission": {
+      "description": "The Productivity Commission provides independent research and advice on economic, social and environmental policies affecting Australians' wellbeing.",
+      "sourceUrl": "https://www.pc.gov.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Bureau of Statistics (ABS)": {
+      "description": "Australia's national statistical agency produces independent data about the economy, population and society to support informed decisions.",
+      "sourceUrl": "https://www.abs.gov.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Finance": {
+      "description": "Finance advises the Australian Government on allocating and managing public resources, including budgeting and financial management.",
+      "sourceUrl": "https://www.finance.gov.au/publications/corporate-plan/corporate-plan-2025-26",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Prudential Regulation Authority (APRA)": {
+      "description": "APRA supervises financial institutions and promotes their financial safety, helping protect depositors, insurance policyholders and superannuation members.",
+      "sourceUrl": "https://www.apra.gov.au/who-we-are",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Securities and Investments Commission (ASIC)": {
+      "description": "ASIC regulates companies, financial markets, financial services and consumer credit, and enforces laws intended to protect consumers and investors.",
+      "sourceUrl": "https://www.asic.gov.au/about-asic/what-we-do/our-role",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Competition and Consumer Commission (ACCC) & Australian Energy Regulator (AER)": {
+      "description": "The ACCC enforces competition and consumer protection laws and regulates infrastructure. The AER regulates energy markets and networks.",
+      "sourceUrl": "https://www.accc.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Taxation Office (ATO)": {
+      "description": "The ATO administers Australia's tax system and collects revenue that funds public services, alongside responsibilities for superannuation administration.",
+      "sourceUrl": "https://www.ato.gov.au/about-ato/who-we-are/?lang=en",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Foreign Affairs and Trade (DFAT)": {
+      "description": "DFAT manages Australia's international relationships, including foreign policy, trade, development assistance and consular services.",
+      "sourceUrl": "https://www.dfat.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Industry, Science and Resources": {
+      "description": "The department develops policy and programs supporting Australian industry, science, innovation and the resources sector.",
+      "sourceUrl": "https://www.industry.gov.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Climate Change, Energy, the Environment and Water (DCCEEW)": {
+      "description": "The department develops policy and programs for climate action, energy, environmental protection and the sustainable management of water.",
+      "sourceUrl": "https://www.dcceew.gov.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Employment and Workplace Relations": {
+      "description": "The department works on employment, skills and workplace policy to support Australians in finding secure work and gaining relevant training.",
+      "sourceUrl": "https://www.dewr.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Social Services (DSS)": {
+      "description": "DSS develops policies, payments and services supporting individuals and families, working with governments, communities and service organisations.",
+      "sourceUrl": "https://www.dss.gov.au/who-we-are",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Health and Aged Care": {
+      "description": "Now the Department of Health, Disability and Ageing, it develops policy, programs and regulation for Australia's health, disability and aged care systems.",
+      "sourceUrl": "https://www.health.gov.au/topics/about-the-department/what-we-do",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Infrastructure, Transport, Regional Development, Communications and the Arts": {
+      "description": "The department develops policy and programs spanning infrastructure, transport, regional development, communications and the arts.",
+      "sourceUrl": "https://www.infrastructure.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Defence": {
+      "description": "Defence protects Australia and its national interests through the Australian Defence Force and the department's policy and support functions.",
+      "sourceUrl": "https://www.defence.gov.au/about/who-we-are/defence-mission",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Veterans' Affairs": {
+      "description": "DVA provides information, advice and support to veterans and their families, including assistance for health and wellbeing.",
+      "sourceUrl": "https://www.dva.gov.au/about-us/who-we-are",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of Agriculture, Fisheries and Forestry (DAFF)": {
+      "description": "The department supports Australia's agriculture, fisheries and forestry industries, including work on biosecurity, trade and sustainable production.",
+      "sourceUrl": "https://www.agriculture.gov.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Department of the Prime Minister and Cabinet (PM&C)": {
+      "description": "PM&C advises the Prime Minister and Cabinet and coordinates work across government to deliver policy priorities.",
+      "sourceUrl": "https://www.pmc.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "National Disability Insurance Agency (NDIA / NDIS)": {
+      "description": "The NDIA administers the National Disability Insurance Scheme, which funds eligible disability supports to help participants pursue their goals.",
+      "sourceUrl": "https://www.ndis.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Austrade (Australian Trade and Investment Commission)": {
+      "description": "Austrade supports Australian exports and investment, promotes international education and works on tourism policy and programs.",
+      "sourceUrl": "https://www.austrade.gov.au/en/about-austrade",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Tourism Australia": {
+      "description": "Tourism Australia promotes Australia as a destination for international visitors and works with the tourism industry to grow demand.",
+      "sourceUrl": "https://www.tourism.australia.com/en/about.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Export Finance Australia": {
+      "description": "Australia's export credit agency provides finance to support exports, overseas investment and infrastructure projects linked to Australian interests.",
+      "sourceUrl": "https://www.exportfinance.gov.au/our-organisation/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Office of Financial Management (AOFM)": {
+      "description": "The AOFM manages Australian Government debt, raising funds and managing borrowing so the government can meet its financial obligations.",
+      "sourceUrl": "https://www.aofm.gov.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Future Fund Management Agency": {
+      "description": "The Future Fund manages public investment funds intended to strengthen the Australian Government's long-term financial position.",
+      "sourceUrl": "https://www.futurefund.gov.au/en/About-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Parliamentary Budget Office (PBO)": {
+      "description": "The PBO provides independent budget analysis and fiscal projections to help Parliament and the public assess government finances.",
+      "sourceUrl": "https://www.pbo.gov.au/publications-and-data/publications/fiscal-projections-and-sustainability/beyond-budget-2024-25",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Bureau of Infrastructure and Transport Research Economics (BITRE)": {
+      "description": "BITRE produces statistics, economic research and analysis to inform Australian infrastructure and transport policy and investment.",
+      "sourceUrl": "https://www.bitre.gov.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Commonwealth Grants Commission": {
+      "description": "The commission independently advises the Australian Government on distributing GST revenue among states and territories.",
+      "sourceUrl": "https://www.cgc.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Inspector-General of Taxation": {
+      "description": "Now the Tax Ombudsman, this independent office reviews tax administration and investigates concerns about its fairness and operation.",
+      "sourceUrl": "https://taxombudsman.gov.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Civil Aviation Safety Authority (CASA)": {
+      "description": "CASA regulates aviation safety in Australia, including pilot licensing, aircraft registration, aerodrome certification and safety oversight.",
+      "sourceUrl": "https://www.casa.gov.au/about-us/who-we-are/about-casa",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Energy Market Operator (AEMO)": {
+      "description": "AEMO operates electricity and gas systems and markets across Australia, supporting secure and reliable energy supply.",
+      "sourceUrl": "https://www.aemo.com.au/about/who-we-are",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "NSW Treasury": {
+      "description": "NSW Treasury manages state finances and assets and provides financial and economic advice to the NSW Government.",
+      "sourceUrl": "https://www.nsw.gov.au/departments-and-agencies/nsw-treasury",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Victorian Department of Treasury and Finance (DTF)": {
+      "description": "DTF advises the Victorian Government on economic, financial, infrastructure, industrial relations and commercial policy.",
+      "sourceUrl": "https://www.dtf.vic.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Queensland Treasury": {
+      "description": "Queensland Treasury provides economic, fiscal and revenue advice and services to support government decisions and priorities.",
+      "sourceUrl": "https://www.treasury.qld.gov.au/about-treasury/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "WA Department of Treasury": {
+      "description": "WA Treasury provides financial and economic advice to support government spending decisions and the sustainable delivery of public services.",
+      "sourceUrl": "https://www.wa.gov.au/organisation/department-of-treasury-and-finance",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "SA Department of Treasury and Finance": {
+      "description": "South Australia's Treasury and Finance department provides financial and policy advice to support government decisions and the state's economy.",
+      "sourceUrl": "https://www.treasury.sa.gov.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Tasmanian Department of Treasury and Finance": {
+      "description": "The department advises on Tasmania's public finances, economic policy and financial management, including the state budget.",
+      "sourceUrl": "https://www.treasury.tas.gov.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "ACT Chief Minister, Treasury and Economic Development Directorate": {
+      "description": "The ACT directorate supports the Chief Minister and manages work on the territory's budget, economic development and government administration.",
+      "sourceUrl": "https://www.cmtedd.act.gov.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Northern Territory Department of Treasury and Finance": {
+      "description": "The department supports the Northern Territory's development through economic, financial and fiscal advice to government.",
+      "sourceUrl": "https://treasury.nt.gov.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Infrastructure Australia": {
+      "description": "Infrastructure Australia independently advises on nationally significant infrastructure planning, investment and project priorities.",
+      "sourceUrl": "https://www.infrastructureaustralia.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Infrastructure NSW": {
+      "description": "Infrastructure NSW advises on priority public infrastructure and supports the planning and delivery of major state projects.",
+      "sourceUrl": "https://www.infrastructure.nsw.gov.au/about-us/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Infrastructure Victoria": {
+      "description": "Infrastructure Victoria provides independent research and advice on the state's infrastructure needs and long-term investment priorities.",
+      "sourceUrl": "https://www.infrastructurevictoria.com.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Building Queensland": {
+      "description": "Building Queensland was an infrastructure advisory body. Its functions transferred to Queensland's department responsible for state development and infrastructure.",
+      "sourceUrl": "https://www.statedevelopment.qld.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page",
+      "identityEvidenceUrl": "https://documents.parliament.qld.gov.au/events/han/2020/2020_12_08_EstimatesSDC.pdf"
+    },
+    "Independent Pricing and Regulatory Tribunal (IPART, NSW)": {
+      "description": "IPART independently reviews regulated prices and advises on economic regulation and public services in NSW.",
+      "sourceUrl": "https://www.ipart.nsw.gov.au/Home/About-IPART/FAQs",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Essential Services Commission (Victoria)": {
+      "description": "The commission regulates essential services in Victoria, with responsibilities relating to prices, service quality and reliability.",
+      "sourceUrl": "https://www.esc.vic.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Study NSW": {
+      "description": "Study NSW supports the state's international education sector and provides information and assistance for international students.",
+      "sourceUrl": "https://www.study.nsw.gov.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Transgrid": {
+      "description": "Transgrid operates high-voltage electricity transmission infrastructure, connecting generators, distributors and energy markets across eastern Australia.",
+      "sourceUrl": "https://www.transgrid.com.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Commonwealth Bank of Australia (CBA)": {
+      "description": "Commonwealth Bank provides banking and financial services for individuals, businesses and institutions in Australia.",
+      "sourceUrl": "https://www.commbank.com.au/about-us.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "ANZ": {
+      "description": "ANZ provides banking and financial services to individuals, businesses and institutional clients in Australia and internationally.",
+      "sourceUrl": "https://www.anz.com.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "National Australia Bank (NAB)": {
+      "description": "NAB serves personal, business, private banking, government and institutional customers in Australia and overseas.",
+      "sourceUrl": "https://www.nab.com.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Westpac": {
+      "description": "Westpac provides banking and financial services, supporting individual, business and institutional customers.",
+      "sourceUrl": "https://www.westpac.com.au/about-westpac/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Macquarie Group": {
+      "description": "Macquarie is a financial services group with Australian origins, operating across banking, investment management, markets and advisory services.",
+      "sourceUrl": "https://www.macquarie.com/au/en/about.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Goldman Sachs (Australia)": {
+      "description": "Goldman Sachs provides investment banking, markets and asset management services for corporations, governments, institutions and individuals.",
+      "sourceUrl": "https://www.goldmansachs.com/our-firm/history/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "JPMorgan Chase (Australia)": {
+      "description": "JPMorgan Chase provides banking and financial services, including investment banking, markets, payments and asset management.",
+      "sourceUrl": "https://www.jpmorganchase.com/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Morgan Stanley (Australia)": {
+      "description": "Morgan Stanley provides financial services including investment banking, securities trading, investment management and wealth management.",
+      "sourceUrl": "https://www.morganstanley.com/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "UBS Australia": {
+      "description": "UBS provides wealth management, asset management and investment banking services, with investment capabilities for Australian clients.",
+      "sourceUrl": "https://www.ubs.com/au/en.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Citi (Citigroup Australia)": {
+      "description": "Citi is a global bank providing financial services and cross-border connections for businesses, institutions and other clients.",
+      "sourceUrl": "https://www.citigroup.com/global/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Deutsche Bank Australia": {
+      "description": "Deutsche Bank provides banking and financial services, including corporate banking, investment banking and asset management.",
+      "sourceUrl": "https://www.db.com/who-we-are/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Bank of America (Australia)": {
+      "description": "Bank of America provides banking and financial services to individuals, businesses and institutional clients.",
+      "sourceUrl": "https://about.bankofamerica.com/en",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Citadel Securities": {
+      "description": "Citadel Securities uses research, technology and trading to provide liquidity and help financial markets operate efficiently.",
+      "sourceUrl": "https://www.citadelsecurities.com/who-we-are/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Grant Samuel": {
+      "description": "Grant Samuel provides independent corporate finance advice, including mergers and acquisitions, capital raising and restructuring.",
+      "sourceUrl": "https://www.grantsamuel.com.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Greenhill & Co.": {
+      "description": "Greenhill is part of Mizuho's investment and corporate banking business, which provides capital markets and financial advisory services.",
+      "sourceUrl": "https://www.mizuhogroup.com/americas/banking",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page",
+      "identityEvidenceUrl": "https://www.mizuhogroup.com/americas-news/2023-12-mizuho-closes-acquisition-of-ma-and-restructuring-advisory-firm-greenhill"
+    },
+    "Macquarie Bank (separate from Macquarie Group's investment bank)": {
+      "description": "Macquarie Bank provides banking products and services, including accounts, lending and private banking for Australian customers.",
+      "sourceUrl": "https://www.macquarie.com.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Bank of Queensland (BOQ)": {
+      "description": "BOQ is an Australian regional bank providing personal and business banking through digital services and its branch network.",
+      "sourceUrl": "https://www.boq.com.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Suncorp Group": {
+      "description": "Suncorp is an insurance group operating in Australia and New Zealand, with its headquarters in Brisbane.",
+      "sourceUrl": "https://www.suncorpgroup.com.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "HSBC Australia": {
+      "description": "HSBC provides banking and financial services in Australia, serving personal, business and institutional customers.",
+      "sourceUrl": "https://www.about.hsbc.com.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "ING Australia": {
+      "description": "ING Australia provides banking products for Australian customers and is part of the international ING Group.",
+      "sourceUrl": "https://www.ing.com.au/about-us.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Bendigo and Adelaide Bank": {
+      "description": "Bendigo and Adelaide Bank provides banking services with a focus on customers and the prosperity of local communities.",
+      "sourceUrl": "https://www.bendigoadelaide.com.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "AustralianSuper": {
+      "description": "AustralianSuper manages superannuation savings and investments to support members' retirement outcomes.",
+      "sourceUrl": "https://www.australiansuper.com/global-investors/who-we-are",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Aware Super": {
+      "description": "Aware Super manages superannuation and retirement savings and provides services to help members plan their financial futures.",
+      "sourceUrl": "https://aware.com.au/member/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "UniSuper": {
+      "description": "UniSuper is an Australian superannuation fund providing investment and retirement services for its members.",
+      "sourceUrl": "https://www.unisuper.com.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "HESTA": {
+      "description": "HESTA is a superannuation fund serving workers in health and community services and investing members' retirement savings.",
+      "sourceUrl": "https://www.hesta.com.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Cbus": {
+      "description": "Cbus provides superannuation and retirement services, with longstanding connections to the construction and building industries.",
+      "sourceUrl": "https://www.cbussuper.com.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "BlackRock Australia": {
+      "description": "BlackRock manages investments for institutions and individuals, including retirement savings, through a range of funds and strategies.",
+      "sourceUrl": "https://www.blackrock.com/au/about-us/about-blackrock-australia",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "PIMCO Australia": {
+      "description": "PIMCO is an investment manager offering strategies across fixed income and other asset classes for institutional and individual investors.",
+      "sourceUrl": "https://www.pimco.com/au/en/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Vanguard Australia": {
+      "description": "Vanguard offers investment funds and superannuation services, with an emphasis on helping individual investors build long-term savings.",
+      "sourceUrl": "https://www.vanguard.com.au/super/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "State Street Australia": {
+      "description": "State Street provides investment servicing, markets and financing services, and investment management for financial institutions and investors.",
+      "sourceUrl": "https://www.statestreet.com/au/en/asset-owner/about/our-story",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Magellan Financial Group": {
+      "description": "Magellan Financial Group describes its business as spanning financial markets, corporate finance and investment management.",
+      "sourceUrl": "https://magellanfinancialgroup.com/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Platinum Asset Management": {
+      "description": "Platinum manages investments through research-led, active investment strategies for clients seeking long-term returns.",
+      "sourceUrl": "https://www.platinum.com.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Perpetual Limited": {
+      "description": "Perpetual provides asset management, private wealth and trustee services to Australian and international clients.",
+      "sourceUrl": "https://www.perpetual.com.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Pendal Group": {
+      "description": "Pendal is an Australian investment manager offering actively managed investment strategies for its clients.",
+      "sourceUrl": "https://pendalgroup.com/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Wilson Asset Management": {
+      "description": "Wilson Asset Management manages listed investment companies and unlisted funds for Australian investors.",
+      "sourceUrl": "https://wilsonassetmanagement.com.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Plato Investment Management": {
+      "description": "Plato specialises in Australian and global equity investment strategies designed around investors' objectives.",
+      "sourceUrl": "https://plato.com.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Pinnacle Investment Management": {
+      "description": "Pinnacle supports a group of investment management affiliates, helping establish and grow their businesses and deliver services to investors.",
+      "sourceUrl": "https://pinnacleinvestment.com/financial-services-guide/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Hostplus": {
+      "description": "Hostplus is an Australian superannuation fund founded for hospitality workers that now serves a broader membership.",
+      "sourceUrl": "https://hostplus.com.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Pacific Equity Partners (PEP)": {
+      "description": "Pacific Equity Partners invests in private markets across Australasia and works with businesses and investors on long-term growth.",
+      "sourceUrl": "https://www.pep.com.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Frontier Economics": {
+      "description": "Frontier Economics provides economic analysis and advice to businesses and governments, using economic frameworks, data and modelling.",
+      "sourceUrl": "https://www.frontier-economics.com.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Deloitte Access Economics": {
+      "description": "Deloitte Access Economics applies economic analysis to public policy, business decisions and investment strategy.",
+      "sourceUrl": "https://www.deloitte.com/au/en/services/economics.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "NERA Economic Consulting": {
+      "description": "NERA uses economics, finance and quantitative analysis to advise on litigation, business decisions, competition and regulation.",
+      "sourceUrl": "https://www.nera.com/about.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "RBB Economics": {
+      "description": "RBB Economics specialises in competition economics, advising clients and presenting analysis to competition authorities and courts.",
+      "sourceUrl": "https://www.rbbecon.com/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Compass Lexecon": {
+      "description": "Compass Lexecon provides economic and financial analysis for law firms, corporations and government clients.",
+      "sourceUrl": "https://www.compasslexecon.com/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "ACIL Allen": {
+      "description": "ACIL Allen is an independent advisory firm working on economics, public policy and strategy.",
+      "sourceUrl": "https://acilallen.com.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "CIE (Centre for International Economics)": {
+      "description": "The CIE applies economic theory and empirical analysis to problems faced by government, business and international organisations.",
+      "sourceUrl": "https://www.thecie.com.au/what-we-do",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Mandala Partners": {
+      "description": "Mandala combines strategic consulting and data analytics to advise governments, businesses and other organisations.",
+      "sourceUrl": "https://mandalapartners.com/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "BIS Oxford Economics / Oxford Economics Australia": {
+      "description": "Oxford Economics provides economic forecasting, modelling and analysis to help businesses and governments make decisions.",
+      "sourceUrl": "https://www.oxfordeconomics.com/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Marsden Jacob Associates": {
+      "description": "Marsden Jacob advises on economics, public policy, markets and strategy, including decisions affecting people and the environment.",
+      "sourceUrl": "https://www.marsdenjacob.com.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Synergies Economic Consulting": {
+      "description": "Synergies provides economic advice to help clients make decisions on commercial, regulatory and public policy issues.",
+      "sourceUrl": "https://www.synergies.com.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Castalia": {
+      "description": "Castalia advises on infrastructure challenges, applying economic and financial expertise to practical policy and investment decisions.",
+      "sourceUrl": "https://castalia-advisors.com/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Insight Economics": {
+      "description": "Insight Economics uses economic modelling and data analysis to assess policies, investment proposals and their impacts for government and business.",
+      "sourceUrl": "https://www.insighteconomics.com.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Cadence Economics": {
+      "description": "Cadence Economics became part of EY, whose professional services include economic advice, consulting, audit and tax.",
+      "sourceUrl": "https://www.ey.com/en_au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page",
+      "identityEvidenceUrl": "https://www.ey.com/en_nz/newsroom/2019/08/ey-oceania-acquisition-of-cadence-economics"
+    },
+    "HoustonKemp": {
+      "description": "HoustonKemp provides economic analysis for competition, finance, regulation and public policy, supported by data and analytical methods.",
+      "sourceUrl": "https://houstonkemp.com/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "AlphaBeta (Accenture)": {
+      "description": "AlphaBeta is part of Accenture, whose work combines strategy, consulting, technology and business transformation services.",
+      "sourceUrl": "https://www.accenture.com/en/about/company-index",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Charles River Associates (CRA Australia)": {
+      "description": "CRA provides economic, financial and strategic advice to law firms, corporations and governments, including litigation and management consulting.",
+      "sourceUrl": "https://www.crai.com/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "FTI Consulting": {
+      "description": "FTI Consulting advises organisations facing business challenges, disputes and change through specialist consulting services.",
+      "sourceUrl": "https://www.fticonsulting.com/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Urbis": {
+      "description": "Urbis is a multidisciplinary urban consultancy advising on the development of cities and communities.",
+      "sourceUrl": "https://urbis.com.au/about-urbis",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "McKinsey & Company (Australia)": {
+      "description": "McKinsey advises organisations on strategy and performance and helps clients develop the capabilities needed to implement change.",
+      "sourceUrl": "https://www.mckinsey.com/about-us/overview/our-purpose-mission-and-values",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Bain & Company (Australia)": {
+      "description": "Bain advises businesses on strategy, performance and transformation, including work with private equity firms and their portfolio companies.",
+      "sourceUrl": "https://www.bain.com/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Boston Consulting Group (BCG, Australia)": {
+      "description": "BCG is a management consultancy working with businesses and other organisations on strategy, transformation and complex challenges.",
+      "sourceUrl": "https://www.bcg.com/australia",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Accenture Strategy (Australia)": {
+      "description": "Accenture provides strategy, consulting and technology services to help organisations transform their operations.",
+      "sourceUrl": "https://www.accenture.com/en/about/company-index",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Strategy& (part of PwC)": {
+      "description": "Strategy& advises leaders on strategic choices and turns those choices into plans for growth, investment and organisational change.",
+      "sourceUrl": "https://www.strategyand.pwc.com/gx/en/about.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "L.E.K. Consulting (Sydney, Melbourne)": {
+      "description": "L.E.K. is a management consultancy combining industry expertise and analysis to help clients make business decisions.",
+      "sourceUrl": "https://www.lek.com/about-lek",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Kearney (Sydney)": {
+      "description": "Kearney is a management consultancy working with businesses and governments on strategic and operational challenges.",
+      "sourceUrl": "https://www.kearney.com/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Port Jackson Partners": {
+      "description": "Port Jackson Partners is part of EY's strategy consulting business, advising organisations on strategic decisions and performance.",
+      "sourceUrl": "https://www.ey.com/en_au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page",
+      "identityEvidenceUrl": "https://www.ey.com/en_au/careers/parthenon/ey-parthenon-strategy"
+    },
+    "Deloitte Australia": {
+      "description": "Deloitte provides audit, tax, legal, consulting and transformation services to businesses, governments and other organisations.",
+      "sourceUrl": "https://www.deloitte.com/au/en/about.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "PwC Australia": {
+      "description": "PwC Australia provides professional services to businesses and other organisations, including audit, tax and advisory work.",
+      "sourceUrl": "https://www.pwc.com.au/about-us.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "EY Australia (Ernst & Young)": {
+      "description": "EY provides professional services including assurance, tax, consulting and strategy advice for businesses and other organisations.",
+      "sourceUrl": "https://www.ey.com/en_au/about-us#our-purpose",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "KPMG Australia": {
+      "description": "KPMG provides audit, consulting, transaction, infrastructure, tax and legal services to businesses, governments and nonprofits.",
+      "sourceUrl": "https://kpmg.com/au/en/about.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "BDO Australia": {
+      "description": "BDO provides audit, tax and advisory services for businesses, government organisations, entrepreneurs and individuals.",
+      "sourceUrl": "https://www.bdo.com.au/en-au/about/about-bdo-in-australia",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Grant Thornton Australia": {
+      "description": "Grant Thornton provides accounting and professional advisory services to businesses and other clients.",
+      "sourceUrl": "https://www.grantthornton.com.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Capgemini Australia": {
+      "description": "Capgemini provides consulting and technology services to help organisations transform their businesses.",
+      "sourceUrl": "https://www.capgemini.com/au-en/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Nous Group": {
+      "description": "Nous is an international consultancy helping organisations address strategic challenges and manage change.",
+      "sourceUrl": "https://nousgroup.com/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Arup Australia": {
+      "description": "Arup provides technical and advisory expertise for planning, designing and improving the built environment.",
+      "sourceUrl": "https://www.arup.com/en-us/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Visagio": {
+      "description": "Visagio combines management consulting, technology, analytics and artificial intelligence to help organisations solve business problems.",
+      "sourceUrl": "https://www.visagio.com/grupo-visagio",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Grattan Institute": {
+      "description": "Grattan Institute researches Australian public policy and develops evidence-based recommendations intended to serve the public interest.",
+      "sourceUrl": "https://grattan.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Committee for Economic Development of Australia (CEDA)": {
+      "description": "CEDA is an independent membership-based think tank researching policy issues affecting Australia's economic and social development.",
+      "sourceUrl": "https://www.ceda.com.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Lowy Institute": {
+      "description": "The Lowy Institute conducts research and public discussion on international policy and the global trends affecting Australia.",
+      "sourceUrl": "https://www.lowyinstitute.org/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Centre for Independent Studies (CIS)": {
+      "description": "CIS conducts public policy research and debate on economic and social issues, with educational publications and events.",
+      "sourceUrl": "https://www.cis.org.au/about/mission/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Institute of Public Affairs (IPA)": {
+      "description": "IPA researches and discusses Australian public policy, publishing analysis and engaging in public debate.",
+      "sourceUrl": "https://ipa.org.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Mitchell Institute (Victoria University)": {
+      "description": "Victoria University's Mitchell Institute researches education policy and develops evidence to improve education outcomes.",
+      "sourceUrl": "https://mitchell-institute.vu.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Per Capita": {
+      "description": "Per Capita is an independent policy think tank researching Australia's economy, society and public policy.",
+      "sourceUrl": "https://percapita.org.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "The Australia Institute": {
+      "description": "The Australia Institute conducts public policy research and communicates its findings to policymakers and the public.",
+      "sourceUrl": "https://australiainstitute.org.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "e61 Institute": {
+      "description": "e61 combines economics, data science and statistics to research policy questions facing Australia.",
+      "sourceUrl": "https://e61.in/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Institute of Family Studies": {
+      "description": "AIFS is the Australian Government's research agency studying family wellbeing, trends and issues affecting families.",
+      "sourceUrl": "https://aifs.gov.au/about/what-we-do",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Centre for Policy Development (CPD)": {
+      "description": "CPD develops research and practical proposals addressing complex policy challenges in Australia and the region.",
+      "sourceUrl": "https://cpd.org.au/discover-cpd-centre-for-policy-development/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Strategic Policy Institute (ASPI)": {
+      "description": "ASPI conducts independent research and analysis on Australia's defence, security and strategic policy.",
+      "sourceUrl": "https://www.aspi.org.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Institute of International Affairs (AIIA)": {
+      "description": "AIIA encourages understanding and discussion of international affairs through research, publications, events and its state and territory branches.",
+      "sourceUrl": "https://www.internationalaffairs.org.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian National University (ANU)": {
+      "description": "ANU is a university providing education and research for Australia and the region, with a national public purpose.",
+      "sourceUrl": "https://www.anu.edu.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "ANU Crawford School of Public Policy": {
+      "description": "ANU's Crawford School provides graduate education, research and policy engagement on public policy in Australia, Asia and the Pacific.",
+      "sourceUrl": "https://crawford.anu.edu.au/about-crawford",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Sydney": {
+      "description": "The University of Sydney provides higher education and research, with research centres addressing social, scientific and economic challenges.",
+      "sourceUrl": "https://www.sydney.edu.au/about-us.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Melbourne": {
+      "description": "The University of Melbourne provides education and research intended to contribute to society and address major challenges.",
+      "sourceUrl": "https://about.unimelb.edu.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Melbourne Institute of Applied Economic and Social Research": {
+      "description": "The Melbourne Institute conducts applied economic and social policy research within the University of Melbourne's Faculty of Business and Economics.",
+      "sourceUrl": "https://melbourneinstitute.unimelb.edu.au/about?in_c=mega",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Monash University": {
+      "description": "Monash provides university education and research across a range of disciplines in Australia and internationally.",
+      "sourceUrl": "https://www.monash.edu/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of New South Wales (UNSW)": {
+      "description": "UNSW provides university education and research, working with communities and partners on social, scientific and economic challenges.",
+      "sourceUrl": "https://www.unsw.edu.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "UNSW Social Policy Research Centre": {
+      "description": "UNSW's Social Policy Research Centre studies social policy and evaluates programs affecting families, communities and people experiencing disadvantage.",
+      "sourceUrl": "https://www.unsw.edu.au/research/sprc",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Queensland (UQ)": {
+      "description": "UQ is a research and teaching university working to develop knowledge and contribute to its students and wider community.",
+      "sourceUrl": "https://about.uq.edu.au/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Queensland University of Technology (QUT)": {
+      "description": "QUT provides higher education and research, with a focus on technology, innovation and links to industry.",
+      "sourceUrl": "https://www.qut.edu.au/about/our-university",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Griffith University": {
+      "description": "Griffith provides university education and research, working with its communities to expand knowledge and improve lives.",
+      "sourceUrl": "https://www.griffith.edu.au/about-griffith/our-university",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Adelaide": {
+      "description": "The University of Adelaide joined with the University of South Australia to form Adelaide University, which provides education and research.",
+      "sourceUrl": "https://adelaide.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of South Australia": {
+      "description": "The University of South Australia joined with the University of Adelaide to form Adelaide University, which provides education and research.",
+      "sourceUrl": "https://adelaide.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Western Australia (UWA)": {
+      "description": "UWA is a university based in Perth, providing education and research and connecting students with academic and industry communities.",
+      "sourceUrl": "https://www.uwa.edu.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Curtin University": {
+      "description": "Curtin provides university education and research, with an emphasis on collaboration and the practical impact of knowledge.",
+      "sourceUrl": "https://www.curtin.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Tasmania": {
+      "description": "The University of Tasmania provides higher education and research, with a focus on its island community and sustainability.",
+      "sourceUrl": "https://www.utas.edu.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Canberra": {
+      "description": "The University of Canberra provides higher education and research, including applied research intended to benefit communities.",
+      "sourceUrl": "https://www.canberra.edu.au/about-uc",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Charles Darwin University": {
+      "description": "Charles Darwin University delivers education, training and research with close connections to the Northern Territory and the Asia-Pacific region.",
+      "sourceUrl": "https://www.cdu.edu.au/about-cdu",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "RMIT University": {
+      "description": "RMIT provides higher education and research, with links to industry and a focus on practical learning and innovation.",
+      "sourceUrl": "https://www.rmit.edu.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Deakin University": {
+      "description": "Deakin provides university education and research, with an emphasis on access, innovation and community partnerships.",
+      "sourceUrl": "https://www.deakin.edu.au/about-deakin",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "La Trobe University": {
+      "description": "La Trobe provides university education and research, working with communities across Victoria and beyond.",
+      "sourceUrl": "https://www.latrobe.edu.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Swinburne University of Technology": {
+      "description": "Swinburne provides education and research, connecting science and technology with business, industry and the community.",
+      "sourceUrl": "https://www.swinburne.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Macquarie University": {
+      "description": "Macquarie University provides higher education and research, bringing students and staff together around discovery and professional learning.",
+      "sourceUrl": "https://www.mq.edu.au/about/about-the-university",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Technology Sydney (UTS)": {
+      "description": "UTS provides university education and research in Sydney, with connections to the city's innovation and creative sectors.",
+      "sourceUrl": "https://www.uts.edu.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Western Sydney University": {
+      "description": "Western Sydney University provides higher education and research through its schools, institutes and partnerships.",
+      "sourceUrl": "https://www.westernsydney.edu.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Wollongong": {
+      "description": "UOW provides university education and research, working with industry, government and communities on economic, environmental, social and health challenges.",
+      "sourceUrl": "https://www.uow.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of Newcastle": {
+      "description": "The University of Newcastle provides higher education and research, working with its regional communities and wider partners.",
+      "sourceUrl": "https://www.newcastle.edu.au/our-uni",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Catholic University (ACU)": {
+      "description": "ACU provides university education and research within the Catholic intellectual tradition, with a commitment to human dignity and the common good.",
+      "sourceUrl": "https://www.acu.edu.au/about-acu/mission-identity-and-values/our-mission",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Bond University": {
+      "description": "Bond is a university offering a personalised education experience and opportunities for professional and academic development.",
+      "sourceUrl": "https://bond.edu.au/study/why-study-at-bond",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Flinders University": {
+      "description": "Flinders provides university education and research, aiming to address practical challenges and contribute to its communities.",
+      "sourceUrl": "https://www.flinders.edu.au/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Charles Sturt University": {
+      "description": "Charles Sturt provides university education and research, with a mission to develop and share knowledge for the benefit of communities.",
+      "sourceUrl": "https://about.csu.edu.au/our-university",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Southern Cross University": {
+      "description": "Southern Cross provides university education and research, with roots in the Northern Rivers, Coffs Harbour and Gold Coast regions.",
+      "sourceUrl": "https://www.scu.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "James Cook University": {
+      "description": "James Cook University provides higher education and research with a focus on the challenges and opportunities of the tropics.",
+      "sourceUrl": "https://www.jcu.edu.au/cadsi/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "University of New England (UNE)": {
+      "description": "UNE is a regionally based university in Armidale, providing higher education and research through local and international connections.",
+      "sourceUrl": "https://www.une.edu.au/about-une",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Federation University Australia": {
+      "description": "Federation University provides university and TAFE education in regional Victoria, with courses linked to industry and community needs.",
+      "sourceUrl": "https://www.federation.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Victoria University": {
+      "description": "Victoria University provides university and vocational education, with a longstanding focus on accessible learning in Melbourne's west and beyond.",
+      "sourceUrl": "https://www.vu.edu.au/about-vu",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Tax and Transfer Policy Institute (ANU)": {
+      "description": "ANU's TTPI researches and evaluates tax and transfer policy to inform public debate and government decisions.",
+      "sourceUrl": "https://crawford.anu.edu.au/ttpi",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Centre for Applied Macroeconomic Analysis (ANU)": {
+      "description": "ANU's CAMA connects economists researching applied macroeconomics and financial markets and supports postgraduate training in these fields.",
+      "sourceUrl": "https://crawford.anu.edu.au/cama",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Institute for Social Science Research (UQ)": {
+      "description": "UQ's ISSR conducts social research and evaluation, working with partners to support equity and sustainable futures.",
+      "sourceUrl": "https://issr.uq.edu.au/about_ISSR",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Centre for Social Research and Methods (ANU)": {
+      "description": "ANU's social research and methods work combines research on society with the development and application of social science methods.",
+      "sourceUrl": "https://polis.cass.anu.edu.au/about-anu-centre-social-research-and-methods",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Centre for Health Economics (Monash)": {
+      "description": "Monash's Centre for Health Economics researches health, healthcare and health policy using economic analysis.",
+      "sourceUrl": "https://www.monash.edu/business/che/who-we-are",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Centre for Social Impact": {
+      "description": "CSI combines education, research and engagement with nonprofits, business, philanthropy and government to support positive social change.",
+      "sourceUrl": "https://www.csi.edu.au/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "BehaviourWorks Australia (Monash)": {
+      "description": "BehaviourWorks Australia partners with practitioners to research behaviour change and develop practical solutions to social and environmental problems.",
+      "sourceUrl": "https://www.behaviourworksaustralia.org/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "World Vision Australia": {
+      "description": "World Vision Australia works on international development and humanitarian assistance and engages Australians in efforts to address poverty.",
+      "sourceUrl": "https://www.worldvision.com.au/our-work/about-us/our-mission-motivation-and-values",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Oxfam Australia": {
+      "description": "Oxfam Australia works with communities to address poverty and inequality, including humanitarian assistance and long-term development.",
+      "sourceUrl": "https://www.oxfam.org.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "CARE Australia": {
+      "description": "CARE Australia is an international aid organisation working to save lives, address poverty and improve rights and opportunities.",
+      "sourceUrl": "https://www.care.org.au/who-we-are/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Save the Children Australia": {
+      "description": "Save the Children Australia provides programs and humanitarian assistance intended to protect children and support their wellbeing and development.",
+      "sourceUrl": "https://www.savethechildren.org.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "ChildFund Australia": {
+      "description": "ChildFund Australia works with communities to reduce poverty and improve the lives of children facing disadvantage.",
+      "sourceUrl": "https://www.childfund.org.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Australian Council of Social Service (ACOSS)": {
+      "description": "ACOSS advocates for people affected by poverty and inequality and represents community services in national policy discussions.",
+      "sourceUrl": "https://www.acoss.org.au/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "The Smith Family": {
+      "description": "The Smith Family supports children and young people experiencing disadvantage to participate in education and build their futures.",
+      "sourceUrl": "https://www.thesmithfamily.com.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Mission Australia": {
+      "description": "Mission Australia works with communities to address disadvantage and help people access support, housing and opportunities.",
+      "sourceUrl": "https://www.missionaustralia.com.au/who-we-are/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "OECD Sydney Office": {
+      "description": "The OECD brings countries together to analyse policy, share evidence and develop approaches that improve economic and social wellbeing.",
+      "sourceUrl": "https://www.oecd.org/en/about.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "World Bank Sydney Hub": {
+      "description": "The World Bank Group supports development through finance, knowledge and partnerships with governments, businesses and communities.",
+      "sourceUrl": "https://www.worldbank.org/ext/en/who-we-are",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "International Monetary Fund (IMF)": {
+      "description": "The IMF supports international monetary cooperation and financial stability through policy advice, lending and capacity development.",
+      "sourceUrl": "https://www.imf.org/en/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Asian Development Bank (ADB)": {
+      "description": "ADB provides development finance and expertise to support sustainable and inclusive growth across Asia and the Pacific.",
+      "sourceUrl": "https://www.adb.org/who-we-are/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Asian Infrastructure Investment Bank (AIIB)": {
+      "description": "AIIB finances infrastructure in Asia and beyond, working with partners on sustainable development and investment.",
+      "sourceUrl": "https://www.aiib.org/en/who-we-are/about-aiib/index-m.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "United Nations Development Programme (UNDP) — Pacific Office": {
+      "description": "UNDP's Pacific Office supports countries and territories in addressing development challenges through policy support, partnerships and practical programs.",
+      "sourceUrl": "https://www.undp.org/pacific/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Pacific Islands Forum Secretariat": {
+      "description": "The Pacific Islands Forum Secretariat supports regional cooperation and the implementation of priorities agreed by Pacific leaders.",
+      "sourceUrl": "https://forumsec.org/pacific-islands-forum",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "World Trade Organization (WTO)": {
+      "description": "The WTO provides a forum for international trade negotiations and administers the rules governing trade between its members.",
+      "sourceUrl": "https://www.wto.org/english/thewto_e/whatis_e/whatis_e.htm",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Bruegel": {
+      "description": "Bruegel is an economic policy think tank producing research, analysis and debate to inform European and international policy.",
+      "sourceUrl": "https://www.bruegel.org/bruegel-european-think-tank-specialises-economics",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Peterson Institute for International Economics": {
+      "description": "PIIE researches international economic policy and shares analysis through publications, events and engagement with policymakers and the public.",
+      "sourceUrl": "https://www.piie.com/about-piie",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Brookings Institution": {
+      "description": "Brookings conducts public policy research and develops practical proposals addressing economic and social challenges.",
+      "sourceUrl": "https://www.brookings.edu/about-us/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Centre for Economic Policy Research": {
+      "description": "CEPR connects economists and publishes policy-relevant research to inform decisions by policymakers, businesses and civil society.",
+      "sourceUrl": "https://cepr.org/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "National Institute of Economic and Social Research": {
+      "description": "NIESR conducts economic and social policy research, with a focus on the UK and its place in the international economy.",
+      "sourceUrl": "https://niesr.ac.uk/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "ODI Global": {
+      "description": "ODI Global researches international development and global challenges and works with partners to inform policy and practice.",
+      "sourceUrl": "https://odi.org/en/about/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Kiel Institute for the World Economy": {
+      "description": "The Kiel Institute conducts economic research and provides evidence-based advice on German, European and international policy.",
+      "sourceUrl": "https://www.kielinstitut.de/institute/about-the-kiel-institute/",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "ifo Institute": {
+      "description": "The ifo Institute combines economic research and policy analysis to inform decisions in business, government and society.",
+      "sourceUrl": "https://www.ifo.de/en/about-ifo",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "RWI – Leibniz Institute for Economic Research": {
+      "description": "RWI conducts economic research and provides evidence-based advice to policymakers, businesses and the public.",
+      "sourceUrl": "https://www.rwi-essen.de/rwi/das-institut/ueber-uns",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "ZEW – Leibniz Centre for European Economic Research": {
+      "description": "ZEW researches economic policy and markets, including innovation, taxation, pensions, inequality and climate policy.",
+      "sourceUrl": "https://www.zew.de/en/zew/about-zew",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Global Voices": {
+      "description": "Global Voices helps young people understand and participate in domestic and international decision-making through policy and diplomacy experiences.",
+      "sourceUrl": "https://www.globalvoices.org.au/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "World Bank Group (global expansion)": {
+      "description": "The World Bank Group provides development finance, expertise and partnerships to address poverty and support sustainable growth.",
+      "sourceUrl": "https://www.worldbank.org/ext/en/who-we-are",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "IFC": {
+      "description": "IFC supports private-sector development through investment, advisory work and partnerships intended to create opportunities in developing economies.",
+      "sourceUrl": "https://www.ifc.org/en/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "MIGA": {
+      "description": "MIGA provides guarantees against non-commercial risks to encourage foreign investment in developing countries.",
+      "sourceUrl": "https://www.miga.org/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "BIS": {
+      "description": "The BIS supports central banks through international cooperation, research and banking services focused on monetary and financial stability.",
+      "sourceUrl": "https://www.bis.org/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "UN economics / ESCAP / DESA": {
+      "description": "The UN's economic and social bodies produce analysis and support countries in turning international development commitments into policy and action.",
+      "sourceUrl": "https://www.un.org/en/desa/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "EBRD": {
+      "description": "The EBRD finances development and supports economic change, with an emphasis on private-sector investment and the green transition.",
+      "sourceUrl": "https://www.ebrd.com/home/who-we-are/ebrd-history.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "AfDB": {
+      "description": "The African Development Bank Group provides finance and expertise to support sustainable economic growth and social development in Africa.",
+      "sourceUrl": "https://www.afdb.org/en/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Institute for Fiscal Studies": {
+      "description": "IFS independently researches economic and social policy, analysing how policy choices affect individuals, households and businesses.",
+      "sourceUrl": "https://ifs.org.uk/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "Center for Global Development": {
+      "description": "CGD uses economic research to inform development policy and practice intended to reduce global poverty.",
+      "sourceUrl": "https://www.cgdev.org/about-cgd",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "DIW Berlin": {
+      "description": "DIW Berlin conducts economic and social research, including the German Socio-Economic Panel, to inform academic work and public policy.",
+      "sourceUrl": "https://www.diw.de/en/diw_01.c.678791.en/about_us.html",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "UNCTAD": {
+      "description": "UNCTAD supports developing economies through research, policy advice and cooperation on trade and development.",
+      "sourceUrl": "https://unctad.org/about",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "UNDP global": {
+      "description": "UNDP supports countries in addressing development challenges through policy advice, partnerships and programs for people and the environment.",
+      "sourceUrl": "https://www.undp.org/about-us-1",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "IDB": {
+      "description": "The IDB provides finance and expertise to support public-sector development in Latin America and the Caribbean.",
+      "sourceUrl": "https://www.iadb.org/en/who-we-are/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "IDB Invest": {
+      "description": "IDB Invest finances private-sector projects in Latin America and the Caribbean to support development and economic opportunity.",
+      "sourceUrl": "https://idbinvest.org/en/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    },
+    "IDB Lab": {
+      "description": "IDB Lab supports entrepreneurship and technology in Latin America and the Caribbean through financing, knowledge and connections for innovative ventures.",
+      "sourceUrl": "https://bidlab.org/en/about/about-us",
+      "reviewedAt": "2026-10-06",
+      "sourceKind": "official-identity-page"
+    }
+  },
+  "unavailable": []
+}

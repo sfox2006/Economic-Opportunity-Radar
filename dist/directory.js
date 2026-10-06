@@ -39,14 +39,27 @@ function renderDirectory() {
         } catch {}
         const label = org.website?.type === 'about' ? 'About us' : 'Homepage';
         return `<article class="organisation-card"><h4>${escapeHtml(org.name)}</h4>
+          ${org.profile?.description ? `<p class="organisation-description">${escapeHtml(org.profile.description)}</p>` : ''}
           <p>${count} ${demoMode ? 'simulated' : 'verified open'} ${count === 1 ? 'opportunity' : 'opportunities'}</p>
           ${futureCount || unconfirmedCount ? `<p>${futureCount} confirmed future; ${unconfirmedCount} unconfirmed planning records</p>` : ''}
-          ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(org.website.label || label)} ↗</a>` : '<span class="missing-source">Official website unavailable</span>'}</article>`;
+          <div class="organisation-actions">
+          ${count ? `<a class="organisation-program-link" href="#programs" data-organisation-programs="${escapeHtml(org.id)}" aria-label="View ${count} open ${count === 1 ? 'opportunity' : 'opportunities'} at ${escapeHtml(org.name)}">View open opportunities ↑</a>` : ''}
+          ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(org.website.label || label)} ↗</a>` : '<span class="missing-source">Official website unavailable</span>'}</div></article>`;
       }).join('')}</div></details>`;
   }).join('');
   document.getElementById('directory-count').textContent = `${shown} of ${radarRegistry.organisations.length} organisations`;
   if (!shown) directory.innerHTML = '<p class="empty-state">No organisations match that search.</p>';
 }
+directory.addEventListener('click', event => {
+  const link = event.target.closest('[data-organisation-programs]');
+  if (!link) return;
+  const org = radarRegistry.organisations.find(entry => entry.id === link.dataset.organisationPrograms);
+  if (!org) return;
+  if (!opportunities.some(item => item.organisationId === org.id)) { event.preventDefault(); renderDirectory(); return; }
+  const records = [...opportunities, ...futureCompilation].filter(item => item.organisationId === org.id);
+  event.preventDefault();
+  showOrganisationPrograms(org.name, records.map(item => item.id));
+});
 orgQuery.addEventListener('input', renderDirectory);
 renderDirectory();
 

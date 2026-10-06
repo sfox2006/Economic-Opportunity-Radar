@@ -285,3 +285,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 summary:focus-visible, .catalog-tabs [role="tab"]:focus-visible { outline-color: var(--charcoal); }
 .site-header a:focus-visible { outline-color: var(--orange); }
 footer { background: var(--charcoal); color: var(--mint); padding-inline: 24px; border-top: 4px solid var(--orange); }
+
+.organisation-card .organisation-description { line-height: 1.5; color: var(--ink); }
+.organisation-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 16px; }
+.organisation-card .organisation-program-link { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 12px; border: 1px solid var(--green); color: var(--green); text-decoration: none; }
+.organisation-program-link:hover { background: var(--paper); text-decoration: underline; }
+.organisation-program-filter { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; margin: 20px 0; border: 1px solid var(--green); }
+.organisation-program-filter[hidden] { display: none; }
+.organisation-program-filter p { margin: 0; }
+.organisation-program-filter button { min-height: 44px; }
+.organisation-program-link:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+.organisation-program-filter {scroll-margin-top:20px;}
+@media (max-width:700px) {.organisation-program-filter {scroll-margin-top:40px;}}
