@@ -2,15 +2,17 @@ const demoMode = radarCatalog.settings.mode === 'demo';
 document.getElementById('download-csv').textContent = demoMode ? 'Download filtered samples ↓' : 'Download filtered open list ↓';
 document.getElementById('demo-banner').hidden = !demoMode;
 document.getElementById('open-tab-label').textContent = demoMode ? 'Sample opportunities' : 'Open now';
-document.getElementById('scan-label').textContent = demoMode ? 'simulated programs' : 'verified open programs';
+document.getElementById('scan-label').textContent = demoMode ? 'simulated programs' : 'accepting vacancies and registers';
 document.getElementById('organisation-count').textContent = radarRegistry.organisations.length;
 const built = new Date(radarCatalog.generatedAt).toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', year: 'numeric' });
 function renderCatalogStatus() {
+  const registers = opportunities.filter(item => item.status === 'interest-register').length;
+  const vacancies = opportunities.length - registers;
   const unconfirmed = futureCompilation.filter(item => item.publicationState !== 'confirmed-future').length;
   document.getElementById('catalog-status').textContent = demoMode
     ? `Demonstration catalogue: ${opportunities.length} simulated programmes; prepared ${built}`
     : opportunities.length || futureCompilation.length
-      ? `${opportunities.length} verified open; ${confirmedFuture.length} confirmed future; ${unconfirmed} unconfirmed planning records. Catalogue built ${built}. Open and confirmed future evidence is checked within ${radarCatalog.settings.maxVerificationAgeDays} days.`
+      ? `${vacancies} verified open vacancies; ${registers} accepting registers / enquiries; ${confirmedFuture.length} confirmed future; ${unconfirmed} unconfirmed planning records. Catalogue built ${built}. Open and confirmed future evidence is checked within ${radarCatalog.settings.maxVerificationAgeDays} days.`
       : 'Organisation coverage is being researched. Verified opportunities will appear after their application status is checked.';
 }
 renderCatalogStatus();
@@ -30,12 +32,12 @@ function renderDirectory() {
         const count = opportunities.filter(item => item.organisationId === org.id).length;
         const futureCount = confirmedFuture.filter(item => item.organisationId === org.id).length;
         const unconfirmedCount = futureCompilation.filter(item => item.organisationId === org.id && item.publicationState !== 'confirmed-future').length;
-        const url = org.careersUrl && org.careersUrl.startsWith('https://') ? org.careersUrl : '';
+        const url = org.careersUrl && org.careersUrl.startsWith('https://') ? org.careersUrl : (org.researchCoverage?.evidenceUrls || [])[0] || '';
         return `<article class="organisation-card"><h4>${escapeHtml(org.name)}</h4>
           <p>${count} ${demoMode ? 'simulated' : 'verified open'} ${count === 1 ? 'opportunity' : 'opportunities'}</p>
           ${futureCount || unconfirmedCount ? `<p>${futureCount} confirmed future; ${unconfirmedCount} unconfirmed planning records</p>` : ''}
-          ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Reference careers page ↗</a>` : '<span class="missing-source">Careers URL not supplied</span>'}
-          <small>${org.referenceVerification?.checkedAt ? `Reference URL checked ${escapeHtml(org.referenceVerification.checkedAt)}. Programme availability is recorded separately.` : 'Organisation from the source list - reference URL not checked. Programme availability is recorded separately.'}</small></article>`;
+          ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${org.careersUrl ? 'Reference careers page' : 'Official research reference'}</a>` : '<span class="missing-source">Careers URL not supplied</span>'}
+          <small>${org.researchCoverage ? `Programme/careers research reviewed ${escapeHtml(org.researchCoverage.checkedOn)}. Coverage does not establish vacancy availability. ` : ''}${org.referenceVerification?.checkedAt ? `Reference URL checked ${escapeHtml(org.referenceVerification.checkedAt)}. Programme availability is recorded separately.` : 'Organisation from the source list - reference URL not checked. Programme availability is recorded separately.'}</small></article>`;
       }).join('')}</div></details>`;
   }).join('');
   document.getElementById('directory-count').textContent = `${shown} of ${radarRegistry.organisations.length} organisations`;

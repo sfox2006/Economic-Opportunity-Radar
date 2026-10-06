@@ -2,8 +2,9 @@
 
 The repository is the data source. Updates are reviewed as JSON plus generated
 assets. Sam authorised real opportunity research and international expansion on
-6 October 2026. Only the removal of simulated public listings has been published;
-feature and research updates still require review within the requested scope.
+6 October 2026. Sam subsequently authorised testing and deployment of the reviewed
+data and associated status/retention changes. Later updates follow their own
+requested scope; this authorisation does not send emails or update other sites.
 
 ## Public data and organisation coverage
 
@@ -58,16 +59,24 @@ independent review remains necessary.
 
 ## Three availability streams
 
-1. **Open now:** `open`, `rolling` or `on-demand`, with
+1. **Open now:** `open`, `rolling`, `on-demand` or `interest-register`, with
    `verification.acceptingApplications: true`. A working current application
    route and current official intake evidence are required. For exact closing
    dates, use `deadlineOn: "YYYY-MM-DD"` and `deadlineConfirmed: true`. Also record
    `closesAt` with an ISO timezone offset when an exact time is specified. Without
    a published deadline, use honest text and `noDeadlinePublished: true`.
+   `interest-register` means an accepting EOI, roster, candidate pool or initial
+   project enquiry; label it clearly and never imply a guaranteed vacancy,
+   placement or admission. Preserve source-stated hours with unknown time zones
+   in deadline text instead of creating an offset timestamp.
 2. **Confirmed future:** `confirmed-future`, with either `opensOn` and
    `openingDateConfirmed: true`, or `opensFrom`/`opensBy`, a readable
    `openingWindow`, and `openingWindowConfirmed: true`. These fields describe an
-   official current announcement, not a typical annual cycle. Future records do
+   official current announcement, not a typical annual cycle. A qualitative
+   official `openingWindow` with `openingWindowConfirmed: true` is also valid:
+   keep wording such as early 2027 verbatim without invented endpoints. Month
+   endpoints describe the bounds of a stated month, not an exact opening day.
+   Future records do
    not need an invented closing date. All horizons are displayed and retained,
    including openings more than three calendar months away.
 3. **Unconfirmed / recurring:** `recurring-unconfirmed`, with
@@ -103,8 +112,15 @@ checks expire. It never falls back to demonstration data.
 
 ## Exports and review
 
-The current-list download includes only selected open records. The separate
-future download includes every retained future record, status, held reason,
+Every derived research record has an explicit `publicationApproved` disposition.
+Unapproved candidates remain in the data source and offline compilation; the build
+omits them from all public assets and availability streams. An approval does not
+override freshness, deadline, application-route or audience checks.
+
+The current-list download includes only selected accepting vacancies and clearly
+labelled registers. The separate website future download contains approved public
+planning records. The offline future export includes every retained future record,
+status, held reason,
 confirmed or indicative date fields, eligibility, official URLs and check notes.
 Run `node scripts/export-compilation.cjs <output-directory>` to generate the
 same current CSV, all-future CSV and a structured all-future JSON for review.
@@ -118,8 +134,18 @@ After editing data:
    and mobile UI checks. Check source links, status labels and both exports.
 3. Commit data and generated assets together on the review branch, with source
    evidence and an added/updated/held summary. Publish only within Sam's explicit
-   authorisation. The initial sample-removal authorisation does not publish
-   research or broader features.
+   authorisation.
 
 No emails, subscriptions, registrations or research services run in this site.
 Daily scheduled builds only enforce expiry; they do not verify new records.
+
+## Research audit, 6 October 2026
+
+`data/research-provenance.json` records final Library audit and evidence identities,
+both version 1. The full 242-record original/reviewed-source/independent-review
+audit remains in Library. The repository contains 130 derived current/future/
+recurring candidates, preserving all original 196 organisation IDs and adding 26.
+At review time, 48 vacancies and 8 registers were accepting, 28 future records
+were approved, and 46 future/recurring candidates were held. All 74 future records
+remain in the offline compilation, including 22 openings after 6 January 2027
+(three nationality-restricted scholarship windows stay outside the public site).

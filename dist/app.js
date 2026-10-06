@@ -5,9 +5,9 @@ const opportunities = currentCatalog.opportunities;
 const openingSoon = currentCatalog.openingSoon;
 const confirmedFuture = currentCatalog.confirmedFuture || openingSoon || [];
 const futureCompilation = currentCatalog.futureCompilation || confirmedFuture;
-const typeOrder = ["Cadetship", "Internship", "Vacationer Program", "Summer Vacation", "Industry Placement", "Scholarship", "Research assistantship", "Other", "Graduate Program", "Graduate Job"];
+const typeOrder = typeof RadarModel === 'undefined' ? ["Cadetship", "Internship", "Vacationer Program", "Summer Vacation", "Industry Placement", "Scholarship", "Research assistantship", "Fellowship", "Training", "Tutoring / Casual Academic", "Other", "Graduate Program", "Graduate Job"] : RadarModel.types;
 
-const openStatuses = new Set(["open", "rolling", "on-demand"]);
+const openStatuses = new Set(["open", "rolling", "on-demand", "interest-register"]);
 
 function parseIsoDate(value) {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value || "");
@@ -71,13 +71,14 @@ function provenanceMarkup(item) {
 function futureStatusLabel(item) {
   if (item.publicationState === 'held') return 'Needs recheck - availability unconfirmed';
   if (item.publicationState === 'recurring-unconfirmed' || item.status === 'recurring-unconfirmed') return 'Recurring programme - next intake unconfirmed';
-  return 'Confirmed future opening - applications not verified open';
+  return /expected/i.test(item.openingWindow || '') ? 'Officially announced expected window - applications not verified open' : 'Confirmed future opening - applications not verified open';
 }
 
 function futureOpeningLabel(item) {
   const prefix = item.publicationState === 'held' ? 'Previously reported: ' : '';
   if (item.opensOn) return `${prefix}${formatOpeningDate(item.opensOn)}`;
   if (item.opensFrom) return `${prefix}${item.openingWindow || `${formatOpeningDate(item.opensFrom)} - ${formatOpeningDate(item.opensBy)}`}`;
+  if (item.openingWindow) return `${prefix}${item.openingWindow}`;
   if (item.expectedWindow) return `Indicative only: ${item.expectedWindow}; next intake unconfirmed`;
   if (item.expectedOpensFrom) return `Indicative only: ${formatOpeningDate(item.expectedOpensFrom)} - ${formatOpeningDate(item.expectedOpensBy)}; next intake unconfirmed`;
   return 'Next opening date not confirmed';
@@ -167,6 +168,9 @@ function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
 }
 
+function organisationLabel(item) { return item.displayOrganisation || item.organisation; }
+function typeLabel(item) { return item.typeDetails || item.type; }
+
 function openingSoonRow(item) {
   const opens = futureOpeningLabel(item);
   const url = typeof item.url === "string" && item.url.startsWith("https://") ? item.url : "";
@@ -176,8 +180,8 @@ function openingSoonRow(item) {
     <details class="program-disclosure">
     <summary class="program-row">
       <h3>${escapeHtml(item.program)}${item.simulated ? `<span class="demo-pill">Simulated</span>` : ""}</h3>
-      <span class="row-organisation">${escapeHtml(item.organisation)}</span>
-      <span class="pill">${escapeHtml(item.type || "")}</span>
+      <span class="row-organisation">${escapeHtml(organisationLabel(item))}</span>
+      <span class="pill">${escapeHtml(typeLabel(item))}</span>
       <span class="row-location">${escapeHtml(item.location || "")}</span>
       <span class="row-reviewed opens-date">${escapeHtml(opens)}</span>
     </summary>
@@ -191,6 +195,7 @@ function openingSoonRow(item) {
         ${item.deadline ? `<div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}</dd></div>` : ""}
         <div><dt>Pay / funding</dt><dd>${escapeHtml(item.fundingDetails || item.paid)}</dd></div>
         <div><dt>Year of study</dt><dd>${escapeHtml(item.studyYear)}</dd></div>
+        <div><dt>Citizenship / work rights</dt><dd>${escapeHtml(item.citizenshipDetails || item.citizenship)}</dd></div>
       </dl>
       <div class="application-detail"><h4>Who can apply</h4><p>${escapeHtml(item.eligibilityDetails)}</p></div>
       <div class="application-detail"><h4>Application details</h4><p>${escapeHtml(item.application)}</p></div>
@@ -310,7 +315,7 @@ function fillSelect(select, values) {
 function fundingCategory(item) {
   if (/^(?:No|Unpaid)\b/i.test(item.paid || "")) return "No";
   if (/\bFree\b/i.test(item.paid || "")) return "Free";
-  if (/\b(?:Paid|stipend|Scholarship|Prize)\b/i.test(item.paid || "")) return "Paid";
+  if (/\b(?:Paid|stipend|Scholarship|Prize|grant)\b/i.test(item.paid || "")) return "Paid";
   return "Not stated";
 }
 
@@ -328,7 +333,7 @@ function matchScore(item) {
 }
 
 function passesFilters(item) {
-  const haystack = `${item.sector} ${item.studyYear} ${item.country} ${item.region} ${item.organisation} ${item.program} ${item.type} ${item.deadline} ${item.paid} ${item.description} ${item.location} ${item.eligibilityDetails} ${item.application}`.toLowerCase();
+  const haystack = `${item.displayOrganisation || ''} ${item.sector} ${item.studyYear} ${item.country} ${item.region} ${item.organisation} ${item.program} ${item.type} ${item.deadline} ${item.paid} ${item.description} ${item.location} ${item.eligibilityDetails} ${item.application}`.toLowerCase();
   const paidPass =
     state.paid === "All" ||
     state.paid === fundingCategory(item);
@@ -556,8 +561,8 @@ function renderDetail() {
   if (!item) { els.detail.innerHTML = ""; return; }
   const score = matchScore(item);
   els.detail.innerHTML = `<p class="eyebrow">${escapeHtml(sourceLabel(item))}</p>
-    <h2>${escapeHtml(item.organisation)}</h2><p><strong>${escapeHtml(item.program)}</strong></p>
-    <div class="detail-meta"><span class="pill">${escapeHtml(item.type)}</span>
+    <h2>${escapeHtml(organisationLabel(item))}</h2><p><strong>${escapeHtml(item.program)}</strong></p>
+    <div class="detail-meta"><span class="pill">${escapeHtml(typeLabel(item))}</span>
       <span class="pill">${escapeHtml(item.location)}</span>
       ${score === null ? "" : `<span class="pill">${score}% profile fit</span>`}</div>
     <p>${escapeHtml(item.description)}</p>`;
@@ -578,23 +583,26 @@ function renderResults() {
     card.id = "opportunity-" + item.id;
     card.tabIndex = 0;
     const reviewed = sourceLabel(item), soon = item.simulated ? "" : closingSoonBadge(item);
+    const register = item.status === 'interest-register';
     const url = !item.simulated && typeof item.url === "string" && item.url.startsWith("https://") ? item.url : "";
     const sectors = typeof radarRegistry === "undefined" ? [] : radarRegistry.sectors;
     const sector = sectors.find(sector => sector.id === item.sector)?.label || item.sector || "";
     card.innerHTML = `<details class="program-disclosure"><summary class="program-row">
-      <h3>${escapeHtml(item.program)}${item.simulated ? `<span class="demo-pill">Simulated</span>` : soon}</h3>
-      <span class="row-organisation">${escapeHtml(item.organisation)}</span>
-      <span class="pill">${escapeHtml(item.type)}</span>
+      <h3>${escapeHtml(item.program)}${item.simulated ? `<span class="demo-pill">Simulated</span>` : register ? '<span class="pill">Interest register / enquiry</span>' : soon}</h3>
+      <span class="row-organisation">${escapeHtml(organisationLabel(item))}</span>
+      <span class="pill">${escapeHtml(typeLabel(item))}</span>
       <span class="row-location">${escapeHtml(item.location)}</span>
       <span class="row-reviewed">${escapeHtml(reviewed.replace(/^Official source reviewed /, ""))}</span>
       </summary><div class="program-body"><p>${escapeHtml(item.description)}</p>
+      ${register ? '<p class="availability-note">Accepting an interest register, roster, pool or initial enquiry. A placement or admission is not guaranteed.</p>' : ''}
+      ${item.country !== 'Australia' && item.eligibility === 'Some restrictions' ? `<p class="availability-note">Conditional overseas access: ${escapeHtml(item.citizenshipDetails || item.verification?.audienceEvidence || item.eligibilityDetails)}</p>` : ''}
       <dl class="opportunity-facts">
         <div><dt>Sector</dt><dd>${escapeHtml(sector)}</dd></div>
         <div><dt>Location</dt><dd>${escapeHtml(item.location)}</dd></div>
         <div><dt>Duration</dt><dd>${escapeHtml(item.duration)}</dd></div>
         <div><dt>Pay / funding</dt><dd>${escapeHtml(item.fundingDetails || item.paid)}</dd></div>
         <div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}${soon}</dd></div>
-        <div><dt>Australian citizenship</dt><dd>${escapeHtml(item.citizenship || "Not stated")}${item.simulated ? " (simulated)" : ""}</dd></div>
+        <div><dt>Citizenship / work rights</dt><dd>${escapeHtml(item.citizenshipDetails || item.citizenship || "Not stated")}${item.simulated ? " (simulated)" : ""}</dd></div>
         <div><dt>Year of study</dt><dd>${escapeHtml(item.studyYear || "Not stated")}${item.simulated ? " (simulated)" : ""}</dd></div>
       </dl><div class="application-detail"><h4>Who can apply</h4><p>${escapeHtml(item.eligibilityDetails)}</p></div>
       <div class="application-detail"><h4>Application details</h4><p>${escapeHtml(item.application)}</p></div>
@@ -671,7 +679,7 @@ function renderTabs() {
   if (els.openingCount) els.openingCount.textContent = String(filteredFuture().length);
   if (els.recurringCount) els.recurringCount.textContent = String(filteredUnconfirmed().length);
   const scanLabel = document.getElementById('scan-label');
-  if (scanLabel) scanLabel.textContent = radarCatalog.settings?.mode === 'demo' ? 'simulated programs' : state.catalog === 'open' ? 'verified open programs' : state.catalog === 'opening' ? 'confirmed future programs' : 'unconfirmed planning records';
+  if (scanLabel) scanLabel.textContent = radarCatalog.settings?.mode === 'demo' ? 'simulated programs' : state.catalog === 'open' ? 'accepting vacancies and registers' : state.catalog === 'opening' ? 'confirmed future programs' : 'unconfirmed planning records';
 }
 
 function selectCatalog(catalog) {

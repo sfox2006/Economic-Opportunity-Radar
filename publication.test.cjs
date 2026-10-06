@@ -95,6 +95,16 @@ test('live selection independently blocks simulations and future dates marked op
   assert.equal(model.select([live({url:null})],settings,now).excluded[0].reason,'application-route-unconfirmed');
   assert.equal(model.select([live({status:'unknown',url:null})],settings,now).opportunities.length,0);
 });
+
+test('independent review gate withholds candidates but keeps future audit records', () => {
+  const current = live({publicationApproved:false});
+  const future = live({id:'pending-future',status:'confirmed-future',publicationApproved:false,opensOn:'2027-09-01',verification:{...live().verification,openingDateConfirmed:true}});
+  const result = model.select([current,future],settings,now);
+  assert.equal(result.opportunities.length,0);
+  assert.equal(result.confirmedFuture.length,0);
+  assert.equal(result.futureCompilation.length,1);
+  assert.equal(result.futureCompilation[0].holdReason,'independent-review-not-approved');
+});
 test('Australia dates and month-end boundaries are deterministic', () => {
   assert.equal(model.dateKey(new Date('2026-10-06T23:00:00Z')),'2026-10-07');
   assert.equal(model.windowEnd('2026-11-30'),'2027-02-28');

@@ -198,9 +198,9 @@ summary:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; }
   .catalog-tabs [role="tab"] { min-height: 48px; padding: 14px 2px; font-size: 18px; border-bottom: 1px solid var(--line); }
   .catalog-tabs [role="tab"][aria-selected="true"] { border-bottom-color: var(--line); box-shadow: inset 3px 0 var(--green); }
   .list-head { display: none; }
-  .program-row, .opening-panel .program-row { grid-template-columns: minmax(0,1fr) auto; gap: 10px 16px; padding: 22px 12px; }
+  .program-row, .opening-panel .program-row { grid-template-columns: minmax(0,1fr); gap: 10px 16px; padding: 22px 12px; }
   .program-row h3, .row-organisation { grid-column: 1 / -1; }
-  .row-location { text-align: right; }
+  .row-location { text-align: left; }
   .program-body { padding: 20px 12px; }
   .profile-layout { grid-template-columns: 1fr; gap: 32px; }
   .newsletter-bar { flex-direction: column; align-items: flex-start; gap: 16px; padding-block: 22px; }

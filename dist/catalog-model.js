@@ -4,8 +4,8 @@
   if (typeof module === 'object' && module.exports) module.exports = model;
   else root.RadarModel = model;
 })(typeof globalThis === 'object' ? globalThis : this, function () {
-  const types = ['Cadetship', 'Internship', 'Vacationer Program', 'Summer Vacation', 'Industry Placement', 'Scholarship', 'Research assistantship', 'Other', 'Graduate Program', 'Graduate Job'];
-  const currentStatuses = ['open', 'rolling', 'on-demand'];
+  const types = ['Cadetship', 'Internship', 'Vacationer Program', 'Summer Vacation', 'Industry Placement', 'Scholarship', 'Research assistantship', 'Fellowship', 'Training', 'Tutoring / Casual Academic', 'Other', 'Graduate Program', 'Graduate Job'];
+  const currentStatuses = ['open', 'rolling', 'on-demand', 'interest-register'];
   const futureStatuses = ['upcoming', 'confirmed-future', 'recurring-unconfirmed'];
   function dateKey(now = new Date(), timeZone = 'Australia/Sydney') {
     const parts = new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(now);
@@ -32,7 +32,7 @@
   }
   function validate(records, registry, settings) {
     if (!['demo', 'live'].includes(settings.mode)) throw new Error('mode must be demo or live');
-    if (!Number.isInteger(settings.maxVerificationAgeDays) || settings.maxVerificationAgeDays < 1 || settings.maxVerificationAgeDays > 30) throw new Error('Verification age must be 1–30 days');
+    if (!Number.isInteger(settings.maxVerificationAgeDays) || settings.maxVerificationAgeDays < 1 || settings.maxVerificationAgeDays > 30) throw new Error('Verification age must be 1-30 days');
     dateKey(new Date(), settings.timeZone);
     if (!Array.isArray(records)) throw new Error('Opportunity input must be an array');
     const orgs = new Map(registry.organisations.map(org => [org.id, org]));
@@ -65,7 +65,7 @@
         if (item.url && !https(item.url)) throw new Error(`${item.id}: supplied programme URLs must be HTTPS`);
         if (item.verification?.sources && (!Array.isArray(item.verification.sources) || item.verification.sources.some(source => !https(source.url) || typeof source.claim !== 'string' || !source.claim.trim()))) throw new Error(`${item.id}: evidence sources need HTTPS URLs and claim notes`);
       }
-      if (item.status === 'confirmed-future' && !item.opensOn && !item.opensFrom) throw new Error(`${item.id}: confirmed future opening requires an exact date or confirmed range`);
+      if (item.status === 'confirmed-future' && !item.opensOn && !item.opensFrom && !(typeof item.openingWindow === 'string' && item.openingWindow.trim())) throw new Error(`${item.id}: confirmed future opening requires an exact date, confirmed range or official qualitative window`);
       if (item.status === 'recurring-unconfirmed' && (item.opensOn || item.opensFrom || item.opensBy)) throw new Error(`${item.id}: unconfirmed cycles must use expected dates, not confirmed opening fields`);
       if (item.status === 'upcoming' && !item.opensOn && !item.opensFrom) {
         if (!validDate(item.expectedOpensFrom) || !validDate(item.expectedOpensBy) || item.expectedOpensFrom > item.expectedOpensBy || !item.openingEvidence) throw new Error(`${item.id}: expected opening needs a dated range and supporting note`);
@@ -83,6 +83,8 @@
       const current = currentStatuses.includes(item.status);
       const evidence = item.verification;
       if (['closed', 'unknown'].includes(item.status)) reason = item.status;
+      if (!reason && settings.mode === 'live' && item.simulated !== false) reason = 'simulated';
+      if (!reason && settings.mode === 'live' && item.publicationApproved === false) reason = 'independent-review-not-approved';
       if (!reason && settings.mode === 'live') {
         const checked = evidence && Date.parse(evidence.checkedAt);
         if (item.simulated !== false) reason = 'simulated';
@@ -96,6 +98,7 @@
         else if (current && !item.deadlineOn && !item.closesAt && evidence.noDeadlinePublished !== true) reason = 'deadline-evidence-missing';
         else if (future && item.opensOn && evidence.openingDateConfirmed !== true) reason = 'opening-unconfirmed';
         else if (future && item.opensFrom && evidence.openingWindowConfirmed !== true) reason = 'opening-window-unconfirmed';
+        else if (future && !recurring && !item.opensOn && !item.opensFrom && evidence.openingWindowConfirmed !== true) reason = 'opening-window-unconfirmed';
         else if (recurring && evidence.recurringProgramConfirmed !== true && evidence.expectedWindowSupported !== true) reason = 'recurring-program-unverified';
         else if (current && (item.opensOn || item.opensFrom) > today) reason = 'not-yet-open';
       }
@@ -104,7 +107,7 @@
       const from = item.opensOn || item.opensFrom || item.expectedOpensFrom;
       const to = item.opensOn || item.opensBy || item.expectedOpensBy;
       if (!reason && future) {
-        if (!recurring && (!from || (settings.mode === 'live' && from <= today))) reason = 'opening-needs-recheck';
+        if (!recurring && from && settings.mode === 'live' && from <= today) reason = 'opening-needs-recheck';
         else if (to && to < today) reason = recurring ? 'expected-window-ended' : 'opening-needs-recheck';
       }
       const checked = evidence && Date.parse(evidence.checkedAt);

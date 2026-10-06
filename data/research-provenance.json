@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "derivedAt": "2026-10-06",
+  "sourceAudit": {
+    "libraryFileId": "libfile_b7b734c8f0108191b29a956cee1994f0",
+    "version": "1",
+    "fileId": "file_00000000391481f58f2c8d8af56b4651"
+  },
+  "evidenceArchive": {
+    "libraryFileId": "libfile_2c9e873bcd008191a35e25db95777349",
+    "version": "1",
+    "fileId": "file_000000000fb481f5839e41fe80d0fed9"
+  },
+  "method": "New repository records derived from parent-reviewed facts and supported read-only Library text reads. Full original claims, reviewed source records and independent review reports remain in the audit Library files; no byte-for-byte audit materialisation was installed.",
+  "asOf": "2026-10-06",
+  "fullAuditSummary": {
+    "existingOrganisations": 196,
+    "existingOrganisationsWithCheck": 196,
+    "expandedOrganisations": 26,
+    "programmeRecords": 242,
+    "classifications": {
+      "confirmed-future": 28,
+      "open": 48,
+      "closed": 51,
+      "recurring-unknown": 41,
+      "EOI": 8,
+      "held": 66
+    },
+    "reviewedRecords": 184,
+    "publicationApproved": 84,
+    "confirmedOpeningsAfter20270106": 22,
+    "registrySectorCounts": {
+      "federal": 32,
+      "state": 16,
+      "banks": 21,
+      "assets": 18,
+      "economics": 19,
+      "consulting": 18,
+      "think-tanks": 13,
+      "universities": 43,
+      "nonprofits": 8,
+      "international": 8
+    },
+    "reviewedCurrentOpen": 48,
+    "reviewedCurrentEOI": 8
+  },
+  "derivedRecordCount": 130,
+  "approvedForPublication": 84,
+  "currentVacancies": 48,
+  "currentRegisters": 8,
+  "confirmedFuture": 28,
+  "heldFutureOrRecurring": 46,
+  "otherAuditOnlyExcluded": 112,
+  "longRangeConfirmed": 22,
+  "publicLongRangeConfirmed": 19,
+  "retention": "All 74 future/recurring candidates retained offline; only 28 independent-review-approved future candidates enter public assets.",
+  "precisionNotes": [
+    "Month endpoints bound the published month/window; they are not exact opening dates.",
+    "Qualitative official windows are retained verbatim without invented dates.",
+    "A provider's check-back month stays recurring/unconfirmed.",
+    "Source-stated hours with unknown time zone remain text; no UTC timestamp is fabricated.",
+    "EOI/register/pool/enquiry acceptance is distinct from a vacancy or guaranteed admission.",
+    "International conditional access requires the published work/study/location conditions; sponsorship and Australia-based remote work are not presumed.",
+    "Original registry IDs and related university/unit IDs are preserved; programme records are not duplicated."
+  ]
+}
