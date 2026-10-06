@@ -4,7 +4,7 @@
   if (typeof module === 'object' && module.exports) module.exports = model;
   else root.RadarModel = model;
 })(typeof globalThis === 'object' ? globalThis : this, function () {
-  const types = ['Cadetship', 'Internship', 'Vacationer Program', 'Summer Vacation', 'Industry Placement', 'Scholarship', 'Research assistantship', 'Fellowship', 'Training', 'Tutoring / Casual Academic', 'Other', 'Graduate Program', 'Graduate Job', 'Professional Job'];
+  const types = ['Cadetship', 'Internship', 'Vacationer Program', 'Summer Vacation', 'Industry Placement', 'Scholarship', 'Research assistantship', 'Fellowship', 'Training', 'Tutoring / Casual Academic', 'Other', 'Graduate Program', 'Graduate Job', 'professional_job'];
   const currentStatuses = ['open', 'rolling', 'on-demand', 'interest-register'];
   const futureStatuses = ['upcoming', 'confirmed-future', 'recurring-unconfirmed'];
   function dateKey(now = new Date(), timeZone = 'Australia/Sydney') {

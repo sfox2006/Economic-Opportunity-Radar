@@ -128,11 +128,11 @@ test('unpaid does not pass paid filters and external card text is escaped', () =
 });
 
 test('professional qualifications and experience are searchable without excluding senior titles', () => {
-  const professional = example({id:'professional-el1',type:'Professional Job',program:'EL1 Assistant Director, Evaluation',
+  const professional = example({id:'professional-el1',type:'professional_job',program:'EL1 Assistant Director, Evaluation',
     studyYear:'Relevant economics degree',experienceDetails:'Three years of <econometric leadership> experience preferred',
     eligibilityDetails:'Australian citizen; baseline clearance; existing employees only',country:'Australia',region:'ACT'});
   const evaluate = load({opportunities:[example(),professional],openingSoon:[]});
-  evaluate('els.typeFilter.value="Professional Job"; els.studyYearFilter.value="Relevant economics degree"; els.query.value="econometric leadership"; updateState()');
+  evaluate('els.typeFilter.value="professional_job"; els.studyYearFilter.value="Relevant economics degree"; els.query.value="econometric leadership"; updateState()');
   assert.equal(evaluate('filteredItems().length'),1);
   assert.equal(evaluate('filteredItems()[0].id'),'professional-el1');
   const html=evaluate('els.results.children.at(-1).innerHTML');

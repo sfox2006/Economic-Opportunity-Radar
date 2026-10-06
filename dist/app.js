@@ -5,7 +5,7 @@ const opportunities = currentCatalog.opportunities;
 const openingSoon = currentCatalog.openingSoon;
 const confirmedFuture = currentCatalog.confirmedFuture || openingSoon || [];
 const futureCompilation = currentCatalog.futureCompilation || confirmedFuture;
-const typeOrder = typeof RadarModel === 'undefined' ? ["Cadetship", "Internship", "Vacationer Program", "Summer Vacation", "Industry Placement", "Scholarship", "Research assistantship", "Fellowship", "Training", "Tutoring / Casual Academic", "Other", "Graduate Program", "Graduate Job", "Professional Job"] : RadarModel.types;
+const typeOrder = typeof RadarModel === 'undefined' ? ["Cadetship", "Internship", "Vacationer Program", "Summer Vacation", "Industry Placement", "Scholarship", "Research assistantship", "Fellowship", "Training", "Tutoring / Casual Academic", "Other", "Graduate Program", "Graduate Job", "professional_job"] : RadarModel.types;
 
 const openStatuses = new Set(["open", "rolling", "on-demand", "interest-register"]);
 

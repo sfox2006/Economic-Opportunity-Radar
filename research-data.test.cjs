@@ -5,14 +5,19 @@ const model = require('./dist/catalog-model.js'), exporter = require('./dist/cat
 const read = name => JSON.parse(fs.readFileSync('data/'+name,'utf8'));
 const records = read('live-opportunities.json'), registry = read('organisations.json'), settings = read('settings.json');
 const manifest = read('research-provenance.json');
-const checked = model.select(records,settings,new Date('2026-10-06T14:00:00Z'));
+const original = records.filter(r=>r.researchAudit.libraryFileId===manifest.sourceAudit.libraryFileId);
+const additions = records.filter(r=>r.researchAudit.libraryFileId===manifest.professionalReview.sourceAudit.libraryFileId);
+const checked = model.select(original,settings,new Date('2026-10-06T14:00:00Z'));
+const allChecked = model.select(records,settings,new Date(manifest.professionalReview.availabilityCheckedAt));
 const byId = id => records.find(r=>r.id===id);
 
 test('reviewed import preserves all candidates, organisations and publication dispositions',()=>{
   model.validate(records,registry,settings);
-  assert.equal(records.length,manifest.derivedRecordCount);
+  assert.equal(records.length,manifest.catalogRecordCount);
+  assert.equal(original.length,manifest.derivedRecordCount);
+  assert.equal(require('node:crypto').createHash('sha256').update(JSON.stringify(original)).digest('hex'),manifest.professionalReview.preservedExistingRecordsSha256);
   assert.equal(registry.organisations.length,222);
-  assert.equal(records.filter(r=>r.publicationApproved).length,84);
+  assert.equal(original.filter(r=>r.publicationApproved).length,84);
   assert.equal(checked.opportunities.filter(r=>r.status!=='interest-register').length,48);
   assert.equal(checked.opportunities.filter(r=>r.status==='interest-register').length,8);
   assert.equal(checked.confirmedFuture.length,28);
@@ -28,7 +33,7 @@ test('reviewed import preserves all candidates, organisations and publication di
 test('public assets omit every held candidate while offline compilation retains restricted future schemes',()=>{
   const context=vm.createContext({});vm.runInContext(fs.readFileSync('dist/catalog.js','utf8'),context);
   const publicRecords=vm.runInContext('radarCatalog.records',context);
-  assert.equal(publicRecords.length,84);
+  assert.equal(publicRecords.length,142);
   for(const r of publicRecords) assert.equal(r.publicationApproved,true);
   const ids=new Set(publicRecords.map(r=>r.id));
   for(const r of records.filter(r=>!r.publicationApproved)) assert.equal(ids.has(r.id),false);
@@ -38,6 +43,41 @@ test('public assets omit every held candidate while offline compilation retains 
   }
   assert.equal(byId('frontier-economics-winter-intern-next-cycle').status,'recurring-unconfirmed');
   assert.equal(byId('frontier-economics-winter-intern-next-cycle').opensOn,undefined);
+});
+
+test('professional review preserves independent holds, actual requirements and all organisation coverage',()=>{
+  const review=manifest.professionalReview,coverage=read('research-coverage.json');
+  assert.equal(additions.length,160);assert.equal(review.updatedExistingRecords,0);
+  assert.equal(additions.filter(r=>r.publicationApproved).length,58);
+  assert.equal(additions.filter(r=>!r.publicationApproved).length,102);
+  assert.equal(allChecked.opportunities.filter(r=>r.status!=='interest-register').length,84);
+  assert.equal(allChecked.opportunities.filter(r=>r.status==='interest-register').length,21);
+  assert.equal(allChecked.confirmedFuture.length,34);assert.equal(allChecked.recurringUnconfirmed.length,3);
+  assert.equal(allChecked.futureCompilation.length,86);
+  assert.equal(allChecked.futureCompilation.filter(r=>r.publicationState==='held').length,49);
+  assert.equal(review.sourceAudit.version,'0');assert.equal(review.sourceSummary.approvedNewRecords,57);
+  assert.equal(review.additionalHeldLeadCount,1);assert.equal(review.privateUnsentClarificationDrafts,9);
+  const nab=byId(review.browserRouteResolution.recordId);
+  assert.equal(nab.publicationApproved,true);assert.equal(nab.independentReview.previousDecision.decision,'hold');
+  assert.equal(nab.verification.applicationRouteCheckedAt,review.browserRouteResolution.checkedAt);
+  for(const r of additions) {
+    assert.equal(r.researchAudit.recordId,r.id);assert.equal(r.researchAudit.independentlyReviewed,true);
+    assert.equal(r.publicationApproved,r.independentReview.publicationApproved);
+    if(r.type==='professional_job'&&r.publicationApproved)assert.ok(r.experienceDetails?.trim());
+    if(r.researchOriginalEligibility&&r.country==='Australia')assert.equal(r.eligibility,'Not stated');
+  }
+  const currentIds=new Set(allChecked.opportunities.map(r=>r.id));
+  for(const r of additions.filter(r=>!r.publicationApproved||['confirmed-future','recurring-unconfirmed'].includes(r.status)))assert.equal(currentIds.has(r.id),false);
+  assert.equal(coverage.organisations.length,222);assert.equal(new Set(coverage.organisations.map(r=>r.organisationId)).size,222);
+  assert.equal(Object.keys(coverage.sectorCounts).length,10);
+  const orgs=new Map(registry.organisations.map(r=>[r.id,r]));
+  for(const row of coverage.organisations) {
+    assert.equal(row.organisation,orgs.get(row.organisationId).name);assert.equal(row.sector,orgs.get(row.organisationId).sector);
+    assert.equal(row.generalVacanciesSearched,true);assert.equal(row.studentGraduatePagesSearched,true);
+    assert.ok(row.coverageStatus);assert.ok(row.limitations);assert.equal(model.validTimestamp(row.checkedAt),true);
+  }
+  assert.match(coverage.coverageLimit,/not an exhaustive/);
+  assert.doesNotMatch(JSON.stringify(coverage),/initialFetchResult|rawText|clarificationDrafts|evidenceFile/);
 });
 
 test('official qualitative windows and unknown deadline time zones keep their original precision',()=>{

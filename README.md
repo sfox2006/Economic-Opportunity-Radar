@@ -55,6 +55,11 @@ data. Unverified, closed, expired and stale live listings are held back. Exact
 opening dates require a recheck before promotion; expected windows stay labelled.
 Future candidates remain in the compilation across all dates and review states.
 Use `node scripts/export-compilation.cjs <output-directory>` for review CSV/JSON.
+The professional expansion preserves the 130 original records and adds 160
+reviewed candidates: 58 approved for publication and 102 held. Coverage and
+source identities are recorded in `data/research-coverage.json` and
+`data/research-provenance.json`. Finite searches across all 222 organisations do
+not establish that inaccessible or unindexed portals contain no further roles.
 
 Edit `data/organisation-websites.json` to maintain organisation About/homepage
 links, then rebuild. This separate overlay records link evidence and labels

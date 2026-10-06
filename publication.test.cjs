@@ -97,7 +97,7 @@ test('live selection independently blocks simulations and future dates marked op
 });
 
 test('professional titles retain actual requirements and all existing publication gates', () => {
-  const role=live({type:'Professional Job',program:'Senior Economist / EL1 Assistant Director',publicationApproved:true,
+  const role=live({type:'professional_job',program:'Senior Economist / EL1 Assistant Director',publicationApproved:true,
     studyYear:'Economics degree required',experienceDetails:'Relevant policy and evaluation experience required; team leadership preferred',
     eligibilityDetails:'Australian citizenship, baseline clearance and current APS employment required; Indigenous applicants only'});
   model.validate([role],registry,settings);
@@ -112,6 +112,7 @@ test('professional titles retain actual requirements and all existing publicatio
   const exporter=require('./dist/catalog-export.js');
   for(const csv of [exporter.currentCsv([selected],registry),exporter.futureCsv([{...selected,status:'confirmed-future',publicationState:'confirmed-future',opensOn:'2099-01-01'}],registry)]){
     assert.match(csv,/Qualifications \/ study/);assert.match(csv,/Experience requirements/);
+    assert.match(csv,/Professional Job/);assert.doesNotMatch(csv,/professional_job/);
     assert.ok(csv.includes(role.studyYear));assert.ok(csv.includes(role.experienceDetails));assert.ok(csv.includes(role.eligibilityDetails));
   }
 });

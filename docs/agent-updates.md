@@ -67,7 +67,8 @@ application URL is held. Closed and unknown audit records need no invented URL. 
 verified or the placement location is variable; otherwise supply actual lat/lon.
 Use honest `Not stated` values for unknown pay, citizenship and eligibility.
 
-General professional vacancies use `type: "Professional Job"`; optional
+General professional vacancies use `type: "professional_job"` and display
+**Professional Job**; optional
 `typeDetails` describes the role category without changing that filter key.
 Keep the exact employer role title and level in `program`. The stable legacy
 `studyYear` field now supplies the **Qualifications / study** column and filter:
@@ -204,9 +205,28 @@ mailbox review or create clarification drafts by itself.
 
 `data/research-provenance.json` records final Library audit and evidence identities,
 both version 1. The full 242-record original/reviewed-source/independent-review
-audit remains in Library. The repository contains 130 derived current/future/
+audit remains in Library. The original cohort contains 130 derived current/future/
 recurring candidates, preserving all original 196 organisation IDs and adding 26.
 At review time, 48 vacancies and 8 registers were accepting, 28 future records
 were approved, and 46 future/recurring candidates were held. All 74 future records
 remain in the offline compilation, including 22 openings after 6 January 2027
 (three nationality-restricted scholarship windows stay outside the public site).
+
+The separate professional-audience review is Library file
+`libfile_30366364b1048191a8c942825f9c4460`, version 0. Its 160 additions retain
+source requirements and independent decisions; all original 130 records and
+their check timestamps are unchanged. The original source bundle approves 57;
+a bounded browser check of NAB 809289's matching first application step resolves
+its sole route hold, giving 58 approved additions and 102 held additions. The
+original hold remains in `independentReview.previousDecision`.
+
+At the final import check there are 84 current vacancies, 21 interest registers,
+34 confirmed future programmes and 3 recurring programmes with unconfirmed next
+intakes. All 86 future candidates remain offline, including 49 held candidates.
+`data/research-provenance.json` separates the historic audit summary from this
+review and aggregate counts. `data/research-coverage.json` records finite general
+vacancy and student/graduate searches for all 222 organisations in ten sectors,
+with access limitations. Its search outcomes do not prove absence of vacancies.
+The additional incomplete AustralianSuper lead and nine clarification drafts
+are retained privately in the source review; neither is a public listing.
+Correspondence is handled separately from this website update.

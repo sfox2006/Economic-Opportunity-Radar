@@ -24,7 +24,7 @@ test('share URLs return to the precise site opportunity, without retaining unrel
 });
 
 test('professional preparation preserves experience and restrictions without inventing an employer age limit',()=>{
- const role={...records[0],program:'Manager, Economics and Evaluation',type:'Professional Job',
+ const role={...records[0],program:'Manager, Economics and Evaluation',type:'professional_job',
   studyYear:'Relevant degree required',experienceDetails:'Demonstrated evaluation experience; management experience preferred',
   eligibilityDetails:'Australian citizenship; security clearance; current employees only'};
  const prompt=tools.applicationPrompt(role);
