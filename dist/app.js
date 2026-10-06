@@ -169,7 +169,12 @@ function escapeHtml(value) {
 }
 
 function organisationLabel(item) { return item.displayOrganisation || item.organisation; }
-function typeLabel(item) { return item.typeDetails || item.type; }
+function typeLabel(item) {
+  const value=item.typeDetails || item.type;
+  if (typeof RadarOpportunity !== 'undefined') return RadarOpportunity.typeLabel(value);
+  return String(value || 'Other').replace(/_/g, ' ').replace(/\b[a-z][a-z]*\b/gi, word => ({phd:'PhD',mphil:'MPhil',hdr:'HDR',eoi:'EOI'})[word.toLowerCase()] || word[0].toUpperCase()+word.slice(1).toLowerCase());
+}
+function opportunityActions(item) { return `<div class="application-tools"><button type="button" data-opportunity-action="prompt" data-opportunity-id="${escapeHtml(item.id)}" aria-label="AI application prompt for ${escapeHtml(item.program)}">AI application prompt</button><button type="button" data-opportunity-action="share" data-opportunity-id="${escapeHtml(item.id)}" aria-label="Share ${escapeHtml(item.program)}">Share</button></div>`; }
 
 function openingSoonRow(item) {
   const opens = futureOpeningLabel(item);
@@ -201,6 +206,7 @@ function openingSoonRow(item) {
       <div class="application-detail"><h4>Application details</h4><p>${escapeHtml(item.application)}</p></div>
       ${item.openingEvidence ? `<p>${escapeHtml(item.openingEvidence)}</p>` : ''}
       ${provenanceMarkup(item)}
+      ${opportunityActions(item)}
       ${url || pinned ? `<div class="opportunity-actions">${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Official programme details</a>` : ""}${pinned ? `<button class="locate-program" type="button">View on globe</button>` : ""}</div>` : ""}
     </div>
     </details>
@@ -308,7 +314,7 @@ function fillSelect(select, values) {
   values.forEach((value) => {
     const option = document.createElement("option");
     option.value = value;
-    option.textContent = value;
+    option.textContent = select === els.typeFilter ? typeLabel({type:value}) : value;
     select.appendChild(option);
   });
 }
@@ -539,7 +545,7 @@ function renderChips() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = `chip ${state.interests.has(type) ? "active" : ""}`;
-    button.textContent = type;
+    button.textContent = typeLabel({type});
     button.addEventListener("click", () => {
       if (state.interests.has(type)) state.interests.delete(type);
       else state.interests.add(type);
@@ -609,6 +615,7 @@ function renderResults() {
       </dl><div class="application-detail"><h4>Who can apply</h4><p>${escapeHtml(item.eligibilityDetails)}</p></div>
       <div class="application-detail"><h4>Application details</h4><p>${escapeHtml(item.application)}</p></div>
       ${provenanceMarkup(item)}
+      ${opportunityActions(item)}
       <div class="opportunity-actions">${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Official application details ↗</a>` : `<strong class="simulation-note">Simulated listing · applications unavailable</strong>`}
         ${isPinned(item) ? `<button class="locate-program" type="button">View on map</button>` : ""}<small>${escapeHtml(reviewed)}</small></div>
       </div></details>${state.profile ? `<div class="score"><span>${item.score}% profile fit</span></div>` : ""}`;
@@ -623,7 +630,7 @@ function bindProgramCard(card, item) {
   };
   card.addEventListener("click", (event) => {
     if (event.target.closest(".locate-program")) select();
-    if (!event.target.closest("a, button, summary, input")) select();
+    if (!event.target.closest("a, button, summary, input, textarea")) select();
   });
   card.addEventListener("keydown", (event) => {
     if (event.target !== card) return;

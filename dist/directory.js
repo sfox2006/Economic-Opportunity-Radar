@@ -12,7 +12,7 @@ function renderCatalogStatus() {
   document.getElementById('catalog-status').textContent = demoMode
     ? `Demonstration catalogue: ${opportunities.length} simulated programmes; prepared ${built}`
     : opportunities.length || futureCompilation.length
-      ? `${vacancies} verified open vacancies; ${registers} accepting registers / enquiries; ${confirmedFuture.length} confirmed future; ${unconfirmed} unconfirmed planning records. Catalogue built ${built}. Open and confirmed future evidence is checked within ${radarCatalog.settings.maxVerificationAgeDays} days.`
+      ? `${vacancies} verified open vacancies; ${registers} accepting registers / enquiries; ${confirmedFuture.length} confirmed future.`
       : 'Organisation coverage is being researched. Verified opportunities will appear after their application status is checked.';
 }
 renderCatalogStatus();

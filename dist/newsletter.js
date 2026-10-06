@@ -18,4 +18,10 @@ if (signup) {
     signup.removeAttribute("href");
   }
 }
+const footerSignup = document.getElementById("footer-newsletter-signup");
+if (footerSignup) {
+  footerSignup.hidden = !newsletterUrl;
+  if (newsletterUrl) { footerSignup.href = newsletterUrl; footerSignup.target = "_blank"; footerSignup.rel = "noopener noreferrer"; }
+  else footerSignup.removeAttribute("href");
+}
 if (newsletterStatus) newsletterStatus.hidden = !!newsletterUrl;

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./journal.css?v=esa-act-colours-20261006" />
+  <link rel="stylesheet" href="./journal.css?v=application-tools-20261006" />
 </head>
 <body>
   <aside id="demo-banner" class="demo-banner" role="note" hidden><strong>Demonstration site</strong> · All opportunities, dates, pay and eligibility below are simulated. None are verified vacancies.</aside>
@@ -41,7 +41,7 @@
           <div class="newsletter-copy">
             <span class="newsletter-kicker">Newsletter</span>
             <h2 id="newsletter-heading">Young Economist Network Opportunity Roundup</h2>
-            <p>The Australian economics opportunities newsletter, brought into a searchable guide. Newsletter signup is not enabled yet.</p>
+            <p>The Australian economics opportunities newsletter, brought into a searchable guide. Get the monthly YEN ACT Opportunity Roundup by email.</p>
           </div>
           <a id="newsletter-signup" class="newsletter-cta" hidden>Sign up ↗</a><span id="newsletter-status" class="newsletter-status">Coming soon</span>
         </div>
@@ -63,6 +63,8 @@
           <div><p class="eyebrow">02 / Find your next step</p><h2>Find an opportunity</h2></div>
           <div class="catalog-actions"><button id="download-csv" type="button">Download filtered list ↓</button><button id="reset-filters" type="button">Reset filters</button></div>
         </div>
+        <p id="opportunity-link-notice" class="link-notice" role="status" hidden></p>
+        <p id="opportunity-action-status" class="action-status" role="status" aria-live="polite"></p>
         <div class="search-toolbar">
                     <label class="search-box">
             <span>Search</span>
@@ -174,15 +176,36 @@
       </div>
     </section>
   </main>
-  <footer class="content-width"><a class="brand" href="#explore">Economic Opportunity Radar.</a><span>Australian economics. Your next opportunity.</span><a href="#explore">Back to top ↑</a></footer>
+  <footer class="content-width site-footer">
+    <a class="brand" href="#explore">Economic Opportunity Radar.</a>
+    <div class="footer-suggestion"><h2>Suggest an opportunity or get involved</h2>
+      <p>Know an economics opportunity or organisation we should include? Send an official source link, the relevant dates and any corrections to YEN ACT. To promote a job or company, contact us with your enquiry.</p>
+      <div class="footer-actions">
+        <a class="footer-action" href="mailto:ye.esa.act@gmail.com?subject=Economic%20Opportunity%20Radar%20%E2%80%94%20suggest%20an%20opportunity">Suggest an opportunity</a>
+        <a class="footer-action" href="mailto:ye.esa.act@gmail.com?subject=Economic%20Opportunity%20Radar%20%E2%80%94%20suggest%20or%20verify%20an%20organisation">Suggest or verify an organisation</a>
+        <a class="footer-action" href="mailto:ye.esa.act@gmail.com?subject=Economic%20Opportunity%20Radar%20%E2%80%94%20job%20or%20company%20promotion%20enquiry">Promote a job or company — enquire</a>
+        <a class="footer-action" href="#organisations">Browse organisations</a>
+        <a id="footer-newsletter-signup" class="footer-action" hidden>Sign up for the monthly YEN ACT email</a>
+      </div>
+    </div>
+    <p>Australian economics. Your next opportunity.</p><a href="#explore">Back to top ↑</a>
+  </footer>
+  <dialog id="opportunity-action-dialog" aria-labelledby="opportunity-action-title" aria-describedby="opportunity-action-message">
+    <h2 id="opportunity-action-title">AI application prompt</h2>
+    <p id="opportunity-action-message" role="status" aria-live="polite"></p>
+    <label for="opportunity-action-text">Ready-to-copy text</label><textarea id="opportunity-action-text" readonly rows="16"></textarea>
+    <div class="dialog-actions"><button type="button" id="copy-opportunity-action">Copy prompt</button><button type="button" id="close-opportunity-action">Close</button></div>
+  </dialog>
   <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.14.0/dist/maplibre-gl.js"></script>
   <script src="./catalog-model.js?v=organisation-profiles-20261006"></script>
   <script src="./catalog-export.js?v=organisation-profiles-20261006"></script>
   <script src="./organisations.js?v=organisation-profiles-20261006"></script>
   <script src="./catalog.js?v=organisation-profiles-20261006"></script>
-  <script src="./config.js?v=organisation-profiles-20261006"></script>
-  <script src="./app.js?v=esa-act-colours-20261006"></script>
-  <script src="./newsletter.js?v=organisation-profiles-20261006"></script>
-  <script src="./directory.js?v=organisation-profiles-20261006"></script>
+  <script src="./config.js?v=application-tools-20261006"></script>
+  <script src="./opportunity-tools.js?v=application-tools-20261006"></script>
+  <script src="./app.js?v=application-tools-20261006"></script>
+  <script src="./opportunity-actions.js?v=application-tools-20261006"></script>
+  <script src="./newsletter.js?v=application-tools-20261006"></script>
+  <script src="./directory.js?v=application-tools-20261006"></script>
 </body>
 </html>

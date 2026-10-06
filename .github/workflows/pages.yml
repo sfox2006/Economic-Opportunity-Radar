@@ -34,6 +34,8 @@ jobs:
           node --check dist/catalog.js
           node --check dist/config.js
           node --check dist/newsletter.js
+          node --check dist/opportunity-tools.js
+          node --check dist/opportunity-actions.js
           node --test *.test.cjs
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'

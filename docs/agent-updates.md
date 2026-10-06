@@ -139,6 +139,18 @@ After editing data:
 No emails, subscriptions, registrations or research services run in this site.
 Daily scheduled builds only enforce expiry; they do not verify new records.
 
+## Operator clarification drafts
+
+For future explicitly requested economic or political opportunity reviews/searches,
+when material facts are unclear or unpublished (for example international
+eligibility), prepare an UNSENT clarification email to the most relevant official
+published contact. Explain the correct website with its link and ask specific
+unresolved questions. Never guess an email address or send the draft. Check
+previous drafts and replies to avoid duplicates, and consolidate related questions
+per programme/organisation. Keep recipients, drafts, replies and subscriber data
+out of public repository assets. A website interface update does not start a
+mailbox review or create clarification drafts by itself.
+
 ## Research audit, 6 October 2026
 
 `data/research-provenance.json` records final Library audit and evidence identities,
