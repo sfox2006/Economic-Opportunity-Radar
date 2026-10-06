@@ -55,5 +55,9 @@ the user's requested scope.
 For the broadened professional-audience pass requested on 6 October 2026, prepare
 a draft pull request with added, updated and withheld counts, coverage for every
 registry organisation in all ten sectors, unresolved access and independent
-verification results. Do not merge or deploy this pass without further Sam
-approval. Earlier feature-deployment authorisation does not apply to this pass.
+verification results. At 21:52 UTC Sam authorised publication once tests pass,
+superseding the earlier draft-only hold for this pass. Wait for the completed,
+independently reviewed records and all-organisation coverage bundle, import only
+approved public records, retain held candidates privately and complete final
+data/UI verification before merge and deployment. Do not publish the foundation
+alone as completed research. Check current main and exact CI/Pages/live results.

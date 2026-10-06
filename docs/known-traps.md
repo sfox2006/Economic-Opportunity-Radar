@@ -118,6 +118,8 @@ clear unconfirmed or needs-recheck labels. Official overseas programmes can be
 relevant when Australian audience eligibility is specifically evidenced.
 
 The broadened professional-audience review is a draft-PR pass requiring separate
-independent verification before publication. An APS shortlist, generic careers
+independent verification before publication. Sam later authorised publication
+once the completed reviewed data and coverage bundle pass final tests; this does
+not relax verification or permit publication of the foundation alone. An APS shortlist, generic careers
 page or role-title snippet is a lead; preserve APS-only eligibility and do not
 bypass a human-verification challenge (including Finance vacancies).

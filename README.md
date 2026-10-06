@@ -72,10 +72,13 @@ or research agents are activated by a site update.
 
 ## Publish
 
-The broadened professional-audience pass is for a **draft PR only**, with
+The broadened professional-audience pass starts as a **draft PR**, with
 added/updated/withheld counts, coverage across all registry organisations and
-sectors, access blockers and independent review. It requires further Sam approval
-before merge or deployment.
+sectors, access blockers and independent review. Sam authorised publication at
+21:52 UTC on 6 October 2026 once the completed independently reviewed data and
+coverage bundle pass final tests. The foundation checkpoint alone must not be
+published as completed catalogue research. Verify current main and the exact
+CI/Pages/live result after the authorised merge.
 
 In repository **Settings → Pages**, select **GitHub Actions**. After the PR is
 merged, main updates or a manual **Test and deploy website** run publish the site.

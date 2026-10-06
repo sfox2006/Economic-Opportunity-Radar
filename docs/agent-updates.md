@@ -26,8 +26,12 @@ evidence. Keep descriptions politically neutral.
 
 Sam requested a draft PR for this broadened pass, with added/updated/withheld
 counts, all-organisation coverage, unresolved access and separate independent
-verification before publication. Do not merge or deploy this pass without further
-approval; earlier feature-deployment authority does not cover it. APS shortlists
+verification before publication. At 21:52 UTC Sam authorised publication once
+tests pass, superseding the draft-only hold for this pass. Complete the reviewed
+records and all-organisation coverage import, preserve held records outside
+public assets and verify the final data before merge/deployment. Do not publish
+the foundation alone as completed research. Check current main and verify the
+exact CI/Pages deployment and live site. APS shortlists
 are leads, not verification. Preserve APS-only restrictions and report blocked
 human-verification pages without bypassing them.
 
