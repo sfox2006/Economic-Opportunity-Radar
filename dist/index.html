@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Economic Opportunity Radar</title>
+  <meta name="description" content="Explore Australian economics internships, graduate jobs, cadetships, vacation programs, placements and scholarships across ten sectors." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.14.0/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./journal.css" />
+</head>
+<body>
+  <aside id="demo-banner" class="demo-banner" role="note"><strong>Demonstration site</strong> · All opportunities, dates, pay and eligibility below are simulated. None are verified vacancies.</aside>
+  <header class="site-header">
+    <a class="brand" href="#explore">Economic Opportunity Radar</a>
+    <nav aria-label="Main navigation">
+      <a href="#explore" aria-current="location">Explore</a>
+      <a href="#programs">Programs</a>
+      <a href="#organisations">Organisations</a>
+      <a href="#profile">My profile</a>
+      <a href="#newsletter">Newsletter</a>
+    </nav>
+    <span class="refresh-label">Young Economist Network · Australia</span>
+  </header>
+  <main>
+    <section id="explore" class="explore-section" aria-label="Opportunity explorer">
+      <div class="section-intro content-width">
+        <div><h1>Your next step in economics.</h1></div>
+        <div class="intro-copy">
+          <p>A guide to internships, graduate jobs, cadetships, vacation programs, industry placements and scholarships for economics students in Australia. Explore employers across government, finance, consulting, research and beyond.</p>
+          <p id="catalog-status" class="catalog-notice">Demonstration catalog · simulated opportunities</p>
+          <div class="scan-card" aria-live="polite"><span id="scan-count">0</span><small id="scan-label">simulated programs</small></div>
+        </div>
+      </div>
+      <div class="content-width coverage-summary"><span><strong id="organisation-count">0</strong> organisations</span><span><strong>10</strong> sectors</span><a href="#organisations">Explore the employer directory ↓</a></div>
+      <section id="newsletter" class="newsletter" aria-labelledby="newsletter-heading">
+        <div class="content-width newsletter-bar">
+          <div class="newsletter-copy">
+            <span class="newsletter-kicker">Newsletter</span>
+            <h2 id="newsletter-heading">Young Economist Network Opportunity Roundup</h2>
+            <p>The Australian economics opportunities newsletter, brought into a searchable guide. Newsletter signup is not enabled in this demonstration.</p>
+          </div>
+          <a id="newsletter-signup" class="newsletter-cta" hidden>Sign up ↗</a><span id="newsletter-status" class="newsletter-status">Coming soon</span>
+        </div>
+      </section>
+      <div class="globe-stage">
+        <div id="globe" role="region" aria-label="Interactive map with Australian program locations"></div>
+        <span id="map-status" role="status">Loading world map...</span>
+        <button id="world-view" type="button" title="Return to world view">Australia view</button>
+        <span class="map-legend"><i></i> Programs <span id="legend-selected" hidden><i class="selected"></i> Selected</span></span>
+      </div>
+      <div class="selection-strip content-width" id="selection-strip" hidden>
+        <section class="detail-card" id="detail-card" aria-live="polite"></section>
+        <a class="section-link" href="#programs">Browse programs <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+    <section id="programs" class="programs-section" aria-label="Available programs">
+      <div class="content-width">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / Find your next step</p><h2>Find an opportunity</h2></div>
+          <div class="catalog-actions"><button id="download-csv" type="button">Download filtered list ↓</button><button id="reset-filters" type="button">Reset filters</button></div>
+        </div>
+        <div class="search-toolbar">
+                    <label class="search-box">
+            <span>Search</span>
+            <input id="query" type="search" placeholder="Try Treasury, cadetship, research..." />
+          </label>
+
+          <div class="filter-grid">
+            <label><span>Sector</span><select id="sector-filter"><option value="All">All sectors</option></select></label>
+            <label><span>Australian citizenship</span><select id="citizenship-filter"><option value="All">Any requirement</option><option>Required</option><option>Not required</option><option>Restrictions</option><option>Not stated</option></select></label>
+            <label><span>Year of study</span><select id="study-year-filter"><option value="All">Any study year</option></select></label>
+            <label>
+              <span>State / territory</span>
+              <select id="region-filter">
+                <option value="All">All locations</option>
+              </select>
+            </label>
+            <label>
+              <span>Type</span>
+              <select id="type-filter">
+                <option value="All">All types</option>
+              </select>
+            </label>
+            <label>
+              <span>Eligibility</span>
+              <select id="eligibility-filter">
+                <option value="All">Any eligibility</option>
+                <option value="Yes">International eligible</option>
+                <option value="Some restrictions">Some restrictions</option>
+                <option value="No">Local only</option>
+              </select>
+            </label>
+            <label>
+              <span>Funding</span>
+              <select id="paid-filter">
+                <option value="All">Any funding</option>
+                <option value="Paid">Paid or stipend</option>
+                <option value="Free">Free / no cost</option>
+                <option value="No">Unpaid</option>
+              </select>
+            </label>
+          </div>
+
+
+        </div>
+        <div class="catalog-tabs" role="tablist" aria-label="When programmes are open">
+          <button type="button" role="tab" id="tab-open" aria-controls="panel-open" aria-selected="true" tabindex="0">
+            <span id="open-tab-label" class="tab-label">Sample opportunities</span>
+            <span id="open-count" class="tab-count">0</span>
+          </button>
+          <button type="button" role="tab" id="tab-opening" aria-controls="panel-opening" aria-selected="false" tabindex="-1">
+            <span class="tab-label">Coming up soon</span>
+            <span id="opening-count" class="tab-count">0</span>
+          </button>
+        </div>
+        <div role="tabpanel" id="panel-open" aria-labelledby="tab-open">
+          <div class="list-head" aria-hidden="true"><span>Program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Verification</span></div>
+          <div id="results" class="results-list"></div>
+        </div>
+        <div role="tabpanel" id="panel-opening" class="opening-panel" aria-labelledby="tab-opening" hidden>
+          <p class="opening-intro">A separate watchlist for the next three months. Expected windows are labelled as estimates and never presented as currently open. All examples in this demonstration are simulated.</p>
+          <div id="opening-soon-head" class="list-head" aria-hidden="true" hidden><span>Program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Opens</span></div>
+          <div id="opening-soon-list" class="results-list"></div>
+        </div>
+      </div>
+    </section>
+    <section id="organisations" class="directory-section content-width" aria-labelledby="directory-heading">
+      <div class="section-heading"><div><p class="eyebrow">The employer directory</p><h2 id="directory-heading">Explore all organisations</h2></div></div>
+      <p class="directory-intro">Employers imported from the YEN reference list, in newsletter sector order. Links are source references and have not been checked. An organisation's inclusion does not mean it has an open vacancy.</p>
+      <label class="directory-search"><span>Search organisations</span><input id="organisation-query" type="search" placeholder="Search an employer or sector..." /></label>
+      <p id="directory-count" role="status"></p><div id="organisation-directory"></div>
+    </section>
+    <section id="profile" class="profile-section" aria-label="Profile builder">
+      <div class="content-width profile-layout">
+        <div class="profile-heading"><p class="eyebrow">03 / Make it personal</p><h2>Your profile</h2><span class="optional-label">Optional</span>
+          <div id="profile-summary" hidden><strong>Profile matching active</strong><p>Estimated fit with your preferences, not acceptance odds.</p></div>
+        </div>
+        <div class="profile-form">            <div class="chips" id="interest-chips" aria-label="Preferred opportunity types"></div>
+            <label>
+              <span>Home state / territory</span>
+              <select id="home-region"><option value="">Choose a location</option><option>ACT</option><option>NSW</option><option>VIC</option><option>QLD</option><option>WA</option><option>SA</option><option>TAS</option><option>NT</option><option>Online</option></select>
+            </label>
+            <label class="toggle">
+              <input id="needs-international" type="checkbox" />
+              <span>I need international eligibility</span>
+            </label>
+            <label class="toggle">
+              <input id="needs-funded" type="checkbox" />
+              <span>Prioritise paid, stipend, or free opportunities</span>
+            </label>
+            <div class="profile-actions">
+              <button id="apply-profile" type="button" disabled>Apply profile</button>
+              <button id="clear-profile" type="button" hidden>Clear profile</button>
+            </div>
+</div>
+      </div>
+    </section>
+  </main>
+  <footer class="content-width"><a class="brand" href="#explore">Economic Opportunity Radar.</a><span>Australian economics. Your next opportunity.</span><a href="#explore">Back to top ↑</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.14.0/dist/maplibre-gl.js"></script>
+  <script src="./catalog-model.js"></script>
+  <script src="./organisations.js"></script>
+  <script src="./catalog.js"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+  <script src="./newsletter.js"></script>
+  <script src="./directory.js"></script>
+</body>
+</html>

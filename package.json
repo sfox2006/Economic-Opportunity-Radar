@@ -1,0 +1,12 @@
+{
+  "name": "economic-opportunity-radar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Australian YEN economics opportunity website with agent-ready data inputs",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "test": "node --test *.test.cjs",
+    "check": "node scripts/build.cjs && node --test *.test.cjs"
+  },
+  "engines": { "node": ">=22" }
+}

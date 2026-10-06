@@ -1,0 +1,15 @@
+source-skill/
+.env
+.env.*
+!.env.example
+.openai/
+__pycache__/
+*.sqlite*
+*.db
+node_modules/
+agents/state/
+newsletter-google/SETUP.private.md
+site.tar.gz
+research/runs/*/crawl/
+research/runs/*/domain-search-*.json
+research/runs/*/discovery-*.json
