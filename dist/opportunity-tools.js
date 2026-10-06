@@ -27,7 +27,8 @@ Role / programme: ${item.description||'Not stated'}
 Location: ${item.location||'Not stated'}
 Duration: ${item.duration||'Not stated'}
 Pay / funding: ${item.fundingDetails||item.paid||'Not stated'}
-Study / academic requirements: ${item.studyYear||'Not stated'}
+Qualifications / study requirements: ${item.studyYear||'Not stated'}
+Experience requirements: ${item.experienceDetails||'Not stated'}
 Eligibility / citizenship / work rights: ${item.eligibilityDetails||'Not established'}
 Citizenship / work-rights detail: ${item.citizenshipDetails||item.citizenship||'Not stated'}
 Deadline: ${item.deadline||'Not established'}
@@ -39,7 +40,7 @@ Audience conditions: ${verification.audienceEvidence||'Refer to eligibility abov
 ${item.holdReason?'Held reason: '+item.holdReason:''}
 
 BEFORE DRAFTING
-Read my CV and identify the stated requirements, evidence I already have, and any gaps. Ask clarifying questions before drafting whenever facts or motivation are unclear, then wait for my answers. In particular ask why I want THIS role and organisation, which relevant experiences and achievements I want to emphasise (including substantiated results), how I meet degree/study-year and work-rights requirements, my availability, and any selection criteria, document instructions, length limits or formatting requirements not established by the sources. Ask for missing CV content or a current advert when needed; do not silently fill gaps. Distinguish mandatory requirements from preferences, and disclose eligibility uncertainty.
+Read my CV and identify the stated requirements, evidence I already have, and any gaps. Ask clarifying questions before drafting whenever facts or motivation are unclear, then wait for my answers. In particular ask why I want THIS role and organisation, which relevant experiences and achievements I want to emphasise (including substantiated results), how I meet qualification, experience and work-rights requirements, my availability, and any selection criteria, document instructions, length limits or formatting requirements not established by the sources. Ask for missing CV content or a current advert when needed; do not silently fill gaps. Distinguish mandatory requirements from preferences, and disclose eligibility uncertainty. Preserve clearance, Indigenous-specific and internal-employee restrictions. This guide's under-30 audience is not an employer age limit: do not invent an age restriction or infer eligibility from a job level or title.
 
 TAILOR MY CV
 Prioritise relevant existing items and remove irrelevant material only within the existing CV section order, layout and structure. Preserve that structure; do not create a new CV template or reorder sections without asking. Do not invent skills, experience, qualifications, dates, responsibilities or quantified achievements. Mark missing information for me to confirm. Explain proposed omissions and preserve a truthful history. Plain text cannot preserve fonts, columns, spacing or pagination exactly: say so and offer replacement text mapped to my existing sections rather than claiming the original formatting is preserved.

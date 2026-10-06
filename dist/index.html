@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Economic Opportunity Radar</title>
-  <meta name="description" content="Explore Australian economics internships, graduate jobs, cadetships, vacation programs, placements and scholarships across ten sectors." />
+  <meta name="description" content="Economics roles, research and student pathways for Australian economists and economics-related professionals under 30, across ten sectors." />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.14.0/dist/maplibre-gl.css" />
   <link rel="stylesheet" href="./styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +18,7 @@
     <a class="brand" href="#explore">Economic Opportunity Radar</a>
     <nav aria-label="Main navigation">
       <a href="#explore" aria-current="location">Explore</a>
-      <a href="#programs">Programs</a>
+      <a href="#programs">Opportunities</a>
       <a href="#organisations">Organisations</a>
       <a href="#profile">My profile</a>
       <a href="#newsletter">Newsletter</a>
@@ -30,7 +30,8 @@
       <div class="section-intro content-width">
         <div><h1>Your next step in economics.</h1></div>
         <div class="intro-copy">
-          <p>A guide to internships, graduate jobs, cadetships, placements, research and scholarships for Australian economics students and early-career applicants. Explore Australian and international organisations, with work rights and funding conditions recorded.</p>
+          <p>A guide for Australian economists and economics-related professionals under 30, including students, graduates and people with several years of experience. Explore economics, analysis, research, policy, consulting, evaluation, regulatory and finance work, including suitable specialist, management and leadership roles, alongside student pathways across Australian and international organisations.</p>
+          <p>Under 30 describes this guide's audience. Each opportunity has its own qualification, experience, work-rights and other eligibility requirements; an employer age limit applies only when explicitly stated.</p>
           <p id="catalog-status" class="catalog-notice">Organisation coverage is being researched. Verified opportunities will appear after their application status is checked.</p>
           <div class="scan-card" aria-live="polite"><span id="scan-count">0</span><small id="scan-label">verified programs</small></div>
         </div>
@@ -74,7 +75,7 @@
           <div class="filter-grid">
             <label><span>Sector</span><select id="sector-filter"><option value="All">All sectors</option></select></label>
             <label><span>Australian citizenship</span><select id="citizenship-filter"><option value="All">Any requirement</option><option>Required</option><option>Not required</option><option>Restrictions</option><option>Not stated</option></select></label>
-            <label><span>Year of study</span><select id="study-year-filter"><option value="All">Any study year</option></select></label>
+            <label><span>Qualifications / study</span><select id="study-year-filter"><option value="All">Any requirement</option></select></label>
             <label>
               <span>Placement location</span>
               <select id="region-filter">
@@ -129,12 +130,12 @@
           </button>
         </div>
         <div role="tabpanel" id="panel-open" aria-labelledby="tab-open">
-          <div class="list-head" aria-hidden="true"><span>Program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Verification</span></div>
+          <div class="list-head" aria-hidden="true"><span>Role / program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Verification</span></div>
           <div id="results" class="results-list"></div>
         </div>
         <div role="tabpanel" id="panel-opening" class="opening-panel" aria-labelledby="tab-opening" hidden>
           <p class="opening-intro">Officially confirmed future openings across all dates, including openings more than three months away. Recheck applications when the opening arrives.</p>
-          <div id="opening-soon-head" class="list-head" aria-hidden="true" hidden><span>Program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Opens</span></div>
+          <div id="opening-soon-head" class="list-head" aria-hidden="true" hidden><span>Role / program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Opens</span></div>
           <div id="opening-soon-list" class="results-list"></div>
         </div>
         <div role="tabpanel" id="panel-recurring" class="opening-panel" aria-labelledby="tab-recurring" hidden>
@@ -197,13 +198,13 @@
     <div class="dialog-actions"><button type="button" id="copy-opportunity-action">Copy prompt</button><button type="button" id="close-opportunity-action">Close</button></div>
   </dialog>
   <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.14.0/dist/maplibre-gl.js"></script>
-  <script src="./catalog-model.js?v=organisation-profiles-20261006"></script>
-  <script src="./catalog-export.js?v=organisation-profiles-20261006"></script>
+  <script src="./catalog-model.js?v=professional-audience-20261006"></script>
+  <script src="./catalog-export.js?v=professional-audience-20261006"></script>
   <script src="./organisations.js?v=organisation-profiles-20261006"></script>
-  <script src="./catalog.js?v=organisation-profiles-20261006"></script>
+  <script src="./catalog.js?v=professional-audience-20261006"></script>
   <script src="./config.js?v=application-tools-20261006"></script>
-  <script src="./opportunity-tools.js?v=application-tools-20261006"></script>
-  <script src="./app.js?v=application-tools-20261006"></script>
+  <script src="./opportunity-tools.js?v=professional-audience-20261006"></script>
+  <script src="./app.js?v=professional-audience-20261006"></script>
   <script src="./opportunity-actions.js?v=application-tools-20261006"></script>
   <script src="./newsletter.js?v=application-tools-20261006"></script>
   <script src="./directory.js?v=application-tools-20261006"></script>

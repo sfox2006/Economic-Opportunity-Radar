@@ -96,6 +96,26 @@ test('live selection independently blocks simulations and future dates marked op
   assert.equal(model.select([live({status:'unknown',url:null})],settings,now).opportunities.length,0);
 });
 
+test('professional titles retain actual requirements and all existing publication gates', () => {
+  const role=live({type:'Professional Job',program:'Senior Economist / EL1 Assistant Director',publicationApproved:true,
+    studyYear:'Economics degree required',experienceDetails:'Relevant policy and evaluation experience required; team leadership preferred',
+    eligibilityDetails:'Australian citizenship, baseline clearance and current APS employment required; Indigenous applicants only'});
+  model.validate([role],registry,settings);
+  const selected=model.select([role],settings,now).opportunities[0];
+  assert.equal(selected.program,role.program);assert.equal(selected.studyYear,role.studyYear);
+  assert.equal(selected.experienceDetails,role.experienceDetails);assert.equal(selected.eligibilityDetails,role.eligibilityDetails);
+  assert.equal(selected.ageLimit,undefined);
+  assert.equal(model.select([{...role,publicationApproved:false}],settings,now).excluded[0].reason,'independent-review-not-approved');
+  assert.equal(model.select([{...role,verification:null}],settings,now).excluded[0].reason,'unverified');
+  assert.equal(model.select([{...role,country:'United Kingdom'}],settings,now).excluded[0].reason,'australian-audience-unconfirmed');
+  for(const invalid of ['',[],{years:3}])assert.throws(()=>model.validate([{...role,experienceDetails:invalid}],registry,settings),/experienceDetails/);
+  const exporter=require('./dist/catalog-export.js');
+  for(const csv of [exporter.currentCsv([selected],registry),exporter.futureCsv([{...selected,status:'confirmed-future',publicationState:'confirmed-future',opensOn:'2099-01-01'}],registry)]){
+    assert.match(csv,/Qualifications \/ study/);assert.match(csv,/Experience requirements/);
+    assert.ok(csv.includes(role.studyYear));assert.ok(csv.includes(role.experienceDetails));assert.ok(csv.includes(role.eligibilityDetails));
+  }
+});
+
 test('independent review gate withholds candidates but keeps future audit records', () => {
   const current = live({publicationApproved:false});
   const future = live({id:'pending-future',status:'confirmed-future',publicationApproved:false,opensOn:'2027-09-01',verification:{...live().verification,openingDateConfirmed:true}});

@@ -22,3 +22,14 @@ test('share URLs return to the precise site opportunity, without retaining unrel
  assert.equal(url,'https://sfox2006.github.io/Economic-Opportunity-Radar/?opportunity=imf-fip-economists-2027#programs');
  assert.doesNotMatch(url,/imf\.example|query=old/);
 });
+
+test('professional preparation preserves experience and restrictions without inventing an employer age limit',()=>{
+ const role={...records[0],program:'Manager, Economics and Evaluation',type:'Professional Job',
+  studyYear:'Relevant degree required',experienceDetails:'Demonstrated evaluation experience; management experience preferred',
+  eligibilityDetails:'Australian citizenship; security clearance; current employees only'};
+ const prompt=tools.applicationPrompt(role);
+ for(const fact of [role.program,role.studyYear,role.experienceDetails,role.eligibilityDetails])assert.ok(prompt.includes(fact));
+ assert.match(prompt,/under-30 audience is not an employer age limit/);
+ assert.match(prompt,/Preserve clearance, Indigenous-specific and internal-employee restrictions/);
+ assert.match(prompt,/Distinguish mandatory requirements from preferences/);
+});

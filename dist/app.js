@@ -5,7 +5,7 @@ const opportunities = currentCatalog.opportunities;
 const openingSoon = currentCatalog.openingSoon;
 const confirmedFuture = currentCatalog.confirmedFuture || openingSoon || [];
 const futureCompilation = currentCatalog.futureCompilation || confirmedFuture;
-const typeOrder = typeof RadarModel === 'undefined' ? ["Cadetship", "Internship", "Vacationer Program", "Summer Vacation", "Industry Placement", "Scholarship", "Research assistantship", "Fellowship", "Training", "Tutoring / Casual Academic", "Other", "Graduate Program", "Graduate Job"] : RadarModel.types;
+const typeOrder = typeof RadarModel === 'undefined' ? ["Cadetship", "Internship", "Vacationer Program", "Summer Vacation", "Industry Placement", "Scholarship", "Research assistantship", "Fellowship", "Training", "Tutoring / Casual Academic", "Other", "Graduate Program", "Graduate Job", "Professional Job"] : RadarModel.types;
 
 const openStatuses = new Set(["open", "rolling", "on-demand", "interest-register"]);
 
@@ -199,7 +199,8 @@ function openingSoonRow(item) {
         ${item.location ? `<div><dt>Location</dt><dd>${escapeHtml(item.location)}</dd></div>` : ""}
         ${item.deadline ? `<div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}</dd></div>` : ""}
         <div><dt>Pay / funding</dt><dd>${escapeHtml(item.fundingDetails || item.paid)}</dd></div>
-        <div><dt>Year of study</dt><dd>${escapeHtml(item.studyYear)}</dd></div>
+        <div><dt>Qualifications / study</dt><dd>${escapeHtml(item.studyYear)}</dd></div>
+        ${item.experienceDetails ? `<div><dt>Experience requirements</dt><dd>${escapeHtml(item.experienceDetails)}</dd></div>` : ''}
         <div><dt>Citizenship / work rights</dt><dd>${escapeHtml(item.citizenshipDetails || item.citizenship)}</dd></div>
       </dl>
       <div class="application-detail"><h4>Who can apply</h4><p>${escapeHtml(item.eligibilityDetails)}</p></div>
@@ -340,7 +341,7 @@ function matchScore(item) {
 }
 
 function passesFilters(item) {
-  const haystack = `${item.displayOrganisation || ''} ${item.sector} ${item.studyYear} ${item.country} ${item.region} ${item.organisation} ${item.program} ${item.type} ${item.deadline} ${item.paid} ${item.description} ${item.location} ${item.eligibilityDetails} ${item.application}`.toLowerCase();
+  const haystack = `${item.displayOrganisation || ''} ${item.sector} ${item.studyYear} ${item.experienceDetails || ''} ${item.country} ${item.region} ${item.organisation} ${item.program} ${item.type} ${item.typeDetails || ''} ${item.deadline} ${item.paid} ${item.description} ${item.location} ${item.eligibilityDetails} ${item.application}`.toLowerCase();
   const paidPass =
     state.paid === "All" ||
     state.paid === fundingCategory(item);
@@ -611,7 +612,8 @@ function renderResults() {
         <div><dt>Pay / funding</dt><dd>${escapeHtml(item.fundingDetails || item.paid)}</dd></div>
         <div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}${soon}</dd></div>
         <div><dt>Citizenship / work rights</dt><dd>${escapeHtml(item.citizenshipDetails || item.citizenship || "Not stated")}${item.simulated ? " (simulated)" : ""}</dd></div>
-        <div><dt>Year of study</dt><dd>${escapeHtml(item.studyYear || "Not stated")}${item.simulated ? " (simulated)" : ""}</dd></div>
+        <div><dt>Qualifications / study</dt><dd>${escapeHtml(item.studyYear || "Not stated")}${item.simulated ? " (simulated)" : ""}</dd></div>
+        ${item.experienceDetails ? `<div><dt>Experience requirements</dt><dd>${escapeHtml(item.experienceDetails)}</dd></div>` : ''}
       </dl><div class="application-detail"><h4>Who can apply</h4><p>${escapeHtml(item.eligibilityDetails)}</p></div>
       <div class="application-detail"><h4>Application details</h4><p>${escapeHtml(item.application)}</p></div>
       ${provenanceMarkup(item)}

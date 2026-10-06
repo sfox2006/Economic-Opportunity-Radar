@@ -6,6 +6,31 @@ assets. Sam authorised real opportunity research and international expansion on
 data and associated status/retention changes. Later updates follow their own
 requested scope; this authorisation does not send emails or update other sites.
 
+## Audience and professional vacancies
+
+The guide serves Australian economists and economics-related professionals under
+30: students, graduates and people with several years of experience. Under 30
+describes the guide's audience; do not turn it into an employer eligibility
+restriction without explicit official evidence. Search general vacancies and
+experienced-hire pages as well as student and graduate pathways for every
+registry organisation in all ten sectors.
+
+Consider economist, analyst, research, policy, consulting, evaluation, regulatory
+and financial work, plus suitable management, specialist and leadership roles.
+An EL1, assistant director, senior or manager title is not an exclusion by itself.
+Assess the actual qualification and experience requirements, economics relevance
+and reasonable audience fit against official evidence. Preserve work rights,
+citizenship, clearance, Indigenous-specific and internal-employee restrictions.
+Overseas opportunities still need specific Australian audience eligibility
+evidence. Keep descriptions politically neutral.
+
+Sam requested a draft PR for this broadened pass, with added/updated/withheld
+counts, all-organisation coverage, unresolved access and separate independent
+verification before publication. Do not merge or deploy this pass without further
+approval; earlier feature-deployment authority does not cover it. APS shortlists
+are leads, not verification. Preserve APS-only restrictions and report blocked
+human-verification pages without bypassing them.
+
 ## Public data and organisation coverage
 
 `data/settings.json` selects `mode: "live"`. `data/live-opportunities.json` is the
@@ -37,6 +62,26 @@ Use null when no route has been established; a current record without a verified
 application URL is held. Closed and unknown audit records need no invented URL. Use `mapped: false` when coordinates are not
 verified or the placement location is variable; otherwise supply actual lat/lon.
 Use honest `Not stated` values for unknown pay, citizenship and eligibility.
+
+General professional vacancies use `type: "Professional Job"`; optional
+`typeDetails` describes the role category without changing that filter key.
+Keep the exact employer role title and level in `program`. The stable legacy
+`studyYear` field now supplies the **Qualifications / study** column and filter:
+record actual degree, registration or study requirements, including `Not stated`
+when unpublished; do not invent a student-year requirement for a professional
+role. Optional `experienceDetails` is a nonempty string containing the source's
+experience requirements or `Not stated`, with mandatory/preferred distinctions
+preserved. It appears in cards, search, prompts and both CSVs. Put all other
+restrictions in `eligibilityDetails`, with official evidence in `verification`.
+Publication approval remains an explicit review disposition. Record the basis
+for economics relevance and audience fit in verification notes, rather than
+guessing suitability from title, employer name or a years-of-experience ceiling.
+
+Research handoff must include stable-ID records and a separate coverage outcome
+for each registry organisation: official careers/general-vacancy pages checked,
+check time, findings, source URLs, independent review and unresolved access or
+eligibility questions. A blocked page is not a finding of no vacancies. Keep
+private uncertainty drafts and recipients outside public repository assets.
 
 All displayed live records require a `verification` object with:
 

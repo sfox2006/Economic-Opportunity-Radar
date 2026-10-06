@@ -127,6 +127,26 @@ test('unpaid does not pass paid filters and external card text is escaped', () =
   assert.equal(evaluate('fundingCategory({paid:"Unpaid"})'),'No');
 });
 
+test('professional qualifications and experience are searchable without excluding senior titles', () => {
+  const professional = example({id:'professional-el1',type:'Professional Job',program:'EL1 Assistant Director, Evaluation',
+    studyYear:'Relevant economics degree',experienceDetails:'Three years of <econometric leadership> experience preferred',
+    eligibilityDetails:'Australian citizen; baseline clearance; existing employees only',country:'Australia',region:'ACT'});
+  const evaluate = load({opportunities:[example(),professional],openingSoon:[]});
+  evaluate('els.typeFilter.value="Professional Job"; els.studyYearFilter.value="Relevant economics degree"; els.query.value="econometric leadership"; updateState()');
+  assert.equal(evaluate('filteredItems().length'),1);
+  assert.equal(evaluate('filteredItems()[0].id'),'professional-el1');
+  const html=evaluate('els.results.children.at(-1).innerHTML');
+  assert.match(html,/Qualifications \/ study/);assert.match(html,/Experience requirements/);
+  assert.match(html,/&lt;econometric leadership&gt;/);assert.match(html,/baseline clearance; existing employees only/);
+  assert.doesNotMatch(html,/<econometric leadership>/);
+  evaluate('resetFilters()');assert.equal(evaluate('filteredItems().length'),2);
+  const future = {...professional,id:'professional-future',status:'confirmed-future',opensOn:'2099-01-01',publicationState:'confirmed-future'};
+  const futureEvaluate=load({opportunities:[],confirmedFuture:[future],futureCompilation:[future],openingSoon:[]});
+  futureEvaluate('selectCatalog("opening"); els.query.value="econometric leadership"; updateState()');
+  assert.match(futureEvaluate('els.openingSoonList.innerHTML'),/Experience requirements/);
+  assert.match(futureEvaluate('els.openingSoonList.innerHTML'),/baseline clearance; existing employees only/);
+});
+
 test('all future dates and recurring records use separate tabs, evidence and counts', () => {
   const future = example({id:'far-future',status:'confirmed-future',opensOn:'2099-09-01',publicationState:'confirmed-future',verification:{sourceUrl:'https://example.org/evidence',checkedAt:'2026-10-06T10:00:00Z',notes:'Official opening announcement; test fixture.'}});
   const recurring = example({id:'recurring',status:'recurring-unconfirmed',publicationState:'recurring-unconfirmed',expectedWindow:'Usually March',verification:{sourceUrl:'https://example.org/recurring',notes:'Next intake has not been announced.'}});

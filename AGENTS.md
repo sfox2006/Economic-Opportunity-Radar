@@ -1,6 +1,12 @@
 # Economic Opportunity Radar
 
-This website serves Australian economics students and early-career applicants.
+This website serves Australian economists and economics-related professionals
+under 30, including students, graduates and applicants with several years of
+experience. The audience age is not an employer age limit unless an official
+source explicitly says so. Review actual qualifications and experience rather
+than excluding a role solely because its title says senior, manager, specialist,
+assistant director or EL1. Economics-relevant management and leadership roles
+can qualify when their actual requirements reasonably fit this audience.
 Sam authorised verified research, international expansion, retention of openings
 more than three months away, and removal of simulated listings on 6 October 2026.
 The public site uses live mode. Synthetic fixtures remain private test inputs;
@@ -45,3 +51,9 @@ Run `node scripts/build.cjs`, `node --test *.test.cjs` and syntax checks for cha
 JavaScript. For UI changes, check the browser at desktop and mobile sizes.
 Keep changes reviewable in a pull request; publishing settings and merges follow
 the user's requested scope.
+
+For the broadened professional-audience pass requested on 6 October 2026, prepare
+a draft pull request with added, updated and withheld counts, coverage for every
+registry organisation in all ten sectors, unresolved access and independent
+verification results. Do not merge or deploy this pass without further Sam
+approval. Earlier feature-deployment authorisation does not apply to this pass.
