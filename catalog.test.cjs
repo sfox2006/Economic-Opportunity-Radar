@@ -33,19 +33,30 @@ const example = (overrides = {}) => ({
   ...overrides
 });
 
-test('public demo covers every registry organisation without verification claims', () => {
+test('private demo fixtures cover registry organisations without verification claims', () => {
   const ctx = vm.createContext({});
   vm.runInContext(catalogCode + '\n' + code.slice(0, code.indexOf('const state =')), ctx);
   const catalog = vm.runInContext('radarCatalog', ctx);
   const registry = JSON.parse(readFileSync('data/organisations.json', 'utf8'));
   const records = JSON.parse(readFileSync('data/demo-opportunities.json', 'utf8'));
-  require('./dist/catalog-model.js').validate(records, registry, catalog.settings);
+  require('./dist/catalog-model.js').validate(records, registry, {...catalog.settings, mode:'demo'});
   assert.equal(registry.sectors.length, 10);
   assert.equal(new Set(registry.organisations.map(org => org.id)).size, registry.organisations.length);
   for (const org of registry.organisations) assert.ok(records.some(item => item.organisationId === org.id && item.simulated));
-  for (const item of catalog.opportunities.concat(catalog.openingSoon)) {
+  for (const item of records) {
     assert.equal(item.url, ''); assert.equal(item.reviewedAt, null); assert.equal(item.verification, undefined);
   }
+});
+
+test('public catalogue uses live data without any simulated fallback', () => {
+  const ctx = vm.createContext({});
+  vm.runInContext(catalogCode, ctx);
+  const catalog = vm.runInContext('radarCatalog', ctx);
+  assert.equal(catalog.settings.mode, 'live');
+  assert.ok([...catalog.opportunities, ...catalog.openingSoon].every(item => item.simulated === false));
+  const html = readFileSync('dist/index.html', 'utf8');
+  assert.match(html, /id="demo-banner"[^>]*hidden/);
+  assert.match(html, /Organisation coverage is being researched/);
 });
 
 test('empty catalog starts without selection, fake listings or map pins', () => {

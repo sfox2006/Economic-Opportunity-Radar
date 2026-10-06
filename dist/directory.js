@@ -7,7 +7,9 @@ document.getElementById('organisation-count').textContent = radarRegistry.organi
 const built = new Date(radarCatalog.generatedAt).toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', year: 'numeric' });
 document.getElementById('catalog-status').textContent = demoMode
   ? `Demonstration catalog · ${opportunities.length} simulated programs · prepared ${built}`
-  : `Catalog built ${built} · listings checked within ${radarCatalog.settings.maxVerificationAgeDays} days · expired listings hidden automatically`;
+  : opportunities.length || openingSoon.length
+    ? `Catalog built ${built} · listings checked within ${radarCatalog.settings.maxVerificationAgeDays} days · expired listings hidden automatically`
+    : 'Organisation coverage is being researched. Verified opportunities will appear after their application status is checked.';
 const directory = document.getElementById('organisation-directory');
 const orgQuery = document.getElementById('organisation-query');
 function renderDirectory() {
@@ -26,7 +28,7 @@ function renderDirectory() {
         return `<article class="organisation-card"><h4>${escapeHtml(org.name)}</h4>
           <p>${count} ${demoMode ? 'simulated' : 'verified open'} ${count === 1 ? 'opportunity' : 'opportunities'}</p>
           ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Reference careers page ↗</a>` : '<span class="missing-source">Careers URL not supplied</span>'}
-          <small>Imported reference · not checked</small></article>`;
+          <small>Organisation from the source list - opportunity availability and reference URL not checked</small></article>`;
       }).join('')}</div></details>`;
   }).join('');
   document.getElementById('directory-count').textContent = `${shown} of ${radarRegistry.organisations.length} organisations`;

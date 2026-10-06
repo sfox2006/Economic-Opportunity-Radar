@@ -5,9 +5,11 @@ Opportunity Roundup. Covers internships, graduate jobs, cadetships, vacation
 programs, industry placements, scholarships and research assistantships across
 the newsletter's ten sectors.
 
-**Current mode: demonstration.** All 196 opportunity cards and ten watchlist
-examples are simulated. No internships or other real vacancies have been searched
-or verified. Each sample is labelled and has no application link.
+**Current mode: live.** Simulated cards and watchlist examples have been removed
+from the public catalogue. The 196 real organisations from the supplied reference
+remain as research coverage. No live opportunities have been verified yet; the
+site displays an empty catalogue while research proceeds. Synthetic fixtures are
+kept privately in `data/demo-opportunities.json` for behavior checks.
 
 ## What works
 
