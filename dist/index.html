@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Economic Opportunity Radar</title>
+  <meta name="description" content="Discover economics internships, research assistantships, fellowships and student programs around the world." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.14.0/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./journal.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#explore">Economic Opportunity Radar</a>
+    <nav aria-label="Main navigation">
+      <a href="#explore" aria-current="location">Explore</a>
+      <a href="#programs">Programs</a>
+      <a href="#profile">My profile</a>
+      <a href="#newsletter">Newsletter</a>
+    </nav>
+    <span class="refresh-label">The opportunity journal</span>
+  </header>
+  <main>
+    <section id="explore" class="explore-section" aria-label="Opportunity explorer">
+      <div class="section-intro content-width">
+        <div><h1>Economics opportunities, mapped.</h1></div>
+        <div class="intro-copy">
+          <p>Economic Opportunity Radar is a free, searchable guide to economics internships, research assistantships, predoctoral programs, fellowships, scholarships, conferences, summer schools and competitions around the world. Explore opportunities at universities, research institutes, central banks and international organisations, and find your next step in economics.</p><p class="catalog-notice">The economics catalog is being prepared. Verified listings will appear here as they are added.</p>
+          <div class="scan-card" aria-live="polite"><span id="scan-count">0</span><small>programs found</small></div>
+        </div>
+      </div>
+      <section id="newsletter" class="newsletter" aria-labelledby="newsletter-heading">
+        <div class="content-width newsletter-bar">
+          <div class="newsletter-copy">
+            <span class="newsletter-kicker">Newsletter</span>
+            <h2 id="newsletter-heading">Economics updates, coming soon</h2>
+            <p>A newsletter for economics students and early-career researchers is being prepared. Signup is not available yet.</p>
+          </div>
+          <a id="newsletter-signup" class="newsletter-cta" hidden>Sign up ↗</a><span id="newsletter-status" class="newsletter-status">Coming soon</span>
+        </div>
+      </section>
+      <div class="globe-stage">
+        <div id="globe" role="region" aria-label="Interactive world map with program locations"></div>
+        <span id="map-status" role="status">Loading world map...</span>
+        <button id="world-view" type="button" title="Return to world view">World view</button>
+        <span class="map-legend"><i></i> Programs <span id="legend-selected" hidden><i class="selected"></i> Selected</span></span>
+      </div>
+      <div class="selection-strip content-width" id="selection-strip" hidden>
+        <section class="detail-card" id="detail-card" aria-live="polite"></section>
+        <a class="section-link" href="#programs">Browse programs <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+    <section id="programs" class="programs-section" aria-label="Available programs">
+      <div class="content-width">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / Find your next step</p><h2>Programs</h2></div>
+          <button id="reset-filters" type="button">Reset filters</button>
+        </div>
+        <div class="search-toolbar">
+                    <label class="search-box">
+            <span>Search</span>
+            <input id="query" type="search" placeholder="Try internship, economics, paid, online..." />
+          </label>
+
+          <div class="filter-grid">
+            <label>
+              <span>Region</span>
+              <select id="region-filter">
+                <option value="All">All regions</option>
+              </select>
+            </label>
+            <label>
+              <span>Type</span>
+              <select id="type-filter">
+                <option value="All">All types</option>
+              </select>
+            </label>
+            <label>
+              <span>Eligibility</span>
+              <select id="eligibility-filter">
+                <option value="All">Any eligibility</option>
+                <option value="Yes">International eligible</option>
+                <option value="Some restrictions">Some restrictions</option>
+                <option value="No">Local only</option>
+              </select>
+            </label>
+            <label>
+              <span>Funding</span>
+              <select id="paid-filter">
+                <option value="All">Any funding</option>
+                <option value="Paid">Paid or stipend</option>
+                <option value="Free">Free / no cost</option>
+                <option value="No">Unpaid</option>
+              </select>
+            </label>
+          </div>
+
+
+        </div>
+        <div class="catalog-tabs" role="tablist" aria-label="When programmes are open">
+          <button type="button" role="tab" id="tab-open" aria-controls="panel-open" aria-selected="true" tabindex="0">
+            <span class="tab-label">Programs (open now)</span>
+            <span id="open-count" class="tab-count">0</span>
+          </button>
+          <button type="button" role="tab" id="tab-opening" aria-controls="panel-opening" aria-selected="false" tabindex="-1">
+            <span class="tab-label">Programs (opening soon)</span>
+            <span id="opening-count" class="tab-count">0</span>
+          </button>
+        </div>
+        <div role="tabpanel" id="panel-open" aria-labelledby="tab-open">
+          <div class="list-head" aria-hidden="true"><span>Program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Reviewed</span></div>
+          <div id="results" class="results-list"></div>
+        </div>
+        <div role="tabpanel" id="panel-opening" class="opening-panel" aria-labelledby="tab-opening" hidden>
+          <p class="opening-intro">These programmes are not open yet. A programme is listed only when an official source states the day applications open, and that day falls within the next three months.</p>
+          <div id="opening-soon-head" class="list-head" aria-hidden="true" hidden><span>Program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Opens</span></div>
+          <div id="opening-soon-list" class="results-list"></div>
+        </div>
+      </div>
+    </section>
+    <section id="profile" class="profile-section" aria-label="Profile builder">
+      <div class="content-width profile-layout">
+        <div class="profile-heading"><p class="eyebrow">03 / Make it personal</p><h2>Your profile</h2><span class="optional-label">Optional</span>
+          <div id="profile-summary" hidden><strong>Profile matching active</strong><p>Estimated fit with your preferences, not acceptance odds.</p></div>
+        </div>
+        <div class="profile-form">            <div class="chips" id="interest-chips" aria-label="Preferred opportunity types"></div>
+            <label>
+              <span>Home region</span>
+              <select id="home-region">
+                <option value="">Choose a region</option>
+                <option value="Australia">Australia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="Europe">Europe</option>
+                <option value="Asia">Asia</option>
+                <option value="Latin America">Latin America</option>
+                <option value="Middle East & Africa">Middle East & Africa</option>
+              </select>
+            </label>
+            <label class="toggle">
+              <input id="needs-international" type="checkbox" />
+              <span>I need international eligibility</span>
+            </label>
+            <label class="toggle">
+              <input id="needs-funded" type="checkbox" />
+              <span>Prioritise paid, stipend, or free opportunities</span>
+            </label>
+            <div class="profile-actions">
+              <button id="apply-profile" type="button" disabled>Apply profile</button>
+              <button id="clear-profile" type="button" hidden>Clear profile</button>
+            </div>
+</div>
+      </div>
+    </section>
+  </main>
+  <footer class="content-width"><a class="brand" href="#explore">Economic Opportunity Radar.</a><span>Economics careers. Global opportunities.</span><a href="#explore">Back to top ↑</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.14.0/dist/maplibre-gl.js"></script>
+  <script src="./catalog.js"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+  <script src="./newsletter.js"></script>
+</body>
+</html>
