@@ -135,6 +135,15 @@ summary:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; }
   display: flex; align-items: stretch; gap: 28px;
   margin: 22px 0 8px; border-bottom: 1px solid var(--line);
 }
+.source-evidence { margin: 18px 0; padding: 12px 0; border-top: 1px solid var(--line); }
+.source-evidence summary { cursor: pointer; font-size: 16px; color: var(--green); }
+.source-evidence ul { padding-left: 20px; }
+.source-evidence li { margin: 8px 0; overflow-wrap: anywhere; }
+.availability-note { font-weight: 600; color: var(--green); }
+.future-download { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 20px 0; }
+.future-download button { border: 1px solid var(--green); color: var(--green); background: transparent; border-radius: 4px; padding: 10px 14px; font: inherit; cursor: pointer; }
+.future-download small { font-size: 14px; max-width: 58ch; }
+@media (max-width: 720px) { .catalog-tabs { gap: 10px; flex-wrap: wrap; } .catalog-tabs [role="tab"] { min-width: 100%; } }
 .catalog-tabs [role="tab"] {
   flex: 1 1 0; display: flex; align-items: center; justify-content: space-between; gap: 12px;
   min-height: 52px; margin: 0; padding: 12px 2px 14px;

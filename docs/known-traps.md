@@ -97,3 +97,11 @@ Employer-specific gotchas. **Read this file before finalising any draft.**
 3. Confirm the program is open to the typical audience (penultimate-year for vacation, final-year for grad). If it's only open to e.g. final-year MBA students, flag in Notes.
 4. When uncertain, **omit the program** rather than risk listing a closed one.
 5. The spreadsheet attachment follows the same rule — closed programs are excluded.
+
+## Website retention rule (6 October 2026)
+
+Sam's request to retain all future openings supersedes the historical three-month
+newsletter watchlist limit. Keep closed and uncertain programmes out of the open
+list; retain explicit future and recurring candidates separately with sources and
+clear unconfirmed or needs-recheck labels. Official overseas programmes can be
+relevant when Australian audience eligibility is specifically evidenced.

@@ -1,6 +1,7 @@
 # Economic Opportunity Radar
 
-An Australian economics careers website based on the Young Economist Network
+An economics careers website for Australian students and early-career applicants,
+based on the Young Economist Network
 Opportunity Roundup. Covers internships, graduate jobs, cadetships, vacation
 programs, industry placements, scholarships and research assistantships across
 the newsletter's ten sectors.
@@ -14,13 +15,15 @@ kept privately in `data/demo-opportunities.json` for behavior checks.
 ## What works
 
 - Australian map with clustered locations and links to program cards.
-- Search and filters for sector, state/territory, type, funding, citizenship,
+- Search and filters for sector, placement location, type, funding, citizenship,
   international eligibility and study year.
 - Expandable cards with dates, pay and eligibility, plus optional profile matching.
 - Searchable directory of all 196 unique organisations from the supplied reference,
   grouped in newsletter sector order. Reference links are labelled unverified.
-- A separate three-month upcoming watchlist and current-only filtered CSV download.
-- Structured JSON inputs and shared publication rules for future agent updates.
+- Separate open, confirmed future, and unconfirmed/recurring tabs. All future dates
+  are retained, including records held for recheck; open and future CSV downloads
+  remain separate.
+- Structured JSON inputs and shared publication rules for verified research updates.
 - GitHub Actions tests and Pages deployment, with daily expiry-only rebuilds.
 
 ## Run and check
@@ -44,6 +47,8 @@ Edit `data/organisations.json`, `data/demo-opportunities.json` or
 selects demo/live mode. Live input starts empty, and live mode rejects simulated
 data. Unverified, closed, expired and stale live listings are held back. Exact
 opening dates require a recheck before promotion; expected windows stay labelled.
+Future candidates remain in the compilation across all dates and review states.
+Use `node scripts/export-compilation.cjs <output-directory>` for review CSV/JSON.
 
 Read [the agent update contract](docs/agent-updates.md), [known traps](docs/known-traps.md)
 and [AGENTS.md](AGENTS.md) before adding live data. Those checks enforce the input

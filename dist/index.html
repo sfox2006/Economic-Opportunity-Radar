@@ -74,7 +74,7 @@
             <label><span>Australian citizenship</span><select id="citizenship-filter"><option value="All">Any requirement</option><option>Required</option><option>Not required</option><option>Restrictions</option><option>Not stated</option></select></label>
             <label><span>Year of study</span><select id="study-year-filter"><option value="All">Any study year</option></select></label>
             <label>
-              <span>State / territory</span>
+              <span>Placement location</span>
               <select id="region-filter">
                 <option value="All">All locations</option>
               </select>
@@ -92,6 +92,7 @@
                 <option value="Yes">International eligible</option>
                 <option value="Some restrictions">Some restrictions</option>
                 <option value="No">Local only</option>
+                <option value="Not stated">Eligibility not stated</option>
               </select>
             </label>
             <label>
@@ -109,12 +110,16 @@
         </div>
         <div class="catalog-tabs" role="tablist" aria-label="When programmes are open">
           <button type="button" role="tab" id="tab-open" aria-controls="panel-open" aria-selected="true" tabindex="0">
-            <span id="open-tab-label" class="tab-label">Sample opportunities</span>
+            <span id="open-tab-label" class="tab-label">Open now</span>
             <span id="open-count" class="tab-count">0</span>
           </button>
           <button type="button" role="tab" id="tab-opening" aria-controls="panel-opening" aria-selected="false" tabindex="-1">
-            <span class="tab-label">Coming up soon</span>
+            <span class="tab-label">Confirmed future</span>
             <span id="opening-count" class="tab-count">0</span>
+          </button>
+          <button type="button" role="tab" id="tab-recurring" aria-controls="panel-recurring" aria-selected="false" tabindex="-1">
+            <span class="tab-label">Unconfirmed / recurring</span>
+            <span id="recurring-count" class="tab-count">0</span>
           </button>
         </div>
         <div role="tabpanel" id="panel-open" aria-labelledby="tab-open">
@@ -122,10 +127,15 @@
           <div id="results" class="results-list"></div>
         </div>
         <div role="tabpanel" id="panel-opening" class="opening-panel" aria-labelledby="tab-opening" hidden>
-          <p class="opening-intro">A separate watchlist for the next three months. Expected windows are labelled as estimates and never presented as currently open.</p>
+          <p class="opening-intro">Officially confirmed future openings across all dates, including openings more than three months away. Recheck applications when the opening arrives.</p>
           <div id="opening-soon-head" class="list-head" aria-hidden="true" hidden><span>Program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Opens</span></div>
           <div id="opening-soon-list" class="results-list"></div>
         </div>
+        <div role="tabpanel" id="panel-recurring" class="opening-panel" aria-labelledby="tab-recurring" hidden>
+          <p class="opening-intro">Recurring programmes and retained future records whose next intake or current evidence needs confirmation. Indicative dates support planning; application availability is unconfirmed.</p>
+          <div id="recurring-list" class="results-list"></div>
+        </div>
+        <p class="future-download"><button type="button" id="download-future-csv">Download all future programmes</button><small>Includes all dates and records held for recheck, with status and sources. Separate from the open list.</small></p>
       </div>
     </section>
     <section id="organisations" class="directory-section content-width" aria-labelledby="directory-heading">
@@ -163,6 +173,7 @@
   <footer class="content-width"><a class="brand" href="#explore">Economic Opportunity Radar.</a><span>Australian economics. Your next opportunity.</span><a href="#explore">Back to top ↑</a></footer>
   <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.14.0/dist/maplibre-gl.js"></script>
   <script src="./catalog-model.js"></script>
+  <script src="./catalog-export.js"></script>
   <script src="./organisations.js"></script>
   <script src="./catalog.js"></script>
   <script src="./config.js"></script>

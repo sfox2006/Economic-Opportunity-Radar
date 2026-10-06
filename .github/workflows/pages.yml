@@ -29,6 +29,7 @@ jobs:
           node scripts/build.cjs
           node --check dist/app.js
           node --check dist/catalog-model.js
+          node --check dist/catalog-export.js
           node --check dist/directory.js
           node --check dist/catalog.js
           node --check dist/config.js

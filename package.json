@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node scripts/build.cjs",
     "test": "node --test *.test.cjs",
+    "export": "node scripts/export-compilation.cjs",
     "check": "node scripts/build.cjs && node --test *.test.cjs"
   },
   "engines": { "node": ">=22" }

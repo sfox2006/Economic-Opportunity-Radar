@@ -1,8 +1,10 @@
 // Recheck live-record freshness and deadlines on each visit, even between builds.
 const currentCatalog = typeof RadarModel === "undefined" || !radarCatalog.settings
-  ? radarCatalog : RadarModel.select([...radarCatalog.opportunities, ...radarCatalog.openingSoon], radarCatalog.settings);
+  ? radarCatalog : RadarModel.select(radarCatalog.records || [...radarCatalog.opportunities, ...(radarCatalog.futureCompilation || radarCatalog.openingSoon || [])], radarCatalog.settings);
 const opportunities = currentCatalog.opportunities;
 const openingSoon = currentCatalog.openingSoon;
+const confirmedFuture = currentCatalog.confirmedFuture || openingSoon || [];
+const futureCompilation = currentCatalog.futureCompilation || confirmedFuture;
 const typeOrder = ["Cadetship", "Internship", "Vacationer Program", "Summer Vacation", "Industry Placement", "Scholarship", "Research assistantship", "Other", "Graduate Program", "Graduate Job"];
 
 const openStatuses = new Set(["open", "rolling", "on-demand"]);
@@ -26,7 +28,7 @@ function addCalendarMonths(date, months) {
 }
 
 function catalogToday() {
-  return typeof RadarModel === "undefined" ? new Date() : parseIsoDate(RadarModel.dateKey());
+  return typeof RadarModel === "undefined" ? new Date() : parseIsoDate(RadarModel.dateKey(new Date(), radarCatalog.settings?.timeZone || 'Australia/Sydney'));
 }
 
 function isOpeningSoon(item, today = catalogToday()) {
@@ -46,8 +48,39 @@ function isOpeningSoon(item, today = catalogToday()) {
 function sourceLabel(item) {
   if (item?.simulated) return "Simulated · not verified";
   const reviewed = parseIsoDate(item?.reviewedAt);
+  if (item?.publicationState === 'held') return reviewed ? `Last recorded check ${formatOpeningDate(item.reviewedAt)} - needs recheck` : 'Verification pending - availability unconfirmed';
+  if (item?.publicationState === 'recurring-unconfirmed' && reviewed) return `Programme source reviewed ${formatOpeningDate(item.reviewedAt)} - next intake unconfirmed`;
   if (reviewed) return `Official source reviewed ${formatOpeningDate(item.reviewedAt)}`;
   return item?.source || "Review date not recorded";
+}
+
+function provenanceMarkup(item) {
+  if (item.simulated) return '';
+  const evidence = item.verification;
+  if (!evidence) return '<p>Source verification is pending. Availability is unconfirmed.</p>';
+  const sources = [{url:evidence.sourceUrl,claim:'Primary official source'}, ...(evidence.sources || [])]
+    .filter(source => typeof source.url === 'string' && source.url.startsWith('https://'));
+  return `<details class="source-evidence"><summary>Sources and verification</summary>
+    <p>${escapeHtml(sourceLabel(item))}${evidence.checkedAt ? ` (${escapeHtml(evidence.checkedAt)})` : ''}</p>
+    <p>${escapeHtml(evidence.notes || 'Verification notes not recorded.')}</p>
+    ${evidence.audienceEvidence ? `<p><strong>Australian audience:</strong> ${escapeHtml(evidence.audienceEvidence)}</p>` : ''}
+    <ul>${sources.map(source => `<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.claim)}</a></li>`).join('')}</ul>
+    </details>`;
+}
+
+function futureStatusLabel(item) {
+  if (item.publicationState === 'held') return 'Needs recheck - availability unconfirmed';
+  if (item.publicationState === 'recurring-unconfirmed' || item.status === 'recurring-unconfirmed') return 'Recurring programme - next intake unconfirmed';
+  return 'Confirmed future opening - applications not verified open';
+}
+
+function futureOpeningLabel(item) {
+  const prefix = item.publicationState === 'held' ? 'Previously reported: ' : '';
+  if (item.opensOn) return `${prefix}${formatOpeningDate(item.opensOn)}`;
+  if (item.opensFrom) return `${prefix}${item.openingWindow || `${formatOpeningDate(item.opensFrom)} - ${formatOpeningDate(item.opensBy)}`}`;
+  if (item.expectedWindow) return `Indicative only: ${item.expectedWindow}; next intake unconfirmed`;
+  if (item.expectedOpensFrom) return `Indicative only: ${formatOpeningDate(item.expectedOpensFrom)} - ${formatOpeningDate(item.expectedOpensBy)}; next intake unconfirmed`;
+  return 'Next opening date not confirmed';
 }
 
 const deadlineMonths = {
@@ -107,6 +140,7 @@ function closingSoonBadge(item, today = catalogToday()) {
 function isPinned(item) {
   return !!item
     && item.mapped !== false
+    && item.publicationState !== "held"
     && item.region !== "Online"
     && item.country !== "Global"
     && Number.isFinite(item.lat)
@@ -134,7 +168,7 @@ function escapeHtml(value) {
 }
 
 function openingSoonRow(item) {
-  const opens = item.opensOn ? formatOpeningDate(item.opensOn) : item.expectedWindow || `${formatOpeningDate(item.expectedOpensFrom)}–${formatOpeningDate(item.expectedOpensBy)} (expected)`;
+  const opens = futureOpeningLabel(item);
   const url = typeof item.url === "string" && item.url.startsWith("https://") ? item.url : "";
   const pinned = isPinned(item);
   const active = item.id === state.selectedId ? " active" : "";
@@ -145,15 +179,23 @@ function openingSoonRow(item) {
       <span class="row-organisation">${escapeHtml(item.organisation)}</span>
       <span class="pill">${escapeHtml(item.type || "")}</span>
       <span class="row-location">${escapeHtml(item.location || "")}</span>
-      <span class="row-reviewed opens-date">Opens ${escapeHtml(opens)}</span>
+      <span class="row-reviewed opens-date">${escapeHtml(opens)}</span>
     </summary>
     <div class="program-body">
+      <p class="availability-note">${escapeHtml(futureStatusLabel(item))}</p>
+      ${item.holdReason ? `<p>Held for review: ${escapeHtml(item.holdReason.replaceAll('-', ' '))}. Retained for planning; recheck the official source.</p>` : ''}
       ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
       <dl class="opportunity-facts">
-        <div><dt>Opening window</dt><dd>Opens ${escapeHtml(opens)}</dd></div>
+        <div><dt>Opening window</dt><dd>${escapeHtml(opens)}</dd></div>
         ${item.location ? `<div><dt>Location</dt><dd>${escapeHtml(item.location)}</dd></div>` : ""}
         ${item.deadline ? `<div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}</dd></div>` : ""}
+        <div><dt>Pay / funding</dt><dd>${escapeHtml(item.fundingDetails || item.paid)}</dd></div>
+        <div><dt>Year of study</dt><dd>${escapeHtml(item.studyYear)}</dd></div>
       </dl>
+      <div class="application-detail"><h4>Who can apply</h4><p>${escapeHtml(item.eligibilityDetails)}</p></div>
+      <div class="application-detail"><h4>Application details</h4><p>${escapeHtml(item.application)}</p></div>
+      ${item.openingEvidence ? `<p>${escapeHtml(item.openingEvidence)}</p>` : ''}
+      ${provenanceMarkup(item)}
       ${url || pinned ? `<div class="opportunity-actions">${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Official programme details</a>` : ""}${pinned ? `<button class="locate-program" type="button">View on globe</button>` : ""}</div>` : ""}
     </div>
     </details>
@@ -162,7 +204,7 @@ function openingSoonRow(item) {
 
 function openingSoonMarkup(items) {
   if (!items.length) {
-    return `<p class="opening-empty">No reviewed programmes have a confirmed opening date in the next three months right now.</p>`;
+    return `<p class="opening-empty">No reviewed programmes have a confirmed future opening right now. Future openings will be retained across all dates.</p>`;
   }
   return items.map(openingSoonRow).join("");
 }
@@ -205,8 +247,12 @@ const els = {
   openingSoonList: document.getElementById("opening-soon-list"),
   tabOpen: document.getElementById("tab-open"),
   tabOpening: document.getElementById("tab-opening"),
+  tabRecurring: document.getElementById("tab-recurring"),
   panelOpen: document.getElementById("panel-open"),
   panelOpening: document.getElementById("panel-opening"),
+  panelRecurring: document.getElementById("panel-recurring"),
+  recurringList: document.getElementById("recurring-list"),
+  recurringCount: document.getElementById("recurring-count"),
   openCount: document.getElementById("open-count"),
   openingCount: document.getElementById("opening-count"),
   results: document.getElementById("results"),
@@ -241,7 +287,7 @@ function layoutDots() {
     markerLayers.forEach(id => map.setPaintProperty(id, "circle-translate", [0, 0]));
     return;
   }
-  const sourceItems = state.catalog === "opening" ? filteredOpeningSoon() : filteredItems();
+  const sourceItems = state.catalog === "opening" ? filteredFuture() : state.catalog === "recurring" ? filteredUnconfirmed() : filteredItems();
   const items = sourceItems.filter(item => markerLayers.includes("pin-" + item.id))
     .sort((a, b) => a.id.localeCompare(b.id));
   const offsets = separateDots(items.map(item => map.project([item.lon, item.lat])));
@@ -249,7 +295,7 @@ function layoutDots() {
 }
 
 function unique(key) {
-  return [...new Set([...opportunities, ...openingSoon].map((item) => item[key]).filter(Boolean))].sort();
+  return [...new Set([...opportunities, ...futureCompilation].map((item) => item[key]).filter(Boolean))].sort();
 }
 
 function fillSelect(select, values) {
@@ -274,7 +320,7 @@ function matchScore(item) {
   let score = 30;
   if (profile.interests.has(item.type)) score += 22;
   if (item.region === profile.homeRegion || item.country === profile.homeRegion) score += 18;
-  if (profile.needsInternational && item.eligibility !== "No") score += 14;
+  if (profile.needsInternational && ['Yes', 'Some restrictions'].includes(item.eligibility)) score += 14;
   if (!profile.needsInternational) score += 6;
   if (profile.needsFunded && ["Paid", "Free"].includes(fundingCategory(item))) score += 14;
   if (/Rolling|Applications open|Apply early/i.test(item.deadline)) score += 6;
@@ -320,8 +366,17 @@ function filteredOpeningSoon() {
   return filteredCatalog(programmesOpeningSoon());
 }
 
+function filteredFuture() {
+  return filteredCatalog(confirmedFuture);
+}
+
+function filteredUnconfirmed() {
+  return filteredCatalog(futureCompilation.filter(item => item.publicationState !== 'confirmed-future'
+    && !confirmedFuture.some(confirmed => confirmed.id === item.id)));
+}
+
 function activeProgrammes() {
-  return state.catalog === "opening" ? filteredOpeningSoon() : filteredItems();
+  return state.catalog === "opening" ? filteredFuture() : state.catalog === "recurring" ? filteredUnconfirmed() : filteredItems();
 }
 
 function mapFeaturesFor(items) {
@@ -490,7 +545,7 @@ function renderChips() {
 function programmeById(id) {
   if (!id) return null;
   return opportunities.find((candidate) => candidate.id === id)
-    || programmesOpeningSoon().find((candidate) => candidate.id === id)
+    || futureCompilation.find((candidate) => candidate.id === id)
     || null;
 }
 
@@ -543,6 +598,7 @@ function renderResults() {
         <div><dt>Year of study</dt><dd>${escapeHtml(item.studyYear || "Not stated")}${item.simulated ? " (simulated)" : ""}</dd></div>
       </dl><div class="application-detail"><h4>Who can apply</h4><p>${escapeHtml(item.eligibilityDetails)}</p></div>
       <div class="application-detail"><h4>Application details</h4><p>${escapeHtml(item.application)}</p></div>
+      ${provenanceMarkup(item)}
       <div class="opportunity-actions">${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Official application details ↗</a>` : `<strong class="simulation-note">Simulated listing · applications unavailable</strong>`}
         ${isPinned(item) ? `<button class="locate-program" type="button">View on map</button>` : ""}<small>${escapeHtml(reviewed)}</small></div>
       </div></details>${state.profile ? `<div class="score"><span>${item.score}% profile fit</span></div>` : ""}`;
@@ -574,8 +630,8 @@ function bindOpeningCards(items) {
 }
 
 function renderOpeningSoon() {
-  const inWindow = programmesOpeningSoon();
-  const items = inWindow.length ? filteredOpeningSoon() : [];
+  const inWindow = confirmedFuture;
+  const items = filteredFuture();
   if (els.openingSoonHead) els.openingSoonHead.hidden = items.length === 0;
   if (!els.openingSoonList) return;
   if (!items.length) {
@@ -588,14 +644,21 @@ function renderOpeningSoon() {
   bindOpeningCards(items);
 }
 
+function renderUnconfirmed() {
+  const items = filteredUnconfirmed();
+  els.recurringList.innerHTML = items.length ? items.map(openingSoonRow).join('')
+    : '<p class="opening-empty">No recurring or unconfirmed future programmes have been recorded yet.</p>';
+  bindOpeningCards(items);
+}
+
 function renderTabs() {
-  const opening = state.catalog === "opening";
+  const opening = state.catalog !== "open";
   const download = document.getElementById("download-csv");
   if (download) {
     download.disabled = opening;
-    download.title = opening ? "Upcoming programs are excluded from downloads" : "Download the filtered current catalog";
+    download.title = opening ? "Use the separate future compilation download for planning records" : "Download the filtered current catalog";
   }
-  [[els.tabOpen, els.panelOpen, !opening], [els.tabOpening, els.panelOpening, opening]].forEach(([tab, panel, selected]) => {
+  [[els.tabOpen, els.panelOpen, state.catalog === 'open'], [els.tabOpening, els.panelOpening, state.catalog === 'opening'], [els.tabRecurring, els.panelRecurring, state.catalog === 'recurring']].forEach(([tab, panel, selected]) => {
     if (tab) {
       const value = selected ? "true" : "false";
       if (typeof tab.setAttribute === "function") tab.setAttribute("aria-selected", value);
@@ -605,11 +668,14 @@ function renderTabs() {
     if (panel) panel.hidden = !selected;
   });
   if (els.openCount) els.openCount.textContent = String(filteredItems().length);
-  if (els.openingCount) els.openingCount.textContent = String(filteredOpeningSoon().length);
+  if (els.openingCount) els.openingCount.textContent = String(filteredFuture().length);
+  if (els.recurringCount) els.recurringCount.textContent = String(filteredUnconfirmed().length);
+  const scanLabel = document.getElementById('scan-label');
+  if (scanLabel) scanLabel.textContent = radarCatalog.settings?.mode === 'demo' ? 'simulated programs' : state.catalog === 'open' ? 'verified open programs' : state.catalog === 'opening' ? 'confirmed future programs' : 'unconfirmed planning records';
 }
 
 function selectCatalog(catalog) {
-  const next = catalog === "opening" ? "opening" : "open";
+  const next = ['opening', 'recurring'].includes(catalog) ? catalog : "open";
   if (state.catalog === next) return;
   state.catalog = next;
   const visible = new Set(activeProgrammes().map((item) => item.id));
@@ -618,7 +684,7 @@ function selectCatalog(catalog) {
 }
 
 function onCatalogTabKeydown(event) {
-  const tabs = [els.tabOpen, els.tabOpening].filter(Boolean);
+  const tabs = [els.tabOpen, els.tabOpening, els.tabRecurring].filter(Boolean);
   const index = tabs.indexOf(event.currentTarget);
   if (index < 0) return;
   let nextIndex = index;
@@ -629,7 +695,7 @@ function onCatalogTabKeydown(event) {
   else return;
   event.preventDefault();
   const next = tabs[nextIndex];
-  selectCatalog(next === els.tabOpening ? "opening" : "open");
+  selectCatalog(next === els.tabOpening ? "opening" : next === els.tabRecurring ? 'recurring' : "open");
   if (typeof next.focus === "function") next.focus();
 }
 
@@ -643,6 +709,7 @@ function render() {
   renderTabs();
   renderResults();
   renderOpeningSoon();
+  renderUnconfirmed();
   syncMap();
 }
 
@@ -795,8 +862,8 @@ if (els.sectorFilter && typeof radarRegistry !== "undefined") {
 });
 
 els.reset.addEventListener("click", resetFilters);
-[els.tabOpen, els.tabOpening].forEach((tab) => {
-  tab.addEventListener("click", () => selectCatalog(tab === els.tabOpening ? "opening" : "open"));
+[els.tabOpen, els.tabOpening, els.tabRecurring].filter(Boolean).forEach((tab) => {
+  tab.addEventListener("click", () => selectCatalog(tab === els.tabOpening ? "opening" : tab === els.tabRecurring ? 'recurring' : "open"));
   tab.addEventListener("keydown", onCatalogTabKeydown);
 });
 document.getElementById("apply-profile").addEventListener("click", applyProfile);

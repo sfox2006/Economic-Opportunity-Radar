@@ -2,14 +2,18 @@ const demoMode = radarCatalog.settings.mode === 'demo';
 document.getElementById('download-csv').textContent = demoMode ? 'Download filtered samples ↓' : 'Download filtered open list ↓';
 document.getElementById('demo-banner').hidden = !demoMode;
 document.getElementById('open-tab-label').textContent = demoMode ? 'Sample opportunities' : 'Open now';
-document.getElementById('scan-label').textContent = demoMode ? 'simulated programs' : 'verified programs';
+document.getElementById('scan-label').textContent = demoMode ? 'simulated programs' : 'verified open programs';
 document.getElementById('organisation-count').textContent = radarRegistry.organisations.length;
 const built = new Date(radarCatalog.generatedAt).toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', year: 'numeric' });
-document.getElementById('catalog-status').textContent = demoMode
-  ? `Demonstration catalog · ${opportunities.length} simulated programs · prepared ${built}`
-  : opportunities.length || openingSoon.length
-    ? `Catalog built ${built} · listings checked within ${radarCatalog.settings.maxVerificationAgeDays} days · expired listings hidden automatically`
-    : 'Organisation coverage is being researched. Verified opportunities will appear after their application status is checked.';
+function renderCatalogStatus() {
+  const unconfirmed = futureCompilation.filter(item => item.publicationState !== 'confirmed-future').length;
+  document.getElementById('catalog-status').textContent = demoMode
+    ? `Demonstration catalogue: ${opportunities.length} simulated programmes; prepared ${built}`
+    : opportunities.length || futureCompilation.length
+      ? `${opportunities.length} verified open; ${confirmedFuture.length} confirmed future; ${unconfirmed} unconfirmed planning records. Catalogue built ${built}. Open and confirmed future evidence is checked within ${radarCatalog.settings.maxVerificationAgeDays} days.`
+      : 'Organisation coverage is being researched. Verified opportunities will appear after their application status is checked.';
+}
+renderCatalogStatus();
 const directory = document.getElementById('organisation-directory');
 const orgQuery = document.getElementById('organisation-query');
 function renderDirectory() {
@@ -24,11 +28,14 @@ function renderDirectory() {
       <summary><h3>${escapeHtml(sector.label)}</h3><span>${orgs.length} ${orgs.length === 1 ? 'organisation' : 'organisations'}</span></summary>
       <div class="organisation-grid">${orgs.map(org => {
         const count = opportunities.filter(item => item.organisationId === org.id).length;
+        const futureCount = confirmedFuture.filter(item => item.organisationId === org.id).length;
+        const unconfirmedCount = futureCompilation.filter(item => item.organisationId === org.id && item.publicationState !== 'confirmed-future').length;
         const url = org.careersUrl && org.careersUrl.startsWith('https://') ? org.careersUrl : '';
         return `<article class="organisation-card"><h4>${escapeHtml(org.name)}</h4>
           <p>${count} ${demoMode ? 'simulated' : 'verified open'} ${count === 1 ? 'opportunity' : 'opportunities'}</p>
+          ${futureCount || unconfirmedCount ? `<p>${futureCount} confirmed future; ${unconfirmedCount} unconfirmed planning records</p>` : ''}
           ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Reference careers page ↗</a>` : '<span class="missing-source">Careers URL not supplied</span>'}
-          <small>Organisation from the source list - opportunity availability and reference URL not checked</small></article>`;
+          <small>${org.referenceVerification?.checkedAt ? `Reference URL checked ${escapeHtml(org.referenceVerification.checkedAt)}. Programme availability is recorded separately.` : 'Organisation from the source list - reference URL not checked. Programme availability is recorded separately.'}</small></article>`;
       }).join('')}</div></details>`;
   }).join('');
   document.getElementById('directory-count').textContent = `${shown} of ${radarRegistry.organisations.length} organisations`;
@@ -37,20 +44,10 @@ function renderDirectory() {
 orgQuery.addEventListener('input', renderDirectory);
 renderDirectory();
 
-// Spreadsheet-friendly CSV; upcoming records are deliberately excluded.
-function csvCell(value) {
-  let text = String(value ?? '');
-  if (/^[\s]*[=+@-]/.test(text)) text = "'" + text;
-  return '"' + text.replace(/"/g, '""') + '"';
-}
-function exportCsv(items) {
-  const header = ['Data status', 'Sector', 'Organisation', 'Program name', 'Type', 'Deadline', 'Location', 'Duration', 'Paid?', 'Australian citizenship required?', 'Year of study eligibility', 'Notes', 'Apply URL', 'Last checked'];
-  const rows = items.map(item => [item.simulated ? 'SIMULATED — NOT A REAL VACANCY' : 'Verified',
-    radarRegistry.sectors.find(sector => sector.id === item.sector)?.label || item.sector,
-    item.organisation, item.program, item.type, item.deadline, item.location, item.duration,
-    item.paid, item.citizenship, item.studyYear, item.eligibilityDetails, item.simulated ? '' : item.url, item.simulated ? 'Not verified' : item.reviewedAt]);
-  return '\uFEFF' + [header, ...rows].map(row => row.map(csvCell).join(',')).join('\r\n');
-}
+// Spreadsheet-friendly CSV; future/held records have a separate compilation.
+function exportCsv(items) { return RadarExport.currentCsv(items, radarRegistry); }
+function exportFutureCsv(items) { return RadarExport.futureCsv(items, radarRegistry); }
+
 document.getElementById('download-csv').addEventListener('click', () => {
   const blob = new Blob([exportCsv(filteredItems())], { type: 'text/csv;charset=utf-8' });
   const link = document.createElement('a');
@@ -62,14 +59,26 @@ document.getElementById('download-csv').addEventListener('click', () => {
   setTimeout(() => URL.revokeObjectURL(link.href), 1000);
 });
 
+document.getElementById('download-future-csv').addEventListener('click', () => {
+  const blob = new Blob([exportFutureCsv(futureCompilation)], { type: 'text/csv;charset=utf-8' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `${demoMode ? 'SIMULATED-' : ''}yen-future-programmes-${RadarModel.dateKey()}.csv`;
+  document.body.appendChild(link); link.click(); link.remove();
+  setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+});
+
 // An open tab also retires live roles as checks or deadlines expire.
 if (!demoMode) setInterval(() => {
-  const next = RadarModel.select([...radarCatalog.opportunities, ...radarCatalog.openingSoon], radarCatalog.settings);
-  const previousIds = [...opportunities, ...openingSoon].map(item => item.id).join('|');
-  if ([...next.opportunities, ...next.openingSoon].map(item => item.id).join('|') === previousIds) return;
+  const next = RadarModel.select(radarCatalog.records || [...radarCatalog.opportunities, ...(radarCatalog.futureCompilation || radarCatalog.openingSoon)], radarCatalog.settings);
+  const signature = items => items.map(item => `${item.id}:${item.publicationState}:${item.holdReason || ''}`).join('|');
+  if (signature([...next.opportunities, ...next.futureCompilation]) === signature([...opportunities, ...futureCompilation])) return;
   opportunities.splice(0, opportunities.length, ...next.opportunities);
   openingSoon.splice(0, openingSoon.length, ...next.openingSoon);
+  confirmedFuture.splice(0, confirmedFuture.length, ...next.confirmedFuture);
+  futureCompilation.splice(0, futureCompilation.length, ...next.futureCompilation);
   if (!programmeById(state.selectedId)) state.selectedId = null;
   render();
   renderDirectory();
+  renderCatalogStatus();
 }, 60000);

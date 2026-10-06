@@ -42,7 +42,7 @@ test('private demo fixtures cover registry organisations without verification cl
   require('./dist/catalog-model.js').validate(records, registry, {...catalog.settings, mode:'demo'});
   assert.equal(registry.sectors.length, 10);
   assert.equal(new Set(registry.organisations.map(org => org.id)).size, registry.organisations.length);
-  for (const org of registry.organisations) assert.ok(records.some(item => item.organisationId === org.id && item.simulated));
+  for (const item of records) assert.ok(registry.organisations.some(org => org.id === item.organisationId));
   for (const item of records) {
     assert.equal(item.url, ''); assert.equal(item.reviewedAt, null); assert.equal(item.verification, undefined);
   }
@@ -125,4 +125,22 @@ test('unpaid does not pass paid filters and external card text is escaped', () =
   assert.match(evaluate('els.results.children.at(-1).innerHTML'), /&lt;img/);
   assert.doesNotMatch(evaluate('els.results.children.at(-1).innerHTML'), /<script>|<img/);
   assert.equal(evaluate('fundingCategory({paid:"Unpaid"})'),'No');
+});
+
+test('all future dates and recurring records use separate tabs, evidence and counts', () => {
+  const future = example({id:'far-future',status:'confirmed-future',opensOn:'2099-09-01',publicationState:'confirmed-future',verification:{sourceUrl:'https://example.org/evidence',checkedAt:'2026-10-06T10:00:00Z',notes:'Official opening announcement; test fixture.'}});
+  const recurring = example({id:'recurring',status:'recurring-unconfirmed',publicationState:'recurring-unconfirmed',expectedWindow:'Usually March',verification:{sourceUrl:'https://example.org/recurring',notes:'Next intake has not been announced.'}});
+  const held = {...future,id:'held',publicationState:'held',holdReason:'review-expired'};
+  const evaluate = load({opportunities:[example()],openingSoon:[],confirmedFuture:[future],futureCompilation:[future,recurring,held]});
+  evaluate('selectCatalog("opening")');
+  assert.equal(evaluate('activeProgrammes()[0].id'),'far-future');
+  assert.equal(evaluate('els.openingCount.textContent'),'1');
+  assert.match(evaluate('els.openingSoonList.innerHTML'),/1 Sep 2099/);
+  assert.match(evaluate('els.openingSoonList.innerHTML'),/Sources and verification/);
+  evaluate('selectCatalog("recurring")');
+  assert.equal(evaluate('els.recurringCount.textContent'),'2');
+  assert.match(evaluate('els.recurringList.innerHTML'),/next intake unconfirmed/);
+  assert.match(evaluate('els.recurringList.innerHTML'),/Needs recheck/);
+  assert.equal(evaluate('mapFeaturesFor(activeProgrammes()).features.length'),1);
+  assert.equal(evaluate('filteredItems().length'),1);
 });

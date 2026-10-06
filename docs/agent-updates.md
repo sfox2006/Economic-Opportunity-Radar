@@ -1,124 +1,125 @@
 # Updating the YEN website
 
-The repository is the data source. Agents can propose JSON updates through GitHub
-pull requests; no custom server, database or agent service is required. This
-project does not yet research any real opportunity or run research agents.
+The repository is the data source. Updates are reviewed as JSON plus generated
+assets. Sam authorised real opportunity research and international expansion on
+6 October 2026. Only the removal of simulated public listings has been published;
+feature and research updates still require review within the requested scope.
 
-## Demonstration and live data are separate
+## Public data and organisation coverage
 
-`data/settings.json` currently selects `mode: "demo"`.
-`data/demo-opportunities.json` has 196 simulated listings and ten sample upcoming
-programs. Dates, locations, types, pay and eligibility are fictional. They must
-not be used to infer an employer's actual programs. Demo cards have no apply link;
-their download labels every row as simulated.
+`data/settings.json` selects `mode: "live"`. `data/live-opportunities.json` is the
+only live input. Empty input produces an honest empty catalogue. Live validation
+requires `simulated: false` and rejects every synthetic fixture.
+`data/demo-opportunities.json` is private test material, outside the published
+`dist/` folder. Never use its programme names, locations, dates, pay or eligibility
+as evidence or as research leads.
 
-`data/live-opportunities.json` starts empty. When the user requests real listings,
-agents fill this file, retaining closed/unknown candidates for an audit if useful.
-After verification and review, changing the explicit setting to `live` publishes
-only eligible records. Live mode rejects any simulated record; there is no
-fallback to demo data when the live catalog is empty.
+`data/organisations.json` contains real organisations from the supplied YEN list.
+Their inclusion describes research coverage, not vacancy availability. Imported
+URLs and notes are unverified leads. Preserve null URLs until checked, stable
+IDs, sector order, named units, and `alsoListedIn`. Add further international
+organisations and think tanks with official source references. Optional
+`referenceVerification` records `checkedAt`, `sourceUrl` and notes for a checked
+reference URL; it does not certify any programme's availability.
 
-## Organisation coverage
-
-`data/organisations.json` imports 196 unique employer/directory entries from the
-user-supplied YEN organisation list. Repeated Productivity Commission, Future Fund
-and Melbourne Institute references are consolidated, with secondary sectors in
-`alsoListedIn`. Named units such as ANU Crawford School are retained separately.
-The combined ACCC/AER reference remains a combined directory entry as supplied.
-
-The source supplies no URL for twelve entries; these remain null and display
-"Careers URL not supplied". Names and URLs are source snapshots, not current
-employer verification. Some legacy names or organisational groupings may need
-checking later. No missing URL has been guessed.
-
-`docs/known-traps.md` is copied from the attached skill as historical research
-guidance. Verify those statements against official pages too; they are not
-authority for current deadlines, eligibility or program availability.
+Read `docs/known-traps.md` before verification. Those historical notes are leads,
+not authority for current programmes, names, eligibility or deadlines.
 
 ## Live record contract
 
-Use the same descriptive fields as demo records: stable `id`, `organisationId`,
-matching organisation name and sector, specific `program`, supported `type`,
-Australian `country`, state/territory or Online `region`, actual `location`,
-coordinates (or `mapped: false`), `duration`, `paid`, `citizenship`, `studyYear`,
-international `eligibility` (`Yes`, `No`, `Some restrictions`), description,
-eligibility details, application instructions and a direct official HTTPS `url`.
+Every record needs a stable programme-and-intake `id`, `organisationId`, matching
+registry `organisation` and `sector`, exact `program`, supported `type`, `country`,
+`region`, `location`, `duration`, `paid`, `deadline`, `citizenship`, `studyYear`,
+`eligibility`, `description`, `eligibilityDetails`, `application`, `url` and
+`simulated: false`. Supplied URLs must be official HTTPS programme references.
+Use null when no route has been established; a current record without a verified
+application URL is held. Closed and unknown audit records need no invented URL. Use `mapped: false` when coordinates are not
+verified or the placement location is variable; otherwise supply actual lat/lon.
+Use honest `Not stated` values for unknown pay, citizenship and eligibility.
 
-Set `simulated: false` and a status of `open`, `rolling`, `on-demand`, `upcoming`,
-`closed` or `unknown`. Production selection excludes closed/unknown records.
+All displayed live records require a `verification` object with:
 
-Every published live record needs `verification` with:
+- `state: "verified"`, an ISO `checkedAt` timestamp with a timezone, a specific
+  official HTTPS `sourceUrl`, and factual `notes` supporting programme existence,
+  status, dates, audience, eligibility and pay claims.
+- Optional `sources: [{"url": "https://...", "claim": "What this source supports"}]`
+  for additional official evidence. Sources and notes appear in cards and exports.
+- For overseas, global or remote international placements,
+  `australianAudienceEligible: true` and nonempty `audienceEvidence` stating the
+  source-grounded basis for Australian eligibility. A global careers page or an
+  Australian office address alone is insufficient. Country can be overseas;
+  region can be the placement country, International, or Online.
 
-```json
-{
-  "state": "verified",
-  "checkedAt": "2026-10-06T10:00:00Z",
-  "sourceUrl": "https://official-employer.example/specific-role",
-  "notes": "Evidence for open status, exact program, eligibility and pay.",
-  "acceptingApplications": true,
-  "deadlineConfirmed": true
-}
-```
+Never invent citizenship, pay, dates, academic requirements, work rights, visa
+support or accepting status. Keep distinct streams and intakes separate. Do not
+put private correspondence, credentials or personal applicant data into public
+record notes. Checks validate the contract, not the truth of a source claim;
+independent review remains necessary.
 
-This example illustrates the contract; it is not a verified listing. `checkedAt`
-must include a time zone and must not be in the future. Review labels are derived
-from it. The default review horizon is fourteen days, configurable from one to
-thirty days.
+## Three availability streams
 
-For an exact deadline, use `deadlineOn: "YYYY-MM-DD"` and the confirmed readable
-`deadline`. Where a time is specified, also use `closesAt` as an ISO timestamp
-with offset. A date without a time remains visible through that calendar day in
-Australia/Sydney; it is not a promise about a midnight cutoff.
+1. **Open now:** `open`, `rolling` or `on-demand`, with
+   `verification.acceptingApplications: true`. A working current application
+   route and current official intake evidence are required. For exact closing
+   dates, use `deadlineOn: "YYYY-MM-DD"` and `deadlineConfirmed: true`. Also record
+   `closesAt` with an ISO timezone offset when an exact time is specified. Without
+   a published deadline, use honest text and `noDeadlinePublished: true`.
+2. **Confirmed future:** `confirmed-future`, with either `opensOn` and
+   `openingDateConfirmed: true`, or `opensFrom`/`opensBy`, a readable
+   `openingWindow`, and `openingWindowConfirmed: true`. These fields describe an
+   official current announcement, not a typical annual cycle. Future records do
+   not need an invented closing date. All horizons are displayed and retained,
+   including openings more than three calendar months away.
+3. **Unconfirmed / recurring:** `recurring-unconfirmed`, with
+   `recurringProgramConfirmed: true` for verified official programme existence.
+   The next intake remains unconfirmed. Optional `expectedOpensFrom` /
+   `expectedOpensBy`, `expectedWindow` and `openingEvidence` are labelled
+   indicative. Never use confirmed opening fields for these records. An old
+   intake or an annual pattern cannot establish a current or confirmed future
+   vacancy.
 
-When the official page confirms accepting applications but gives no deadline,
-omit `deadlineOn`, use honest text such as "Rolling" or "Apply early", and set
-`verification.noDeadlinePublished: true`. Never invent a date. Publication checks
-enforce the data contract; they cannot prove that an agent's evidence accurately
-represents the careers page. Independent review is still needed before initial
-live publication.
+Legacy `upcoming` records with confirmed exact dates/ranges use the future
+stream; legacy expected ranges use the unconfirmed stream. `closed` and
+`unknown` candidates remain outside published availability streams.
 
-## Watchlist
+## Freshness and retention
 
-An upcoming entry never enters the current catalog or CSV. Give either:
+The default review age is fourteen days (configurable one to thirty). Checked
+records with future timestamps, insufficient evidence, unconfirmed audience,
+passed deadlines or expired reviews cannot enter the open catalogue. A future
+opening at or before today needs rechecking and is never promoted automatically.
+Confirmed ranges need rechecking when their earliest opening day arrives.
 
-- An official exact `opensOn` date and `verification.openingDateConfirmed: true`.
-- A supported estimated range `expectedOpensFrom` / `expectedOpensBy`, a readable
-  `expectedWindow`, an `openingEvidence` note and
-  `verification.expectedWindowSupported: true`.
+Every explicit future/recurring record survives in `futureCompilation`, even
+when its evidence expires, an expected window ends or its opening arrives.
+Held records show the precise `holdReason` and an unconfirmed availability label.
+The original input stays intact. Retention does not grant verification.
+`openingSoon` remains a derived subset of confirmed openings within three months,
+for integrations that need it; it is not a cutoff for retention or the UI.
 
-Only windows overlapping the next three calendar months are displayed. An exact
-opening date at or before today is held for recheck, rather than promoted. After
-the expected range ends, that entry is also held. Recheck the current official
-application route before changing it to open. No forecast may be derived solely
-from an old newsletter or a typical annual cycle.
+`radarCatalog.records` supplies validated input for browser rechecks. The browser
+uses the shared policy on load and every minute, updating tabs and counts as
+checks expire. It never falls back to demonstration data.
 
-## Update process
+## Exports and review
 
-1. Read the registry and known traps. Retrieve the specific official listing;
-   check the correct employer, stream, intake and Australian placement.
-2. Update or add a live record using its stable program-and-intake ID. Record
-   evidence and the current timestamp. Keep RBA roles and Treasury streams
-   separate; do not overwrite an internship with a graduate job.
-3. Run `node scripts/build.cjs`. It validates identities, supported types, data
-   mode, dates, work-rights fields and publication evidence. It reports how many
-   records were held back; `radarCatalog.excluded` records their IDs and reasons.
-4. Run `node --test *.test.cjs` and syntax checks on changed JavaScript. Review
-   the website, counts, links, dates and current-only CSV.
-5. Commit JSON input and generated assets together, then propose a pull request.
-   Include an added/updated/removed summary and evidence links.
+The current-list download includes only selected open records. The separate
+future download includes every retained future record, status, held reason,
+confirmed or indicative date fields, eligibility, official URLs and check notes.
+Run `node scripts/export-compilation.cjs <output-directory>` to generate the
+same current CSV, all-future CSV and a structured all-future JSON for review.
+Synthetic fixtures cannot be compiled as research.
 
-There is no Gmail integration, subscriber store or email delivery in this site.
-The newsletter link remains disabled in the demonstration.
+After editing data:
 
-## Rebuilds and expiry
+1. Run `node scripts/build.cjs` and inspect the open, confirmed-future,
+   recurring-unconfirmed, retained and held counts.
+2. Run `node --test *.test.cjs`, syntax checks for changed JavaScript, and desktop
+   and mobile UI checks. Check source links, status labels and both exports.
+3. Commit data and generated assets together on the review branch, with source
+   evidence and an added/updated/held summary. Publish only within Sam's explicit
+   authorisation. The initial sample-removal authorisation does not publish
+   research or broader features.
 
-GitHub Actions tests pull requests. Once Pages is enabled and the PR is merged,
-main updates, manual workflow runs and daily rebuilds publish `dist/`. The daily
-job only re-evaluates already supplied data for expiry; it does not search,
-refresh verification timestamps or fabricate new vacancies. Its schedule cannot
-make the site accurate without agents providing new verified data.
-
-The browser applies the same expiry policy on load and every minute in an open
-live tab. Records disappear when their explicit cutoff passes or their evidence
-expires even if the scheduled build is delayed. Students are shown an honest
-empty state when no verified records remain.
+No emails, subscriptions, registrations or research services run in this site.
+Daily scheduled builds only enforce expiry; they do not verify new records.

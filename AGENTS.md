@@ -1,8 +1,10 @@
 # Economic Opportunity Radar
 
-This website serves Australian economics students. The current phase is a
-demonstration: simulated opportunities only. Do not start employer searches or
-switch to live mode unless the user requests verified listings.
+This website serves Australian economics students and early-career applicants.
+Sam authorised verified research, international expansion, retention of openings
+more than three months away, and removal of simulated listings on 6 October 2026.
+The public site uses live mode. Synthetic fixtures remain private test inputs;
+never restore them to the public catalogue or use them as research leads.
 
 ## Files to edit
 
@@ -33,7 +35,9 @@ be an Australian placement or explicitly verified as eligible for this Australia
 audience; a global careers page alone is insufficient.
 
 Never promote a watchlist entry automatically on its opening date. Recheck it.
-Keep upcoming, unverified, closed and stale records out of current-list downloads.
+Keep future, recurring-unconfirmed, unverified, closed and stale records out of
+current-list downloads. Retain all future candidates in the separate future
+compilation, including records held for recheck and openings beyond three months.
 Never mix simulated data into live mode. Do not send emails, create Gmail drafts
 or activate research services as part of a website update.
 
