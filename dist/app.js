@@ -215,6 +215,7 @@ function openingSoonMarkup(items) {
 }
 
 const state = {
+  directoryOrganisation: null,
   query: "",
   region: "All",
   type: "All",
@@ -338,6 +339,7 @@ function passesFilters(item) {
     state.paid === "All" ||
     state.paid === fundingCategory(item);
   return (
+    (!state.directoryOrganisation || state.directoryOrganisation.programIds.includes(item.id)) &&
     (!state.query || haystack.includes(state.query.toLowerCase())) &&
     (state.region === "All" || item.region === state.region) &&
     (state.type === "All" || item.type === state.type) &&
@@ -691,6 +693,34 @@ function selectCatalog(catalog) {
   render();
 }
 
+function renderOrganisationFilter() {
+  const banner = document.getElementById('organisation-program-filter');
+  if (!banner) return;
+  banner.hidden = !state.directoryOrganisation;
+  if (state.directoryOrganisation) {
+    document.getElementById('organisation-filter-label').textContent = `Opportunities at ${state.directoryOrganisation.name}`;
+  }
+}
+
+function showOrganisationPrograms(name, programIds) {
+  const ids = [...new Set(programIds)].filter(id => programmeById(id));
+  if (!ids.some(id => opportunities.some(item => item.id === id))) return false;
+  resetFilters();
+  state.directoryOrganisation = {name, programIds: ids};
+  state.catalog = 'open';
+  state.selectedId = null;
+  render();
+  if (window.location?.hash !== '#programs') window.history?.pushState(null, '', '#programs');
+  const heading = document.getElementById('organisation-filter-label') || document.querySelector('#programs h2');
+  if (heading) { heading.tabIndex = -1; heading.focus({preventScroll: true}); }
+  (document.getElementById('organisation-program-filter') || document.getElementById('programs'))?.scrollIntoView({
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'
+  });
+  return true;
+}
+
+document.getElementById('clear-organisation-filter')?.addEventListener('click', resetFilters);
+
 function onCatalogTabKeydown(event) {
   const tabs = [els.tabOpen, els.tabOpening, els.tabRecurring].filter(Boolean);
   const index = tabs.indexOf(event.currentTarget);
@@ -708,6 +738,7 @@ function onCatalogTabKeydown(event) {
 }
 
 function render() {
+  renderOrganisationFilter();
   document.getElementById("profile-summary").hidden = !state.profile;
   document.getElementById("clear-profile").hidden = !state.profile;
   document.getElementById("apply-profile").disabled = !(els.homeRegion.value || state.interests.size || els.needsInternational.checked || els.needsFunded.checked);
@@ -757,6 +788,7 @@ function updateState() {
 }
 
 function resetFilters() {
+  state.directoryOrganisation = null;
   els.query.value = "";
   for (const control of [els.sectorFilter, els.citizenshipFilter, els.studyYearFilter]) if (control) control.value = "All";
   els.regionFilter.value = "All";

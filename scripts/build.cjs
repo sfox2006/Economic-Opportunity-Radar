@@ -6,6 +6,7 @@ const read = name => JSON.parse(fs.readFileSync(path.join(root, 'data', name), '
 const settings = read('settings.json');
 const registry = read('organisations.json');
 const websites = read('organisation-websites.json');
+const profiles = read('organisation-profiles.json');
 for (const org of registry.organisations) {
   const website = websites.organisations[org.name];
   if (website === undefined) throw new Error(`Missing website review: ${org.name}`);
@@ -16,6 +17,15 @@ for (const org of registry.organisations) {
     }
   }
   org.website = website;
+  const profile = profiles.organisations[org.name];
+  if (profile === undefined) throw new Error(`Missing organisation profile review: ${org.name}`);
+  if (profile) {
+    const source = new URL(profile.sourceUrl);
+    if (source.protocol !== 'https:' || source.username || source.password || !profile.description?.trim() || profile.description.length > 450) {
+      throw new Error(`Invalid organisation profile: ${org.name}`);
+    }
+  }
+  org.profile = profile;
 }
 const records = read(settings.mode === 'demo' ? 'demo-opportunities.json' : 'live-opportunities.json');
 model.validate(records, registry, settings);
