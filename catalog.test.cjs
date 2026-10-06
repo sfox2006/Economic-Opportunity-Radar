@@ -33,32 +33,18 @@ const example = (overrides = {}) => ({
   ...overrides
 });
 
-test('public catalog uses supported fields, unique IDs and valid dates', () => {
+test('public demo covers every registry organisation without verification claims', () => {
   const ctx = vm.createContext({});
   vm.runInContext(catalogCode + '\n' + code.slice(0, code.indexOf('const state =')), ctx);
   const catalog = vm.runInContext('radarCatalog', ctx);
-  const types = vm.runInContext('typeOrder', ctx);
-  const ids = new Set();
-  for (const [key, records] of Object.entries(catalog)) {
-    assert.ok(Array.isArray(records));
-    for (const item of records) {
-      for (const field of ['id', 'organisation', 'program', 'description', 'country', 'region', 'location', 'deadline', 'paid', 'eligibilityDetails', 'duration', 'application', 'url', 'reviewedAt']) {
-        assert.ok(typeof item[field] === 'string' && item[field].trim(), `${item.id}: ${field}`);
-      }
-      assert.ok(!ids.has(item.id), `Duplicate ID: ${item.id}`); ids.add(item.id);
-      assert.ok(types.includes(item.type));
-      assert.ok(['Yes', 'Some restrictions', 'No'].includes(item.eligibility));
-      assert.equal(new URL(item.url).protocol, 'https:');
-      assert.ok(ctx.parseIsoDate(item.reviewedAt));
-      if (item.deadlineOn) assert.ok(ctx.parseIsoDate(item.deadlineOn));
-      if (key === 'openingSoon') {
-        assert.equal(item.status, 'upcoming'); assert.ok(ctx.parseIsoDate(item.opensOn));
-      } else assert.ok(['open', 'rolling', 'on-demand'].includes(item.status));
-      if (item.mapped !== false && item.region !== 'Online' && item.country !== 'Global') {
-        assert.ok(Number.isFinite(item.lat) && Math.abs(item.lat) <= 90);
-        assert.ok(Number.isFinite(item.lon) && Math.abs(item.lon) <= 180);
-      }
-    }
+  const registry = JSON.parse(readFileSync('data/organisations.json', 'utf8'));
+  const records = JSON.parse(readFileSync('data/demo-opportunities.json', 'utf8'));
+  require('./dist/catalog-model.js').validate(records, registry, catalog.settings);
+  assert.equal(registry.sectors.length, 10);
+  assert.equal(new Set(registry.organisations.map(org => org.id)).size, registry.organisations.length);
+  for (const org of registry.organisations) assert.ok(records.some(item => item.organisationId === org.id && item.simulated));
+  for (const item of catalog.opportunities.concat(catalog.openingSoon)) {
+    assert.equal(item.url, ''); assert.equal(item.reviewedAt, null); assert.equal(item.verification, undefined);
   }
 });
 
@@ -68,7 +54,7 @@ test('empty catalog starts without selection, fake listings or map pins', () => 
   assert.equal(evaluate('state.profile'), null);
   assert.equal(evaluate('els.scanCount.textContent'), 0);
   assert.equal(evaluate('mapFeaturesFor(activeProgrammes()).features.length'), 0);
-  assert.match(evaluate('els.results.innerHTML'), /Economics opportunities are coming soon/);
+  assert.match(evaluate('els.results.innerHTML'), /No verified opportunities/);
   evaluate('selectCatalog("opening")');
   assert.equal(evaluate('els.panelOpen.hidden'), true);
   assert.equal(evaluate('els.tabOpening.ariaSelected'), 'true');
@@ -107,4 +93,25 @@ test('opening window, upcoming geography, review dates and closing badges', () =
   assert.equal(evaluate('sourceLabel({})'), 'Review date not recorded');
   assert.ok(evaluate('isClosingSoon({deadlineOn:"2026-10-08"}, new Date(2026,9,6))'));
   assert.equal(evaluate('isClosingSoon({deadlineOn:"2026-10-05"}, new Date(2026,9,6))'), false);
+});
+
+test('sector, citizenship and study-year filters combine and reset correctly', () => {
+  const evaluate = load({opportunities:[example({sector:'federal',citizenship:'Required',studyYear:'Final year'}),
+    example({id:'other',sector:'banks',citizenship:'Not required',studyYear:'Penultimate year'})],openingSoon:[]});
+  evaluate('els.sectorFilter.value="banks"; els.citizenshipFilter.value="Not required"; els.studyYearFilter.value="Penultimate year"; updateState()');
+  assert.equal(evaluate('filteredItems().length'),1);
+  assert.equal(evaluate('filteredItems()[0].id'),'other');
+  evaluate('els.citizenshipFilter.value="Required"; updateState()');
+  assert.equal(evaluate('filteredItems().length'),0);
+  evaluate('resetFilters()');
+  assert.equal(evaluate('filteredItems().length'),2);
+});
+
+test('unpaid does not pass paid filters and external card text is escaped', () => {
+  const evaluate = load({opportunities:[example({paid:'Unpaid'}),example({id:'unsafe-text',program:'<img src=x onerror=alert(1)>',description:'<script>bad</script>'})],openingSoon:[]});
+  evaluate('els.paidFilter.value="Paid"; updateState()');
+  assert.equal(evaluate('filteredItems().length'),1);
+  assert.match(evaluate('els.results.children.at(-1).innerHTML'), /&lt;img/);
+  assert.doesNotMatch(evaluate('els.results.children.at(-1).innerHTML'), /<script>|<img/);
+  assert.equal(evaluate('fundingCategory({paid:"Unpaid"})'),'No');
 });

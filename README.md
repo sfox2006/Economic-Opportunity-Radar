@@ -1,80 +1,68 @@
 # Economic Opportunity Radar
 
-A static website for economics internships, research assistantships, predoctoral
-programs, fellowships, scholarships, conferences, summer schools and competitions.
-Includes the interactive globe, search, filters, expandable program cards and
-optional profile matching from [Opportunity Radar](https://github.com/sfox2006/Opportunity-Radar).
+An Australian economics careers website based on the Young Economist Network
+Opportunity Roundup. Covers internships, graduate jobs, cadetships, vacation
+programs, industry placements, scholarships and research assistantships across
+the newsletter's ten sectors.
 
-The economics catalog starts empty. Political listings, dated research archives,
-research-agent services and the political newsletter's subscriber integrations
-are not imported. Newsletter signup stays unavailable until an independent
-economics Google Form is configured.
+**Current mode: demonstration.** All 196 opportunity cards and ten watchlist
+examples are simulated. No internships or other real vacancies have been searched
+or verified. Each sample is labelled and has no application link.
 
-## Run locally
+## What works
 
-No package install or build is required:
+- Australian map with clustered locations and links to program cards.
+- Search and filters for sector, state/territory, type, funding, citizenship,
+  international eligibility and study year.
+- Expandable cards with dates, pay and eligibility, plus optional profile matching.
+- Searchable directory of all 196 unique organisations from the supplied reference,
+  grouped in newsletter sector order. Reference links are labelled unverified.
+- A separate three-month upcoming watchlist and current-only filtered CSV download.
+- Structured JSON inputs and shared publication rules for future agent updates.
+- GitHub Actions tests and Pages deployment, with daily expiry-only rebuilds.
 
-```sh
-python -m http.server 8765 --directory dist --bind 127.0.0.1
-```
+## Run and check
 
-Open http://127.0.0.1:8765. Internet access is needed for map tiles, MapLibre and
-Google Fonts. All website paths are relative for GitHub Pages project hosting.
-
-## Add listings
-
-Edit `dist/catalog.js`. Add currently open records to `radarCatalog.opportunities`
-and upcoming records to `radarCatalog.openingSoon`. Use these fields:
-
-| Field | Purpose |
-| --- | --- |
-| `id` | Unique identifier across both catalogs |
-| `organisation`, `program`, `description` | Organisation, title and summary |
-| `type` | One of the categories in `typeOrder` in `dist/app.js` |
-| `country`, `region`, `location` | Country, filter region and location details; use `Online` for remote programs |
-| `lat`, `lon` | Numeric coordinates for a map pin, or null for unmapped programs |
-| `mapped` | Set false to omit a pin |
-| `status` | `open`, `rolling` or `on-demand`; use `upcoming` for the opening catalog |
-| `deadline`, `deadlineOn` | Human-readable deadline including time zone if known; optional exact ISO date for closing-soon badges |
-| `opensOn` | Upcoming only: official confirmed opening date as `YYYY-MM-DD` |
-| `paid`, `fundingDetails` | Pay/cost summary and optional details; use `No` for unpaid |
-| `eligibility`, `eligibilityDetails` | `Yes`, `Some restrictions` or `No` for international eligibility, plus requirements |
-| `duration`, `application` | Dates/time commitment and application instructions |
-| `url`, `reviewedAt` | Official HTTPS program page and actual review date as `YYYY-MM-DD` |
-
-Check official sources before adding a listing. Upcoming programs appear only
-within three calendar months of their confirmed opening date. Once applications
-open, verify and move the record into the open catalog. Closed records must be
-removed or moved out of the public catalog; the site does not refresh itself.
-
-Edit `dist/config.js` to configure an economics newsletter Google Form. Leaving
-`newsletterSignupUrl` empty keeps signup hidden. Subscriber data stays in the
-form owner's account, outside this repository.
-
-## Validate
+Node.js 22+ is required for the build and tests. No npm install is needed.
 
 ```sh
-node --check dist/app.js
-node --check dist/catalog.js
-node --check dist/config.js
-node --check dist/newsletter.js
+node scripts/build.cjs
 node --test *.test.cjs
+python -m http.server 8974 --directory dist --bind 127.0.0.1
 ```
 
-Tests cover the catalog schema, empty catalog startup, filters, profile matching,
-opening windows, map navigation/clustering and newsletter configuration. Test
-fixtures are synthetic and never included in the published website.
+Open http://127.0.0.1:8974. Internet access is needed for map assets and fonts.
+Authored assets live in `dist/`; only that folder is published. Generated
+`catalog.js` and `organisations.js` must be rebuilt after JSON changes.
 
-## GitHub Pages
+## Agent foundations
 
-The workflow validates pull requests and publishes only `dist/` on updates to
-`main`. In **Settings → Pages**, select **GitHub Actions** as the publishing source.
-Then merge the starter pull request or run **Test and deploy website** manually.
-The intended URL is https://sfox2006.github.io/Economic-Opportunity-Radar/.
-Repository code and the workflow alone do not enable Pages settings.
+Edit `data/organisations.json`, `data/demo-opportunities.json` or
+`data/live-opportunities.json`, then rebuild. `data/settings.json` explicitly
+selects demo/live mode. Live input starts empty, and live mode rejects simulated
+data. Unverified, closed, expired and stale live listings are held back. Exact
+opening dates require a recheck before promotion; expected windows stay labelled.
 
-## Source
+Read [the agent update contract](docs/agent-updates.md), [known traps](docs/known-traps.md)
+and [AGENTS.md](AGENTS.md) before adding live data. Those checks enforce the input
+contract; they do not replace source verification or independent review.
 
-Copied from `sfox2006/Opportunity-Radar` at commit
-`7be285ac5f75c679e4ea201bded76973671e8d4b` on 6 October 2026.
-This is a source snapshot; the political repository's Git history is not imported.
+Newsletter signup is disabled until separately configured in `dist/config.js`.
+No Gmail drafts, subscriber integrations or research agents have been activated.
+
+## Publish
+
+In repository **Settings → Pages**, select **GitHub Actions**. After the PR is
+merged, main updates or a manual **Test and deploy website** run publish the site.
+Daily scheduled rebuilds enforce expiry only; agents still need to verify and
+submit fresh data. The intended URL is
+https://sfox2006.github.io/Economic-Opportunity-Radar/.
+
+## Sources
+
+UI foundation copied from `sfox2006/Opportunity-Radar`, commit
+`7be285ac5f75c679e4ea201bded76973671e8d4b`. Organisation leads and employer pitfalls
+come from the user-supplied `yen-opportunities-newsletter.skill` on 6 October 2026.
+Duplicate references are consolidated. Missing URLs are preserved as null;
+legacy names remain leads for future verification. Political opportunity data and
+newsletter subscriber integrations are not copied.

@@ -1,6 +1,9 @@
-const opportunities = radarCatalog.opportunities;
-const openingSoon = radarCatalog.openingSoon;
-const typeOrder = ["Internship", "Research assistantship", "Predoctoral program", "Fellowship", "Scholarship", "Summer school", "Conference", "Essay competition", "Online course", "Seminar"];
+// Recheck live-record freshness and deadlines on each visit, even between builds.
+const currentCatalog = typeof RadarModel === "undefined" || !radarCatalog.settings
+  ? radarCatalog : RadarModel.select([...radarCatalog.opportunities, ...radarCatalog.openingSoon], radarCatalog.settings);
+const opportunities = currentCatalog.opportunities;
+const openingSoon = currentCatalog.openingSoon;
+const typeOrder = ["Cadetship", "Internship", "Vacationer Program", "Summer Vacation", "Industry Placement", "Scholarship", "Research assistantship", "Other", "Graduate Program", "Graduate Job"];
 
 const openStatuses = new Set(["open", "rolling", "on-demand"]);
 
@@ -22,8 +25,17 @@ function addCalendarMonths(date, months) {
   return new Date(date.getFullYear(), monthIndex, Math.min(date.getDate(), last));
 }
 
-function isOpeningSoon(item, today = new Date()) {
+function catalogToday() {
+  return typeof RadarModel === "undefined" ? new Date() : parseIsoDate(RadarModel.dateKey());
+}
+
+function isOpeningSoon(item, today = catalogToday()) {
   if (!item || openStatuses.has(item.status)) return false;
+  if (!item.opensOn && item.expectedOpensFrom && item.expectedOpensBy) {
+    const from = parseIsoDate(item.expectedOpensFrom), to = parseIsoDate(item.expectedOpensBy);
+    const start = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    return !!from && !!to && to >= start && from <= addCalendarMonths(start, 3);
+  }
   const opens = parseIsoDate(item.opensOn);
   if (!opens || !(today instanceof Date) || Number.isNaN(today.getTime())) return false;
   const start = new Date(today.getFullYear(), today.getMonth(), today.getDate());
@@ -32,6 +44,7 @@ function isOpeningSoon(item, today = new Date()) {
 }
 
 function sourceLabel(item) {
+  if (item?.simulated) return "Simulated · not verified";
   const reviewed = parseIsoDate(item?.reviewedAt);
   if (reviewed) return `Official source reviewed ${formatOpeningDate(item.reviewedAt)}`;
   return item?.source || "Review date not recorded";
@@ -77,7 +90,7 @@ function closingDeadline(item) {
   return dates[0];
 }
 
-function isClosingSoon(item, today = new Date()) {
+function isClosingSoon(item, today = catalogToday()) {
   const deadline = closingDeadline(item);
   const now = today instanceof Date && !Number.isNaN(today.getTime()) ? today : new Date();
   if (!deadline) return false;
@@ -86,7 +99,7 @@ function isClosingSoon(item, today = new Date()) {
   return deadline.getTime() >= start.getTime() && deadline.getTime() <= end.getTime();
 }
 
-function closingSoonBadge(item, today = new Date()) {
+function closingSoonBadge(item, today = catalogToday()) {
   return isClosingSoon(item, today) ? `<span class="closing-soon">Closing soon</span>` : "";
 }
 
@@ -100,11 +113,11 @@ function isPinned(item) {
     && Number.isFinite(item.lon);
 }
 
-function programmesOpeningSoon(today = new Date(), records = openingSoon) {
+function programmesOpeningSoon(today = catalogToday(), records = openingSoon) {
   const openIds = new Set(opportunities.map((item) => item.id));
   return records
     .filter((item) => item && item.id && !openIds.has(item.id) && isOpeningSoon(item, today))
-    .sort((a, b) => String(a.opensOn).localeCompare(String(b.opensOn))
+    .sort((a, b) => String(a.opensOn || a.expectedOpensFrom).localeCompare(String(b.opensOn || b.expectedOpensFrom))
       || String(a.organisation || "").localeCompare(String(b.organisation || ""))
       || String(a.program || "").localeCompare(String(b.program || "")));
 }
@@ -121,23 +134,23 @@ function escapeHtml(value) {
 }
 
 function openingSoonRow(item) {
-  const opens = formatOpeningDate(item.opensOn);
+  const opens = item.opensOn ? formatOpeningDate(item.opensOn) : item.expectedWindow || `${formatOpeningDate(item.expectedOpensFrom)}–${formatOpeningDate(item.expectedOpensBy)} (expected)`;
   const url = typeof item.url === "string" && item.url.startsWith("https://") ? item.url : "";
   const pinned = isPinned(item);
   const active = item.id === state.selectedId ? " active" : "";
   return `<article class="result${active}" id="opportunity-${escapeHtml(item.id)}" tabindex="0">
     <details class="program-disclosure">
     <summary class="program-row">
-      <h3>${escapeHtml(item.program)}</h3>
+      <h3>${escapeHtml(item.program)}${item.simulated ? `<span class="demo-pill">Simulated</span>` : ""}</h3>
       <span class="row-organisation">${escapeHtml(item.organisation)}</span>
       <span class="pill">${escapeHtml(item.type || "")}</span>
-      <span class="row-location">${escapeHtml(item.country || "")}</span>
+      <span class="row-location">${escapeHtml(item.location || "")}</span>
       <span class="row-reviewed opens-date">Opens ${escapeHtml(opens)}</span>
     </summary>
     <div class="program-body">
       ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
       <dl class="opportunity-facts">
-        <div><dt>Applications open</dt><dd>Opens ${escapeHtml(opens)}</dd></div>
+        <div><dt>Opening window</dt><dd>Opens ${escapeHtml(opens)}</dd></div>
         ${item.location ? `<div><dt>Location</dt><dd>${escapeHtml(item.location)}</dd></div>` : ""}
         ${item.deadline ? `<div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}</dd></div>` : ""}
       </dl>
@@ -167,12 +180,16 @@ const state = {
   interests: new Set(),
   selectedId: null,
   mapReady: false,
-  catalog: "open"
+  catalog: "open",
+  sector: "All", citizenship: "All", studyYear: "All"
 };
 
 const els = {
   canvas: document.getElementById("globe"),
   query: document.getElementById("query"),
+  sectorFilter: document.getElementById("sector-filter"),
+  citizenshipFilter: document.getElementById("citizenship-filter"),
+  studyYearFilter: document.getElementById("study-year-filter"),
   regionFilter: document.getElementById("region-filter"),
   typeFilter: document.getElementById("type-filter"),
   eligibilityFilter: document.getElementById("eligibility-filter"),
@@ -244,6 +261,13 @@ function fillSelect(select, values) {
   });
 }
 
+function fundingCategory(item) {
+  if (/^(?:No|Unpaid)\b/i.test(item.paid || "")) return "No";
+  if (/\bFree\b/i.test(item.paid || "")) return "Free";
+  if (/\b(?:Paid|stipend|Scholarship|Prize)\b/i.test(item.paid || "")) return "Paid";
+  return "Not stated";
+}
+
 function matchScore(item) {
   if (!state.profile) return null;
   const profile = state.profile;
@@ -252,29 +276,36 @@ function matchScore(item) {
   if (item.region === profile.homeRegion || item.country === profile.homeRegion) score += 18;
   if (profile.needsInternational && item.eligibility !== "No") score += 14;
   if (!profile.needsInternational) score += 6;
-  if (profile.needsFunded && /Paid|stipend|Free|Scholarship|Prize/i.test(item.paid)) score += 14;
+  if (profile.needsFunded && ["Paid", "Free"].includes(fundingCategory(item))) score += 14;
   if (/Rolling|Applications open|Apply early/i.test(item.deadline)) score += 6;
   return Math.min(score, 99);
 }
 
 function passesFilters(item) {
-  const haystack = `${item.country} ${item.region} ${item.organisation} ${item.program} ${item.type} ${item.deadline} ${item.paid} ${item.description} ${item.location} ${item.eligibilityDetails} ${item.application}`.toLowerCase();
+  const haystack = `${item.sector} ${item.studyYear} ${item.country} ${item.region} ${item.organisation} ${item.program} ${item.type} ${item.deadline} ${item.paid} ${item.description} ${item.location} ${item.eligibilityDetails} ${item.application}`.toLowerCase();
   const paidPass =
     state.paid === "All" ||
-    (state.paid === "Paid" && /Paid|stipend|Scholarship|Prize/i.test(item.paid)) ||
-    (state.paid === "Free" && /Free/i.test(item.paid)) ||
-    (state.paid === "No" && item.paid === "No");
+    state.paid === fundingCategory(item);
   return (
     (!state.query || haystack.includes(state.query.toLowerCase())) &&
     (state.region === "All" || item.region === state.region) &&
     (state.type === "All" || item.type === state.type) &&
     (state.eligibility === "All" || item.eligibility === state.eligibility) &&
+    (state.sector === "All" || item.sector === state.sector) &&
+    (state.citizenship === "All" || item.citizenship === state.citizenship) &&
+    (state.studyYear === "All" || item.studyYear === state.studyYear) &&
     paidPass
   );
 }
 
 function filteredCatalog(records) {
-  const items = records.filter(passesFilters);
+  const items = records.filter(passesFilters).sort((a, b) => {
+    const sectors = typeof radarRegistry === "undefined" ? [] : radarRegistry.sectors.map(sector => sector.id);
+    return sectors.indexOf(a.sector) - sectors.indexOf(b.sector)
+      || typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type)
+      || String(a.deadlineOn || "9999").localeCompare(String(b.deadlineOn || "9999"))
+      || a.organisation.localeCompare(b.organisation);
+  });
   if (!state.profile) return items;
   return items
     .map((item) => ({ ...item, score: matchScore(item) }))
@@ -364,8 +395,8 @@ function initMap() {
     map = new maplibregl.Map({
       container: "globe",
       style: "https://tiles.openfreemap.org/styles/liberty",
-      center: [25, 20],
-      zoom: window.innerWidth < 720 ? 0.7 : 1.5,
+      center: [134, -26],
+      zoom: window.innerWidth < 720 ? 2 : 3,
       minZoom: -0.7,
       maxZoom: 16,
       cooperativeGestures: true,
@@ -432,7 +463,7 @@ function initMap() {
     });
     document.getElementById("world-view").addEventListener("click", () => {
       popup?.remove();
-      map.flyTo({ center: [25, 20], zoom: window.innerWidth < 720 ? 0.7 : 1.5, bearing: 0, pitch: 0, duration: 1000 });
+      map.flyTo({ center: [134, -26], zoom: window.innerWidth < 720 ? 2 : 3, bearing: 0, pitch: 0, duration: 1000 });
     });
     new ResizeObserver(() => map.resize()).observe(els.canvas);
   } catch (error) {
@@ -464,33 +495,17 @@ function programmeById(id) {
 }
 
 function renderDetail() {
-  let item = programmeById(state.selectedId);
+  const item = programmeById(state.selectedId);
   if (els.legendSelected) els.legendSelected.hidden = !item;
-  if (!item) {
-    if (els.selectionStrip) els.selectionStrip.hidden = true;
-    els.detail.innerHTML = "";
-    return;
-  }
-  if (!item.source || item.deadline == null) {
-    item = { ...item, source: item.source || "", deadline: item.deadline || "" };
-  }
-  if (els.selectionStrip) els.selectionStrip.hidden = false;
+  if (els.selectionStrip) els.selectionStrip.hidden = !item;
+  if (!item) { els.detail.innerHTML = ""; return; }
   const score = matchScore(item);
-  const reviewed = sourceLabel(item);
-  els.detail.innerHTML = `
-    <p class="eyebrow">${reviewed}</p>
-    <h2>${item.organisation}</h2>
-    <p><strong>${item.program}</strong></p>
-    <div class="detail-meta">
-      <span class="pill">${item.country}</span>
-      <span class="pill">${item.type}</span>
-      <span class="pill">${item.deadline}</span>
-      ${closingSoonBadge(item)}
-      ${item.opensOn ? `<span class="pill">Opens ${formatOpeningDate(item.opensOn)}</span>` : ""}
-      ${score === null ? "" : `<span class="pill">${score}% profile fit</span>`}
-    </div>
-    <p>${item.description}</p>
-  `;
+  els.detail.innerHTML = `<p class="eyebrow">${escapeHtml(sourceLabel(item))}</p>
+    <h2>${escapeHtml(item.organisation)}</h2><p><strong>${escapeHtml(item.program)}</strong></p>
+    <div class="detail-meta"><span class="pill">${escapeHtml(item.type)}</span>
+      <span class="pill">${escapeHtml(item.location)}</span>
+      ${score === null ? "" : `<span class="pill">${score}% profile fit</span>`}</div>
+    <p>${escapeHtml(item.description)}</p>`;
 }
 
 function renderResults() {
@@ -498,44 +513,39 @@ function renderResults() {
   els.results.innerHTML = "";
   if (!items.length) {
     els.results.innerHTML = opportunities.length
-      ? `<article class="result empty-state"><h3>No matches yet</h3><p>Try broadening the region, type, or funding filters.</p></article>`
-      : `<article class="result empty-state"><h3>Economics opportunities are coming soon</h3><p>We are preparing the first verified listings. Check back for internships, research assistantships and other economics programs.</p></article>`;
+      ? `<article class="result empty-state"><h3>No matches yet</h3><p>Try broadening the sector, location, type or eligibility filters.</p></article>`
+      : `<article class="result empty-state"><h3>No verified opportunities to show</h3><p>New listings will appear after their application status has been checked.</p></article>`;
     return;
   }
-  items.forEach((item) => {
+  items.forEach(item => {
     const card = document.createElement("article");
     card.className = `result ${item.id === state.selectedId ? "active" : ""}`;
     card.id = "opportunity-" + item.id;
     card.tabIndex = 0;
-    const reviewed = sourceLabel(item);
-    const soon = closingSoonBadge(item);
-    card.innerHTML = `
-      <details class="program-disclosure">
-      <summary class="program-row">
-        <h3>${item.program}${soon}</h3>
-        <span class="row-organisation">${item.organisation}</span>
-        <span class="pill">${item.type}</span>
-        <span class="row-location">${item.country}</span>
-        <span class="row-reviewed">${reviewed.replace(/^Official source reviewed /, "")}</span>
-      </summary>
-      <div class="program-body">
-      <p>${item.description}</p>
+    const reviewed = sourceLabel(item), soon = item.simulated ? "" : closingSoonBadge(item);
+    const url = !item.simulated && typeof item.url === "string" && item.url.startsWith("https://") ? item.url : "";
+    const sectors = typeof radarRegistry === "undefined" ? [] : radarRegistry.sectors;
+    const sector = sectors.find(sector => sector.id === item.sector)?.label || item.sector || "";
+    card.innerHTML = `<details class="program-disclosure"><summary class="program-row">
+      <h3>${escapeHtml(item.program)}${item.simulated ? `<span class="demo-pill">Simulated</span>` : soon}</h3>
+      <span class="row-organisation">${escapeHtml(item.organisation)}</span>
+      <span class="pill">${escapeHtml(item.type)}</span>
+      <span class="row-location">${escapeHtml(item.location)}</span>
+      <span class="row-reviewed">${escapeHtml(reviewed.replace(/^Official source reviewed /, ""))}</span>
+      </summary><div class="program-body"><p>${escapeHtml(item.description)}</p>
       <dl class="opportunity-facts">
-        <div><dt>Location</dt><dd>${item.location}</dd></div>
-        <div><dt>Duration</dt><dd>${item.duration}</dd></div>
-        <div><dt>Funding / cost</dt><dd>${item.fundingDetails || item.paid}</dd></div>
-        <div><dt>Deadline / status</dt><dd>${item.deadline}${soon}</dd></div>
-      </dl>
-      <div class="application-detail"><h4>Who can apply</h4><p>${item.eligibilityDetails}</p></div>
-      <div class="application-detail"><h4>Application details</h4><p>${item.application}</p></div>
-      <div class="opportunity-actions"><a href="${item.url}" target="_blank" rel="noopener noreferrer">Official programme details</a><button class="locate-program" type="button">View on globe</button><small>${reviewed}</small></div>
-      </div>
-      </details>
-      ${state.profile ? `<div class="score">
-        <span>${item.score}% profile fit</span>
-        <div class="score-bar" aria-hidden="true"><span style="width:${item.score}%"></span></div>
-      </div>` : ""}
-    `;
+        <div><dt>Sector</dt><dd>${escapeHtml(sector)}</dd></div>
+        <div><dt>Location</dt><dd>${escapeHtml(item.location)}</dd></div>
+        <div><dt>Duration</dt><dd>${escapeHtml(item.duration)}</dd></div>
+        <div><dt>Pay / funding</dt><dd>${escapeHtml(item.fundingDetails || item.paid)}</dd></div>
+        <div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}${soon}</dd></div>
+        <div><dt>Australian citizenship</dt><dd>${escapeHtml(item.citizenship || "Not stated")}${item.simulated ? " (simulated)" : ""}</dd></div>
+        <div><dt>Year of study</dt><dd>${escapeHtml(item.studyYear || "Not stated")}${item.simulated ? " (simulated)" : ""}</dd></div>
+      </dl><div class="application-detail"><h4>Who can apply</h4><p>${escapeHtml(item.eligibilityDetails)}</p></div>
+      <div class="application-detail"><h4>Application details</h4><p>${escapeHtml(item.application)}</p></div>
+      <div class="opportunity-actions">${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Official application details ↗</a>` : `<strong class="simulation-note">Simulated listing · applications unavailable</strong>`}
+        ${isPinned(item) ? `<button class="locate-program" type="button">View on map</button>` : ""}<small>${escapeHtml(reviewed)}</small></div>
+      </div></details>${state.profile ? `<div class="score"><span>${item.score}% profile fit</span></div>` : ""}`;
     bindProgramCard(card, item);
     els.results.appendChild(card);
   });
@@ -580,6 +590,11 @@ function renderOpeningSoon() {
 
 function renderTabs() {
   const opening = state.catalog === "opening";
+  const download = document.getElementById("download-csv");
+  if (download) {
+    download.disabled = opening;
+    download.title = opening ? "Upcoming programs are excluded from downloads" : "Download the filtered current catalog";
+  }
   [[els.tabOpen, els.panelOpen, !opening], [els.tabOpening, els.panelOpening, opening]].forEach(([tab, panel, selected]) => {
     if (tab) {
       const value = selected ? "true" : "false";
@@ -657,6 +672,9 @@ function updateState() {
   state.type = els.typeFilter.value;
   state.eligibility = els.eligibilityFilter.value;
   state.paid = els.paidFilter.value;
+  state.sector = els.sectorFilter?.value || "All";
+  state.citizenship = els.citizenshipFilter?.value || "All";
+  state.studyYear = els.studyYearFilter?.value || "All";
   state.homeRegion = els.homeRegion.value;
   state.needsInternational = els.needsInternational.checked;
   state.needsFunded = els.needsFunded.checked;
@@ -665,6 +683,7 @@ function updateState() {
 
 function resetFilters() {
   els.query.value = "";
+  for (const control of [els.sectorFilter, els.citizenshipFilter, els.studyYearFilter]) if (control) control.value = "All";
   els.regionFilter.value = "All";
   els.typeFilter.value = "All";
   els.eligibilityFilter.value = "All";
@@ -681,6 +700,7 @@ function registerWebMcpTools() {
     type: "object",
     properties: {
       query: { type: "string" },
+      sector: { type: "string" }, citizenship: { type: "string" }, studyYear: { type: "string" },
       region: { type: "string" },
       type: { type: "string" },
       eligibility: { type: "string" },
@@ -715,6 +735,9 @@ function registerWebMcpTools() {
           annotations: { readOnlyHint: false, untrustedContentHint: false },
           execute(input = {}) {
             if (typeof input.query === "string") els.query.value = input.query;
+            safeSet(els.sectorFilter, input.sector);
+            safeSet(els.citizenshipFilter, input.citizenship);
+            safeSet(els.studyYearFilter, input.studyYear);
             safeSet(els.regionFilter, input.region);
             safeSet(els.typeFilter, input.type);
             safeSet(els.eligibilityFilter, input.eligibility);
@@ -757,8 +780,16 @@ function registerWebMcpTools() {
 
 fillSelect(els.regionFilter, unique("region"));
 fillSelect(els.typeFilter, typeOrder);
+if (els.studyYearFilter) fillSelect(els.studyYearFilter, unique("studyYear"));
+if (els.sectorFilter && typeof radarRegistry !== "undefined") {
+  radarRegistry.sectors.forEach(sector => {
+    const option = document.createElement("option"); option.value = sector.id; option.textContent = sector.label;
+    els.sectorFilter.appendChild(option);
+  });
+}
 
-[els.query, els.regionFilter, els.typeFilter, els.eligibilityFilter, els.paidFilter, els.homeRegion, els.needsInternational, els.needsFunded].forEach((el) => {
+[els.query, els.sectorFilter, els.citizenshipFilter, els.studyYearFilter, els.regionFilter, els.typeFilter, els.eligibilityFilter, els.paidFilter, els.homeRegion, els.needsInternational, els.needsFunded].forEach((el) => {
+  if (!el) return;
   el.addEventListener("input", updateState);
   el.addEventListener("change", updateState);
 });
