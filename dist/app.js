@@ -365,9 +365,9 @@ function addProgramPin(item) {
     filter: ["all", ["!", ["has", "point_count"]], ["==", ["get", "id"], item.id]],
     paint: {
       "circle-radius": ["case", ["get", "selected"], 8, 6],
-      "circle-color": ["case", ["get", "selected"], "#b8925f", "#1f3d2b"],
+      "circle-color": ["case", ["get", "selected"], "#f19a3e", "#403233"],
       "circle-translate-anchor": "viewport",
-      "circle-stroke-color": "#f5f1e8", "circle-stroke-width": 2
+      "circle-stroke-color": "#b9ffb7", "circle-stroke-width": 2
     }
   });
   map.on("mouseenter", layerId, () => { map.getCanvas().style.cursor = "pointer"; });
@@ -408,9 +408,9 @@ function initMap() {
     map.on("style.load", () => {
       map.setProjection({ type: "globe" });
       for (const layer of map.getStyle().layers) {
-        if (layer.type === "background") map.setPaintProperty(layer.id, "background-color", "#f5f1e8");
-        if (layer.type === "fill") map.setPaintProperty(layer.id, "fill-color", /water/i.test(layer.id) ? "#e4dccb" : "#f5f1e8");
-        if (layer.type === "line" && /boundary|border/i.test(layer.id)) map.setPaintProperty(layer.id, "line-color", "#b8a98c");
+        if (layer.type === "background") map.setPaintProperty(layer.id, "background-color", "#b9ffb7");
+        if (layer.type === "fill") map.setPaintProperty(layer.id, "fill-color", /water/i.test(layer.id) ? "#98d9c2" : "#b9ffb7");
+        if (layer.type === "line" && /boundary|border/i.test(layer.id)) map.setPaintProperty(layer.id, "line-color", "#658978");
         if (layer.type === "symbol" && layer.layout?.["text-field"]) {
           map.setLayoutProperty(layer.id, "text-field", ["coalesce", ["get", "name:en"], ["get", "name:latin"], ["get", "name"]]);
           map.setLayoutProperty(layer.id, "text-letter-spacing", 0);
@@ -427,7 +427,7 @@ function initMap() {
         filter: ["has", "point_count"],
         paint: {
           "circle-radius": ["step", ["get", "point_count"], 18, 10, 23, 30, 28],
-          "circle-color": "#1f3d2b", "circle-stroke-color": "#f5f1e8", "circle-stroke-width": 2
+          "circle-color": "#403233", "circle-stroke-color": "#b9ffb7", "circle-stroke-width": 2
         }
       });
       map.addLayer({
