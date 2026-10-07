@@ -1,6 +1,6 @@
 // Recheck live-record freshness and deadlines on each visit, even between builds.
 const currentCatalog = typeof RadarModel === "undefined" || !radarCatalog.settings
-  ? radarCatalog : RadarModel.select(radarCatalog.records || [...radarCatalog.opportunities, ...(radarCatalog.futureCompilation || radarCatalog.openingSoon || [])], radarCatalog.settings);
+  ? radarCatalog : (radarCatalog.publicScope==='current-and-upcoming' ? RadarModel.selectPublic : RadarModel.select)(radarCatalog.records || [...radarCatalog.opportunities, ...(radarCatalog.futureCompilation || radarCatalog.openingSoon || [])], radarCatalog.settings);
 const opportunities = currentCatalog.opportunities;
 const openingSoon = currentCatalog.openingSoon;
 const confirmedFuture = currentCatalog.confirmedFuture || openingSoon || [];
@@ -137,15 +137,20 @@ function closingSoonBadge(item, today = catalogToday()) {
   return isClosingSoon(item, today) ? `<span class="closing-soon">Closing soon</span>` : "";
 }
 
-// Same pin rule as the open catalogue: coordinates are required, and online, global, or explicitly unmapped programmes stay off the globe.
+// A reviewed display overlay can show an approximate city without altering the source's unmapped audit record.
+function mapPosition(item) {
+  return item?.mapLocation?.precision === 'city' ? item.mapLocation : item;
+}
+
 function isPinned(item) {
+  const position = mapPosition(item);
   return !!item
-    && item.mapped !== false
+    && (item.mapped !== false || item.mapLocation?.precision === 'city')
     && item.publicationState !== "held"
     && item.region !== "Online"
     && item.country !== "Global"
-    && Number.isFinite(item.lat)
-    && Number.isFinite(item.lon);
+    && Number.isFinite(position.lat)
+    && Number.isFinite(position.lon);
 }
 
 function programmesOpeningSoon(today = catalogToday(), records = openingSoon) {
@@ -197,6 +202,7 @@ function openingSoonRow(item) {
       <dl class="opportunity-facts">
         <div><dt>Opening window</dt><dd>${escapeHtml(opens)}</dd></div>
         ${item.location ? `<div><dt>Location</dt><dd>${escapeHtml(item.location)}</dd></div>` : ""}
+        ${item.mapLocation ? `<div><dt>Map marker</dt><dd>${escapeHtml(item.mapLocation.city)} city area (approximate; not an office address)</dd></div>` : ''}
         ${item.deadline ? `<div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}</dd></div>` : ""}
         <div><dt>Pay / funding</dt><dd>${escapeHtml(item.fundingDetails || item.paid)}</dd></div>
         <div><dt>Qualifications / study</dt><dd>${escapeHtml(item.studyYear)}</dd></div>
@@ -303,7 +309,7 @@ function layoutDots() {
   const sourceItems = state.catalog === "opening" ? filteredFuture() : state.catalog === "recurring" ? filteredUnconfirmed() : filteredItems();
   const items = sourceItems.filter(item => markerLayers.includes("pin-" + item.id))
     .sort((a, b) => a.id.localeCompare(b.id));
-  const offsets = separateDots(items.map(item => map.project([item.lon, item.lat])));
+  const offsets = separateDots(items.map(item => { const position=mapPosition(item); return map.project([position.lon, position.lat]); }));
   items.forEach((item, index) => map.setPaintProperty("pin-" + item.id, "circle-translate", offsets[index]));
 }
 
@@ -398,8 +404,8 @@ function mapFeaturesFor(items) {
     type: "FeatureCollection",
     features: items.filter(isPinned).map(item => ({
       type: "Feature",
-      geometry: { type: "Point", coordinates: [item.lon, item.lat] },
-      properties: { id: item.id, selected: item.id === state.selectedId }
+      geometry: { type: "Point", coordinates: [mapPosition(item).lon, mapPosition(item).lat] },
+      properties: { id: item.id, selected: item.id === state.selectedId, city:item.mapLocation?.city || '', precision:item.mapLocation?.precision || 'record' }
     }))
   };
 }
@@ -408,11 +414,17 @@ function syncMap() {
   const items = activeProgrammes();
   els.scanCount.textContent = items.length;
   const data = mapFeaturesFor(items);
+  const summary=document.getElementById('map-summary-text');
+  if(summary)summary.textContent=items.length ? `${data.features.length} of ${items.length} opportunities have approximate city markers. ${items.length-data.features.length} remain in the list with variable, remote or insufficiently specific locations.` : 'No opportunities match these filters.';
   mapMarkers = data.features.map(feature => feature.properties.id);
   if (!state.mapReady) return;
   map.getSource("programs").setData(data);
   items.filter(isPinned).forEach(addProgramPin);
   layoutDots();
+  if(data.features.length && !data.features.some(feature=>map.getBounds().contains(feature.geometry.coordinates))) {
+    const coordinates=data.features.map(feature=>feature.geometry.coordinates);
+    map.fitBounds([[Math.min(...coordinates.map(p=>p[0])),Math.min(...coordinates.map(p=>p[1]))],[Math.max(...coordinates.map(p=>p[0])),Math.max(...coordinates.map(p=>p[1]))]],{padding:50,maxZoom:5,duration:0});
+  }
 }
 
 function focusProgram(item) {
@@ -421,7 +433,8 @@ function focusProgram(item) {
   render();
   document.getElementById("explore")?.scrollIntoView({ behavior: "smooth", block: "start" });
   if (map && isPinned(item)) {
-    map.flyTo({ center: [item.lon, item.lat], zoom: 10, duration: 1400 });
+    const position=mapPosition(item);
+    map.flyTo({ center: [position.lon, position.lat], zoom: 10, duration: 1400 });
   }
 }
 
@@ -521,6 +534,7 @@ function initMap() {
       opportunities.filter(isPinned).forEach(addProgramPin);
       programmesOpeningSoon().filter(isPinned).forEach(addProgramPin);
       state.mapReady = true;
+      status.hidden = true;
       syncMap();
     });
     map.on("move", layoutDots);
@@ -608,6 +622,7 @@ function renderResults() {
       <dl class="opportunity-facts">
         <div><dt>Sector</dt><dd>${escapeHtml(sector)}</dd></div>
         <div><dt>Location</dt><dd>${escapeHtml(item.location)}</dd></div>
+        ${item.mapLocation ? `<div><dt>Map marker</dt><dd>${escapeHtml(item.mapLocation.city)} city area (approximate; not an office address)</dd></div>` : ''}
         <div><dt>Duration</dt><dd>${escapeHtml(item.duration)}</dd></div>
         <div><dt>Pay / funding</dt><dd>${escapeHtml(item.fundingDetails || item.paid)}</dd></div>
         <div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}${soon}</dd></div>
@@ -619,7 +634,7 @@ function renderResults() {
       ${provenanceMarkup(item)}
       ${opportunityActions(item)}
       <div class="opportunity-actions">${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Official application details ↗</a>` : `<strong class="simulation-note">Simulated listing · applications unavailable</strong>`}
-        ${isPinned(item) ? `<button class="locate-program" type="button">View on map</button>` : ""}<small>${escapeHtml(reviewed)}</small></div>
+        ${isPinned(item) ? `<button class="locate-program" type="button">${item.mapLocation ? 'View city on map' : 'View on map'}</button>` : ""}<small>${escapeHtml(reviewed)}</small></div>
       </div></details>${state.profile ? `<div class="score"><span>${item.score}% profile fit</span></div>` : ""}`;
     bindProgramCard(card, item);
     els.results.appendChild(card);
@@ -664,6 +679,7 @@ function renderOpeningSoon() {
 }
 
 function renderUnconfirmed() {
+  if (!els.recurringList) return;
   const items = filteredUnconfirmed();
   els.recurringList.innerHTML = items.length ? items.map(openingSoonRow).join('')
     : '<p class="opening-empty">No recurring or unconfirmed future programmes have been recorded yet.</p>';
@@ -671,6 +687,8 @@ function renderUnconfirmed() {
 }
 
 function renderTabs() {
+  const horizonLabel=document.getElementById('opening-horizon-label');
+  if(horizonLabel&&currentCatalog.publicOpeningWindow)horizonLabel.textContent=`Current horizon: through ${new Date(currentCatalog.publicOpeningWindow.through+'T00:00:00Z').toLocaleDateString('en-AU',{timeZone:'Australia/Sydney',day:'numeric',month:'long',year:'numeric'})} (Australia/Sydney date).`;
   const opening = state.catalog !== "open";
   const download = document.getElementById("download-csv");
   if (download) {
@@ -694,7 +712,7 @@ function renderTabs() {
 }
 
 function selectCatalog(catalog) {
-  const next = ['opening', 'recurring'].includes(catalog) ? catalog : "open";
+  const next = radarCatalog.publicScope==='current-and-upcoming' ? (catalog==='opening'?'opening':'open') : radarCatalog.publicScope==='accepting-only' ? 'open' : ['opening', 'recurring'].includes(catalog) ? catalog : "open";
   if (state.catalog === next) return;
   state.catalog = next;
   const visible = new Set(activeProgrammes().map((item) => item.id));

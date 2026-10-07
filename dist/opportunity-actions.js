@@ -36,7 +36,7 @@
       const previous=(radarCatalog.records||[]).find(item=>item.id===id);
       const exclusion=currentCatalog.excluded?.find(item=>item.id===id);
       notice.hidden=false;
-      notice.textContent=previous?`${previous.program} at ${previous.displayOrganisation||previous.organisation} is no longer in the accepting list. ${exclusion?.reason==='deadline-passed'?'Its recorded deadline has passed.':'Its availability needs a fresh check.'} Recorded deadline: ${previous.deadline}.`:'This opportunity is missing or no longer published. Browse the current list or search its organisation.';
+      notice.textContent=previous?`${previous.program} at ${previous.displayOrganisation||previous.organisation} is no longer in the verified public catalogue. ${exclusion?.reason==='deadline-passed'?'Its recorded deadline has passed.':exclusion?.reason==='opening-needs-recheck'?'Its opening needs a fresh availability check.':'Its availability needs a fresh check.'} Recorded deadline: ${previous.deadline}.`:'This opportunity is missing or no longer published. Browse the current list or search its organisation.';
       if(previous?.url?.startsWith('https://')){const link=document.createElement('a');link.href=previous.url;link.textContent='Check the official source';link.target='_blank';link.rel='noopener noreferrer';notice.appendChild(document.createTextNode(' '));notice.appendChild(link);}
       notice.tabIndex=-1;notice.focus({preventScroll:true});notice.scrollIntoView({block:'center'});return;
     }

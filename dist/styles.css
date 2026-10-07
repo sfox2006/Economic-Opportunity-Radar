@@ -40,6 +40,7 @@ nav a:hover, nav a[aria-current] { color: var(--green); border-color: var(--gree
 .map-legend { position: absolute; bottom: 40px; left: 40px; display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--muted); pointer-events: none; }
 .map-legend i { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
 .map-legend i.selected { background: var(--gold); margin-left: 12px; }
+.map-summary { font-size: 13px; color: var(--muted); line-height: 1.6; padding-block: 12px; }
 .selection-strip { display: flex; align-items: center; gap: 40px; padding-block: 22px; border-top: 1px solid #d8e4e8; }
 .detail-card { flex: 1; min-width: 0; }
 .detail-card .eyebrow { font-size: 10px; margin-bottom: 6px; }

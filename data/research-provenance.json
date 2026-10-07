@@ -202,5 +202,44 @@
       "Private clarification drafts and recipients are excluded."
     ]
   },
-  "originalAuditScope": "The sourceAudit, fullAuditSummary and original top-level derived/publication counts describe the earlier 130-record cohort. professionalReview describes the separate 160-record expansion and aggregate availability without refreshing original records."
+  "originalAuditScope": "The sourceAudit, fullAuditSummary and original top-level derived/publication counts describe the earlier 130-record cohort. professionalReview describes the separate 160-record expansion and aggregate availability without refreshing original records.",
+  "correctionReview": {
+    "source": {
+      "libraryFileId": "libfile_ce20618bfc408191b92761088b3f6599",
+      "version": "2",
+      "fileId": "file_00000000aaa481f9bf75064bc73fddc7",
+      "name": "Economic-Radar-public-corrections-2026-10-06.json"
+    },
+    "readLines": 4686,
+    "method": "Consumer-authored public-safe correction projection after full supported read-only Library text reads. Original audit data and private correspondence remain separate. Build and offline export use the same effective records.",
+    "priorityPatches": 7,
+    "fieldFindings": 284,
+    "recordsWithFindings": 152,
+    "originalRecordsPreserved": 290,
+    "promotedRecordIds": ["rmit-researcher-indigenous-socioeconomic-jr50955"],
+    "publicAvailabilityCheckedAt": "2026-10-07T12:40:00Z",
+    "publicVacancies": 85,
+    "publicRegisters": 21,
+    "approximateCityMarkers": 56,
+    "listOnlyResults": 50,
+    "retainedFutureRecords": 86,
+    "publicFutureRecords": 0,
+    "publicationScopeAtThatCheck": "Accepting only, before the superseding 7 October three-month instruction",
+    "independentChecks": "Isolated public browser GETs verified RMIT JR50955/JR51180 posted and canApply=true, JR51180's 16 October cutoff, CPD no current advert, and EJM 12610 accepting with 5 December midnight UTC wording. The employer-confirmed end-of-day interpretation is retained. DEWR 26/1537 returned a human-verification challenge (HTTP 405); no bypass. Fresh Deloitte reads did not reproduce prior filled notices; retain both holds and preserve this limitation.",
+    "limitations": "DEWR application route and ANU exact PhD-submission timing remain unresolved. JR51180 timezone remains unstated. Field-fact checks do not refresh original acceptance checks or remove other holds. Approximate city markers require a single source-stated city; alternatives, remote and variable locations remain in the list. Private audit, emails, recipients and drafts are not imported."
+  },
+  "publicationPolicy": {
+    "instructionDate": "2026-10-07",
+    "scope": "Accepting vacancies/registers plus separately labelled, fresh approved openings within three calendar months. Farther-future, uncertain and recurring candidates stay outside public assets; all 86 future records remain offline.",
+    "timeZone": "Australia/Sydney",
+    "rangeRule": "The complete official day/range must fall after today and through the three-calendar-month horizon. Source-stated months are bounded internally for that comparison, without publishing an invented exact opening day. Qualitative/straddling windows remain private.",
+    "asOf": "2026-10-07T13:04:50Z",
+    "through": "2027-01-08",
+    "acceptingVacancies": 83,
+    "acceptingRegisters": 21,
+    "publicUpcoming": 5,
+    "retainedOfflineFuture": 86,
+    "futureExcludedFromPublicAssets": 81,
+    "expiryNote": "Two records with 7 October deadlines expired when the site date rolled to 8 October in Australia/Sydney. They are omitted rather than kept accepting. Counts change as recorded deadlines and checks expire."
+  }
 }

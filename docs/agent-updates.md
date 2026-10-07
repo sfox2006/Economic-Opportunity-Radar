@@ -8,6 +8,25 @@ requested scope; this authorisation does not send emails or update other sites.
 
 ## Audience and professional vacancies
 
+Sam's latest 7 October instruction supersedes the prior current-only scope.
+Publish reviewed accepting vacancies/registers and a separate upcoming list for
+officially confirmed openings within three calendar months, using the site's
+Australia/Sydney date. The entire official opening date/range must fit the
+horizon. A source-stated month keeps its text and is bounded internally only for
+the horizon check; never invent an exact opening day. Vague or straddling windows,
+recurring programmes and held records remain outside public assets. Retain all
+future evidence and candidates offline. `RadarModel.selectPublic` enforces this
+same policy at build and in the browser, without promoting due openings to open.
+Public upcoming links/downloads include only fresh approved near-term records;
+private/farther links report unavailable. Enquiries are handled separately.
+
+For the map, source records remain unchanged. A display overlay maps only an
+explicit single city in the verified location text to a sourced approximate city
+representative point. Never substitute employer headquarters or infer a venue.
+Remote, variable, multiple-city and insufficiently specific placements remain
+unmapped and visible in the list. Verify rendered markers and physical browser
+clicks, clustering and filtering with real published data at desktop/mobile sizes.
+
 The guide serves Australian economists and economics-related professionals under
 30: students, graduates and people with several years of experience. Under 30
 describes the guide's audience; do not turn it into an employer eligibility
@@ -38,7 +57,13 @@ human-verification pages without bypassing them.
 ## Public data and organisation coverage
 
 `data/settings.json` selects `mode: "live"`. `data/live-opportunities.json` is the
-only live input. Empty input produces an honest empty catalogue. Live validation
+original live audit input. `data/opportunity-corrections.json` supplies reviewed
+public-safe revisions through `scripts/research-records.cjs` to the build and
+offline exporter. The original 290 records remain unchanged; newer verified
+source values take precedence. Field findings carry separate source/check
+evidence and do not refresh acceptance timestamps or promote held/future
+programmes. Only reviewed priority patches can alter a publication disposition.
+Empty input produces an honest empty catalogue. Live validation
 requires `simulated: false` and rejects every synthetic fixture.
 `data/demo-opportunities.json` is private test material, outside the published
 `dist/` folder. Never use its programme names, locations, dates, pay or eligibility
@@ -153,8 +178,9 @@ Every explicit future/recurring record survives in `futureCompilation`, even
 when its evidence expires, an expected window ends or its opening arrives.
 Held records show the precise `holdReason` and an unconfirmed availability label.
 The original input stays intact. Retention does not grant verification.
-`openingSoon` remains a derived subset of confirmed openings within three months,
-for integrations that need it; it is not a cutoff for retention or the UI.
+`openingSoon` is the derived subset of confirmed openings within three months.
+The public UI and upcoming download use that horizon; the offline compilation
+retains every future and recurring candidate regardless of the horizon.
 
 `radarCatalog.records` supplies validated input for browser rechecks. The browser
 uses the shared policy on load and every minute, updating tabs and counts as
@@ -168,8 +194,9 @@ omits them from all public assets and availability streams. An approval does not
 override freshness, deadline, application-route or audience checks.
 
 The current-list download includes only selected accepting vacancies and clearly
-labelled registers. The separate website future download contains approved public
-planning records. The offline future export includes every retained future record,
+labelled registers. The separate public upcoming download includes only fresh,
+approved openings within three calendar months. The offline future export
+includes every retained future record,
 status, held reason,
 confirmed or indicative date fields, eligibility, official URLs and check notes.
 Run `node scripts/export-compilation.cjs <output-directory>` to generate the

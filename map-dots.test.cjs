@@ -26,6 +26,7 @@ const layoutContext = vm.createContext({
   map:{getZoom:()=>zoom,project:()=>({x:100,y:100}),setPaintProperty:(...args)=>paints.push(args)}
 });
 vm.runInContext(code.slice(code.indexOf('function separateDots('), code.indexOf('function unique(')), layoutContext);
+vm.runInContext(code.slice(code.indexOf('function mapPosition('), code.indexOf('function isPinned(')), layoutContext);
 layoutContext.layoutDots();
 assert.ok(paints.every(p=>JSON.stringify(p[2])==='[0,0]'));
 paints.length=0; zoom=10; layoutContext.layoutDots();

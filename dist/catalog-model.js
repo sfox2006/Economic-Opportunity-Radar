@@ -132,5 +132,21 @@
     confirmedFuture.sort(byOpening); recurringUnconfirmed.sort(byOpening); futureCompilation.sort(byOpening);
     return { opportunities, openingSoon, confirmedFuture, recurringUnconfirmed, futureCompilation, excluded };
   }
-  return { types, currentStatuses, futureStatuses, dateKey, validDate, validTimestamp, windowEnd, validate, select };
+  function openingBounds(item) {
+    if(item.opensOn)return {from:item.opensOn,by:item.opensOn,precision:'day'};
+    if(item.opensFrom&&item.opensBy)return {from:item.opensFrom,by:item.opensBy,precision:'range'};
+    // Bound a source-stated month without inventing an exact opening day.
+    const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const match=/^([A-Za-z]+)\s+(20\d{2})(?:\s*\([^)]*\))?$/.exec((item.openingWindow||'').trim());
+    const month=match?months.findIndex(m=>m.toLowerCase()===match[1].toLowerCase()):-1;
+    if(month<0)return null;
+    const year=Number(match[2]),from=`${year}-${String(month+1).padStart(2,'0')}-01`;
+    return {from,by:new Date(Date.UTC(year,month+1,0)).toISOString().slice(0,10),precision:'month'};
+  }
+  function selectPublic(records,settings,now=new Date()) {
+    const selected=select(records,settings,now),today=dateKey(now,settings.timeZone),through=windowEnd(today);
+    const confirmedFuture=selected.confirmedFuture.filter(item=>{const bounds=openingBounds(item);return bounds&&bounds.from>today&&bounds.by<=through;});
+    return {...selected,confirmedFuture,openingSoon:confirmedFuture,recurringUnconfirmed:[],futureCompilation:confirmedFuture,publicOpeningWindow:{from:today,through}};
+  }
+  return { types, currentStatuses, futureStatuses, dateKey, validDate, validTimestamp, windowEnd, validate, select, openingBounds, selectPublic };
 });
