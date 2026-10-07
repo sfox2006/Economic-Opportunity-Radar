@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "libraryFileId": "libfile_70ea2227d9b0819184eabb38326938e3",
+    "version": "0",
+    "fileId": "file_00000000418c81f5a4a54713b777ca29",
+    "name": "Economic-Radar-IFS-incremental-corrections-2026-10-07.json",
+    "readLines": 351
+  },
+  "method": "Consumer-authored incremental projection from a complete supported read-only Library text read. Applies after the intact version-2 corrections; only the two exact existing IDs are revised. Contains derived role facts and provenance, not private correspondence.",
+  "priorityCount": 2,
+  "findingCount": 0,
+  "revisions": [
+    {
+      "recordId": "ifs-postdoctoral-fellow-2027",
+      "facts": [],
+      "priority": {
+        "checkedAt": "2026-10-07T18:13:14Z",
+        "sources": [
+          "https://econjobmarket.org/positions/12665",
+          "https://ifs.org.uk/jobs"
+        ],
+        "disposition": "Promote only this matching accepting vacancy after independent importer validation and role-specific reviewed employer clarification.",
+        "changes": {
+          "status": "open",
+          "publicationApproved": true,
+          "deadline": "15 November 2026 at 23:59 UTC; role-specific employer confirmation",
+          "deadlineOn": "2026-11-15",
+          "closesAt": "2026-11-15T23:59:00Z",
+          "deadlineConfirmed": true,
+          "noDeadlinePublished": false,
+          "holdReason": null,
+          "applicationUrl": "https://econjobmarket.org/positions/12665",
+          "application": "Apply through this exact EJM position using the Applicant login route; cover letter, CV, job-market paper and three recommenders required. No login or submission was performed.",
+          "verification": {
+            "state": "verified",
+            "checkedAt": "2026-10-07T18:13:14Z",
+            "sourceUrl": "https://econjobmarket.org/positions/12665",
+            "acceptingApplications": true,
+            "deadlineConfirmed": true,
+            "noDeadlinePublished": false,
+            "australianAudienceEligible": true,
+            "audienceAccess": "conditional",
+            "sources": [
+              {
+                "url": "https://econjobmarket.org/positions/12665",
+                "claim": "Exact public vacancy accepting applications; role terms and qualifications checked."
+              },
+              {
+                "url": "https://ifs.org.uk/jobs",
+                "claim": "IFS links this specific role directly to its matching EJM position."
+              },
+              {
+                "url": "https://econjobmarket.org/login",
+                "claim": "Reachable Applicant login landing only; authenticated submission was not tested."
+              }
+            ],
+            "notes": "Separate importer source review on 7 October confirms this exact EJM position is accepting applications, requires a doctorate or expected 2027 PhD completion, and starts 1 September 2027. The reviewed role-specific employer confirmation resolves the public one-year/up-to-three-years wording as an initial one-year contract with renewal up to three years total, and the public midnight wording as 15 November 2026 at 23:59 UTC. Renewal is not guaranteed. Conditional overseas eligibility and Skilled Worker support are explicit in this public advert.",
+            "audienceEvidence": "This exact public advert welcomes applicants from abroad and provides Skilled Worker support, subject to UK work eligibility and the role requirements.",
+            "applicationRouteCheckedAt": "2026-10-07T18:13:14Z",
+            "applicationRouteEvidence": "Separate read-only HTTPS checks reached this exact accepting EJM position and its Applicant login landing page (email/password controls). IFS jobs-page links were independently followed through the web reader to the matching position. No sign-in, registration or submission."
+          },
+          "independentReview": {
+            "decision": "approve",
+            "checkedAt": "2026-10-07T14:40:36Z",
+            "publicationApproved": true,
+            "notes": "Reviewed incremental source disposition retained; separate importer review verified exact identity, accepting advert, linked login landing, doctoral qualifications and conditional audience evidence before applying the promotion.",
+            "importerCheckedAt": "2026-10-07T18:13:14Z"
+          },
+          "duration": "Initial one-year contract, renewable for up to three years of funding in total; renewal is not guaranteed",
+          "eligibility": "Some restrictions",
+          "citizenshipDetails": "This exact public advert welcomes UK and overseas applicants and offers Skilled Worker support, subject to UK work eligibility.",
+          "workRights": "UK work eligibility required; Skilled Worker support is stated in this exact public advert. Visa approval is not guaranteed.",
+          "experienceRequirements": "Strong academic background and economic research record, with excellent communication skills; applied microeconomics. No minimum post-PhD years are specified.",
+          "employerConfirmation": {
+            "date": "2026-10-07",
+            "fields": [
+              "deadline",
+              "closesAt",
+              "duration"
+            ],
+            "sourceLibraryFileId": "libfile_70ea2227d9b0819184eabb38326938e3",
+            "version": "0"
+          }
+        }
+      }
+    },
+    {
+      "recordId": "ifs-research-economist-postdoctoral-2027",
+      "facts": [],
+      "priority": {
+        "checkedAt": "2026-10-07T18:13:14Z",
+        "sources": [
+          "https://econjobmarket.org/positions/12705",
+          "https://ifs.org.uk/jobs"
+        ],
+        "disposition": "Promote only this matching accepting vacancy after independent importer validation and role-specific reviewed employer clarification.",
+        "changes": {
+          "status": "open",
+          "publicationApproved": true,
+          "deadline": "15 November 2026 at 23:59 UTC; role-specific employer confirmation",
+          "deadlineOn": "2026-11-15",
+          "closesAt": "2026-11-15T23:59:00Z",
+          "deadlineConfirmed": true,
+          "noDeadlinePublished": false,
+          "holdReason": null,
+          "applicationUrl": "https://econjobmarket.org/positions/12705",
+          "application": "Apply through this exact EJM position using the Applicant login route; cover letter, CV, job-market paper and three recommenders required. No login or submission was performed.",
+          "verification": {
+            "state": "verified",
+            "checkedAt": "2026-10-07T18:13:14Z",
+            "sourceUrl": "https://econjobmarket.org/positions/12705",
+            "acceptingApplications": true,
+            "deadlineConfirmed": true,
+            "noDeadlinePublished": false,
+            "australianAudienceEligible": true,
+            "audienceAccess": "conditional",
+            "sources": [
+              {
+                "url": "https://econjobmarket.org/positions/12705",
+                "claim": "Exact public vacancy accepting applications; role terms and qualifications checked."
+              },
+              {
+                "url": "https://ifs.org.uk/jobs",
+                "claim": "IFS links this specific role directly to its matching EJM position."
+              },
+              {
+                "url": "https://econjobmarket.org/login",
+                "claim": "Reachable Applicant login landing only; authenticated submission was not tested."
+              }
+            ],
+            "notes": "Separate importer source review on 7 October confirms this exact EJM position is accepting applications for a permanent doctoral-entry role starting 1 September 2027. The reviewed role-specific employer confirmation establishes 15 November 2026 at 23:59 UTC and Skilled Worker support where needed, subject to qualification and UK work/visa eligibility. The public advert still says midnight and does not state sponsorship; sponsorship is employer-confirmed rather than inferred from EJM 12665 or the separate non-doctoral role.",
+            "audienceEvidence": "Role-specific HR confirmation establishes sponsorship support for EJM 12705; do not infer it from the other IFS vacancies.",
+            "applicationRouteCheckedAt": "2026-10-07T18:13:14Z",
+            "applicationRouteEvidence": "Separate read-only HTTPS checks reached this exact accepting EJM position and its Applicant login landing page (email/password controls). IFS jobs-page links were independently followed through the web reader to the matching position. No sign-in, registration or submission."
+          },
+          "independentReview": {
+            "decision": "approve",
+            "checkedAt": "2026-10-07T14:40:36Z",
+            "publicationApproved": true,
+            "notes": "Reviewed incremental source disposition retained; separate importer review verified exact identity, accepting advert, linked login landing, doctoral qualifications and conditional audience evidence before applying the promotion.",
+            "importerCheckedAt": "2026-10-07T18:13:14Z"
+          },
+          "citizenship": "Restrictions",
+          "citizenshipDetails": "Role-specific employer HR confirms international applicants, including applicants needing Skilled Worker sponsorship, can be supported. Qualification and UK work/visa eligibility requirements still apply.",
+          "workRights": "Skilled Worker sponsorship eligibility and IFS support where needed confirmed by employer HR on 7 October 2026; this is not stated in the current public advert. Visa approval is not guaranteed.",
+          "eligibility": "Some restrictions",
+          "experienceRequirements": "Strong academic background and economic research record; UK-context experience or commitment; excellent communication and ability and willingness to manage and develop junior colleagues are essential. Policy-impact or external-funding experience is an additional asset. Duties include research leadership, fundraising and mentorship/line management.",
+          "employerConfirmation": {
+            "date": "2026-10-07",
+            "fields": [
+              "deadline",
+              "closesAt",
+              "citizenshipDetails",
+              "workRights",
+              "verification.australianAudienceEligible"
+            ],
+            "sourceLibraryFileId": "libfile_70ea2227d9b0819184eabb38326938e3",
+            "version": "0"
+          }
+        }
+      }
+    }
+  ]
+}

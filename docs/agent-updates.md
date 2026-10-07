@@ -216,6 +216,27 @@ After editing data:
 No emails, subscriptions, registrations or research services run in this site.
 Daily scheduled builds only enforce expiry; they do not verify new records.
 
+## Incremental IFS correction, 7 October 2026
+
+`data/ifs-incremental-corrections.json` is applied after the original version-2
+projection by `readRecords`; builds and offline exports use the same effective
+records. It promotes only the exact existing EJM 12665 and 12705 IDs after the
+reviewed role-specific clarification and separate importer source/route checks.
+The 290-record source audit and original correction projection remain intact.
+The separate 8 November non-doctoral vacancy and PhD Enrichment are unchanged.
+The unmatched summer internship and PhD studentship remain held in the Library
+source with conflicting dates and unresolved mapping/eligibility; no records
+are created for them. Preserve the explicit employer-only provenance for the
+23:59 UTC deadlines, renewable postdoc term and EJM 12705 sponsorship support.
+The public adverts alone do not establish all these clarified facts.
+
+The current table displays four columns without Verification. Expanded source
+details, timestamps, publication checks and CSV evidence remain available.
+Upcoming rows retain their Opens column on desktop and labelled Opens text on
+smaller screens. External browser certificate failures must not be bypassed;
+report that map rendering is unverified when assets fail while completing
+independent table, source-data and download checks.
+
 ## Operator clarification drafts
 
 For future explicitly requested economic or political opportunity reviews/searches,

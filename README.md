@@ -71,6 +71,13 @@ This preserves the original audit input and keeps field-fact checks distinct
 from current application-acceptance checks. Seven priority patches and 284
 source-backed field findings from the version 2 correction review update the
 effective catalogue; corrected dates alone do not remove DEWR/ANU holds.
+The separate `data/ifs-incremental-corrections.json` applies two reviewed IFS
+updates after that projection. Only EJM 12665 and 12705 are promoted; the
+unmatched summer internship and PhD studentship remain held in the Library
+source. Role-specific employer confirmation and fresh public-route checks are
+recorded separately in provenance. Original audit and correction inputs remain
+unchanged. The current table omits the Verification column while retaining
+expanded source details and CSV evidence; upcoming rows retain Opens.
 The professional expansion preserves the 130 original records and adds 160
 reviewed candidates: 58 approved for publication and 102 held. Coverage and
 source identities are recorded in `data/research-coverage.json` and

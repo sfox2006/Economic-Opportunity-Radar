@@ -241,5 +241,52 @@
     "retainedOfflineFuture": 86,
     "futureExcludedFromPublicAssets": 81,
     "expiryNote": "Two records with 7 October deadlines expired when the site date rolled to 8 October in Australia/Sydney. They are omitted rather than kept accepting. Counts change as recorded deadlines and checks expire."
+  },
+  "ifsIncrementalReview": {
+    "source": {
+      "libraryFileId": "libfile_70ea2227d9b0819184eabb38326938e3",
+      "version": "0",
+      "fileId": "file_00000000418c81f5a4a54713b777ca29",
+      "name": "Economic-Radar-IFS-incremental-corrections-2026-10-07.json",
+      "readLines": 351
+    },
+    "method": "Derived public-safe projection from a full supported read-only Library read (351 lines, version 0). Supported materialisation was attempted on this cloud executor but its download returned HTTP 403; no byte-for-byte local copy is claimed. Original 290 audit records and version-2 corrections are unchanged.",
+    "effectiveProjection": "data/ifs-incremental-corrections.json",
+    "importedAt": "2026-10-07T18:13:14Z",
+    "appliedExistingRecords": 2,
+    "addedRecords": 0,
+    "heldUnmatchedProgrammes": 2,
+    "appliedIds": [
+      "ifs-postdoctoral-fellow-2027",
+      "ifs-research-economist-postdoctoral-2027"
+    ],
+    "preservedDistinctIds": [
+      "ifs-research-economist-2027",
+      "ifs-phd-enrichment-2027"
+    ],
+    "independentImporterReview": {
+      "checkedAt": "2026-10-07T18:13:14Z",
+      "result": "Both exact EJM positions returned HTTPS 200 with accepting status, doctoral qualifications, September 2027 starts and Applicant login links. Login returned HTTPS 200 with email/password controls. Independent web-reader traversal of the IFS employer links reached matching EJM IDs. Existing source independent approval and former holds are retained. Only those two exact IDs pass the incremental publication disposition.",
+      "employerOnlyFacts": "Role-specific 7 October clarification supplies the 23:59 UTC deadlines, initial one-year/renewable-total-three-year postdoc terms and conditional EJM 12705 Skilled Worker support. Public midnight wording and absent EJM 12705 sponsorship text remain explicit.",
+      "limitations": "No authenticated login, account, application or submission. Chromium external sources/map assets encounter ERR_CERT_AUTHORITY_INVALID; security/trust settings were unchanged. Separate HTTPS GETs verify EJM/login; IFS direct HTTP GET returned 403 but the supported web reader resolved the employer page and both links. Unmatched BeApplied GETs returned 200 but do not resolve the source date/eligibility holds."
+    },
+    "heldProgrammes": [
+      {
+        "program": "IFS Summer Interns, 2027",
+        "reason": "No matching existing ID. Reviewed source retains conflicting platform cutoff times/dates versus employer clarification; full candidate mapping/eligibility remains unreviewed. No import or promotion."
+      },
+      {
+        "program": "IFS PhD Studentship, 2027–28",
+        "reason": "No matching existing ID; distinct from PhD Enrichment. Separate HTTPS read still contains 19 January versus 29 January instructions; exact cutoff and full mapping remain unresolved. Retain home-fee and UK UBEL/ESRC restrictions in the private Library source. No import or promotion."
+      }
+    ],
+    "availability": {
+      "checkedAt": "2026-10-07T18:18:34Z",
+      "acceptingVacancies": 85,
+      "acceptingRegisters": 21,
+      "publicUpcoming": 5,
+      "retainedOfflineFuture": 86
+    },
+    "privacy": "Correspondence, recipients, addresses, message IDs, quotations and drafts are excluded; unresolved full programme candidates remain in the source Library file."
   }
 }

@@ -63,11 +63,14 @@ h2 { font-size: 32px; font-weight: 500; }
 label > span { font-size: 15px; font-weight: 400; }
 input, select { font-size: 16px; border-radius: 4px; padding: 11px 12px; background: var(--paper); }
 input::placeholder { color: var(--muted); }
-/* Shared fractional tracks keep long opening notes from changing individual row widths. */
+/* Current rows have four tracks; upcoming rows retain their separate Opens track. */
 .list-head, .program-row {
   display: grid;
-  grid-template-columns: minmax(0,2.6fr) minmax(0,1.8fr) minmax(0,1.1fr) minmax(0,1.3fr) minmax(0,1.6fr);
+  grid-template-columns: minmax(0,2.6fr) minmax(0,1.8fr) minmax(0,1.1fr) minmax(0,1.3fr);
   gap: 16px; align-items: start;
+}
+.opening-panel .list-head, .opening-panel .program-row {
+  grid-template-columns: minmax(0,2.6fr) minmax(0,1.8fr) minmax(0,1.1fr) minmax(0,1.3fr) minmax(0,1.6fr);
 }
 .list-head { padding: 15px 14px; color: var(--paper); font-size: 14px; font-weight: 600; background: var(--navy); border-bottom: 1px solid var(--line); }
 .list-head > span { min-width: 0; }
@@ -200,10 +203,9 @@ summary:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; }
   .search-toolbar { grid-template-columns: 1fr; }
   .program-row, .list-head,
   .opening-panel .program-row, .opening-panel .list-head { grid-template-columns: minmax(0,2fr) minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr); }
-  .row-reviewed { grid-column: 1 / -1; text-align: left; }
-  .row-reviewed::before { content: 'Reviewed: '; font-weight: 600; }
-  .opening-panel .row-reviewed::before { content: 'Opens: '; }
-  .list-head > :last-child { display: none; }
+  .opening-panel .row-reviewed { grid-column: 1 / -1; text-align: left; }
+  .opening-panel .row-reviewed::before { content: 'Opens: '; font-weight: 600; }
+  .opening-panel .list-head > :last-child { display: none; }
 }
 @media (max-width: 760px) {
   .content-width { width: calc(100% - 40px); }
