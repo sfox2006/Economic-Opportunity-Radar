@@ -615,7 +615,6 @@ function renderResults() {
       <span class="row-organisation">${escapeHtml(organisationLabel(item))}</span>
       <span class="pill">${escapeHtml(typeLabel(item))}</span>
       <span class="row-location">${escapeHtml(item.location)}</span>
-      <span class="row-reviewed">${escapeHtml(reviewed.replace(/^Official source reviewed /, ""))}</span>
       </summary><div class="program-body"><p>${escapeHtml(item.description)}</p>
       ${register ? '<p class="availability-note">Accepting an interest register, roster, pool or initial enquiry. A placement or admission is not guaranteed.</p>' : ''}
       ${item.country !== 'Australia' && item.eligibility === 'Some restrictions' ? `<p class="availability-note">Conditional overseas access: ${escapeHtml(item.citizenshipDetails || item.verification?.audienceEvidence || item.eligibilityDetails)}</p>` : ''}

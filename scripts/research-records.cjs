@@ -55,7 +55,7 @@ function applyCorrections(records,projection){
       delete changes.verification;delete changes.independentReview;Object.assign(item,changes);
       if(verification)item.verification={...item.verification,...verification};
       if(review)item.independentReview={...review,previousDecision:original.independentReview};
-      changedRequirements||=['qualifications','studyYear','restrictions','citizenshipDetails'].some(k=>k in changes);
+      changedRequirements||=['qualifications','studyYear','restrictions','citizenshipDetails','workRights','experienceRequirements'].some(k=>k in changes);
     }
     if(changedRequirements){
       if(item.qualifications&&item.eligibilityDetails.includes(oldQualifications))item.eligibilityDetails=item.eligibilityDetails.replaceAll(oldQualifications,item.qualifications);
@@ -75,5 +75,9 @@ function applyCorrections(records,projection){
     return item;
   });
 }
-function readRecords(root){const read=name=>JSON.parse(fs.readFileSync(path.join(root,'data',name),'utf8'));return applyCorrections(read('live-opportunities.json'),read('opportunity-corrections.json'));}
+function readRecords(root){
+  const read=name=>JSON.parse(fs.readFileSync(path.join(root,'data',name),'utf8'));
+  const corrected=applyCorrections(read('live-opportunities.json'),read('opportunity-corrections.json'));
+  return applyCorrections(corrected,read('ifs-incremental-corrections.json'));
+}
 module.exports={applyCorrections,readRecords};
