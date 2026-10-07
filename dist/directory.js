@@ -12,7 +12,7 @@ function renderCatalogStatus() {
   document.getElementById('catalog-status').textContent = demoMode
     ? `Demonstration catalogue: ${opportunities.length} simulated programmes; prepared ${built}`
     : opportunities.length || futureCompilation.length
-      ? `${vacancies} verified open vacancies; ${registers} accepting registers / enquiries.`
+      ? `${vacancies} verified open vacancies; ${registers} accepting registers / enquiries; ${confirmedFuture.length} verified upcoming within three months.`
       : 'Organisation coverage is being researched. Verified opportunities will appear after their application status is checked.';
 }
 renderCatalogStatus();
@@ -41,7 +41,7 @@ function renderDirectory() {
         return `<article class="organisation-card"><h4>${escapeHtml(org.name)}</h4>
           ${org.profile?.description ? `<p class="organisation-description">${escapeHtml(org.profile.description)}</p>` : ''}
           <p>${count} ${demoMode ? 'simulated' : 'verified open'} ${count === 1 ? 'opportunity' : 'opportunities'}</p>
-          ${futureCount || unconfirmedCount ? `<p>${futureCount} confirmed future; ${unconfirmedCount} unconfirmed planning records</p>` : ''}
+          ${futureCount ? `<p>${futureCount} upcoming within three months; applications not verified open</p>` : ''}
           <div class="organisation-actions">
           ${count ? `<a class="organisation-program-link" href="#programs" data-organisation-programs="${escapeHtml(org.id)}" aria-label="View ${count} open ${count === 1 ? 'opportunity' : 'opportunities'} at ${escapeHtml(org.name)}">View open opportunities ↑</a>` : ''}
           ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(org.website.label || label)} ↗</a>` : '<span class="missing-source">Official website unavailable</span>'}</div></article>`;
@@ -79,7 +79,7 @@ document.getElementById('download-csv').addEventListener('click', () => {
 });
 
 document.getElementById('download-future-csv')?.addEventListener('click', () => {
-  const blob = new Blob([exportFutureCsv(futureCompilation)], { type: 'text/csv;charset=utf-8' });
+  const blob = new Blob([exportFutureCsv(confirmedFuture)], { type: 'text/csv;charset=utf-8' });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = `${demoMode ? 'SIMULATED-' : ''}yen-future-programmes-${RadarModel.dateKey()}.csv`;

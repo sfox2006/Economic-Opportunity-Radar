@@ -66,11 +66,16 @@ approved public records, retain held candidates privately and complete final
 data/UI verification before merge and deployment. Do not publish the foundation
 alone as completed research. Check current main and exact CI/Pages/live results.
 
-Sam subsequently requested removal of public Confirmed future and Recurring
-options. Publish only reviewed accepting vacancies/registers. Retain every
-future/recurring record and its evidence in the source and private/offline
-compilation for organisation follow-up; never relabel it open. Old future share
-links must report unavailable. Enquiries are handled separately by the parent.
+Sam's latest instruction on 7 October supersedes the prior current-only scope.
+Publish reviewed accepting vacancies/registers and separately identified,
+officially confirmed openings within the next three calendar months. Retain every
+future/recurring record offline, including farther-future and uncertain records
+excluded from public assets. `RadarModel.selectPublic` requires the full official
+opening range to fit the horizon; an explicitly stated month is bounded for this
+check without inventing an opening day. Vague windows, recurring dates and holds
+remain private. Never auto-promote an opening to accepting. Public upcoming
+downloads contain only fresh approved nearby openings; private/farther share
+links report unavailable. Enquiries are handled separately by the parent.
 
 Map city markers are a display overlay derived only from source-stated single
 city locations and sourced approximate city representative points. Keep original

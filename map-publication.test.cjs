@@ -7,7 +7,7 @@ const ctx=vm.createContext({});vm.runInContext(fs.readFileSync('dist/catalog.js'
 const publicRecords=vm.runInContext('radarCatalog.records',ctx);
 
 test('real accepting records produce sourced city markers while original audit data stays unmapped',()=>{
-  validateGazetteer(cities);assert.equal(publicRecords.length,require('./dist/catalog-model.js').select(effective,JSON.parse(fs.readFileSync('data/settings.json')),new Date(vm.runInContext('radarCatalog.generatedAt',ctx))).opportunities.length);
+  validateGazetteer(cities);const selected=require('./dist/catalog-model.js').selectPublic(effective,JSON.parse(fs.readFileSync('data/settings.json')),new Date(vm.runInContext('radarCatalog.generatedAt',ctx)));assert.equal(publicRecords.length,selected.opportunities.length+selected.confirmedFuture.length);
   const reviewedCurrent=require('./dist/catalog-model.js').select(effective,JSON.parse(fs.readFileSync('data/settings.json')),new Date('2026-10-07T12:40:00Z')).opportunities;
   assert.ok(reviewedCurrent.filter(r=>cityLocation(r,cities)).length>30,'real reviewed data must produce useful map markers');
   assert.ok(records.every(r=>r.mapped===false&&r.lat===undefined&&r.lon===undefined));
@@ -28,13 +28,15 @@ test('remote, multiple-city, unspecified and unverified placements never receive
   assert.equal(cityLocation({...role,location:'Parkville, Melbourne; hybrid'},cities).city,'Melbourne');
 });
 
-test('future records stay offline and their public options and downloads are absent',()=>{
+test('only verified three-month openings are public while all future records remain offline',()=>{
   const html=fs.readFileSync('dist/index.html','utf8');
-  assert.doesNotMatch(html,/id="(?:tab-opening|tab-recurring|panel-opening|panel-recurring|download-future-csv)"/);
-  assert.equal(vm.runInContext('radarCatalog.publicScope',ctx),'accepting-only');
-  assert.ok(publicRecords.every(r=>['open','rolling','on-demand','interest-register'].includes(r.status)));
+  assert.doesNotMatch(html,/id="(?:tab-recurring|panel-recurring)"/);
+  assert.match(html,/id="tab-opening"/);assert.match(html,/id="download-future-csv"/);
+  assert.equal(vm.runInContext('radarCatalog.publicScope',ctx),'current-and-upcoming');
+  assert.ok(publicRecords.every(r=>['open','rolling','on-demand','interest-register','confirmed-future'].includes(r.status)));
   const model=require('./dist/catalog-model.js'),settings=JSON.parse(fs.readFileSync('data/settings.json','utf8'));
   assert.equal(model.select(records,settings,new Date('2026-10-06T23:24:08Z')).futureCompilation.length,86);
   const publicIds=new Set(publicRecords.map(r=>r.id));
-  for(const r of records.filter(r=>model.futureStatuses.includes(r.status)))assert.equal(publicIds.has(r.id),false);
+  const publicFutureIds=new Set(vm.runInContext('radarCatalog.confirmedFuture',ctx).map(r=>r.id));
+  for(const r of records.filter(r=>model.futureStatuses.includes(r.status)))assert.equal(publicIds.has(r.id),publicFutureIds.has(r.id));
 });

@@ -1,6 +1,6 @@
 // Recheck live-record freshness and deadlines on each visit, even between builds.
 const currentCatalog = typeof RadarModel === "undefined" || !radarCatalog.settings
-  ? radarCatalog : RadarModel.select(radarCatalog.records || [...radarCatalog.opportunities, ...(radarCatalog.futureCompilation || radarCatalog.openingSoon || [])], radarCatalog.settings);
+  ? radarCatalog : (radarCatalog.publicScope==='current-and-upcoming' ? RadarModel.selectPublic : RadarModel.select)(radarCatalog.records || [...radarCatalog.opportunities, ...(radarCatalog.futureCompilation || radarCatalog.openingSoon || [])], radarCatalog.settings);
 const opportunities = currentCatalog.opportunities;
 const openingSoon = currentCatalog.openingSoon;
 const confirmedFuture = currentCatalog.confirmedFuture || openingSoon || [];
@@ -202,6 +202,7 @@ function openingSoonRow(item) {
       <dl class="opportunity-facts">
         <div><dt>Opening window</dt><dd>${escapeHtml(opens)}</dd></div>
         ${item.location ? `<div><dt>Location</dt><dd>${escapeHtml(item.location)}</dd></div>` : ""}
+        ${item.mapLocation ? `<div><dt>Map marker</dt><dd>${escapeHtml(item.mapLocation.city)} city area (approximate; not an office address)</dd></div>` : ''}
         ${item.deadline ? `<div><dt>Deadline / status</dt><dd>${escapeHtml(item.deadline)}</dd></div>` : ""}
         <div><dt>Pay / funding</dt><dd>${escapeHtml(item.fundingDetails || item.paid)}</dd></div>
         <div><dt>Qualifications / study</dt><dd>${escapeHtml(item.studyYear)}</dd></div>
@@ -686,6 +687,8 @@ function renderUnconfirmed() {
 }
 
 function renderTabs() {
+  const horizonLabel=document.getElementById('opening-horizon-label');
+  if(horizonLabel&&currentCatalog.publicOpeningWindow)horizonLabel.textContent=`Current horizon: through ${new Date(currentCatalog.publicOpeningWindow.through+'T00:00:00Z').toLocaleDateString('en-AU',{timeZone:'Australia/Sydney',day:'numeric',month:'long',year:'numeric'})} (Australia/Sydney date).`;
   const opening = state.catalog !== "open";
   const download = document.getElementById("download-csv");
   if (download) {
@@ -709,7 +712,7 @@ function renderTabs() {
 }
 
 function selectCatalog(catalog) {
-  const next = radarCatalog.publicScope==='accepting-only' ? 'open' : ['opening', 'recurring'].includes(catalog) ? catalog : "open";
+  const next = radarCatalog.publicScope==='current-and-upcoming' ? (catalog==='opening'?'opening':'open') : radarCatalog.publicScope==='accepting-only' ? 'open' : ['opening', 'recurring'].includes(catalog) ? catalog : "open";
   if (state.catalog === next) return;
   state.catalog = next;
   const visible = new Set(activeProgrammes().map((item) => item.id));

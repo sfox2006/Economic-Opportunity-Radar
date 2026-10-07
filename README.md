@@ -57,8 +57,12 @@ data. Unverified, closed, expired and stale live listings are held back. Exact
 opening dates require a recheck before promotion; expected windows stay labelled.
 Future candidates remain in the compilation across all dates and review states.
 Use `node scripts/export-compilation.cjs <output-directory>` for review CSV/JSON.
-Sam's subsequent instruction removes public future/recurring access while
-preserving those records and evidence offline. `data/map-cities.json` supplies
+Sam's latest 7 October instruction publishes a separate upcoming list for verified
+openings within three calendar months. Farther-future, vague, recurring and held
+records remain outside published assets; all future evidence survives offline.
+`RadarModel.selectPublic` requires the full official date/range to fit the horizon,
+and preserves source-stated month precision without inventing a day. It never
+promotes a due opening to accepting. `data/map-cities.json` supplies
 sourced approximate city representative points; the display overlay never
 changes original opportunity records or their verification timestamps.
 Reviewed public-safe corrections live in `data/opportunity-corrections.json`,

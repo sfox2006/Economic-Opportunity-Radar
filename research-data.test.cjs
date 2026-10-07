@@ -35,10 +35,12 @@ test('public assets omit every held candidate while offline compilation retains 
   const publicRecords=vm.runInContext('radarCatalog.records',context);
   const effective=require('./scripts/research-records.cjs').readRecords(__dirname);
   const generatedAt=vm.runInContext('radarCatalog.generatedAt',context);
-  assert.equal(publicRecords.length,model.select(effective,settings,new Date(generatedAt)).opportunities.length);
-  assert.equal(vm.runInContext('radarCatalog.publicScope',context),'accepting-only');
-  for(const r of publicRecords)assert.ok(model.currentStatuses.includes(r.status));
-  for(const key of ['confirmedFuture','recurringUnconfirmed','futureCompilation','openingSoon'])assert.equal(vm.runInContext('radarCatalog.'+key+'.length',context),0);
+  const published=model.selectPublic(effective,settings,new Date(generatedAt));
+  assert.equal(publicRecords.length,published.opportunities.length+published.confirmedFuture.length);
+  assert.equal(vm.runInContext('radarCatalog.publicScope',context),'current-and-upcoming');
+  for(const r of publicRecords)assert.ok([...model.currentStatuses,'confirmed-future'].includes(r.status));
+  assert.equal(vm.runInContext('radarCatalog.recurringUnconfirmed.length',context),0);
+  for(const key of ['confirmedFuture','futureCompilation','openingSoon'])assert.equal(vm.runInContext('radarCatalog.'+key+'.length',context),published.confirmedFuture.length);
   for(const r of publicRecords) assert.equal(r.publicationApproved,true);
   const ids=new Set(publicRecords.map(r=>r.id));
   for(const r of effective.filter(r=>!r.publicationApproved)) assert.equal(ids.has(r.id),false);

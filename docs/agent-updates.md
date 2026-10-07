@@ -8,13 +8,17 @@ requested scope; this authorisation does not send emails or update other sites.
 
 ## Audience and professional vacancies
 
-Sam's subsequent current-only instruction supersedes public future/recurring
-display. The website publishes reviewed accepting vacancies/registers only.
-Future, upcoming and recurring candidates retain their separate verification
-states in source data and offline compilations, but no public tabs, future CSV,
-directory counts or deep-link access. An old future link reports unavailable;
-it never promotes a future programme to open. Organisation enquiries are handled
-separately from this code update.
+Sam's latest 7 October instruction supersedes the prior current-only scope.
+Publish reviewed accepting vacancies/registers and a separate upcoming list for
+officially confirmed openings within three calendar months, using the site's
+Australia/Sydney date. The entire official opening date/range must fit the
+horizon. A source-stated month keeps its text and is bounded internally only for
+the horizon check; never invent an exact opening day. Vague or straddling windows,
+recurring programmes and held records remain outside public assets. Retain all
+future evidence and candidates offline. `RadarModel.selectPublic` enforces this
+same policy at build and in the browser, without promoting due openings to open.
+Public upcoming links/downloads include only fresh approved near-term records;
+private/farther links report unavailable. Enquiries are handled separately.
 
 For the map, source records remain unchanged. A display overlay maps only an
 explicit single city in the verified location text to a sourced approximate city
@@ -189,8 +193,9 @@ omits them from all public assets and availability streams. An approval does not
 override freshness, deadline, application-route or audience checks.
 
 The current-list download includes only selected accepting vacancies and clearly
-labelled registers. Sam's current-only instruction removes the public future
-download. The offline future export includes every retained future record,
+labelled registers. The separate public upcoming download includes only fresh,
+approved openings within three calendar months. The offline future export
+includes every retained future record,
 status, held reason,
 confirmed or indicative date fields, eligibility, official URLs and check notes.
 Run `node scripts/export-compilation.cjs <output-directory>` to generate the

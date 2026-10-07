@@ -121,10 +121,21 @@
             <span id="open-tab-label" class="tab-label">Open now</span>
             <span id="open-count" class="tab-count">0</span>
           </button>
+          <button type="button" role="tab" id="tab-opening" aria-controls="panel-opening" aria-selected="false" tabindex="-1">
+            <span class="tab-label">Upcoming within 3 months</span>
+            <span id="opening-count" class="tab-count">0</span>
+          </button>
         </div>
         <div role="tabpanel" id="panel-open" aria-labelledby="tab-open">
           <div class="list-head" aria-hidden="true"><span>Role / program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Verification</span></div>
           <div id="results" class="results-list"></div>
+        </div>
+        <div role="tabpanel" id="panel-opening" class="opening-panel" aria-labelledby="tab-opening" hidden>
+          <p class="opening-intro">Officially confirmed openings within the next three calendar months. Applications are not verified open; check the official source when the opening arrives. Published months and ranges retain their original precision.</p>
+          <p id="opening-horizon-label" class="opening-intro"></p>
+          <div id="opening-soon-head" class="list-head" aria-hidden="true" hidden><span>Role / program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Opens</span></div>
+          <div id="opening-soon-list" class="results-list"></div>
+          <p class="future-download"><button type="button" id="download-future-csv">Download upcoming opportunities</button><small>Verified upcoming entries only; separate from the accepting list.</small></p>
         </div>
       </div>
     </section>
@@ -181,15 +192,15 @@
     <div class="dialog-actions"><button type="button" id="copy-opportunity-action">Copy prompt</button><button type="button" id="close-opportunity-action">Close</button></div>
   </dialog>
   <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.14.0/dist/maplibre-gl.js"></script>
-  <script src="./catalog-model.js?v=professional-audience-20261006"></script>
+  <script src="./catalog-model.js?v=three-month-upcoming-20261007"></script>
   <script src="./catalog-export.js?v=professional-audience-20261006"></script>
   <script src="./organisations.js?v=organisation-profiles-20261006"></script>
-  <script src="./catalog.js?v=city-map-current-only-20261007"></script>
+  <script src="./catalog.js?v=city-map-three-month-upcoming-20261007"></script>
   <script src="./config.js?v=application-tools-20261006"></script>
   <script src="./opportunity-tools.js?v=professional-audience-20261006"></script>
-  <script src="./app.js?v=city-map-current-only-20261007"></script>
-  <script src="./opportunity-actions.js?v=application-tools-20261006"></script>
+  <script src="./app.js?v=city-map-three-month-upcoming-20261007"></script>
+  <script src="./opportunity-actions.js?v=three-month-upcoming-20261007"></script>
   <script src="./newsletter.js?v=application-tools-20261006"></script>
-  <script src="./directory.js?v=city-map-current-only-20261007"></script>
+  <script src="./directory.js?v=city-map-three-month-upcoming-20261007"></script>
 </body>
 </html>
