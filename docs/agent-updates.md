@@ -178,8 +178,9 @@ Every explicit future/recurring record survives in `futureCompilation`, even
 when its evidence expires, an expected window ends or its opening arrives.
 Held records show the precise `holdReason` and an unconfirmed availability label.
 The original input stays intact. Retention does not grant verification.
-`openingSoon` remains a derived subset of confirmed openings within three months,
-for integrations that need it; it is not a cutoff for retention or the UI.
+`openingSoon` is the derived subset of confirmed openings within three months.
+The public UI and upcoming download use that horizon; the offline compilation
+retains every future and recurring candidate regardless of the horizon.
 
 `radarCatalog.records` supplies validated input for browser rechecks. The browser
 uses the shared policy on load and every minute, updating tabs and counts as
