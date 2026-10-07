@@ -12,7 +12,7 @@ function renderCatalogStatus() {
   document.getElementById('catalog-status').textContent = demoMode
     ? `Demonstration catalogue: ${opportunities.length} simulated programmes; prepared ${built}`
     : opportunities.length || futureCompilation.length
-      ? `${vacancies} verified open vacancies; ${registers} accepting registers / enquiries; ${confirmedFuture.length} confirmed future.`
+      ? `${vacancies} verified open vacancies; ${registers} accepting registers / enquiries.`
       : 'Organisation coverage is being researched. Verified opportunities will appear after their application status is checked.';
 }
 renderCatalogStatus();
@@ -78,7 +78,7 @@ document.getElementById('download-csv').addEventListener('click', () => {
   setTimeout(() => URL.revokeObjectURL(link.href), 1000);
 });
 
-document.getElementById('download-future-csv').addEventListener('click', () => {
+document.getElementById('download-future-csv')?.addEventListener('click', () => {
   const blob = new Blob([exportFutureCsv(futureCompilation)], { type: 'text/csv;charset=utf-8' });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);

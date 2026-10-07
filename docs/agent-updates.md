@@ -8,6 +8,21 @@ requested scope; this authorisation does not send emails or update other sites.
 
 ## Audience and professional vacancies
 
+Sam's subsequent current-only instruction supersedes public future/recurring
+display. The website publishes reviewed accepting vacancies/registers only.
+Future, upcoming and recurring candidates retain their separate verification
+states in source data and offline compilations, but no public tabs, future CSV,
+directory counts or deep-link access. An old future link reports unavailable;
+it never promotes a future programme to open. Organisation enquiries are handled
+separately from this code update.
+
+For the map, source records remain unchanged. A display overlay maps only an
+explicit single city in the verified location text to a sourced approximate city
+representative point. Never substitute employer headquarters or infer a venue.
+Remote, variable, multiple-city and insufficiently specific placements remain
+unmapped and visible in the list. Verify rendered markers and physical browser
+clicks, clustering and filtering with real published data at desktop/mobile sizes.
+
 The guide serves Australian economists and economics-related professionals under
 30: students, graduates and people with several years of experience. Under 30
 describes the guide's audience; do not turn it into an employer eligibility
@@ -38,7 +53,13 @@ human-verification pages without bypassing them.
 ## Public data and organisation coverage
 
 `data/settings.json` selects `mode: "live"`. `data/live-opportunities.json` is the
-only live input. Empty input produces an honest empty catalogue. Live validation
+original live audit input. `data/opportunity-corrections.json` supplies reviewed
+public-safe revisions through `scripts/research-records.cjs` to the build and
+offline exporter. The original 290 records remain unchanged; newer verified
+source values take precedence. Field findings carry separate source/check
+evidence and do not refresh acceptance timestamps or promote held/future
+programmes. Only reviewed priority patches can alter a publication disposition.
+Empty input produces an honest empty catalogue. Live validation
 requires `simulated: false` and rejects every synthetic fixture.
 `data/demo-opportunities.json` is private test material, outside the published
 `dist/` folder. Never use its programme names, locations, dates, pay or eligibility
@@ -168,8 +189,8 @@ omits them from all public assets and availability streams. An approval does not
 override freshness, deadline, application-route or audience checks.
 
 The current-list download includes only selected accepting vacancies and clearly
-labelled registers. The separate website future download contains approved public
-planning records. The offline future export includes every retained future record,
+labelled registers. Sam's current-only instruction removes the public future
+download. The offline future export includes every retained future record,
 status, held reason,
 confirmed or indicative date fields, eligibility, official URLs and check notes.
 Run `node scripts/export-compilation.cjs <output-directory>` to generate the

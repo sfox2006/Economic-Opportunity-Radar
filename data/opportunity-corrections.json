@@ -1,0 +1,3381 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "libraryFileId": "libfile_ce20618bfc408191b92761088b3f6599",
+    "version": "2",
+    "fileId": "file_00000000aaa481f9bf75064bc73fddc7",
+    "name": "Economic-Radar-public-corrections-2026-10-06.json",
+    "readLines": 4686
+  },
+  "method": "Consumer-authored correction projection from complete supported read-only Library text reads. Contains only public-safe role facts, official source URLs and reviewed patch dispositions; the private audit and correspondence remain separate.",
+  "priorityCount": 7,
+  "findingCount": 284,
+  "revisions": [
+    {
+      "recordId": "deloitte-australia-1362411666",
+      "facts": [
+        {
+          "field": "status",
+          "value": "Closed: position filled",
+          "checkedAt": "2026-10-06T23:35:39Z",
+          "sources": [
+            "https://jobs.deloitte.com.au/job/Brisbane-Strategy-Manager-Monitor-Deloitte-QLD/1362411666/"
+          ]
+        }
+      ],
+      "priority": {
+        "changes": {
+          "status": "unknown",
+          "publicationApproved": false,
+          "holdReason": "Prior independent review reported the position filled. Fresh public read did not establish an accepting application route; retain the publication hold.",
+          "verification": {
+            "state": "pending",
+            "acceptingApplications": false,
+            "checkedAt": "2026-10-06T23:35:39Z",
+            "sourceUrl": "https://jobs.deloitte.com.au/job/Brisbane-Strategy-Manager-Monitor-Deloitte-QLD/1362411666/",
+            "notes": "Prior independent review reported a filled-position notice on 6 October 2026. An isolated public browser read on 7 October 2026 did not reproduce that notice, and current external application acceptance was not certified. Keep unpublished; do not infer current acceptance from a retained advert or Apply link."
+          }
+        },
+        "checkedAt": "2026-10-06T23:35:39Z",
+        "sources": [
+          "https://jobs.deloitte.com.au/job/Brisbane-Strategy-Manager-Monitor-Deloitte-QLD/1362411666/"
+        ],
+        "disposition": "Keep out of public active results and clarification outreach; preserve archive/history."
+      }
+    },
+    {
+      "recordId": "deloitte-australia-1065312766",
+      "facts": [
+        {
+          "field": "status",
+          "value": "Closed: position filled",
+          "checkedAt": "2026-10-06T23:35:39Z",
+          "sources": [
+            "https://jobs.deloitte.com.au/job/Brisbane-Senior-Consultant-Strategy-&-Business-Design-QLD/1065312766/"
+          ]
+        }
+      ],
+      "priority": {
+        "changes": {
+          "status": "unknown",
+          "publicationApproved": false,
+          "holdReason": "Prior independent review reported the position filled. Fresh public read did not establish an accepting application route; retain the publication hold.",
+          "verification": {
+            "state": "pending",
+            "acceptingApplications": false,
+            "checkedAt": "2026-10-06T23:35:39Z",
+            "sourceUrl": "https://jobs.deloitte.com.au/job/Brisbane-Senior-Consultant-Strategy-&-Business-Design-QLD/1065312766/",
+            "notes": "Prior independent review reported a filled-position notice on 6 October 2026. An isolated public browser read on 7 October 2026 did not reproduce that notice, and current external application acceptance was not certified. Keep unpublished; do not infer current acceptance from a retained advert or Apply link."
+          }
+        },
+        "checkedAt": "2026-10-06T23:35:39Z",
+        "sources": [
+          "https://jobs.deloitte.com.au/job/Brisbane-Senior-Consultant-Strategy-&-Business-Design-QLD/1065312766/"
+        ],
+        "disposition": "Keep out of public active results and clarification outreach; preserve archive/history."
+      }
+    },
+    {
+      "recordId": "aiib-internship",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "General programme rule says applications close February 28 each year; next named cohort dates not separately verified",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://jobs.aiib.org/go/Global-Internship-Program/9829601/"
+          ]
+        },
+        {
+          "field": "eligibility",
+          "value": "Current programme permits full-time master’s/doctoral students or those who graduated in the application year; older FAQ return-to-school rule conflicts",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://jobs.aiib.org/go/Global-Internship-Program/9829601/"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official 2026 cohort article: two months, extendable by one; current portal introduces a separate research format with an extended period, so next-format duration needs confirmation",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.aiib.org/en/news-events/media-center/blog/2026/our-most-diverse-class-yet-highlights-from-the-2026-global-internship-program.html"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "aiib-graduate",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Two-year rotational programme",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://aiib.org/en/opportunities/career/job-vacancies/graduate-program/index.html"
+          ]
+        },
+        {
+          "field": "verification",
+          "value": "Published general annual pattern: applications December–February, onboarding September 1; no named next intake confirmed",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://aiib.org/en/opportunities/career/job-vacancies/graduate-program/index.html"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "aiib-6499-2026",
+      "facts": [
+        {
+          "field": "citizenship",
+          "value": "Exact official advertisement explicitly invites applicants within and outside AIIB members regardless of nationality",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://jobs.aiib.org/job/Economic-Analyst/6499-en_US/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "aiib-6504-2026",
+      "facts": [
+        {
+          "field": "citizenship",
+          "value": "Exact official advertisement explicitly invites applicants within and outside AIIB members regardless of nationality",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://jobs.aiib.org/job/Economic-Associate,-Project-Economics/6504-en_US/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "aiib-6501-2026",
+      "facts": [
+        {
+          "field": "citizenship",
+          "value": "Exact official advertisement explicitly invites applicants within and outside AIIB members regardless of nationality",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://jobs.aiib.org/job/Investment-Associate,-Project-&-Corporate-Finance/6501-en_US/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "aiib-6502-2026",
+      "facts": [
+        {
+          "field": "citizenship",
+          "value": "Exact official advertisement explicitly invites applicants within and outside AIIB members regardless of nationality",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://jobs.aiib.org/job/Investment-Officer,-Project-&-Corporate-Finance/6502-en_US/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "citadel-securities-quantitative-developer-research-engineer",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "Official multi-location advert discloses base salary $250,000–$350,000 but does not establish Australian currency/location applicability; do not publish as Australian pay",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.citadelsecurities.com/careers/details/quantitative-developer-research-engineer/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "brookings-economic-ra-2027",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Valid US work authorisation required; first-year RAs are ineligible for employment-based sponsorship. F-1 OPT/CPT accepted; term follows permission and any later sponsorship depends on funding/project needs",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.brookings.edu/join-the-top-ranked-think-tank-for-domestic-economic-policy/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "brookings-3886-2026",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "Projected hiring salary range $69,840–$81,480 (US role)",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://careers-brookings.icims.com/jobs/3886/investment-analyst-(job-id:-2026-3886)/job"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Regular, full-time position; fixed end date not specified",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://careers-brookings.icims.com/jobs/3886/investment-analyst-(job-id:-2026-3886)/job"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "oecd-internship-2026",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "One to six months, renewable up to twelve total; rolling recruitment",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://jobs.smartrecruiters.com/OECD/744000101644285-internship-programme"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "OECD visa team assists selected interns to obtain a visa",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.oecd.org/careers/OECD-Internship-FAQs.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "oecd-statisticians-152479229-2026",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Pool may fill open-ended and fixed-term functions; appointment type determined by Directorate need and confirmed at offer. There is no single missing duration.",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://jobs.smartrecruiters.com/OECD/744000152479229"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "aifs-register-general-2026-27",
+      "facts": [
+        {
+          "field": "citizenship",
+          "value": "AIFS general recruitment policy requires Australian citizenship; security clearance is role-dependent",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://aifs.gov.au/about/careers/recruitment"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "aifs-register-first-nations-2026-27",
+      "facts": [
+        {
+          "field": "citizenship",
+          "value": "AIFS general recruitment policy requires Australian citizenship; security clearance is role-dependent",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://aifs.gov.au/about/careers/recruitment"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "idb-group-internship-cycles",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Two months; general winter window January 16–March 15 and summer June 16–August 15, with applications around 3–4 months ahead",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.iadb.org/en/how-we-can-work-together/students-recent-graduates"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "idb-country-office-internships",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Two to six months; business-needs recruitment without a defined timeline/cohort",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.iadb.org/en/how-we-can-work-together/students-recent-graduates"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Citizen or work-permit holder living in the office country; Australian citizenship alone insufficient",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.iadb.org/en/how-we-can-work-together/students-recent-graduates"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "vanguard-australia-transaction-cost-177273",
+      "facts": [
+        {
+          "field": "experienceRequirements",
+          "value": "Minimum three years related experience, preferably one year transaction-cost analysis",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://vanguard.wd5.myworkdayjobs.com/vanguard_external/job/Transaction-Cost-Analyst--Specialist_177273-1"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Advanced degree in a quantitative discipline",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://vanguard.wd5.myworkdayjobs.com/vanguard_external/job/Transaction-Cost-Analyst--Specialist_177273-1"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "cbus-graduate-next-unconfirmed",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Current published programme requires Australian work rights; no separate citizenship restriction shown",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.cbussuper.com.au/about-us/careers/our-graduate-program"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Current closed 2026 programme is 12-month maximum-term, full-time. Do not transplant to an unannounced intake",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.cbussuper.com.au/about-us/careers/our-graduate-program"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "commonwealth-grants-commission-graduate-program",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Official careers page currently says there are no vacancies; programme page describes genuine graduate pathway without next intake dates",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.cgc.gov.au/about-us/careers"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "department-of-finance-2028-finance-graduate-program",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "Published closing month April 2027; exact date/time not provided",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.finance.gov.au/about-us/careers/graduate-and-early-career-pathways/graduate-program"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "grattan-academy-watch",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Anyone can register; policy professionals are target audience, not a restriction. No citizenship, work-rights or experience question needed.",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://grattan.edu.au/grattan-academy/"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "Fee-paying professional training, not paid employment; no subsidised places currently offered. Employment pay field is not applicable.",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://grattan.edu.au/grattan-academy/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "pacific-equity-partners-pep-women-in-business-2027",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Official page explicitly says applications reopen April 2027, despite legacy 2025 closed wording",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.pep.com.au/women-in-business-scholarship-closed/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "productivity-commission-2028-graduate-program",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "The offer subpage explicitly dates $79,125 + 15.4% super to 2027, so 2028 salary remains unconfirmed",
+          "checkedAt": "2026-10-06T23:42:00Z",
+          "sources": [
+            "https://www.pc.gov.au/careers/graduate/offer/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-annuities",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-ai-shopping",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-school-autonomy",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-effective-tax",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-interest-networks",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-productivity",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-campaign-spending",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-green-iron",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-cooperation-costs",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-economics-summer-2027-mine-rehabilitation",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-winter-research-2027",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-plato-finance-scholarship-2027",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "AUD 6,000 for each year held, maximum two years; continuation conditions apply.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://scholarships.uq.edu.au/sites/default/files/2021-10/plato-finance-scholarship-rules.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-issr-summer-2027-climate-governance",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-issr-summer-2027-canopy-education",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-issr-summer-2027-education-dashboards",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-issr-summer-2027-immigrant-integration",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-issr-summer-2027-sole-parents",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-issr-summer-2027-gender-labour",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-issr-summer-2027-gender-life-course",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uq-issr-summer-2027-ageing-inclusion",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Current UQ undergraduate, honours or postgraduate coursework students; enrolment throughout, relevant study, academic achievement, and unused unpaid-work-experience days required. No published citizenship-only restriction.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://employability.uq.edu.au/summer-winter-research/apply"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kiel-asp-2027",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "No tuition. EUR 1,750/month scholarship for first 16 months; after successful exams, 42-month junior researcher position at approximately EUR 2,200 net/month under 75% TV-L EG13.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.kielinstitut.de/institute/advanced-studies-program/why-choose-our-program/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "cpd-communications-officer-2026",
+      "facts": [
+        {
+          "field": "status",
+          "value": "No current vacancy on official page.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://cpd.org.au/careers-internships/"
+          ]
+        }
+      ],
+      "priority": {
+        "changes": {
+          "status": "unknown",
+          "publicationApproved": false,
+          "holdReason": "Official current opportunities page has no current opportunities; this advert is absent.",
+          "verification": {
+            "state": "pending",
+            "acceptingApplications": false,
+            "checkedAt": "2026-10-06T23:37:02Z",
+            "sourceUrl": "https://cpd.org.au/careers-internships/",
+            "notes": "Official current opportunities page has no current opportunities; this advert is absent."
+          }
+        },
+        "checkedAt": "2026-10-06T23:37:02Z",
+        "sources": [
+          "https://cpd.org.au/careers-internships/"
+        ],
+        "disposition": "Keep out of public active results and clarification outreach; preserve archive/history."
+      }
+    },
+    {
+      "recordId": "wto-intern-roster-2026",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Geneva internships last 3–6 months.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://wto.wd103.myworkdayjobs.com/en-US/External/job/CWR/Intern_JR103985"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "WTO applies for a Carte de Légitimation for non-Swiss citizens for contract duration; entry visa may still be needed.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.wto.org/english/thewto_e/vacan_e/faq_e.htm"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "cie-centre-for-international-economics-careers-enquiry",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Good degree in economics or relevant discipline; Honours, Masters or PhD preferred.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.thecie.com.au/careers"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Must be able to work in Australia.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.thecie.com.au/careers"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "monash-che-integrated-phd-next-unconfirmed",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "CHE page currently states tuition covered and AUD 39,000 base annual stipend, up to AUD 49,000 for outstanding applicants, across MCom and PhD; does not establish next-round terms.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.monash.edu/business/che/study-with-us/phd-program/applications-and-scholarships"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Up to 5.5 years: MCom up to two years and PhD up to 3.5 years.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.monash.edu/business/research/phd-programs/frequently-asked-questions-faq-integrated-phd-program"
+          ]
+        },
+        {
+          "field": "eligibilityDetails",
+          "value": "High-performing domestic and international students eligible; full-time expected. Tuition and applicable OSHC support described for international students.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.monash.edu/business/research/phd-programs/frequently-asked-questions-faq-integrated-phd-program"
+          ]
+        },
+        {
+          "field": "openingWindow",
+          "value": "Semester 1: 1 July–31 August 11:59pm AEST. Semester 2: 1 December–1 February 11:59pm AEDT. Page gives recurring dates without cohort year.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.monash.edu/business/research/phd-programs/how-to-apply/integrated"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "parliamentary-budget-office-pbo-parliament-of-australia-graduate-placement",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Central Parliament FAQ allows people accepted into, undertaking or who completed a Commonwealth graduate programme within five years, with home-agency endorsement. Confirm PBO-specific next-round rules.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.aph.gov.au/About_Parliament/Employment/Graduate/FAQs"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "un-escap-trade-284109",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Six months, full-time 35 hours/week; remote or Bangkok.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://inspira.un.org/psc/UNCAREERS/EMPLOYEE/HRMS/c/UN_CUSTOMIZATIONS.UN_JOB_DETAIL.GBL?Page=UN_JOB_DETAIL&Action=A&JobOpeningId=284109"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-graduate-2027-rolling",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "Paid, competitive market-rate base salary plus superannuation; amount discussed on offer",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://kpmg.com/au/en/careers/graduates/faq.html"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Full-time Australian work rights at application and throughout programme; Australian residency is not required",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://kpmg.com/au/en/careers/graduates/faq.html"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "No work experience required",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://kpmg.com/au/en/careers/graduates/faq.html"
+          ]
+        },
+        {
+          "field": "verification",
+          "value": "Rolling talent pool; candidates considered as new or unfilled roles arise, not guaranteed vacancies",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://kpmg.com/au/en/careers/graduates/faq.html"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-vacationer-2026-27-rolling",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Full-time Australian work rights at application and throughout programme; Australian residency is not required",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://kpmg.com/au/en/careers/graduates/faq.html"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "No work experience required",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://kpmg.com/au/en/careers/graduates/faq.html"
+          ]
+        },
+        {
+          "field": "verification",
+          "value": "Rolling talent pool; candidates considered as new or unfilled roles arise, not guaranteed vacancies",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://kpmg.com/au/en/careers/graduates/faq.html"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001402550",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001402550"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001402550"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001440575",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "Advert states $80,000–$100,000; currency and superannuation treatment need confirmation",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.smartrecruiters.com/KPMGAustralia1/6000000001440575-mid-market-private-consulting-advisory-strategy-ops-consultant-"
+          ]
+        },
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001440575"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001440575"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001445825",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001445825"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001445825"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001445850",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001445850"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001445850"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001445874",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001445874"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001445874"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001445898",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001445898"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001445898"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001446310",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001446310"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001446310"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001446356",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001446356"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001446356"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001458961",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001458961"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "Advert states $80k–$100k+ inclusive of super; currency not explicit",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001458961"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Body lists Casual, Max-Term Full/Part Time and Permanent Full/Part Time, despite API permanent/full-time; contract duration depends on placement",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001458961"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001462766",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001462766"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001462766"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001462791",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001462791"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001462791"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001462814",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001462814"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001462814"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "kpmg-australia-6000000001462838",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public official posting currently returned, with role-specific apply URL",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001462838"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Official API typeOfEmployment id permanent, label Full-time; supports permanent full-time",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://api.smartrecruiters.com/v1/companies/KPMGAustralia1/postings/6000000001462838"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ebrd-intern-37127",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "12 months",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.ebrd.com/job/London-Intern/1442907033/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ebrd-ipp",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "24 months",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.ebrd.com/go/Early-career-opportunities/1111501/"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Shareholder-country nationals do not need an existing work visa; visa-exemption vignette scheme",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.ebrd.com/go/Early-career-opportunities/1111501/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ebrd-internships-general",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "Ad-hoc internships are advertised regularly rather than in one annual application window; role-specific deadlines apply",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.ebrd.com/go/Early-career-opportunities/1111501/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ebrd-36932-2026",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact current advert includes an Apply now link; downstream submission not tested",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.ebrd.com/job/London-Analyst,-Infra-Eurasia/1444419633/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ebrd-37107-2026",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact current advert includes an Apply now link; downstream submission not tested",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.ebrd.com/job/London-Analyst,-TFP/1443970933/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ebrd-37126-2026",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact current advert includes an Apply now link; downstream submission not tested",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.ebrd.com/job/London-Analyst%2C-FI-PDI/1443988133/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ebrd-37124-2026",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact current advert includes an Apply now link; downstream submission not tested",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.ebrd.com/job/London-Analyst,-EU-Pillar/1443180133/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ebrd-37133-2026",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact current advert includes an Apply now link; downstream submission not tested",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://jobs.ebrd.com/job/London-Principal,-EU-Partnerships/1443173333/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "wbg-pioneers-undergraduate",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Recurring application seasons: January–February and July–August; exact next dates not announced",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.worldbank.org/ext/en/careers/talent-programs/wbg-pioneers"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "wbg-pioneers-postgraduate",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Recurring application seasons: January–February and July–August; exact next dates not announced",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.worldbank.org/ext/en/careers/talent-programs/wbg-pioneers"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "jjwbgsp-2027-w1",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Degree programme duration or two years, whichever is shorter",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "jjwbgsp-2027-w2",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Degree programme duration or two years, whichever is shorter",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp"
+          ]
+        },
+        {
+          "field": "deadline",
+          "value": "21 May 2027 at 12:00 noon EST, as written; UTC offset/daylight-saving interpretation unresolved",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://thedocs.worldbank.org/en/doc/0d33194c7bbb3436f3c4cb24e8e3fa6f-0050052026/original/2027-Application-Guidelines-for-DevelopingCountryNationals-W2.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "jjwbgsp-japan-2027",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Degree programme duration or two years, whichever is shorter",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.worldbank.org/en/programs/scholarships/japanese-nationals"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "wbg-treasury-summer-internship-2027",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Official page says 2027 summer applications open and links requisition 38076; portal text could not be retrieved",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://treasury.worldbank.org/en/about/unit/treasury/about/student-and-graduate-careers"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "wbg-treasury-junior-analyst-2028-pathway",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "Competitive Junior Analyst applications open at the end of the 2027 internship; this is not an independent public-entry application",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://treasury.worldbank.org/en/about/unit/treasury/about/student-and-graduate-careers"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "victorian-department-of-treasury-and-finance-dtf-1368011266-senior-analyst",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Corresponding Australian work rights required; ongoing appointments limited to Australian/NZ citizens or Australian permanent residents",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://careers.people.vic.gov.au/DTF/job/East-Melbourne-Senior-Analyst-VIC-3002/1368011266/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "victorian-department-of-treasury-and-finance-dtf-1368010866-senior-manager",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Corresponding Australian work rights required; ongoing appointments limited to Australian/NZ citizens or Australian permanent residents",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://careers.people.vic.gov.au/DTF/job/East-Melbourne-Senior-Manager-VIC-3002/1368010866/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "anz-summer-intern-2027-28",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Central internship criteria: AU/NZ citizen or permanent resident; penultimate-year bachelor/postgraduate student",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.anz.com.au/careers/career-programs/summer-internship/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "anz-research-analysis-124022",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Exact public URL now returns employee-only login notice; external availability cannot be established",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://careers.anz.com/job/Sydney-Director-Associate-Director,-Research-&-Analysis/1368074966/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "anz-graduate-eoi-2028",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Central graduate criteria: AU/NZ citizen or permanent resident in programme country; final-year bachelor or higher, or graduated within last three years",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.anz.com.au/careers/career-programs/graduate-program/"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Central programme is 18 or 24 months, depending on stream; exact 2028 stream duration not yet stated",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.anz.com.au/careers/career-programs/graduate-program/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ifs-research-economist-2027",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "8 November 2026 at 23:55 GMT",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://app.beapplied.com/apply/udmayprjwe"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "bis-graduate-programme",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Up to 11 months, non-renewable",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.bis.org/about/careers/early-careers"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "bis-phd-fellowship",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Three to 11 months",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.bis.org/about/careers/early-careers"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "rmit-senior-operations-performance-jr51180",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "16 October 2026 at 11:59 pm; timezone unstated. Supersedes source dataset 9 October date.",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://rmit.wd3.myworkdayjobs.com/wday/cxs/rmit/RMIT_Careers/job/Melbourne/Senior-Operations-Performance-Coordinator_JR51180"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Completed or in-progress related postgraduate qualification, or equivalent experience",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.rmit.edu.au/content/dam/rmit/au/en/careers/position-descriptions/pd-senior-operations-performance-coordinator-26.pdf"
+          ]
+        },
+        {
+          "field": "verification",
+          "value": "posted=true and canApply=true",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://rmit.wd3.myworkdayjobs.com/wday/cxs/rmit/RMIT_Careers/job/Melbourne/Senior-Operations-Performance-Coordinator_JR51180"
+          ]
+        }
+      ],
+      "priority": {
+        "changes": {
+          "deadline": "16 October 2026 at 11:59pm; timezone not stated",
+          "deadlineOn": "2026-10-16",
+          "qualifications": "Completed or in-progress postgraduate qualification in a related field, or equivalent experience",
+          "studyYear": "Completed or in-progress postgraduate qualification in a related field, or equivalent experience",
+          "verification": {
+            "checkedAt": "2026-10-06T23:43:49Z",
+            "acceptingApplications": true,
+            "notes": "Fresh exact official Workday response confirms posted=true and canApply=true, and 16 October 2026 at 11:59pm. Timezone remains unstated. Linked position description confirms postgraduate qualification or equivalent experience and valid Victorian WWCC."
+          }
+        },
+        "checkedAt": "2026-10-06T23:43:49Z",
+        "sources": [
+          "https://rmit.wd3.myworkdayjobs.com/RMIT_Careers/job/Melbourne/Senior-Operations-Performance-Coordinator_JR51180",
+          "https://rmit.wd3.myworkdayjobs.com/wday/cxs/rmit/RMIT_Careers/job/Melbourne/Senior-Operations-Performance-Coordinator_JR51180",
+          "https://www.rmit.edu.au/content/dam/rmit/au/en/careers/position-descriptions/pd-senior-operations-performance-coordinator-26.pdf"
+        ],
+        "disposition": "Correct deadline and qualification display. Preserve unknown timezone; do not invent closesAt offset. Regenerate derived eligibility text."
+      }
+    },
+    {
+      "recordId": "rmit-researcher-indigenous-socioeconomic-jr50955",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Current exact requisition posted=true, canApply=true; official Level A/B position descriptions independently inspected",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://rmit.wd3.myworkdayjobs.com/wday/cxs/rmit/RMIT_Careers/job/Melbourne/Researcher--Indigenous-cultural-and-socio-economic-outcomes-_JR50955-2"
+          ]
+        }
+      ],
+      "priority": {
+        "changes": {
+          "status": "open",
+          "publicationApproved": true,
+          "deadline": "11 October 2026 at 11:59pm AEDT (Melbourne/Sydney time); employer-confirmed",
+          "deadlineOn": "2026-10-11",
+          "closesAt": "2026-10-11T23:59:00+11:00",
+          "deadlineConfirmed": true,
+          "noDeadlinePublished": false,
+          "description": "Research cultural, social and economic outcomes of coastal wetland restoration with Traditional Custodians.",
+          "qualifications": "Level A: bachelor's degree and relevant research/professional experience; PhD preferred, not mandatory. Level B: relevant PhD mandatory.",
+          "studyYear": "Level A: bachelor's degree and relevant research/professional experience; PhD preferred, not mandatory. Level B: relevant PhD mandatory.",
+          "restrictions": "First Nations applicants encouraged; role is not advertised as Indigenous-only. Valid Victorian Working with Children Check and relevant screening required; applicants complete a gender-based violence declaration. Fieldwork/travel to regional or remote Queensland required.",
+          "citizenshipDetails": "Citizenship or visa-sponsorship conditions are not stated in the role sources. First Nations applicants are encouraged; the advert does not restrict applications to Indigenous candidates.",
+          "application": "Apply through the official RMIT Workday vacancy; submit a CV and covering letter addressing suitability.",
+          "applicationUrl": "https://rmit.wd3.myworkdayjobs.com/RMIT_Careers/job/Melbourne/Researcher--Indigenous-cultural-and-socio-economic-outcomes-_JR50955-2",
+          "holdReason": null,
+          "verification": {
+            "state": "verified",
+            "checkedAt": "2026-10-06T23:42:10Z",
+            "sourceUrl": "https://rmit.wd3.myworkdayjobs.com/RMIT_Careers/job/Melbourne/Researcher--Indigenous-cultural-and-socio-economic-outcomes-_JR50955-2",
+            "acceptingApplications": true,
+            "deadlineConfirmed": true,
+            "noDeadlinePublished": false,
+            "audienceAccess": "australian-program",
+            "notes": "Current official Workday record JR50955 reports posted=true and canApply=true; the exact public role page returns HTTP 200. Employer clarification on 6 October 2026 confirms 11 October 2026 at 11:59pm Melbourne/Sydney time, resolving the AM/PM conflict. Official Level A/B position descriptions checked. Work-rights/sponsorship and numerical salary remain unstated. No application was created or submitted.",
+            "sources": [
+              {
+                "url": "https://rmit.wd3.myworkdayjobs.com/wday/cxs/rmit/RMIT_Careers/job/Melbourne/Researcher--Indigenous-cultural-and-socio-economic-outcomes-_JR50955-2",
+                "claim": "Current role-specific public Workday data confirms requisition JR50955 is posted and applications enabled."
+              },
+              {
+                "url": "https://www.rmit.edu.au/content/dam/rmit/au/en/careers/position-descriptions/reefwise-pd-levela.pdf",
+                "claim": "Level A mandatory bachelors degree, relevant experience, 0.9 FTE and Victorian WWCC/Queensland field travel."
+              },
+              {
+                "url": "https://www.rmit.edu.au/content/dam/rmit/au/en/careers/position-descriptions/reefwise-pd-levelb.pdf",
+                "claim": "Level B mandatory relevant PhD, 0.8 FTE and relevant selection criteria, screening and travel."
+              }
+            ]
+          },
+          "independentReview": {
+            "decision": "approve",
+            "checkedAt": "2026-10-06T23:42:10Z",
+            "publicationApproved": true
+          }
+        },
+        "checkedAt": "2026-10-06T23:42:10Z",
+        "sources": [
+          "https://rmit.wd3.myworkdayjobs.com/RMIT_Careers/job/Melbourne/Researcher--Indigenous-cultural-and-socio-economic-outcomes-_JR50955-2",
+          "https://rmit.wd3.myworkdayjobs.com/wday/cxs/rmit/RMIT_Careers/job/Melbourne/Researcher--Indigenous-cultural-and-socio-economic-outcomes-_JR50955-2",
+          "https://www.rmit.edu.au/content/dam/rmit/au/en/careers/position-descriptions/reefwise-pd-levela.pdf",
+          "https://www.rmit.edu.au/content/dam/rmit/au/en/careers/position-descriptions/reefwise-pd-levelb.pdf"
+        ],
+        "disposition": "Promote to open after schema validation; employer-confirmed cutoff resolves conflict. Unknown work-rights and numerical salary remain visible."
+      }
+    },
+    {
+      "recordId": "unsw-senior-data-scientist-543096",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Australian work rights required at application; sponsorship unavailable",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://external-careers.jobs.unsw.edu.au/cw/en/job/543096/senior-data-scientist"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "childfund-data-analyst-2026",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Official Work With Us page names Data Analyst under Current job opportunities but does not expose role detail/application link in extracted text",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.childfund.org.au/work-with-us/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "department-of-health-and-aged-care-2028-graduate-program",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Current programme: full-time 10 months, starting each February in Canberra; 2028 intake-specific changes not announced",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.health.gov.au/our-work/graduate-program"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "Current published starting salary AUD 81,954 plus 15.4% super; after completion APS5 AUD 87,843 plus super; not guaranteed 2028 rates",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.health.gov.au/our-work/graduate-program/what-we-offer?language=en"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "ey-australia-ernst-young-1749075",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "Competitive salary, negotiable according to skills and experience; numerical range not stated",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://careers.ey.com/ey/job/Melbourne-EY-Parthenon-Senior-Consultant-Economics-VIC-3000/1443616033/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "sa-department-of-treasury-and-finance-academy-policy-budget-financial-markets-investments-and-financial-management",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "International students/valid visa holders may apply; fixed-term employment limited to visa rights; ongoing appointment requires permanent residency",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://www.treasury.sa.gov.au/careers/academy/application-process"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Completing/recent relevant Australian-recognised qualification; economics and related disciplines explicitly listed",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://treasury.sa.gov.au/careers/academy/about-the-academy"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uwa-project-analyst-pmo-524546",
+      "facts": [
+        {
+          "field": "eligibility",
+          "value": "Only current UWA staff may apply",
+          "checkedAt": "2026-10-06T23:46:30Z",
+          "sources": [
+            "https://external.jobs.uwa.edu.au/jobs/project-analyst-pmo-crawley-wa-australia"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "department-of-employment-and-workplace-relations-2028-graduate-program-data-stream",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "2027 intake closed; 2028 interest registration only",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.dewr.gov.au/graduate-and-entry-level-programs/graduate-program/data-stream"
+          ]
+        },
+        {
+          "field": "citizenship",
+          "value": "Australian citizen at application for published 2027 criteria",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.dewr.gov.au/graduate-and-entry-level-programs/graduate-program/data-stream"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "AQF7 bachelor or higher; any discipline; 2027 completion window 1 Jan 2022–31 Dec 2026",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.dewr.gov.au/graduate-and-entry-level-programs/graduate-program/data-stream"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "bdo-australia-jr103861",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Degree in commerce, accounting, finance, economics or related discipline; CA/CFA interest or progress",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Junior-Analyst-Analyst_JR103861",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Junior-Analyst-Analyst_JR103861"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "Previous relevant deal advisory, corporate finance or commercial work; no numeric minimum stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Junior-Analyst-Analyst_JR103861",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Junior-Analyst-Analyst_JR103861"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Not stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Junior-Analyst-Analyst_JR103861",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Junior-Analyst-Analyst_JR103861"
+          ]
+        },
+        {
+          "field": "application",
+          "value": "Official Workday ATS canApply=true; EOI status retained where employer says talent pool",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Junior-Analyst-Analyst_JR103861",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Junior-Analyst-Analyst_JR103861"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "bdo-australia-jr103944",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant economics, commerce, law or business degree",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Sydney-New-South-Wales/Consultant-or-Senior-Consultant--Transfer-Pricing_JR103944",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Sydney-New-South-Wales/Consultant-or-Senior-Consultant--Transfer-Pricing_JR103944"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "2–3 years in transfer pricing",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Sydney-New-South-Wales/Consultant-or-Senior-Consultant--Transfer-Pricing_JR103944",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Sydney-New-South-Wales/Consultant-or-Senior-Consultant--Transfer-Pricing_JR103944"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Not stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Sydney-New-South-Wales/Consultant-or-Senior-Consultant--Transfer-Pricing_JR103944",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Sydney-New-South-Wales/Consultant-or-Senior-Consultant--Transfer-Pricing_JR103944"
+          ]
+        },
+        {
+          "field": "application",
+          "value": "Official Workday ATS canApply=true; EOI status retained where employer says talent pool",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Sydney-New-South-Wales/Consultant-or-Senior-Consultant--Transfer-Pricing_JR103944",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Sydney-New-South-Wales/Consultant-or-Senior-Consultant--Transfer-Pricing_JR103944"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "bdo-australia-jr103716",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant finance, accounting, economics, commerce, engineering or property degree; professional study is valued",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Senior-Consultant--Project---Infrastructure-Advisory_JR103716-1",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Senior-Consultant--Project---Infrastructure-Advisory_JR103716-1"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "Approximately 3–5 years in financial/commercial/infrastructure advisory, corporate finance, transactions, consulting or project finance",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Senior-Consultant--Project---Infrastructure-Advisory_JR103716-1",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Senior-Consultant--Project---Infrastructure-Advisory_JR103716-1"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Not stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Senior-Consultant--Project---Infrastructure-Advisory_JR103716-1",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Senior-Consultant--Project---Infrastructure-Advisory_JR103716-1"
+          ]
+        },
+        {
+          "field": "application",
+          "value": "Official Workday ATS canApply=true; EOI status retained where employer says talent pool",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Senior-Consultant--Project---Infrastructure-Advisory_JR103716-1",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Senior-Consultant--Project---Infrastructure-Advisory_JR103716-1"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "bdo-australia-jr103200",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Property economics/real-estate qualification, valuer registration or real-estate licence are examples of relevant qualifications; source welcomes partial matches",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Brisbane-Queensland/Senior-Manager--Real-Estate-Advisory---Transactions_JR103200",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Brisbane-Queensland/Senior-Manager--Real-Estate-Advisory---Transactions_JR103200"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "Relevant property advisory, transaction and financial-modelling exposure; no numeric minimum stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Brisbane-Queensland/Senior-Manager--Real-Estate-Advisory---Transactions_JR103200",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Brisbane-Queensland/Senior-Manager--Real-Estate-Advisory---Transactions_JR103200"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Not stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Brisbane-Queensland/Senior-Manager--Real-Estate-Advisory---Transactions_JR103200",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Brisbane-Queensland/Senior-Manager--Real-Estate-Advisory---Transactions_JR103200"
+          ]
+        },
+        {
+          "field": "application",
+          "value": "Official Workday ATS canApply=true; EOI status retained where employer says talent pool",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Brisbane-Queensland/Senior-Manager--Real-Estate-Advisory---Transactions_JR103200",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Brisbane-Queensland/Senior-Manager--Real-Estate-Advisory---Transactions_JR103200"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "bdo-australia-jr103381",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Tertiary finance, law, commerce, engineering and/or economics qualification",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Brisbane-Queensland/Senior-Consultant--Assistant-Manager--Project---Infrastructure-Advisory--Expressions-of-Interest-_JR103381",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Brisbane-Queensland/Senior-Consultant--Assistant-Manager--Project---Infrastructure-Advisory--Expressions-of-Interest-_JR103381"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "Consulting or related experience; no numeric minimum stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Brisbane-Queensland/Senior-Consultant--Assistant-Manager--Project---Infrastructure-Advisory--Expressions-of-Interest-_JR103381",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Brisbane-Queensland/Senior-Consultant--Assistant-Manager--Project---Infrastructure-Advisory--Expressions-of-Interest-_JR103381"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Not stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Brisbane-Queensland/Senior-Consultant--Assistant-Manager--Project---Infrastructure-Advisory--Expressions-of-Interest-_JR103381",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Brisbane-Queensland/Senior-Consultant--Assistant-Manager--Project---Infrastructure-Advisory--Expressions-of-Interest-_JR103381"
+          ]
+        },
+        {
+          "field": "application",
+          "value": "Official Workday ATS canApply=true; EOI status retained where employer says talent pool",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Brisbane-Queensland/Senior-Consultant--Assistant-Manager--Project---Infrastructure-Advisory--Expressions-of-Interest-_JR103381",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Brisbane-Queensland/Senior-Consultant--Assistant-Manager--Project---Infrastructure-Advisory--Expressions-of-Interest-_JR103381"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "bdo-australia-jr103453",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant tertiary qualifications, with commerce, finance, engineering and legal examples",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Melbourne-Victoria/Expression-of-Interest--Consultant---Director--Project---Infrastructure-Advisory_JR103453",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Melbourne-Victoria/Expression-of-Interest--Consultant---Director--Project---Infrastructure-Advisory_JR103453"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "Relevant project financial analysis and teamwork capability; no numeric minimum stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Melbourne-Victoria/Expression-of-Interest--Consultant---Director--Project---Infrastructure-Advisory_JR103453",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Melbourne-Victoria/Expression-of-Interest--Consultant---Director--Project---Infrastructure-Advisory_JR103453"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Not stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Melbourne-Victoria/Expression-of-Interest--Consultant---Director--Project---Infrastructure-Advisory_JR103453",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Melbourne-Victoria/Expression-of-Interest--Consultant---Director--Project---Infrastructure-Advisory_JR103453"
+          ]
+        },
+        {
+          "field": "application",
+          "value": "Official Workday ATS canApply=true; EOI status retained where employer says talent pool",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Melbourne-Victoria/Expression-of-Interest--Consultant---Director--Project---Infrastructure-Advisory_JR103453",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Melbourne-Victoria/Expression-of-Interest--Consultant---Director--Project---Infrastructure-Advisory_JR103453"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "bdo-australia-jr103724",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant tertiary qualifications, with commerce, finance, engineering and legal examples",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Expression-of-Interest--Consultant---Manager--Project---Infrastructure-Advisory_JR103724",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Expression-of-Interest--Consultant---Manager--Project---Infrastructure-Advisory_JR103724"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "Relevant modelling, procurement, engineering or project-management skills; no numeric minimum stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Expression-of-Interest--Consultant---Manager--Project---Infrastructure-Advisory_JR103724",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Expression-of-Interest--Consultant---Manager--Project---Infrastructure-Advisory_JR103724"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Not stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Expression-of-Interest--Consultant---Manager--Project---Infrastructure-Advisory_JR103724",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Expression-of-Interest--Consultant---Manager--Project---Infrastructure-Advisory_JR103724"
+          ]
+        },
+        {
+          "field": "application",
+          "value": "Official Workday ATS canApply=true; EOI status retained where employer says talent pool",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://bdoau.wd105.myworkdayjobs.com/BDOCareers/job/Perth-Western-Australia/Expression-of-Interest--Consultant---Manager--Project---Infrastructure-Advisory_JR103724",
+            "https://bdoau.wd105.myworkdayjobs.com/wday/cxs/bdoau/BDOCareers/job/Perth-Western-Australia/Expression-of-Interest--Consultant---Manager--Project---Infrastructure-Advisory_JR103724"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "nous-group-8843982002",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant education and sector experience; distinction average or above essential",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8843982002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8843982002"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "1–5 years professional experience",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8843982002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8843982002"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Australian right to work required; Intern EOI says Australian permanent residency OR right to work",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8843982002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8843982002"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "nous-group-8859649002",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant education and sector experience; distinction average or above essential",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8859649002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8859649002"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "1–5 years professional experience",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8859649002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8859649002"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Australian right to work required; Intern EOI says Australian permanent residency OR right to work",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8859649002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8859649002"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "nous-group-8612973002",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant education and sector experience; distinction average or above essential",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8612973002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8612973002"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "1–5 years professional experience",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8612973002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8612973002"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Australian right to work required; Intern EOI says Australian permanent residency OR right to work",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8612973002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8612973002"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "nous-group-8603687002",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Strong analysis and communication; no degree/study-year threshold published in this intern EOI",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8603687002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8603687002"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "No numeric requirement stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8603687002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8603687002"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Australian right to work required; Intern EOI says Australian permanent residency OR right to work",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8603687002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8603687002"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "nous-group-8093715002",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant sector capability, structured analysis and communication; no degree or academic-average threshold stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8093715002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8093715002"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "5+ years professional experience",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8093715002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8093715002"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Australian right to work required; Intern EOI says Australian permanent residency OR right to work",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8093715002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8093715002"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "nous-group-8432816002",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant sector capability, structured analysis and communication; no degree or academic-average threshold stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8432816002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8432816002"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "2+ years relevant professional experience",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8432816002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8432816002"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Australian right to work required; Intern EOI says Australian permanent residency OR right to work",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8432816002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8432816002"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "nous-group-8843994002",
+      "facts": [
+        {
+          "field": "qualifications",
+          "value": "Relevant sector capability, structured analysis and communication; no degree or academic-average threshold stated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8843994002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8843994002"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "2+ years relevant professional experience",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8843994002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8843994002"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Australian right to work required; Intern EOI says Australian permanent residency OR right to work",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/nousgroup/jobs/8843994002",
+            "https://boards-api.greenhouse.io/v1/boards/nousgroup/jobs/8843994002"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "sydney-sustainable-living-phd-sc5982",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "12 research periods; possible 2-period extension",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://sydneyuniversity.formstack.com/forms/sc5982",
+            "https://www.sydney.edu.au/scholarships/d/postgraduate-research-scholarship-in-sustainable-living-under-de.html"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "Current RTP stipend AUD 42,754/year, indexed annually",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://sydneyuniversity.formstack.com/forms/sc5982",
+            "https://www.sydney.edu.au/scholarships/d/postgraduate-research-scholarship-in-sustainable-living-under-de.html"
+          ]
+        },
+        {
+          "field": "eligibility",
+          "value": "Domestic/international; sustainability-related honours upper-second/first or masters; full-time Physics PhD; economics background expressly eligible",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://sydneyuniversity.formstack.com/forms/sc5982",
+            "https://www.sydney.edu.au/scholarships/d/postgraduate-research-scholarship-in-sustainable-living-under-de.html"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "sydney-honours-scholarship-2027",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Table: opens 11 December 2026, closes 15 January 2027",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.sydney.edu.au/scholarships/e/honours-scholarship.html"
+          ]
+        },
+        {
+          "field": "eligibility",
+          "value": "Appended Honours at Sydney; international applicants must have completed their undergraduate degree at Sydney",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.sydney.edu.au/scholarships/e/honours-scholarship.html"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "sydney-market-intelligence-officer-0156339",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Unrestricted Australian work rights for duration; visa sponsorship unavailable",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://usyd.wd105.myworkdayjobs.com/USYD_EXTERNAL_CAREER_SITE/job/Darlington-Campus/Market-Intelligence-Officer_0156339-2"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "sydney-senior-manager-insights-0156790",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Unrestricted Australian work rights for duration; visa sponsorship unavailable",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://usyd.wd105.myworkdayjobs.com/USYD_EXTERNAL_CAREER_SITE/job/Camperdown-Campus/Senior-Manager-Insights_0156790-1"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "sydney-manager-ai-evaluation-0155256",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Unrestricted Australian work rights for duration; visa sponsorship unavailable",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://usyd.wd105.myworkdayjobs.com/USYD_EXTERNAL_CAREER_SITE/job/Forest-Lodge/Manager--AI-Evaluation_0155256-1"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "adb-visiting-fellow",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "5–20 working days",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/work-with-us/careers/adb-visiting-fellow-program"
+          ]
+        },
+        {
+          "field": "verification",
+          "value": "Annual applications 1 January to 31 March; selection Q2 and successful applicants notified by 31 July",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/work-with-us/careers/adb-visiting-fellow-program"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "Possible airfare reimbursement, per diem/hotel/meal allowances and modest honorarium; no staff salary",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/work-with-us/careers/adb-visiting-fellow-program"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "adb-260921-2026",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "2026 TI1 salary structure: USD 114,500 minimum; 157,500 midpoint; 200,400 maximum per year. Individual offer based on qualifications/experience.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260921",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "citizenship",
+          "value": "ADB member-country nationals; Australia is a member",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260921",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Official benefit policy includes visa support for relocation",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260921",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Economics, finance, public policy or related degree; postgraduate preferred",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260921",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Up to three-year fixed term; ADB may renew in periods up to three years, not convertible to regular appointment",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260921",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "adb-260893-2026",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "2026 TI1 salary structure: USD 114,500 minimum; 157,500 midpoint; 200,400 maximum per year. Individual offer based on qualifications/experience.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260893",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "citizenship",
+          "value": "ADB member-country nationals; Australia is a member",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260893",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Official benefit policy includes visa support for relocation",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260893",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Finance, economics or relevant degree; postgraduate preferred",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260893",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Initial three-year fixed term; may extend once for up to two years, convert to regular appointment, or end",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260893",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "adb-260896-2026",
+      "facts": [
+        {
+          "field": "paid",
+          "value": "2026 TI1 salary structure: USD 114,500 minimum; 157,500 midpoint; 200,400 maximum per year. Individual offer based on qualifications/experience.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260896",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "citizenship",
+          "value": "ADB member-country nationals; Australia is a member",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260896",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Official benefit policy includes visa support for relocation",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260896",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Economics, business administration, finance or equivalent degree; postgraduate preferred",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260896",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Up to three-year fixed term, renewals depend on temporary funding; not convertible to regular appointment",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.adb.org/careers/260896",
+            "https://www.adb.org/sites/default/files/page/568836/adb-international-staff-salary-structure-2026.pdf",
+            "https://www.adb.org/work-with-us/careers/what-we-offer"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "anu-manager-risk-563672",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Two full-time continuing positions",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://jobs.anu.edu.au/jobs/manager-risk-canberra-act-act-australia"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "AUD 141,637–148,403 plus 17% super",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://jobs.anu.edu.au/jobs/manager-risk-canberra-act-act-australia"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Rights to live and work in Australia required",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://jobs.anu.edu.au/jobs/manager-risk-canberra-act-act-australia"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "anu-cbe-cbe-sourced-semester1-2027",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Semester 1 2027, academic internship with 6 or 12 course credits",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://cbe.anu.edu.au/current-students/opportunities-and-careers/cbe-internships/internships-information-students"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Current CBE undergraduate or postgraduate; published unit/GPA prerequisites apply",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://cbe.anu.edu.au/current-students/opportunities-and-careers/cbe-internships/internships-information-students"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "anu-cbe-self-sourced-semester1-2027",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Semester 1 2027, academic internship with 6 or 12 course credits",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://cbe.anu.edu.au/current-students/opportunities-and-careers/cbe-internships/internships-information-students"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Current CBE undergraduate or postgraduate; published unit/GPA prerequisites apply",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://cbe.anu.edu.au/current-students/opportunities-and-careers/cbe-internships/internships-information-students"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "boston-consulting-group-bcg-australia-graduate-next-cycle",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Applications reopen January 2027",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.bcg.com/global/en/locations/australia-and-new-zealand",
+            "https://careers.bcg.com/global/en/locations/australia-new-zealand/associate-recruitment"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Final-year UG/PG or completed studies within last three years; graduate route",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.bcg.com/global/en/locations/australia-and-new-zealand",
+            "https://careers.bcg.com/global/en/locations/australia-new-zealand/associate-recruitment"
+          ]
+        },
+        {
+          "field": "citizenship",
+          "value": "Australian/NZ citizen or Australian permanent resident",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.bcg.com/global/en/locations/australia-and-new-zealand",
+            "https://careers.bcg.com/global/en/locations/australia-new-zealand/associate-recruitment"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "boston-consulting-group-bcg-australia-scholarship-early-intake-2027",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Applications reopen March 2027",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.bcg.com/global/en/locations/australia-and-new-zealand",
+            "https://careers.bcg.com/global/en/locations/australia-new-zealand/associate-recruitment"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Penultimate UG or masters excluding MBA",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.bcg.com/global/en/locations/australia-and-new-zealand",
+            "https://careers.bcg.com/global/en/locations/australia-new-zealand/associate-recruitment"
+          ]
+        },
+        {
+          "field": "citizenship",
+          "value": "Associate/scholarship recruitment page says Australian/NZ citizen or Australian permanent resident",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.bcg.com/global/en/locations/australia-and-new-zealand",
+            "https://careers.bcg.com/global/en/locations/australia-new-zealand/associate-recruitment"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "boston-consulting-group-bcg-australia-first-nations-intern-scholarship-2027",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Applications reopen March 2027",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.bcg.com/global/en/locations/australia-and-new-zealand/first-nations-internship-scholarship-program",
+            "https://careers.bcg.com/global/en/locations/australia-and-new-zealand"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "imf-economist-2027",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Three-year rotational programme (standing programme page)",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://imf.wd5.myworkdayjobs.com/en-US/IMF/job/Economist-Program-2027_26-R9861",
+            "https://www.imf.org/en/about/careers/economist-program"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "imf-rap-26-r8967",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Two years",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://imf.wd5.myworkdayjobs.com/IMF/job/USA-Washington-DC/Research-Analyst-under-the-Research-Analyst-Program--RAP-_26-R8967",
+            "https://www.imf.org/en/about/recruitment/working-at-the-imf/research-analyst-program"
+          ]
+        },
+        {
+          "field": "eligibility",
+          "value": "Worldwide recruitment; recent relevant bachelors, 3.5 GPA overall and major; limited-experience advanced degrees considered",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://imf.wd5.myworkdayjobs.com/IMF/job/USA-Washington-DC/Research-Analyst-under-the-Research-Analyst-Program--RAP-_26-R8967",
+            "https://www.imf.org/en/about/recruitment/working-at-the-imf/research-analyst-program"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "australian-energy-market-operator-aemo-graduate-program-next-intake",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Applications closed, reopen early 2027",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.aemo.com.au/about/careers/graduate-program",
+            "https://aemo.com.au/about/careers/graduate-program/faqs"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Permanent role; two-year programme with four six-month rotations",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.aemo.com.au/about/careers/graduate-program",
+            "https://aemo.com.au/about/careers/graduate-program/faqs"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Full rights for duration; visa holders accepted but sponsorship unavailable",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.aemo.com.au/about/careers/graduate-program",
+            "https://aemo.com.au/about/careers/graduate-program/faqs"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "australian-energy-market-operator-aemo-2027-28-internship-expression-of-interest",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "2027/28 expression of interest, not a placement offer",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/australianenergymarketoperator/jobs/4414221009"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Current university students only; graduates ineligible",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://job-boards.greenhouse.io/australianenergymarketoperator/jobs/4414221009"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "capgemini-australia-graduate-march-2027",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "One-year development programme; permanent contract",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.capgemini.com/job/Melbourne-Graduate/1434622633/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "capgemini-australia-492879",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Permanent contract",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.capgemini.com/job/Sydney-Strategy-Business-Transformation-Consultant-Senior-Consultant/1415575533/"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "2–4 years in consulting or enterprise environments; ERP experience required, SAP preferred",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.capgemini.com/job/Sydney-Strategy-Business-Transformation-Consultant-Senior-Consultant/1415575533/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "national-australia-bank-nab-senior-analyst-credit-strategy-809216",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "9 October 2026 23:55 AEDT",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.nab.com.au/jobs/senior-analyst-credit-strategy-nsw-sydney-cbd-nsw-australia-nsw-sydney-inner-vic-melbourne-cbd-vic-vic-melbourne-inner-australia-wide"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "national-australia-bank-nab-analyst-field-examiner-809289",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "13 October 2026 00:25 AEDT",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.nab.com.au/jobs/analyst-field-examiner-sa-adelaide-inner-sa-australia"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "tasmanian-department-of-treasury-and-finance-treasury-cadet-program",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Maximum six years depending completed study/experience, annual contracts",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.treasury.tas.gov.au/about-us/careers/cadet-program"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Current or commencing undergraduate enrolment, broad disciplines",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.treasury.tas.gov.au/about-us/careers/cadet-program"
+          ]
+        },
+        {
+          "field": "verification",
+          "value": "Typically 3–5 recruits per year, vacancies on jobs.tas.gov.au",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.treasury.tas.gov.au/about-us/careers/cadet-program"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "tasmanian-department-of-treasury-and-finance-finance-graduate-program",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Three years; placements up to 18 months",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.treasury.tas.gov.au/about-us/careers/finance-graduate-program"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Degree qualifying for CPA or CA ANZ",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.treasury.tas.gov.au/about-us/careers/finance-graduate-program"
+          ]
+        },
+        {
+          "field": "verification",
+          "value": "Recruitment as needed, not a fixed annual cycle",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.treasury.tas.gov.au/about-us/careers/finance-graduate-program"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "uts-hdr-domestic-session2-2027",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "Domestic Research Session 2 2027 closes 11 March 2027; opening TBC; outcomes from 27 April; starts July–November 2027",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/masters-by-research-phd/application-closing-dates"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "afdb-ypp",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Three-year development programme",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.afdb.org/en/about-us/careers/young-professionals-program-ypp"
+          ]
+        },
+        {
+          "field": "eligibility",
+          "value": "AfDB member-country nationality mandatory; Australian-only nationality ineligible",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.afdb.org/en/about-us/careers/young-professionals-program-ypp"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "castalia-sydney-interest",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "General application-of-interest form allowing Sydney preference",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://castalia-advisors.com/join/application-of-interest/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "citi-citigroup-australia-metals-mining-research-26974010",
+      "facts": [
+        {
+          "field": "experienceRequirements",
+          "value": "4–8 years relevant experience; equity research preferred or mining/resources transition",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://jobs.citi.com/job/sydney/research-analyst-vice-president/287/97083861712"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Bachelors required; MBA/CFA or relevant graduate degree preferred",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://jobs.citi.com/job/sydney/research-analyst-vice-president/287/97083861712"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "department-of-veterans-affairs-graduate-development-program",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Recruitment through selected AGGP stream rather than a DVA-specific application",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.dva.gov.au/about-us/careers/entry-level-programs/graduate-development-program-gdp"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "essential-services-commission-victoria-1367176066-senior-adviser",
+      "facts": [
+        {
+          "field": "workRights",
+          "value": "Australian/NZ citizen or Australian permanent resident; corresponding work rights for period",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.people.vic.gov.au/DTF/job/Melbourne-Senior-Adviser-VIC-3000/1367176066/"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "global-voices-y20-2027",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "Recruitment February 2027",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.globalvoices.org.au/y20"
+          ]
+        },
+        {
+          "field": "citizenship",
+          "value": "Australian citizen or permanent resident",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.globalvoices.org.au/y20"
+          ]
+        },
+        {
+          "field": "eligibility",
+          "value": "Age 18–30 throughout; no previous Global Voices fellowship; travel availability and at least 5 hours/week plus extra Y20 commitments",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.globalvoices.org.au/y20"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "infrastructure-victoria-tertiary-internship-opportunities",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "No vacant positions currently; paid internships offered throughout year as work/supervisor capacity allows",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.infrastructurevictoria.com.au/about-us"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "Paid",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.infrastructurevictoria.com.au/about-us"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Tertiary economics, engineering, planning, policy or strategy",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.infrastructurevictoria.com.au/about-us"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "monash-implementation-evaluation-698479",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "12-month fixed term, 0.4 FTE",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.pageuppeople.com/513/cw/en/job/698479/research-fellow-implementation-and-evaluation-translational-medicine"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "Pro-rata of A AUD 86,195–116,981 or B AUD 123,138–146,228 plus 17% super",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.pageuppeople.com/513/cw/en/job/698479/research-fellow-implementation-and-evaluation-translational-medicine"
+          ]
+        },
+        {
+          "field": "workRights",
+          "value": "Present valid/current Australian work rights required",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://careers.pageuppeople.com/513/cw/en/job/698479/research-fellow-implementation-and-evaluation-translational-medicine"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "odi-fellowship-watch",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "2026–28 cohort closed 31 March 2026; no new round announced",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://odi.org/en/fellowship-scheme/",
+            "https://media.odi.org/documents/FS_booklet_updated_2026_-_Fellows_v3.pdf"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "Two years",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://odi.org/en/fellowship-scheme/",
+            "https://media.odi.org/documents/FS_booklet_updated_2026_-_Fellows_v3.pdf"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Masters/PhD economics, statistics or related",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://odi.org/en/fellowship-scheme/",
+            "https://media.odi.org/documents/FS_booklet_updated_2026_-_Fellows_v3.pdf"
+          ]
+        },
+        {
+          "field": "citizenship",
+          "value": "All nationalities encouraged",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://odi.org/en/fellowship-scheme/",
+            "https://media.odi.org/documents/FS_booklet_updated_2026_-_Fellows_v3.pdf"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "2026 booklet: total annual compensation net of tax approximately GBP 32,600 in year one and GBP 34,600 in year two, inclusive of location-varying housing allowance. Not verified for next round.",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://odi.org/en/fellowship-scheme/",
+            "https://media.odi.org/documents/FS_booklet_updated_2026_-_Fellows_v3.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "port-jackson-partners-spark-2027",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "2026 closed; reopens mid-2027",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.ey.com/en_au/careers/parthenon/ey-parthenon-strategy"
+          ]
+        },
+        {
+          "field": "citizenship",
+          "value": "Australian/NZ citizen or PR, residing in either country",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.ey.com/en_au/careers/parthenon/ey-parthenon-strategy"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Woman in penultimate or pre-penultimate UG/PG year",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.ey.com/en_au/careers/parthenon/ey-parthenon-strategy"
+          ]
+        },
+        {
+          "field": "paid",
+          "value": "Current page: scholarship winner AUD-currency-unconfirmed $20,000 cash plus paid internship; next-cycle terms not confirmed",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.ey.com/en_au/careers/parthenon/ey-parthenon-strategy"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "suncorp-group-graduate-2028",
+      "facts": [
+        {
+          "field": "verification",
+          "value": "2028 opportunities open August 2027",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.suncorpgroup.com.au/careers/graduates/graduate-programs",
+            "https://www.suncorpgroup.com.au/careers"
+          ]
+        },
+        {
+          "field": "duration",
+          "value": "General careers page describes two-year graduate programme; confirm 2028 terms",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.suncorpgroup.com.au/careers/graduates/graduate-programs",
+            "https://www.suncorpgroup.com.au/careers"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "visagio-experienced-11759000003381542",
+      "facts": [
+        {
+          "field": "duration",
+          "value": "Full-time experienced positions; permanent/fixed term unstated",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.visagiotalent.com/full-time-experienced"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Relevant quantitative/commerce/finance degree preferred",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.visagiotalent.com/full-time-experienced"
+          ]
+        },
+        {
+          "field": "experienceRequirements",
+          "value": "Management & Business stream has competency-based requirements, not the separate Low-Code stream’s 2+ year threshold",
+          "checkedAt": "2026-10-06T23:45:00Z",
+          "sources": [
+            "https://www.visagiotalent.com/full-time-experienced"
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "department-of-employment-and-workplace-relations-26-1537-director-closing-gap",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "12 October 2026 at 11:30pm AEDT; employer-confirmed timezone",
+          "checkedAt": "2026-10-07T02:42:00Z",
+          "sources": [
+            "https://dewr.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&jobid=2922C318-5B9A-4C03-87FD-B4C700DD40FE",
+            "https://dewr.nga.net.au/publicfiles/dewr/jobs/2922C318-5B9A-4C03-87FD-B4C700DD40FE/Job%20Description_1.pdf",
+            "https://www.apsjobs.gov.au/s/job-details?Id=a05OY00000Qts5dYAB"
+          ]
+        }
+      ],
+      "priority": {
+        "changes": {
+          "deadline": "12 October 2026 at 11:30pm AEDT; employer-confirmed timezone",
+          "deadlineOn": "2026-10-12",
+          "closesAt": "2026-10-12T23:30:00+11:00",
+          "deadlineConfirmed": true,
+          "noDeadlinePublished": false,
+          "status": "unknown",
+          "publicationApproved": false,
+          "holdReason": "Current application route and updated candidate-pack verification remain outstanding; deadline timezone resolved.",
+          "verification": {
+            "state": "unverified",
+            "checkedAt": "2026-10-07T02:42:00Z",
+            "sourceUrl": "https://dewr.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&jobid=2922C318-5B9A-4C03-87FD-B4C700DD40FE",
+            "deadlineConfirmed": true,
+            "acceptingApplications": false,
+            "notes": "Employer clarification on 7 October 2026 confirms AEDT in response to the exact 26/1537 cutoff question (12 October 2026, 11:30pm). Fresh direct retrieval of the exact vacancy and candidate pack returned HTTP 405; APSJobs detail returned Loading/CSS Error. Closing date is also supported by indexed official APSJobs text. Application acceptance and updated pack contents remain unverified. This correction applies only to 26/1537.",
+            "sources": [
+              {
+                "url": "https://dewr.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&jobid=2922C318-5B9A-4C03-87FD-B4C700DD40FE",
+                "claim": "Exact official requisition route; live contents could not be retrieved in this recheck."
+              },
+              {
+                "url": "https://dewr.nga.net.au/publicfiles/dewr/jobs/2922C318-5B9A-4C03-87FD-B4C700DD40FE/Job%20Description_1.pdf",
+                "claim": "Exact official candidate pack; reported timezone update could not be independently retrieved."
+              },
+              {
+                "url": "https://www.apsjobs.gov.au/s/job-details?Id=a05OY00000Qts5dYAB",
+                "claim": "Exact official APSJobs listing; detail did not render in this recheck."
+              }
+            ]
+          },
+          "independentReview": {
+            "decision": "hold",
+            "checkedAt": "2026-10-07T02:42:00Z",
+            "publicationApproved": false
+          }
+        },
+        "checkedAt": "2026-10-07T02:42:00Z",
+        "sources": [
+          "https://dewr.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&jobid=2922C318-5B9A-4C03-87FD-B4C700DD40FE",
+          "https://dewr.nga.net.au/publicfiles/dewr/jobs/2922C318-5B9A-4C03-87FD-B4C700DD40FE/Job%20Description_1.pdf",
+          "https://www.apsjobs.gov.au/s/job-details?Id=a05OY00000Qts5dYAB"
+        ],
+        "disposition": "Correct the deadline only; retain the private publication hold and require fresh accepting-application/updated-pack verification. Do not infer closure from retrieval errors, or copy this deadline to any other vacancy."
+      }
+    },
+    {
+      "recordId": "anu-economics-lecturer-561517",
+      "facts": [
+        {
+          "field": "deadline",
+          "value": "5 December 2026 midnight UTC (end of day), equivalent to 6 December 2026 at 00:00 UTC / 11:00 AEDT; employer-confirmed interpretation",
+          "checkedAt": "2026-10-07T03:36:55Z",
+          "sources": [
+            "https://econjobmarket.org/positions/12610",
+            "https://jobs.anu.edu.au/jobs/lecturer-senior-lecturer-in-economics-canberra-act-act-australia"
+          ]
+        },
+        {
+          "field": "qualifications",
+          "value": "Economics PhD awarded or submitted. Submission is required; whether it must occur by application or appointment is not expressly confirmed.",
+          "checkedAt": "2026-10-07T03:36:55Z",
+          "sources": [
+            "https://econjobmarket.org/positions/12610",
+            "https://jobs.anu.edu.au/jobs/lecturer-senior-lecturer-in-economics-canberra-act-act-australia"
+          ]
+        },
+        {
+          "field": "application",
+          "value": "Apply through the primary Econ Job Market position 12610 using the Applicant login route, with cover letter, CV, job-market paper and 3 recommendations. Public page is accepting applications; no login or submission was tested.",
+          "checkedAt": "2026-10-07T03:36:55Z",
+          "sources": [
+            "https://econjobmarket.org/positions/12610",
+            "https://jobs.anu.edu.au/jobs/lecturer-senior-lecturer-in-economics-canberra-act-act-australia"
+          ]
+        }
+      ],
+      "priority": {
+        "changes": {
+          "deadline": "5 December 2026 midnight UTC (end of day), equivalent to 6 December 2026 at 00:00 UTC / 11:00 AEDT; employer-confirmed interpretation",
+          "deadlineOn": "2026-12-06",
+          "closesAt": "2026-12-06T00:00:00Z",
+          "deadlineConfirmed": true,
+          "noDeadlinePublished": false,
+          "url": "https://econjobmarket.org/positions/12610",
+          "applicationUrl": "https://econjobmarket.org/positions/12610",
+          "application": "Apply through the primary Econ Job Market position 12610 using the Applicant login route, with cover letter, CV, job-market paper and 3 recommendations. Public page is accepting applications; no login or submission was tested.",
+          "qualifications": "Economics PhD awarded or submitted. Submission is required; whether it must occur by application or appointment is not expressly confirmed.",
+          "studyYear": "Economics PhD awarded or submitted. Submission is required; whether it must occur by application or appointment is not expressly confirmed.",
+          "status": "unknown",
+          "publicationApproved": false,
+          "holdReason": "Exact PhD-submission timing relative to application versus appointment remains unresolved; deadline interpretation and primary application route are confirmed.",
+          "verification": {
+            "state": "pending",
+            "checkedAt": "2026-10-07T03:36:55Z",
+            "sourceUrl": "https://econjobmarket.org/positions/12610",
+            "acceptingApplications": true,
+            "deadlineConfirmed": true,
+            "noDeadlinePublished": false,
+            "audienceAccess": "australian-program",
+            "notes": "The employer confirms EJM 12610 is the primary advertisement and midnight UTC means the end of 5 December 2026. The resulting cutoff is 6 December 2026 00:00 UTC / 11:00 AEDT. Fresh EJM public page explicitly accepts applications and provides the Applicant login route. The ANU 561517 page still advertises 6 December 2026 23:55 AEDT; this conflicting secondary display has not changed. Economics PhD must be awarded or submitted; submission timing by application versus appointment remains unconfirmed. No login, account creation or application submission was performed.",
+            "sources": [
+              {
+                "url": "https://econjobmarket.org/positions/12610",
+                "claim": "Primary exact position; public deadline text 5 December 2026 midnight UTC, accepting applications and Applicant login route verified 7 October 2026."
+              },
+              {
+                "url": "https://jobs.anu.edu.au/jobs/lecturer-senior-lecturer-in-economics-canberra-act-act-australia",
+                "claim": "Exact ANU 561517 advert directs applicants to EJM 12610, still displays 6 December 2026 23:55 AEDT, and requires an awarded or submitted economics PhD."
+              }
+            ]
+          },
+          "independentReview": {
+            "decision": "hold",
+            "checkedAt": "2026-10-07T03:36:55Z",
+            "publicationApproved": false
+          }
+        },
+        "checkedAt": "2026-10-07T03:36:55Z",
+        "sources": [
+          "https://econjobmarket.org/positions/12610",
+          "https://jobs.anu.edu.au/jobs/lecturer-senior-lecturer-in-economics-canberra-act-act-australia"
+        ],
+        "disposition": "Apply the primary-source deadline interpretation and degree-stage clarification only to ANU 561517/EJM 12610. Preserve the publication hold pending exact PhD-submission timing clarification; regenerate derived eligibility/experience text."
+      }
+    }
+  ]
+}

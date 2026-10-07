@@ -20,6 +20,10 @@ never restore them to the public catalogue or use them as research leads.
 - `data/demo-opportunities.json`: synthetic examples; every record must say
   `simulated: true`, with no application URL or verification claim.
 - `data/live-opportunities.json`: future verified opportunities and held candidates.
+- `data/opportunity-corrections.json`: public-safe reviewed correction projection;
+  apply through `scripts/research-records.cjs` in build and offline exports. Keep
+  the original audit input intact. Field facts do not refresh acceptance checks
+  or change publication gates; explicit reviewed priority patches are separate.
 - `data/settings.json`: explicit demo/live mode and review-age policy.
 - `docs/agent-updates.md`, `docs/known-traps.md`: workflow and employer pitfalls.
 - `dist/catalog-model.js`: publication policy shared between build and browser.
@@ -61,3 +65,16 @@ independently reviewed records and all-organisation coverage bundle, import only
 approved public records, retain held candidates privately and complete final
 data/UI verification before merge and deployment. Do not publish the foundation
 alone as completed research. Check current main and exact CI/Pages/live results.
+
+Sam subsequently requested removal of public Confirmed future and Recurring
+options. Publish only reviewed accepting vacancies/registers. Retain every
+future/recurring record and its evidence in the source and private/offline
+compilation for organisation follow-up; never relabel it open. Old future share
+links must report unavailable. Enquiries are handled separately by the parent.
+
+Map city markers are a display overlay derived only from source-stated single
+city locations and sourced approximate city representative points. Keep original
+records and verification timestamps intact. Variable, remote, multi-city and
+insufficiently specific locations remain in the list, with truthful map counts.
+Verify actual rendered markers, clustering, clickthrough and filtered sources
+at desktop and mobile sizes; mock geometry tests alone are insufficient.

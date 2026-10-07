@@ -7,7 +7,7 @@ const read = name => JSON.parse(fs.readFileSync(path.join(root, 'data', name), '
 const settings = read('settings.json');
 if (settings.mode !== 'live') throw new Error('Research compilation requires live mode; simulated fixtures cannot be exported as research.');
 const registry = read('organisations.json');
-const records = read('live-opportunities.json');
+const records = require('./research-records.cjs').readRecords(root);
 model.validate(records, registry, settings);
 const now = new Date();
 const catalog = model.select(records, settings, now);

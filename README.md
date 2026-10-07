@@ -16,15 +16,17 @@ kept privately in `data/demo-opportunities.json` for behavior checks.
 
 ## What works
 
-- Australian map with clustered locations and links to program cards.
+- Map with sourced approximate city markers, clustered locations and links to
+  programme cards. Remote, variable and insufficiently specific placements stay
+  in the list, with mapped/unmapped counts shown beside the map.
 - Search and filters for sector, placement location, type, funding, citizenship,
   international eligibility and qualifications / study.
 - Expandable cards with dates, pay and eligibility, plus optional profile matching.
 - Searchable directory covering the 196 original organisations and 26 additions,
   grouped in newsletter sector order, with official About pages or homepages.
-- Separate open, confirmed future, and unconfirmed/recurring tabs. All future dates
-  are retained, including records held for recheck; open and future CSV downloads
-  remain separate.
+- Public catalogue and CSV contain accepting vacancies/registers only. Future
+  and recurring candidates stay in the source and offline compilation for
+  follow-up; their public tabs, downloads and opportunity links are unavailable.
 - Structured JSON inputs and shared publication rules for verified research updates.
 - Optional professional experience requirements in cards, search, application
   prompts and exports, using source wording without inferred age limits.
@@ -55,6 +57,16 @@ data. Unverified, closed, expired and stale live listings are held back. Exact
 opening dates require a recheck before promotion; expected windows stay labelled.
 Future candidates remain in the compilation across all dates and review states.
 Use `node scripts/export-compilation.cjs <output-directory>` for review CSV/JSON.
+Sam's subsequent instruction removes public future/recurring access while
+preserving those records and evidence offline. `data/map-cities.json` supplies
+sourced approximate city representative points; the display overlay never
+changes original opportunity records or their verification timestamps.
+Reviewed public-safe corrections live in `data/opportunity-corrections.json`,
+applied by `scripts/research-records.cjs` to both builds and offline exports.
+This preserves the original audit input and keeps field-fact checks distinct
+from current application-acceptance checks. Seven priority patches and 284
+source-backed field findings from the version 2 correction review update the
+effective catalogue; corrected dates alone do not remove DEWR/ANU holds.
 The professional expansion preserves the 130 original records and adds 160
 reviewed candidates: 58 approved for publication and 102 held. Coverage and
 source identities are recorded in `data/research-coverage.json` and

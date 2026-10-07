@@ -33,10 +33,15 @@ test('reviewed import preserves all candidates, organisations and publication di
 test('public assets omit every held candidate while offline compilation retains restricted future schemes',()=>{
   const context=vm.createContext({});vm.runInContext(fs.readFileSync('dist/catalog.js','utf8'),context);
   const publicRecords=vm.runInContext('radarCatalog.records',context);
-  assert.equal(publicRecords.length,142);
+  const effective=require('./scripts/research-records.cjs').readRecords(__dirname);
+  const generatedAt=vm.runInContext('radarCatalog.generatedAt',context);
+  assert.equal(publicRecords.length,model.select(effective,settings,new Date(generatedAt)).opportunities.length);
+  assert.equal(vm.runInContext('radarCatalog.publicScope',context),'accepting-only');
+  for(const r of publicRecords)assert.ok(model.currentStatuses.includes(r.status));
+  for(const key of ['confirmedFuture','recurringUnconfirmed','futureCompilation','openingSoon'])assert.equal(vm.runInContext('radarCatalog.'+key+'.length',context),0);
   for(const r of publicRecords) assert.equal(r.publicationApproved,true);
   const ids=new Set(publicRecords.map(r=>r.id));
-  for(const r of records.filter(r=>!r.publicationApproved)) assert.equal(ids.has(r.id),false);
+  for(const r of effective.filter(r=>!r.publicationApproved)) assert.equal(ids.has(r.id),false);
   for(const id of ['jjwbgsp-2027-w1','jjwbgsp-2027-w2','jjwbgsp-japan-2027']) {
     const r=checked.futureCompilation.find(r=>r.id===id);
     assert.equal(r.publicationState,'held');assert.equal(r.verification.australianAudienceEligible,false);

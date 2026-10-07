@@ -48,11 +48,12 @@
         </div>
       </section>
       <div class="globe-stage">
-        <div id="globe" role="region" aria-label="Interactive map with Australian program locations"></div>
+        <div id="globe" role="region" aria-label="Interactive map of source-stated opportunity cities"></div>
         <span id="map-status" role="status">Loading world map...</span>
         <button id="world-view" type="button" title="Return to world view">Australia view</button>
-        <span class="map-legend"><i></i> Programs <span id="legend-selected" hidden><i class="selected"></i> Selected</span></span>
+        <span class="map-legend"><i></i> City markers <span id="legend-selected" hidden><i class="selected"></i> Selected</span></span>
       </div>
+      <p class="map-summary content-width"><span id="map-summary-text" role="status"></span> <a href="#programs">View the opportunity list</a>. City markers are approximate; they do not identify employer addresses. City coordinates: <a href="https://www.geonames.org/" target="_blank" rel="noopener noreferrer">GeoNames</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>).</p>
       <div class="selection-strip content-width" id="selection-strip" hidden>
         <section class="detail-card" id="detail-card" aria-live="polite"></section>
         <a class="section-link" href="#programs">Browse programs <span aria-hidden="true">↓</span></a>
@@ -120,29 +121,11 @@
             <span id="open-tab-label" class="tab-label">Open now</span>
             <span id="open-count" class="tab-count">0</span>
           </button>
-          <button type="button" role="tab" id="tab-opening" aria-controls="panel-opening" aria-selected="false" tabindex="-1">
-            <span class="tab-label">Confirmed future</span>
-            <span id="opening-count" class="tab-count">0</span>
-          </button>
-          <button type="button" role="tab" id="tab-recurring" aria-controls="panel-recurring" aria-selected="false" tabindex="-1">
-            <span class="tab-label">Unconfirmed / recurring</span>
-            <span id="recurring-count" class="tab-count">0</span>
-          </button>
         </div>
         <div role="tabpanel" id="panel-open" aria-labelledby="tab-open">
           <div class="list-head" aria-hidden="true"><span>Role / program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Verification</span></div>
           <div id="results" class="results-list"></div>
         </div>
-        <div role="tabpanel" id="panel-opening" class="opening-panel" aria-labelledby="tab-opening" hidden>
-          <p class="opening-intro">Officially confirmed future openings across all dates, including openings more than three months away. Recheck applications when the opening arrives.</p>
-          <div id="opening-soon-head" class="list-head" aria-hidden="true" hidden><span>Role / program</span><span>Organisation</span><span>Type</span><span>Location</span><span>Opens</span></div>
-          <div id="opening-soon-list" class="results-list"></div>
-        </div>
-        <div role="tabpanel" id="panel-recurring" class="opening-panel" aria-labelledby="tab-recurring" hidden>
-          <p class="opening-intro">Recurring programmes and retained future records whose next intake or current evidence needs confirmation. Indicative dates support planning; application availability is unconfirmed.</p>
-          <div id="recurring-list" class="results-list"></div>
-        </div>
-        <p class="future-download"><button type="button" id="download-future-csv">Download all future programmes</button><small>Includes all dates and records held for recheck, with status and sources. Separate from the open list.</small></p>
       </div>
     </section>
     <section id="organisations" class="directory-section content-width" aria-labelledby="directory-heading">
@@ -201,12 +184,12 @@
   <script src="./catalog-model.js?v=professional-audience-20261006"></script>
   <script src="./catalog-export.js?v=professional-audience-20261006"></script>
   <script src="./organisations.js?v=organisation-profiles-20261006"></script>
-  <script src="./catalog.js?v=professional-audience-20261006"></script>
+  <script src="./catalog.js?v=city-map-current-only-20261007"></script>
   <script src="./config.js?v=application-tools-20261006"></script>
   <script src="./opportunity-tools.js?v=professional-audience-20261006"></script>
-  <script src="./app.js?v=professional-audience-20261006"></script>
+  <script src="./app.js?v=city-map-current-only-20261007"></script>
   <script src="./opportunity-actions.js?v=application-tools-20261006"></script>
   <script src="./newsletter.js?v=application-tools-20261006"></script>
-  <script src="./directory.js?v=application-tools-20261006"></script>
+  <script src="./directory.js?v=city-map-current-only-20261007"></script>
 </body>
 </html>

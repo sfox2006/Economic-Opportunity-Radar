@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-06",
+  "precision": "Approximate city representative point, rounded to two decimal places; never an employer address.",
+  "licence": "GeoNames geographical data, CC BY 4.0",
+  "cities": [
+    {
+      "label": "Sydney",
+      "country": "Australia",
+      "lat": -33.87,
+      "lon": 151.21,
+      "sourceUrl": "https://www.geonames.org/2147714/sydney.html"
+    },
+    {
+      "label": "Melbourne",
+      "country": "Australia",
+      "lat": -37.81,
+      "lon": 144.96,
+      "sourceUrl": "https://www.geonames.org/2158177/melbourne.html"
+    },
+    {
+      "label": "Brisbane",
+      "country": "Australia",
+      "lat": -27.47,
+      "lon": 153.03,
+      "sourceUrl": "https://www.geonames.org/2174003/brisbane.html"
+    },
+    {
+      "label": "Canberra",
+      "country": "Australia",
+      "lat": -35.28,
+      "lon": 149.13,
+      "sourceUrl": "https://www.geonames.org/2172517/canberra.html"
+    },
+    {
+      "label": "Adelaide",
+      "country": "Australia",
+      "lat": -34.93,
+      "lon": 138.6,
+      "sourceUrl": "https://www.geonames.org/2078025/adelaide.html"
+    },
+    {
+      "label": "Perth",
+      "country": "Australia",
+      "lat": -31.95,
+      "lon": 115.86,
+      "sourceUrl": "https://www.geonames.org/2063523/perth.html"
+    },
+    {
+      "label": "Hobart",
+      "country": "Australia",
+      "lat": -42.88,
+      "lon": 147.33,
+      "sourceUrl": "https://www.geonames.org/2163355/hobart.html"
+    },
+    {
+      "label": "Darwin",
+      "country": "Australia",
+      "lat": -12.46,
+      "lon": 130.84,
+      "sourceUrl": "https://www.geonames.org/2073124/darwin.html"
+    },
+    {
+      "label": "Washington, DC",
+      "country": "United States",
+      "lat": 38.9,
+      "lon": -77.04,
+      "sourceUrl": "https://www.geonames.org/4140963/washington.html"
+    },
+    {
+      "label": "London",
+      "country": "United Kingdom",
+      "lat": 51.51,
+      "lon": -0.13,
+      "sourceUrl": "https://www.geonames.org/2643743/london.html"
+    },
+    {
+      "label": "Geneva",
+      "country": "Switzerland",
+      "lat": 46.2,
+      "lon": 6.15,
+      "sourceUrl": "https://www.geonames.org/2660646/geneva.html"
+    },
+    {
+      "label": "Berlin",
+      "country": "Germany",
+      "lat": 52.52,
+      "lon": 13.41,
+      "sourceUrl": "https://www.geonames.org/2950159/berlin.html"
+    },
+    {
+      "label": "Mannheim",
+      "country": "Germany",
+      "lat": 49.49,
+      "lon": 8.47,
+      "sourceUrl": "https://www.geonames.org/2873891/mannheim.html"
+    },
+    {
+      "label": "Paris",
+      "country": "France",
+      "lat": 48.85,
+      "lon": 2.35,
+      "sourceUrl": "https://www.geonames.org/2988507/paris.html"
+    }
+  ]
+}
